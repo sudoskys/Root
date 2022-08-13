@@ -7,10 +7,12 @@
 💡 **前言**：本教程仅供作者参考，阅读者**需要自己承担因尝试解锁导致的后果**。如果你对自己的动手能力感到怀疑，可以选择付费请人！**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。最好使用 Win10 ，避免驱动问题**
 
 本文的PDF版本在 [这里](https://github.com/sudoskys/Root/)
+
 你也可以在 [这里](https://root.dianas.cyou/) 看到这篇教程
+
 你可以在 [这里](https://push.dianas.cyou/LIS/Share/Root/) 下载文件包
 
-**大概有几种方法：**rec，fastboot，fastbootd，9008，mtk端口
+**大概有几种方法：** rec，fastboot，fastbootd，9008，mtk端口
 
 ![c3v64ptb34tc8qacv7jg.png](https://s1.328888.xyz/2022/08/13/TGFaP.png)
 
