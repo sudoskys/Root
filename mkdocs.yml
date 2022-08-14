@@ -9,7 +9,7 @@ nav:
 theme:
   name: material
   language: zh
-  logo: logo.png
+  # logo: https://github.com/sudoskys/Root/raw/main/logo.png
   palette:
     primary: indigo
 
