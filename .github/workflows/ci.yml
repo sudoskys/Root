@@ -16,3 +16,21 @@ jobs:
       - run: pip install mkdocs-git-authors-plugin
       - run: mkdocs build
       # - run: mkdocs gh-deploy --force
+      - name: commit
+        env:
+          TZ: 'CST-8'
+          emails: ${{ secrets.GITHUB_EMAIL }}
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+          git config --global user.email emails
+          git config --global user.name sudoskys
+          datime=$(date "+%Y年%m月%d日 %H:%M")
+          echo "git commit: 上传于 $datime"
+          if [ -n "$(git status -s)" ];then
+              git add .
+              git commit -m "上传于 $datime" -a
+          fi
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
