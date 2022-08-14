@@ -746,7 +746,9 @@
 <p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。SHamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
 <p>进入面具排除列表，然后右上角搜索手机管家，大概率都会搜索不到，主要是方法不对，以下教大家查找手机管家的正确方法。</p>
 <p><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png" /></p>
-<details class="help"><summary><strong>Momo提示找到Magisk解决方法</strong></summary><p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk。</p>
+<details class="help">
+<summary><strong>Momo提示找到Magisk解决方法</strong></summary>
+<p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk。</p>
 <p><strong>解决方法</strong>
 (1)去面具模块界面，检查有没有安装“隐藏系统root”模块。如果是安装了“隐藏系统root”模块，那就不要解决Momo提示找到Magisk了。因为就是这个模块，导致Momo提示找到Magisk。但是你又不能停用这个模块，停用它你就更加隐藏不了root。</p>
 <p>关于“隐藏系统root”这个模块的作用，我发现许多人对这个模块的作用存在很大误解。</p>
@@ -755,12 +757,16 @@
 <p>怎么排查是哪个面具模块引起Momo找到Magisk呢？我建议停用除“SHamiko”以外的所有模块，即“SHamiko”模块你不要停用，其余模块全部停用。PS:停用的面具模块，主要包括字体模块、桌面模块、调节音质、优化触控、停用温控、开启高刷、调整扬声器马达、开启快充等等这一类优化模块。</p>
 <p>停用后重启手机打开Momo再看看，如果停用面具模块解决了Momo找到Magisk的问题，那么我建议大家重新启用面具模块时，一个一个或者两个两个来启用。每启用一个或者两个，就重启下手机打开Momo再看看。直到Momo再次提示找到Magisk，就可以知道是哪个模块引起的了。知道是哪个模块引起的，就把哪个模块移除不用就行了。</p>
 </details>
-<details class="help"><summary><strong>Momo提示找到二进制文件“su”解决方法</strong></summary><p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，特定用户也安装了“隐藏系统root”模块，打开Momo还是提示找到二进制文件“su”。</p>
+<details class="help">
+<summary><strong>Momo提示找到二进制文件“su”解决方法</strong></summary>
+<p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，特定用户也安装了“隐藏系统root”模块，打开Momo还是提示找到二进制文件“su”。</p>
 <p><strong>解决方法</strong>
 我建议停用除“SHamiko”以外的所有模块，即“SHamiko”模块你不要停用，剩余模块全部停用。如果你是安装了“隐藏系统root”模块的特定用户，那么你就停用除“隐藏系统root、SHamiko”以外的所有模块。即这两个SHamiko模块和隐藏系统root模块你不要停用，剩余模块全部停用。</p>
 <p>停用后重启手机打开Momo再看看，如果停用面具模块解决了Momo找到二进制文件“su”的问题，那么我建议大家重新启用面具模块时，一个一个或者两个两个来启用。每启用一个或者两个，就重启下手机打开Momo再看看。直到Momo再次提示找到二进制文件“su”，就可以知道是哪个模块引起的了。知道是哪个模块引起的，就把哪个模块移除不用就行了。</p>
 </details>
-<details class="help"><summary><strong>Momo提示找到Zygisk的解决方法</strong></summary><p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Zygisk。</p>
+<details class="help">
+<summary><strong>Momo提示找到Zygisk的解决方法</strong></summary>
+<p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Zygisk。</p>
 <p><strong>解决方法</strong>
 如果你隐藏应用列表的生效应用里选择了Momo，那么你应该取消对Momo的隐藏。Momo不会检测应用列表，你对Momo隐藏应用列表反而会导致Momo检测到Zygisk。</p>
 <p>如果隐藏应用列表生效应用里没选择Momo，Momo还是提示发现Zygisk。那么一般可能是因为面具版本太低或者Shamiko版本太低，总之发现Zygisk这个不太好解决。有时候你升级Momo版本，(升级后的Momo)就有可能发现Zygisk；或者你升级面具版本，也有可能导致Momo发现Zygisk。</p>
@@ -769,7 +775,9 @@
 </blockquote>
 <p>启用“Shamiko”白名单模式后，你手机里安装的所有应用(也包括系统应用)都检测不到root了。你不用再像第(一)期教程中的那样，想对哪个应用隐藏root，还必须得在面具排除列表勾选哪个应用才行。启用白名单模式后，你可以跟排除列表繁琐的勾选步骤说再见了，不用再去配置排除列表了。</p>
 </details>
-<details class="help"><summary>还不行？停用部分面具模块</summary><p>适用场景：
+<details class="help">
+<summary>还不行？停用部分面具模块</summary>
+<p>适用场景：
 也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
 <p>原因分析：这种情况不是因为“Shamiko”模块失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
 </details>
