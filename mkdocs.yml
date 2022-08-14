@@ -1,0 +1,33 @@
+site_name: IdontKnowRoot
+site_url: https://root.dianas.cyou/
+nav:
+    - 前言: index.md
+    - 准备: prepare.md
+    - 刷机: root.md
+    - 优化: better.md
+    - 关于: about.md
+theme:
+  name: material
+  language: zh
+  logo: logo.png
+  palette:
+    primary: indigo
+
+markdown_extensions:
+  - tables
+  - attr_list
+  - footnotes
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+
+extra:
+  social:
+    - icon: fontawesome/brands/telegram
+      link: https://t.me/gjzsr
+plugins:
+  - git-authors
+
+repo_url: https://github.com/sudoskys/Root
+
+copyright: Copyright &copy; 集体所有，商用需申请所有作者
