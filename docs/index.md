@@ -19,7 +19,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 你也可以在 [这里](https://github.com/sudoskys/Root/) 看到这篇教程
 
-你可以在 [这里](https://push.dianas.cyou/LIS/Share/Root/) 下载相关文件包。
+你可以在 [这里](https://push.dianas.cyou/LIS/Share/Root/) 下载相关文件包(如果因为不允许陌生域名跳转打不开，请复制链接再粘贴访问)。
 工具包备份分流地址如下
 
 - 暂无
