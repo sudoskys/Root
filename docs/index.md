@@ -24,13 +24,14 @@ Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，
 
 - 暂无
 
-你可以在以下平台获取相关若有若无的支持
+在操作过程中，你可以在以下平台获取相关支持
 
-- https://kamiui.ml/E52shuaji/
-- https://orangefox.download/zh-CN
-- https://mi.fiime.cn
-- https://twrp.me/Devices
-
+- 分享站 https://kamiui.ml/E52shuaji/
+- 橘色小狐狸官网 https://orangefox.download/zh-CN
+- 还可以的论坛 https://mi.fiime.cn
+- Twrp官方 https://twrp.me/Devices
+- 小米Rom下载站？ http://xiaomirom.com
+- XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
 
 ##  **文档结构**
 
