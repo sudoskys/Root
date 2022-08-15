@@ -277,7 +277,7 @@ Win7 或以上电脑一台，能传输文件的数据线一条（**最好是原�
 
 那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。
 
-备份文件下载链接 [pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw](http://pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw) 提取码:vo15 ，或者我打包的文件中[^1],文件来自[^15]
+备份文件下载链接 [作者给出](http://pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw) 提取码:`vo15` ，或者我打包的文件中[^1],文件来自[^15]。或者使用[蓝奏云](https://miao202.lanzouj.com/i9pJX09kzq8j)
 
 **高通机型备份字库**
 
