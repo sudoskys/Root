@@ -29,10 +29,10 @@ extra:
 plugins:
   - git-authors
   - git-revision-date-localized:
+      type: date
       enable_creation_date: true
       fallback_to_build_date: true
-  - git-committers:
-      repository: sudoskys/Root
+
 
 repo_url: https://github.com/sudoskys/Root
 edit_uri: edit/main/docs/
