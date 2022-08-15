@@ -4,7 +4,17 @@
 
 Magisk 模块仓库在很早就被官方移除，面具只能通过 zip 文件刷入模块，而 Lsposed 可以通过安装 APP 来启动模块（而不需要重启）。
 
+## 模块仓库？
 
+- https://magisk.suchenqaq.club/
+- https://kamiui.ml/E52shuaji/
+
+!!! danger
+    安装模块必须审计模块脚本！如果你不会 sh ，那么请确保你是从可靠信源下载的。
+    模块的文件地址`/sbin/.magisk/img`
+
+
+推荐先装一个救砖模块: 
 ## 模块安装方法
 
 
@@ -26,7 +36,7 @@ Magisk 模块仓库在很早就被官方移除，面具只能通过 zip 文件�
 默认情况下，`update-binary` 将检查/设置环境，加载使用的脚本，将模块安装程序的zip解压缩到将要安装模块的位置，最后执行一些琐碎的任务和清理工作，这些工作和清理应满足大多数简单模块的需求。
 
 
-### BusyBox[27^]
+### BusyBox[^27]
 
 Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支持)。可执行文件位于/data/adb/magisk/busybox。Magisk的BusyBox支持运行时切换“ASH独立Shell模式”。这种独立模式意味着，当在BusyBox的灰壳中运行时，每个单独的命令将直接使用BusyBox中的applet，而不管什么被设置为PATH。例如，像ls, rm, chmod这样的命令不会使用PATH中的内容(在Android的情况下，默认是/system/bin/ls， /system/bin/rm，和/system/bin/chmod)，而是直接调用内部的BusyBox小程序。这可以确保脚本始终运行在可预测的环境中，并且无论运行在哪个Android版本上都始终拥有完整的命令套件。要强制命令不使用BusyBox，您必须调用具有完整路径的可执行文件。
 
@@ -45,7 +55,7 @@ Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支�
 为了确保所有随后执行的 sh shell 也在独立模式下运行，选项1是首选方法(Magisk 和 Magisk 应用程序内部使用的方法) ，因为环境变量被继承到子进程。
 
 
-### 文件结构[24^]
+### 文件结构[^24]
 
 ```
 module.zip
@@ -83,7 +93,7 @@ updateJson=<url> (optional)
     ID的命名是有限制的，很多酷友模块卸载不了，还在模块界面显示问号，很难受。。。就是这个原因导致的。咱看一下magisk的说明:
     ID必须匹配这个正则表达式：^[a-zA-Z][a-zA-Z0-9\._-]+$。
     ✗ a module，✗ 1_module，✗ -a-module
-    不要使用中文及中文字符，不然就会发生卸载不了的情况。如果卸载不了的，也可以手动到/sbin/.magisk/img文件夹找到相应模块删除。
+    不要使用中文及中文字符，不然就会发生卸载不了的情况。如果卸载不了的，也可以手动到`/sbin/.magisk/img`文件夹找到相应模块删除。
 
 **versionCode** 必须是一个 integer 整数，用于比较版本。
 
@@ -290,6 +300,10 @@ service myservice ${MAGISKTMP}/myscript.sh
     oneshot
 ```
 
-[24^]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
-[25^]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
-[27^]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
+## 特典:ClashForMagisk
+
+刷入此包即可:[Clash养老版,自带说明](https://t.me/nanie1/48)
+
+[^24]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
+[^25]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
+[^27]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html

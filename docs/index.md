@@ -37,7 +37,7 @@ Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，
 
 本教程仅供参考，阅读者**需要自己承担因尝试解锁导致的后果**。
 
-如果你对自己的动手能力感到怀疑，可以选择付费请人！**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。最好使用 Win10 ，避免驱动问题**
+如果你对自己的动手能力感到怀疑，可以选择付费请人！**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。最好使用 Win10 ，避免驱动问题** 
 
 
 **刷机大概有几种方法：** rec，fastboot，fastbootd，9008，mtk端口。
@@ -119,7 +119,7 @@ Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，
 
 [^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626
 
-[24^]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
-[25^]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
-[26^]:MagiskInstallation https://topjohnwu.github.io/Magisk/install.html
-[27^]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
+[^24]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
+[^25]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
+[^26]:MagiskInstallation https://topjohnwu.github.io/Magisk/install.html
+[^27]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
