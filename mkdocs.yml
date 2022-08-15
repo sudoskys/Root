@@ -13,7 +13,11 @@ theme:
   # logo: https://github.com/sudoskys/Root/raw/main/logo.png
   palette:
     primary: indigo
-
+  features:
+    - navigation.tabs
+    - navigation.indexes
+    - navigation.top
+    - navigation.instant
 markdown_extensions:
   - tables
   - attr_list
@@ -32,6 +36,7 @@ plugins:
       type: date
       enable_creation_date: true
       fallback_to_build_date: true
+  - search
 
 
 repo_url: https://github.com/sudoskys/Root
