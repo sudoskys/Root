@@ -15,7 +15,8 @@ theme:
     primary: indigo
   features:
     - navigation.tabs
-    # - navigation.indexes
+    - toc.integrate
+    #- navigation.indexes
     - navigation.top
     - navigation.instant
 markdown_extensions:
@@ -30,6 +31,8 @@ extra:
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/gjzsr
+
+
 plugins:
   - git-authors
   - git-revision-date-localized:
