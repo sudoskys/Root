@@ -4,6 +4,13 @@
 
 然后在 [Magisk仓库](https://github.com/topjohnwu/Magisk/releases/latest/) 安装最新版本的 Magisk，如果不能下载请复制Github的 apk 链接请填入[镜像站](https://ghproxy.com/) 下载
 
+
+## 我的手机能 Root 吗？
+
+第一看手机能不能解锁Bl,第二看你是否有全量包或者对应的第三方Recovery.
+
+如果不是很小众，端口什么的也没有封锁(需要手动验证),大部分手机都可以 Root.
+
 ## 了解术语[^17]
 
 **双清:** Dalvik/ART Cache Cache 其目的就是清除分区以及数据，简称重置手机。
