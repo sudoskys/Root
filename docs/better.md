@@ -405,6 +405,18 @@ PS：大家还记得我这篇教程第二部分讲的内容吗？当你开启“
 
 但是可以隐藏你的模块应用，隐藏 LSPosed 相关特征.
 
+
+## 安装 LSPosed
+
+面具设置中开启 Zygisk（riru已经停止维护）
+如果你使用Zygisk，那么Riru就无法使用。
+
+Lsposed已经推出了Zygisk版本。Zygisk模式下用Shamiko模块的白名单模式。
+
+你可以在[这里](https://github.com/LSPosed/LSPosed/releases/latest)下载安装 zygisk 版本的 LSPosed 并刷入它，LSPosed 自带仓库。
+
+刷入教程看下一节。
+
 [^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626
 
 [^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk.com/feed/37950576)
