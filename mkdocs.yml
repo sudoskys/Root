@@ -15,7 +15,7 @@ theme:
     primary: indigo
   features:
     - navigation.tabs
-    - navigation.indexes
+    # - navigation.indexes
     - navigation.top
     - navigation.instant
 markdown_extensions:
@@ -33,7 +33,7 @@ extra:
 plugins:
   - git-authors
   - git-revision-date-localized:
-      type: date
+      type: datetime
       enable_creation_date: true
       fallback_to_build_date: true
   - search
