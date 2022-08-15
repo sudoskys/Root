@@ -268,7 +268,9 @@ REPLACE="
 - 与不存在的文件对应的文件将被忽略
 - 为了在自定义`*.rc`脚本中引用其他文件, 请在`overlay.d/sbin`中添加其他文件。上面的3条规则不适用于此特定文件夹中的所有内容，因为它们将被直接复制到 Magisk 的内部tmpfs目录(该目录始终位于 `/sbin`)。
 
-由于Android 11中的更改​​，不再保证`/sbin` 文件夹存在。这种情况下，Magisk会随机生成`tmpfs`文件夹。在你的`*.rc`脚本中所有的`${MAGISKTMP}`会在`magiskinit`注入到`init.rc`中时，被`Magisk tmpfs`文件夹替换。**这也可以在Android 11之前的设备上使用**，因为在这种情况下`${MAGISKTMP}`将简单地被替换为`/sbin`，因此最佳实践是在引用其他文件时，不要在*.rc脚本中编码`/sbin`。
+由于Android 11中的更改​​，不再保证`/sbin` 文件夹存在。这种情况下，Magisk会随机生成`tmpfs`文件夹。在你的`*.rc`脚本中所有的`${MAGISKTMP}`会在`magiskinit`注入到`init.rc`中时，被`Magisk tmpfs`文件夹替换。
+
+**这也可以在Android 11之前的设备上使用**，因为在这种情况下`${MAGISKTMP}`将简单地被替换为`/sbin`，因此最佳实践是在引用其他文件时，不要在*.rc脚本中编码`/sbin`。
 
 下面是一个如何使用自定义`*.rc`脚本设置`overlay.d`的示例:
 
