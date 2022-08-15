@@ -19,7 +19,8 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 你也可以在 [这里](https://github.com/sudoskys/Root/) 看到这篇教程
 
-你可以在 [这里](https://push.dianas.cyou/LIS/Share/Root/) 下载相关文件包。
+你可以在 [这里](https://push.dianas.cyou/LIS/Share/Root/) 下载相关文件包
+
 工具包备份分流地址如下
 
 - 暂无
@@ -28,6 +29,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 - 分享站 https://kamiui.ml/E52shuaji/
 - 橘色小狐狸官网 https://orangefox.download/zh-CN
+- 搞机助手 https://gjzsr.com/
 - 还可以的论坛 https://mi.fiime.cn
 - Twrp官方 https://twrp.me/Devices
 - 小米Rom下载站？ http://xiaomirom.com
