@@ -126,4 +126,6 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 [^26]:MagiskInstallation https://topjohnwu.github.io/Magisk/install.html
 [^27]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
 [^28]:联发科不建议玩机 https://www.coolapk.com/feed/37080982
-[^29]:Root升级系统 https://www.coolapk.com/feed/37080982
+[^29]:Root升级系统 https://www.coolapk.com/feed/34860331
+[^30]:简单认识手机各个分区 https://www.coolapk.com/feed/38367093
+[^31]:手动给予安卓应用root权限的方法 https://www.coolapk.com/feed/37543497

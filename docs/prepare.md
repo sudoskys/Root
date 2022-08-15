@@ -41,6 +41,73 @@ MTK和高通是生产手机CPU的厂家。MTK平台和高通平台指的是这�
     （补充1，由于联发科设备 fastboot boot 命令是暴毙的，所以临时启动 twrp 是做不到的，只能通过直接 fastboot flash 刷入分区来使用，因此大大增加了暴毙的几率。）
     （补充2，也由于 GKI2.0 的原因，整个 boot 分区只有 kernel，所以理论上为其编译内核只需要使用 android common kernel 合入 mtk 专有 gki 部分，就可以正常开机了）
 
+**手机分区**
+
+内容来自[^30]
+
+- boot
+
+引导分区：顾名思义，一个引导进入系统的分区，包含Android的kernel（内核）和ramdisk（内存盘）。我们日常启动Android系统，就是通过启动boot分区的kernel并加载ramdisk，完成内核启动，进入系统。
+
+一旦引导分区遭到不当改动，手机通常无法进入系统，主要表现为，无限重启，卡fastboot，卡第一屏等。
+
+- system
+
+组合体,system分区遭到损坏，手机就无法正常开机。
+
+- data&userdata
+
+用户数据分区：用户所有的数据都包含在这个分区当中，也包括内部存储中的数据。
+
+- persist
+
+保存着用于FRP（factory reset protect）机制的一些信息，例如账号，密码等重要信息。
+
+而且还包含DRM（数字版权管理）相关文件，传感器注册表，对我们的wifi，蓝牙，mac地址来说必不可少。
+
+!!! info
+    恢复出厂设置并不能清空persist分区，另外线刷包不包含persist分区，一旦出问题我们需要动手修复。
+
+- modem&radio
+
+基带分区,控制手机通讯功能的分区，此分区一旦损坏，通讯相关功能大概率会寄寄，具体表现为不读卡，丢失imei等。
+
+!!! help
+    Qualcomm（高通）基带分区：fsg、fsc、modemst1、modemst2 可选分区dsp、bluetooth、modem、persist、sec
+
+    Mediatek（MTK）基带分区：nvcfg、nvdata、persist、protect1、protect2、seccfg、nvram分区
+
+    路径：/dev/block/bootdevice/by-name/
+    /dev/block/platform/bootdevice/by-name/
+
+- vbmeta
+
+AVB/DM启动验证分区，主要是为了防止启动镜像（boot.img）被篡改。vbmeta启动效验通常导致MTK机型刷入magisk或者三方Recovery后陷入无限重启的情况。可以去掉验证，面具中也有选项。
+
+```sh
+fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img 
+```
+
+- recovery
+
+备用引导分区，在boot分区（主引导分区）损坏后，仍可以进入rec分区进行系统的备份和恢复，发挥着相当于电脑pe的作用。
+
+- misc
+
+一个非常小的分区，4 MB左右。
+这个分区供 recovery 来保存一些关于升级的信息，应对升级过程中的设备掉电重启的状况。
+
+- cache
+
+安卓系统缓存分区，清除此分区不会影响个人数据，缓存将会在日用中重新生成。
+
+- dtbo
+
+控制屏幕刷新率和频率的分区，变更前记得先备份，否则得不偿失。
+
+- splash&logo
+
+存储着安卓开机第一屏图片，fastboot模式下图片，及系统损坏图片等。
 
 
 **A/B分区**
@@ -372,4 +439,5 @@ Win7 或以上电脑一台，能传输文件的数据线一条（**最好是原�
 [^3]:[Android 玩家必备神器入门：从零开始安装 Magisk - 少数派 (sspai.com)](https://sspai.com/post/67932)
 [^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538)
 [^17]:常识基础 [https://mi.fiime.cn/tutorial](https://mi.fiime.cn/tutorial)
-[^28]:https://www.coolapk.com/feed/37080982
+[^28]:联发科不建议玩机 https://www.coolapk.com/feed/37080982
+[^30]:简单认识手机各个分区 https://www.coolapk.com/feed/38367093
