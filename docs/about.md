@@ -2,7 +2,6 @@
 ## 社区
 
 
-[Fiime :fontawesome-solid-paper-plane:](https://fiime.cn/){ .md-button }
 
 [Fiime](https://fiime.cn/)
 
