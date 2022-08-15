@@ -442,8 +442,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#7" class="md-nav__link">
-    安全验证^7
+  <a href="#_4" class="md-nav__link">
+    安全验证
   </a>
   
 </li>
@@ -502,8 +502,8 @@
 <p><a href="https://github.com/Xposed-Modules-Repo">Xposed-Modules-Repo</a></p>
 <p><a href="https://t.me/s/LSPosed">LSPosed</a></p>
 <p>下载模块后，在面具的设置中开启 Zygsik，同时在模块中从本地安装 LSposed。重启设备，桌面就新增 LSPosed 的APP。</p>
-<h2 id="7">安全验证^7</h2>
-<p>Google 那边已经给开发者提供了一个基于 SafetyNet 认证的反盗版功能（anti-piracy feature），开发者如果使用这套机制，那么已经 root、无法通过 SafetyNet 认证的设备就没办法在 Play 商店搜索、下载和更新对应的 App。</p>
+<h2 id="_4">安全验证</h2>
+<p>Google 那边已经给开发者提供了一个基于 SafetyNet 认证的反盗版功能（anti-piracy feature），开发者如果使用这套机制，那么已经 root、无法通过 SafetyNet 认证的设备就没办法在 Play 商店搜索、下载和更新对应的 App。<sup id="fnref:7"><a class="footnote-ref" href="#fn:7">1</a></sup></p>
 <p>SafetyNet 是 Google 移动服务套件的功能，这意味着，只有装有 GMS 并且应用调用了相关接口的情况下，我们才需要通过 SafetyNet 验证。逃避国内应用的 root 检测大部分情况下并不需要通过 SafetyNet 认证，只要使模块和 Magisk 不对这些应用生效即可，无需在意 SafetyNet 结果。</p>
 <p>推荐 <a href="https://play.google.com/store/apps/details?id=rikka.safetynetchecker">YASNAC</a>。下载此软件，然后进行一次测试，我们便知道自己的设备是否启用了基于硬件的安全验证。</p>
 <p>留意 <code>evaluationType</code> 一项的结果，根据前文的解释，若此结果为 <code>basic</code>，则意味着没有启用基于硬件的安全验证，若此结果为 <code>hardware</code>，则增强安全验证已经启用。</p>
@@ -512,19 +512,27 @@
 <p>Zygisk模式下用Shamiko模块的白名单模式，真的是yyds。就是默认全局对所有应用隐藏Root，除了超级用户授权过的应用可以获得Root权限，其他新装软件都完全请求不到和检测到Root，配置教程请读：</p>
 <p><a href="https://www.coolapk.com/feed/37950576">图文分享</a></p>
 <p>附：</p>
-<p><a href="https://play.google.com/store/apps/details?id=rikka.safetynetchecker"></a></p>
+<p><a href="https://play.google.com/store/apps/details?id=rikka.safetynetchecker">SafeNet通过性检查</a></p>
 <p><a href="https://shizuku.rikka.app/zh-hans/">Shizuku</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:7">
+<p><a href="https://sspai.com/post/69945">Android 玩机「神器」的矛盾与新生：Magisk Canary 更新详解 - 少数派 (sspai.com)</a>&#160;<a class="footnote-backref" href="#fnref:7" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 07:59:31</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 08:01:13</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 07:59:31</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 15, 2022 08:01:13</span>
       
     
   </small>
