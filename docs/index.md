@@ -1,7 +1,7 @@
 # 前言
 
 
-Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，致力于给予小白全详细的刷机起步指导，不必因为教程老旧，描述不清而发愁。
+Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全详细的刷机起步指导，不必因为教程老旧，描述不清而发愁。
 
 
 如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
