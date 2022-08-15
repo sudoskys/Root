@@ -29,6 +29,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 - 分享站 https://kamiui.ml/E52shuaji/
 - 橘色小狐狸官网 https://orangefox.download/zh-CN
+- 搞机助手 https://gjzsr.com/
 - 还可以的论坛 https://mi.fiime.cn
 - Twrp官方 https://twrp.me/Devices
 - 小米Rom下载站？ http://xiaomirom.com
