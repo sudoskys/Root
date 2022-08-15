@@ -318,6 +318,10 @@ Win7 或以上电脑一台，能传输文件的数据线一条（**最好是原�
 
 解压工具包，你会看到 adb 和 fastboot ，这是我们针对 Android 设备进行高级调试和安装的工具。
 
+如果你不想配置ADB全局环境的话，以后执行 Adb 命令需要在工具目录下，按住 Shift 右键鼠标打开终端，命令替换为`.\adb`或者`.\fastboot`，如果需要配置全局环境，请按照[这篇文档](https://www.sunzn.com/2018/08/02/Windows-10-%E4%B8%8B%E9%85%8D%E7%BD%AE-ADB-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/)配置。
+
+Linux 需要使用其自带包管理器安装 `android-platform-tools`
+
 !!! tip "提示[^3]"
     如果你已经安装了 [choco](https://chocolatey.org/) 或 [homebrew](https://brew.sh/) 等包管理工具的话，Windows 输入`choco install adb universal adb-drivers -y`，Mac 输入 `brew install android-platform-tools`能最方便的完成 adb 和 fastboot 的配置。Windows 用户可以参照  [Windows 操作系统下的 ADB 环境配置](https://sspai.com/post/40471) 这篇文章；macOS 用户可以尝试  [此脚本](https://github.com/corbindavenport/nexus-tools) 或是参考 [使用 Mac 为 Android 手机刷原生系统](https://sspai.com/post/38535) 进行手动配置。最后最最不济，可以尝试在 Google  [开发者页面](https://developer.android.com/studio/releases/platform-tools?hl=zh-cn) 下载对应 adb 包，解压后在对应的目录下执行指令亦可，或者是尝试 [WebADB](https://app.webadb.com/#/) 或  [adb 在线执行器](https://adb.http.gs/) 这样的在线 adb 工具，比较考验浏览器的兼容性。
 
