@@ -3,7 +3,7 @@
 # Root？
 
 
-本文的在线文档站点(持续更新)在 [这里](https://root.dianas.cyou/)
+本文的**在线文档站点**(持续更新,欢迎贡献)在 [这里](https://root.dianas.cyou/)
 
 
 本文的PDF版本在 [这里](https://github.com/sudoskys/Root/)

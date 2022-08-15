@@ -115,4 +115,4 @@ Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，
 
 [^22]:**高通9008线刷救黑砖教程** [https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
 
-
+[^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626

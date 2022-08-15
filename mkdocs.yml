@@ -29,5 +29,6 @@ plugins:
   - git-authors
 
 repo_url: https://github.com/sudoskys/Root
+edit_uri: edit/main/docs/
 
 copyright: Copyright &copy; 集体所有，商用需申请所有作者

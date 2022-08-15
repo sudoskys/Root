@@ -72,50 +72,5 @@ Zygisk模式下用Shamiko模块的白名单模式，真的是yyds。就是默认
 
 [Shizuku](https://shizuku.rikka.app/zh-hans/)
 
-### 附录
-
-[^1]:**所需资料打包**<https://push.dianas.cyou/LIS/Share/Root/>
-
-[^2]: ****root、刷rec、rom通用教程<****[sudo0m.github.io/2022/05/29/root、刷rec、rom通用教程/](http://sudo0m.github.io/2022/05/29/root%E3%80%81%E5%88%B7rec%E3%80%81rom%E9%80%9A%E7%94%A8%E6%95%99%E7%A8%8B/)****>****
-
-[^3]:[Android 玩家必备神器入门：从零开始安装 Magisk - 少数派 (sspai.com)](https://sspai.com/post/67932)
-
-[^4]:Magisk官方教程<[https://topjohnwu.github.io/Magisk/](https://topjohnwu.github.io/Magisk/)>
-
-[^5]:Magisk官方论坛<[https://forum.xda-developers.com/f/magisk.5903/](https://forum.xda-developers.com/f/magisk.5903/)>
-
-[^6]:[每个 Android 玩家都不可错过的神器（一）：Magisk 初识与安装 - 少数派 (sspai.com)](https://sspai.com/post/53043)
-
-[^7]:[Android 玩机「神器」的矛盾与新生：Magisk Canary 更新详解 - 少数派 (sspai.com)](https://sspai.com/post/69945)
-
-[^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk.com/feed/37950576)
-
-[^9]:**酷安MiaoHan 的专栏** [https://www.coolapk.com/feed/32286938](https://www.coolapk.com/feed/32286938)
-
-[^10]:[APKMirror - Free APK Downloads - Free and safe Android APK downloads](https://www.apkmirror.com/)
-
-[^11]:[Clash For Magisk简介 - CFM (adlyq.ml)](https://docs.adlyq.ml/)
-
-[^12]:****小米手機各種刷機方式的疑問?**** [https://www.mobile01.com/topicdetail.php?f=634&t=3725269](https://www.mobile01.com/topicdetail.php?f=634&t=3725269)
-
-[^13]:****[通过 ADB 给手机刷入第三方 Recovery](https://blog.linioi.com/posts/8/)**** 
-
-[^14]:****小米如何刷入第三方Recovery**** [https://zhuanlan.zhihu.com/p/428730333](https://zhuanlan.zhihu.com/p/428730333)
-
-[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538)
-
-[^16]:酷安Rannki原创 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538?shareKey=NWMzMGQxYTU4OWMwNWZlNzJjZTc~&shareUid=1294855&shareFrom=com.coolapk.market_10.5.3)
-
-[^17]:常识基础 [https://mi.fiime.cn/tutorial](https://mi.fiime.cn/tutorial)
-
-[^18]:**刷入原生ROM的通用教程等教程** [https://fiime.cn/thread/359](https://fiime.cn/thread/359)
-
-[^19]:****[Violet 机型 PE/Plus 刷入教程](https://blog.linioi.com/posts/10/)****
-
-[^20]:****[如何在 Redmi Note 7 Pro 上刷机？](https://blog.linioi.com/posts/11/)****
-
-[^21]:[https://wiki.pchelper666.com/底层刷机教程](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
-
-[^22]:**高通9008线刷救黑砖教程** [https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
 
 
