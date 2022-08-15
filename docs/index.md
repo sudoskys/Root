@@ -125,3 +125,5 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 [^25]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
 [^26]:MagiskInstallation https://topjohnwu.github.io/Magisk/install.html
 [^27]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
+[^28]:联发科不建议玩机 https://www.coolapk.com/feed/37080982
+[^29]:Root升级系统 https://www.coolapk.com/feed/37080982
