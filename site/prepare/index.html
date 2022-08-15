@@ -612,6 +612,68 @@
 （补充1，由于联发科设备 fastboot boot 命令是暴毙的，所以临时启动 twrp 是做不到的，只能通过直接 fastboot flash 刷入分区来使用，因此大大增加了暴毙的几率。）
 （补充2，也由于 GKI2.0 的原因，整个 boot 分区只有 kernel，所以理论上为其编译内核只需要使用 android common kernel 合入 mtk 专有 gki 部分，就可以正常开机了）</p>
 </div>
+<p><strong>手机分区</strong></p>
+<p>内容来自<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">6</a></sup></p>
+<ul>
+<li>boot</li>
+</ul>
+<p>引导分区：顾名思义，一个引导进入系统的分区，包含Android的kernel（内核）和ramdisk（内存盘）。我们日常启动Android系统，就是通过启动boot分区的kernel并加载ramdisk，完成内核启动，进入系统。</p>
+<p>一旦引导分区遭到不当改动，手机通常无法进入系统，主要表现为，无限重启，卡fastboot，卡第一屏等。</p>
+<ul>
+<li>system</li>
+</ul>
+<p>组合体,system分区遭到损坏，手机就无法正常开机。</p>
+<ul>
+<li>data&amp;userdata</li>
+</ul>
+<p>用户数据分区：用户所有的数据都包含在这个分区当中，也包括内部存储中的数据。</p>
+<ul>
+<li>persist</li>
+</ul>
+<p>保存着用于FRP（factory reset protect）机制的一些信息，例如账号，密码等重要信息。</p>
+<p>而且还包含DRM（数字版权管理）相关文件，传感器注册表，对我们的wifi，蓝牙，mac地址来说必不可少。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>恢复出厂设置并不能清空persist分区，另外线刷包不包含persist分区，一旦出问题我们需要动手修复。</p>
+</div>
+<ul>
+<li>modem&amp;radio</li>
+</ul>
+<p>基带分区,控制手机通讯功能的分区，此分区一旦损坏，通讯相关功能大概率会寄寄，具体表现为不读卡，丢失imei等。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>Qualcomm（高通）基带分区：fsg、fsc、modemst1、modemst2 可选分区dsp、bluetooth、modem、persist、sec</p>
+<p>Mediatek（MTK）基带分区：nvcfg、nvdata、persist、protect1、protect2、seccfg、nvram分区</p>
+<p>路径：/dev/block/bootdevice/by-name/
+/dev/block/platform/bootdevice/by-name/</p>
+</div>
+<ul>
+<li>vbmeta</li>
+</ul>
+<p>AVB/DM启动验证分区，主要是为了防止启动镜像（boot.img）被篡改。vbmeta启动效验通常导致MTK机型刷入magisk或者三方Recovery后陷入无限重启的情况。可以去掉验证，面具中也有选项。</p>
+<div class="highlight"><pre><span></span><code>fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img 
+</code></pre></div>
+<ul>
+<li>recovery</li>
+</ul>
+<p>备用引导分区，在boot分区（主引导分区）损坏后，仍可以进入rec分区进行系统的备份和恢复，发挥着相当于电脑pe的作用。</p>
+<ul>
+<li>misc</li>
+</ul>
+<p>一个非常小的分区，4 MB左右。
+这个分区供 recovery 来保存一些关于升级的信息，应对升级过程中的设备掉电重启的状况。</p>
+<ul>
+<li>cache</li>
+</ul>
+<p>安卓系统缓存分区，清除此分区不会影响个人数据，缓存将会在日用中重新生成。</p>
+<ul>
+<li>dtbo</li>
+</ul>
+<p>控制屏幕刷新率和频率的分区，变更前记得先备份，否则得不偿失。</p>
+<ul>
+<li>splash&amp;logo</li>
+</ul>
+<p>存储着安卓开机第一屏图片，fastboot模式下图片，及系统损坏图片等。</p>
 <p><strong>A/B分区</strong></p>
 <p>Android从7.0开始引入新的OTA升级方式，A/B System Updates，这里将其叫做A/B系统。顾名思义，A/B系统就是设备上有A和B两套可以工作的系统（用户数据只有一份，为两套系统共用），简单来讲，可以理解为一套系统分区，另外一套为备份分区。其系统版本可能一样；也可能不一样，其中一个是新版本，另外一个旧版本，通过升级，将旧版本也更新为新版本。当然，设备出厂时这两套系统肯定是一样的。之所以叫套，而不是个，是因为Android系统不是由一个分区组成，其系统包括boot分区的kernel和ramdisk，system和vendor分区的应用程序和库文件，以及userdata分区的数据</p>
 <p>A/B系统实现了无缝升级(seamless updates)，有以下特点：出厂时设备上有两套可以正常工作的系统，升级时确保设备上始终有一个可以工作的系统，减少设备变砖的可能性，方便维修和售后。</p>
@@ -816,7 +878,10 @@
 <p>常识基础 <a href="https://mi.fiime.cn/tutorial">https://mi.fiime.cn/tutorial</a>&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:28">
-<p>https://www.coolapk.com/feed/37080982&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>联发科不建议玩机 https://www.coolapk.com/feed/37080982&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
+<li id="fn:30">
+<p>简单认识手机各个分区 https://www.coolapk.com/feed/38367093&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
