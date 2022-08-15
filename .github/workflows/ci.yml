@@ -23,12 +23,12 @@ jobs:
         run: |
           sudo timedatectl set-timezone Asia/Shanghai
           git config --global user.email emails
-          git config --global user.name sudoskys
+          git config --global user.name GithubActionBot
           datime=$(date "+%Y年%m月%d日 %H:%M")
-          echo "git commit: 上传于 $datime"
+          echo "git commit: push something, $datime"
           if [ -n "$(git status -s)" ];then
               git add .
-              git commit -m "上传于 $datime" -a
+              git commit -m "make:action push $datime" -a
           fi
       - name: Push changes
         uses: ad-m/github-push-action@master

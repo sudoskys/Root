@@ -6,6 +6,7 @@ Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，
 
 如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
 
+你可以点击右上角来对文档提出修改，或者使用 [GithubDev](https://github.dev/sudoskys/Root)
 
 >本站大多数资料都是综合收集来的，不许商用，需要商用请和引用页内的源取得授权
 
