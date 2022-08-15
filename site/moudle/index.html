@@ -522,8 +522,9 @@
 <p><code>updater-script</code>  此文件应仅包含字符串<code>#MAGISK</code></p>
 <p>默认情况下，<code>update-binary</code> 将检查/设置环境，加载使用的脚本，将模块安装程序的zip解压缩到将要安装模块的位置，最后执行一些琐碎的任务和清理工作，这些工作和清理应满足大多数简单模块的需求。</p>
 <h3 id="busybox3">BusyBox<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">3</a></sup></h3>
-<p>Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支持)。可执行文件位于/data/adb/magisk/busybox。Magisk的BusyBox支持运行时切换“ASH独立Shell模式”。这种独立模式意味着，当在BusyBox的灰壳中运行时，每个单独的命令将直接使用BusyBox中的applet，而不管什么被设置为PATH。例如，像ls, rm, chmod这样的命令不会使用PATH中的内容(在Android的情况下，默认是/system/bin/ls， /system/bin/rm，和/system/bin/chmod)，而是直接调用内部的BusyBox小程序。这可以确保脚本始终运行在可预测的环境中，并且无论运行在哪个Android版本上都始终拥有完整的命令套件。要强制命令不使用BusyBox，您必须调用具有完整路径的可执行文件。</p>
-<p>在 Magisk 上下文中运行的每个 shell 脚本都将在 BusyBox 的 ash shell 中执行，并启用独立模式。对于与第三方开发人员相关的内容，这包括所有引导脚本和模块安装脚本。</p>
+<p>Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支持)。可执行文件位于<code>/data/adb/magisk/busybox</code>。</p>
+<p>Magisk的 BusyBox 支持运行时切换“ASH独立Shell模式”。这种独立模式意味着，当在BusyBox的灰壳中运行时，每个单独的命令将直接使用 BusyBox 中的 applet，而不管什么被设置为PATH。例如，像ls, rm, chmod这样的命令不会使用 PATH 中的内容(在Android的情况下，默认是<code>/system/bin/ls</code>， <code>/system/bin/rm</code>，和<code>/system/bin/chmod</code>)，而是直接调用内部的BusyBox小程序。这可以确保脚本始终运行在可预测的环境中，并且无论运行在哪个 Android 版本上都始终拥有完整的命令套件。要强制命令不使用BusyBox，您必须调用具有完整路径的可执行文件。</p>
+<p>在 Magisk 上下文中运行的每个 shell 脚本都将在 BusyBox 的 <code>ash shell</code> 中执行，并启用独立模式。对于与第三方开发人员相关的内容，这包括所有引导脚本和模块安装脚本。</p>
 <p>如果你想在 Magisk 以外的地方使用这个“独立模式”功能，有两种方法可以实现:</p>
 <ol>
 <li>准备环境变量 ASH_STANDALONE  1</li>
@@ -600,17 +601,19 @@ ID必须匹配这个正则表达式：^[a-zA-Z][a-zA-Z0-9._-]+$。
 <p>如果您需要更多的自定义，并且希望自己做所有事情请在<code>customize.sh</code>中标注<code>SKIPUNZIP=1</code>以跳过提取操作并应用默认<code>permissions/secontext</code>。请注意，这样做后，你的<code>customize.sh</code>将负责自行安装所有内容。</p>
 <p><strong><code>customize.sh</code>的运行环境</strong></p>
 <p>这个脚本将在启用了“独立模式”Magisk的BusyBox <code>ash</code> shell 中运行。为了方便起见，可以使用以下变量和shell函数:</p>
-<p>变量</p>
-<p><code>MAGISK_VER</code> (string): 当前安装的Magisk的版本字符串 (例如 v20.0)
-<code>MAGISK_VER_CODE</code> (int): 当前安装的Magisk的版本代码 (例如 20000)
-<code>BOOTMODE</code> (bool): 如果模块当前安装在Magisk Manager中，则为true
-<code>MODPATH</code> (path): 你的模块应该被安装到的路径
-<code>TMPDIR</code> (path): 一个你可以临时存储文件的路径
-<code>ZIPFILE</code> (path): 模块的安装包（zip）的路径
-<code>ARCH</code> (string): 设备的C​​PU构架。值可以是arm, arm64, x86, or x64
-<code>IS64BIT</code> (bool): 如果$ARCH(上方的ARCH变量)为 arm64或x64，则为true
-<code>API</code> (int): 设备的API级别(Android版本)(例如 21为Android 5.0)</p>
-<p>可用函数
+<p><strong>变量</strong></p>
+<ul>
+<li><code>MAGISK_VER</code> (string): 当前安装的Magisk的版本字符串 (例如 v20.0)</li>
+<li><code>MAGISK_VER_CODE</code> (int): 当前安装的Magisk的版本代码 (例如 20000)</li>
+<li><code>BOOTMODE</code> (bool): 如果模块当前安装在Magisk Manager中，则为true</li>
+<li><code>MODPATH</code> (path): 你的模块应该被安装到的路径</li>
+<li><code>TMPDIR</code> (path): 一个你可以临时存储文件的路径</li>
+<li><code>ZIPFILE</code> (path): 模块的安装包（zip）的路径</li>
+<li><code>ARCH</code> (string): 设备的C​​PU构架。值可以是arm, arm64, x86, or x64</li>
+<li><code>IS64BIT</code> (bool): 如果$ARCH(上方的ARCH变量)为 arm64或x64，则为true</li>
+<li><code>API</code> (int): 设备的API级别(Android版本)(例如 21为Android 5.0)</li>
+</ul>
+<p>可用函数</p>
 <div class="highlight"><pre><span></span><code>ui_print &lt;msg&gt;
     打印(print)&lt;msg&gt;到控制台
     避免使用&#39;echo&#39;，因为它不会显示在第三方的recovery的控制台中。
@@ -632,7 +635,7 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
        set_perm 文件 所有者 用户组 文件权限 上下文
     对于&lt;目录&gt;中的所有目录(包括自身)，它将调用:
        set_perm 目录 所有者 用户组 目录权限 上下文
-</code></pre></div></p>
+</code></pre></div>
 <p>为了方便起见，还可以在变量名 <code>REPLACE</code> 中声明要替换的文件夹列表。</p>
 <p>模块安装程序脚本将提取此变量并创建<code>.replace</code>文件进行替换。声明示例:</p>
 <div class="highlight"><pre><span></span><code><span class="na">REPLACE</span><span class="o">=</span><span class="s">&quot;</span><span class="w"></span>
@@ -699,7 +702,8 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
 <li>与不存在的文件对应的文件将被忽略</li>
 <li>为了在自定义<code>*.rc</code>脚本中引用其他文件, 请在<code>overlay.d/sbin</code>中添加其他文件。上面的3条规则不适用于此特定文件夹中的所有内容，因为它们将被直接复制到 Magisk 的内部tmpfs目录(该目录始终位于 <code>/sbin</code>)。</li>
 </ul>
-<p>由于Android 11中的更改​​，不再保证<code>/sbin</code> 文件夹存在。这种情况下，Magisk会随机生成<code>tmpfs</code>文件夹。在你的<code>*.rc</code>脚本中所有的<code>${MAGISKTMP}</code>会在<code>magiskinit</code>注入到<code>init.rc</code>中时，被<code>Magisk tmpfs</code>文件夹替换。<strong>这也可以在Android 11之前的设备上使用</strong>，因为在这种情况下<code>${MAGISKTMP}</code>将简单地被替换为<code>/sbin</code>，因此最佳实践是在引用其他文件时，不要在*.rc脚本中编码<code>/sbin</code>。</p>
+<p>由于Android 11中的更改​​，不再保证<code>/sbin</code> 文件夹存在。这种情况下，Magisk会随机生成<code>tmpfs</code>文件夹。在你的<code>*.rc</code>脚本中所有的<code>${MAGISKTMP}</code>会在<code>magiskinit</code>注入到<code>init.rc</code>中时，被<code>Magisk tmpfs</code>文件夹替换。</p>
+<p><strong>这也可以在Android 11之前的设备上使用</strong>，因为在这种情况下<code>${MAGISKTMP}</code>将简单地被替换为<code>/sbin</code>，因此最佳实践是在引用其他文件时，不要在*.rc脚本中编码<code>/sbin</code>。</p>
 <p>下面是一个如何使用自定义<code>*.rc</code>脚本设置<code>overlay.d</code>的示例:</p>
 <div class="highlight"><pre><span></span><code>ramdisk
 │
