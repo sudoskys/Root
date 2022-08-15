@@ -2,7 +2,7 @@
 
 先下载一个 [Mt管理器](https://www.coolapk.com/apk/bin.mt.plus)，用来执行文件操作。
 
-然后在 [Magisk仓库](https://github.com/topjohnwu/Magisk/releases/latest/) 安装最新版本的 Magisk，如果不能下载请复制 apk 链接填入[这里](https://ghproxy.com/)
+然后在 [Magisk仓库](https://github.com/topjohnwu/Magisk/releases/latest/) 安装最新版本的 Magisk，如果不能下载请复制Github的 apk 链接请填入[镜像站](https://ghproxy.com/) 下载
 
 ## 了解术语[^17]
 

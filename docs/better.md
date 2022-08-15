@@ -415,6 +415,10 @@ Lsposed已经推出了Zygisk版本。Zygisk模式下用Shamiko模块的白名单
 
 你可以在[这里](https://github.com/LSPosed/LSPosed/releases/latest)下载安装 zygisk 版本的 LSPosed 并刷入它，LSPosed 自带仓库。
 
+!!! tip
+    如果不能下载请复制Github的 apk 链接请填入[镜像站](https://ghproxy.com/) 下载
+
+
 刷入教程看下一节。
 
 [^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626
