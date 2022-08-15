@@ -5,6 +5,7 @@ nav:
     - 准备: prepare.md
     - 刷机: root.md
     - 优化: better.md
+    - 模块: moudle.md
     - 关于: about.md
 theme:
   name: material

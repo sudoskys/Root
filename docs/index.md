@@ -118,3 +118,8 @@ Welcome to IdontKnowRoot ，本站基于 [mkdocs.org](https://www.mkdocs.org)，
 [^22]:**高通9008线刷救黑砖教程** [https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
 
 [^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626
+
+[24^]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
+[25^]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
+[26^]:MagiskInstallation https://topjohnwu.github.io/Magisk/install.html
+[27^]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html

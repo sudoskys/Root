@@ -33,7 +33,7 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 
 
 
-你可以从 [Github](https://github.com/topjohnwu/Magisk/releases) 或者 文件包 [1^] 下载它，推荐去 Github 下载，越新越好。
+你可以从 [Github](https://github.com/topjohnwu/Magisk/releases) 或者 文件包 [1^] 下载它，推荐去 Github 下载，越新越好。如果不能下载 Github 文件请复制 apk 链接填入[这里](https://ghproxy.com/)
 
 **安装Magisk Manager APP后如果它显示`Ramdisk` 为"是"，那么你才可以进行下面的操作。**
 
