@@ -40,9 +40,11 @@ Magisk 模块仓库在很早就被官方移除，面具只能通过 zip 文件�
 
 ### BusyBox[^27]
 
-Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支持)。可执行文件位于/data/adb/magisk/busybox。Magisk的BusyBox支持运行时切换“ASH独立Shell模式”。这种独立模式意味着，当在BusyBox的灰壳中运行时，每个单独的命令将直接使用BusyBox中的applet，而不管什么被设置为PATH。例如，像ls, rm, chmod这样的命令不会使用PATH中的内容(在Android的情况下，默认是/system/bin/ls， /system/bin/rm，和/system/bin/chmod)，而是直接调用内部的BusyBox小程序。这可以确保脚本始终运行在可预测的环境中，并且无论运行在哪个Android版本上都始终拥有完整的命令套件。要强制命令不使用BusyBox，您必须调用具有完整路径的可执行文件。
+Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支持)。可执行文件位于`/data/adb/magisk/busybox`。
 
-在 Magisk 上下文中运行的每个 shell 脚本都将在 BusyBox 的 ash shell 中执行，并启用独立模式。对于与第三方开发人员相关的内容，这包括所有引导脚本和模块安装脚本。
+Magisk的 BusyBox 支持运行时切换“ASH独立Shell模式”。这种独立模式意味着，当在BusyBox的灰壳中运行时，每个单独的命令将直接使用 BusyBox 中的 applet，而不管什么被设置为PATH。例如，像ls, rm, chmod这样的命令不会使用 PATH 中的内容(在Android的情况下，默认是`/system/bin/ls`， `/system/bin/rm`，和`/system/bin/chmod`)，而是直接调用内部的BusyBox小程序。这可以确保脚本始终运行在可预测的环境中，并且无论运行在哪个 Android 版本上都始终拥有完整的命令套件。要强制命令不使用BusyBox，您必须调用具有完整路径的可执行文件。
+
+在 Magisk 上下文中运行的每个 shell 脚本都将在 BusyBox 的 `ash shell` 中执行，并启用独立模式。对于与第三方开发人员相关的内容，这包括所有引导脚本和模块安装脚本。
 
 如果你想在 Magisk 以外的地方使用这个“独立模式”功能，有两种方法可以实现:
 
@@ -147,19 +149,21 @@ updateJson=<url> (optional)
 
 这个脚本将在启用了“独立模式”Magisk的BusyBox `ash` shell 中运行。为了方便起见，可以使用以下变量和shell函数:
 
-变量
+**变量**
 
-`MAGISK_VER` (string): 当前安装的Magisk的版本字符串 (例如 v20.0)
-`MAGISK_VER_CODE` (int): 当前安装的Magisk的版本代码 (例如 20000)
-`BOOTMODE` (bool): 如果模块当前安装在Magisk Manager中，则为true
-`MODPATH` (path): 你的模块应该被安装到的路径
-`TMPDIR` (path): 一个你可以临时存储文件的路径
-`ZIPFILE` (path): 模块的安装包（zip）的路径
-`ARCH` (string): 设备的C​​PU构架。值可以是arm, arm64, x86, or x64
-`IS64BIT` (bool): 如果$ARCH(上方的ARCH变量)为 arm64或x64，则为true
-`API` (int): 设备的API级别(Android版本)(例如 21为Android 5.0)
+- `MAGISK_VER` (string): 当前安装的Magisk的版本字符串 (例如 v20.0)
+- `MAGISK_VER_CODE` (int): 当前安装的Magisk的版本代码 (例如 20000)
+- `BOOTMODE` (bool): 如果模块当前安装在Magisk Manager中，则为true
+- `MODPATH` (path): 你的模块应该被安装到的路径
+- `TMPDIR` (path): 一个你可以临时存储文件的路径
+- `ZIPFILE` (path): 模块的安装包（zip）的路径
+- `ARCH` (string): 设备的C​​PU构架。值可以是arm, arm64, x86, or x64
+- `IS64BIT` (bool): 如果$ARCH(上方的ARCH变量)为 arm64或x64，则为true
+- `API` (int): 设备的API级别(Android版本)(例如 21为Android 5.0)
+
 
 可用函数
+
 ```
 ui_print <msg>
     打印(print)<msg>到控制台
