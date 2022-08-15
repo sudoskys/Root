@@ -718,6 +718,12 @@ finished.
 <blockquote></blockquote>
 <hr />
 <p>此方案无需改线，无需触点短接等操作，需要电脑进行操作</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>基带什么的每个机子都不一样，9008不能写所有分区,所以最好备份好完整字库
+如果刷坏没备份，不能正常使用sim卡，部分型号不能连wifi，甚至要换主板。
+有些机型需要授权9008.</p>
+</div>
 <p>我们将手机的变砖分为四个程度</p>
 <ol>
 <li>能亮屏，按键有反应 开机卡住 连接USB电脑有反应</li>
@@ -740,6 +746,10 @@ finished.
 <p>联发科的底层刷机模式没有高通那么麻烦。该模式在 MTK 内部被称为 MTK in-house developed loader。MTK 的该模式与高通略有不同，该模式具有帮助系统寻找Uboot的功能。该模式除了具有启动功能之外，还具有下载功能。首先还是需要明确的是mtk芯片都有一个boot rom，如果没有这个rom，那么程序是无法被下载到 Nand Flash中的，然后此时的Flash上是为空的，没有任何数据的。系统在上电之后它会检测是启动模式还是下载模式，如果是下载模式，它会初始化一个usb的串口，将Preloader加载到内部的SRAM中，跳转到Preloader中去执行，初始化好Flash和外部RAM之后，依次将preloader、lk、kernel、android下载到nand flash中去。刷机工具是SP Flash Tools ，需要验证的对应的DA文件，或者 MTKclinet</p>
 </div>
 <h3 id="mtk_1">准备 MTK 工具/工具箱</h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>最好备份好完整字库</p>
+</div>
 <p>💡 <strong>解释</strong>：MTk 工具依赖安卓的一种漏洞来实现 Root ，提取 boot.img，在使用前请关注你的社区（酷安等）。工具箱的使用都有说明，请自行咨询或查阅资料。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
