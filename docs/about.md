@@ -49,9 +49,9 @@
 
 下载模块后，在面具的设置中开启 Zygsik，同时在模块中从本地安装 LSposed。重启设备，桌面就新增 LSPosed 的APP。
 
-## 安全验证^7
+## 安全验证
 
-Google 那边已经给开发者提供了一个基于 SafetyNet 认证的反盗版功能（anti-piracy feature），开发者如果使用这套机制，那么已经 root、无法通过 SafetyNet 认证的设备就没办法在 Play 商店搜索、下载和更新对应的 App。
+Google 那边已经给开发者提供了一个基于 SafetyNet 认证的反盗版功能（anti-piracy feature），开发者如果使用这套机制，那么已经 root、无法通过 SafetyNet 认证的设备就没办法在 Play 商店搜索、下载和更新对应的 App。[^7]
 
 SafetyNet 是 Google 移动服务套件的功能，这意味着，只有装有 GMS 并且应用调用了相关接口的情况下，我们才需要通过 SafetyNet 验证。逃避国内应用的 root 检测大部分情况下并不需要通过 SafetyNet 认证，只要使模块和 Magisk 不对这些应用生效即可，无需在意 SafetyNet 结果。
 
@@ -69,9 +69,14 @@ Zygisk模式下用Shamiko模块的白名单模式，真的是yyds。就是默认
 
 附：
 
-[](https://play.google.com/store/apps/details?id=rikka.safetynetchecker)
+[SafeNet通过性检查](https://play.google.com/store/apps/details?id=rikka.safetynetchecker)
 
 [Shizuku](https://shizuku.rikka.app/zh-hans/)
+
+
+
+[^7]:[Android 玩机「神器」的矛盾与新生：Magisk Canary 更新详解 - 少数派 (sspai.com)](https://sspai.com/post/69945)
+
 
 
 
