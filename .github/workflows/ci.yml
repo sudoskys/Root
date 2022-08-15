@@ -14,7 +14,7 @@ jobs:
           python-version: 3.x
       - run: pip install mkdocs-material
       - run: pip install mkdocs-git-authors-plugin
-      - run: mkdocs build
+      - run: mkdocs build --clean
       # - run: mkdocs gh-deploy --force
       - name: commit
         env:
