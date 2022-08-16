@@ -19,7 +19,6 @@ theme:
     #- navigation.indexes
     - navigation.top
     - navigation.instant
-  favicon: img/wheelchair-alt.svg
 
 
     
