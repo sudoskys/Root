@@ -176,30 +176,26 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 [^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
-[^22]:**高通9008线刷救黑砖教程** [https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
+[^22]:[**高通9008线刷救黑砖教程**](https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
 
-[^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626
+[^23]:[保留root去更新系统](https://www.coolapk.com/feed/37647626)
+[^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk.com/feed/16164846)
+[^25]:[自制简易Magisk模块教程](https://www.coolapk.com/feed/37576170)
+[^26]:[MagiskInstallation](https://topjohnwu.github.io/Magisk/install.html)
+[^27]:[MagiskDeveloperGuides](https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html)
+[^28]:[联发科不建议玩机](https://www.coolapk.com/feed/37080982)
+[^29]:[Root升级系统](https://www.coolapk.com/feed/34860331)
+[^30]:[简单认识手机各个分区](https://www.coolapk.com/feed/38367093)
+[^31]:[手动给予安卓应用root权限的方法](https://www.coolapk.com/feed/37543497)
+[^32]:[如何提问，并获得高回复率] (https://zhuanlan.zhihu.com/p/19779979)
+[^33]:[Android Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
 
-[^24]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
-[^25]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
-[^26]:MagiskInstallation https://topjohnwu.github.io/Magisk/install.html
-[^27]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
-[^28]:联发科不建议玩机 https://www.coolapk.com/feed/37080982
-[^29]:Root升级系统 https://www.coolapk.com/feed/34860331
-[^30]:简单认识手机各个分区 https://www.coolapk.com/feed/38367093
-[^31]:手动给予安卓应用root权限的方法 https://www.coolapk.com/feed/37543497
-[^32]:如何提问，并获得高回复率  https://zhuanlan.zhihu.com/p/19779979
+[^34]:[Root卡刷原理](https://www.zhihu.com/question/20098750/answer/173038749)
 
-[^33]:Android Root原理分析及防Root新思路 https://blog.csdn.net/hsluoyc/article/details/50560782
+[^35]:[Fastboot 原理](https://wowothink.com/5ade33b8/)
 
-[^34]:Root卡刷原理 https://www.zhihu.com/question/20098750/answer/173038749
+[^36]:[Bootloader 原理](https://www.zhihu.com/question/47496619/answer/195494376)
 
+[^37]:[MTK刷机原理](https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/)
 
-[^35]:Fastboot 原理 https://wowothink.com/5ade33b8/
-
-[^36]:Bootloader 原理 https://www.zhihu.com/question/47496619/answer/195494376
-
-[^37]:MTK刷机原理 https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/
-
-
-[^38]:高通刷机原理 https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/
+[^38]:[高通9008刷机原理](https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/)

@@ -130,15 +130,16 @@ fastboot模式其实是调用spl进行刷机的，所以如果刷spl坏了，fas
 
 [^7]:[Android 玩机「神器」的矛盾与新生：Magisk Canary 更新详解 - 少数派 (sspai.com)](https://sspai.com/post/69945)
 
-[^34]:Root卡刷原理 https://www.zhihu.com/question/20098750/answer/173038749
+[^34]:[Root卡刷原理](https://www.zhihu.com/question/20098750/answer/173038749)
 
-[^35]:Fastboot 原理 https://wowothink.com/5ade33b8/
-
-
-[^21]:底层刷机教程/全解析 https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B
+[^35]:[Fastboot 原理](https://wowothink.com/5ade33b8/)
 
 
+[^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
-[^37]:MTK刷机 https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/
 
-[^38]:高通刷机原理 https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/
+
+[^37]:[MTK刷机原理](https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/)
+
+[^38]:[高通9008刷机原理](https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/)
+
