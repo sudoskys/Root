@@ -420,47 +420,20 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    突发救砖
-  </a>
-  
-    <nav class="md-nav" aria-label="突发救砖">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    安装模块变砖防护策略
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtk" class="md-nav__link">
-    MTK恢复
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
     系统分区解锁
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     没有图标
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     小米刷原生
   </a>
   
@@ -468,14 +441,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     刷底包
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     通用教程
   </a>
   
@@ -502,7 +475,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     面具随机包名
   </a>
   
@@ -537,7 +510,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     疑难解答
   </a>
   
@@ -551,7 +524,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     隐藏应用列表
   </a>
   
@@ -701,37 +674,14 @@
 <p>这时候打开Magisk Manager。卸载-还原原厂镜像。安装-安装-安装到未使用的槽位（OTA后）。</p>
 <p>接着按提示重启即可。重启完成后系统应该是新系统，Magisk应该还在。</p>
 <p><a href="https://zhuanlan.zhihu.com/p/507103088">Redmi K50 ROOT刷Magisk（面具）教程</a></p>
-<h2 id="_3">突发救砖</h2>
-<hr />
-<ol>
-<li>刷机包与手机自带的BOOT版本不匹配，这个时候只需要从ROM包里提取boot.img文件单刷，然后再重新刷机就好了。</li>
-<li>刷完后卡在第一屏或重启，可以进 RECOVERY 里面，双WIPE (<strong>清除手机数据) 之后再刷机就可以解决问题</strong>，一些ROM包会提示不用WIPE，但如果你出现上述情况，也可以双WIPE试试。</li>
-<li>如果你实在不行了，那么准备好保存好的原始 boot.img 和 vbmeta.img 刷入。</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>因为未知原因导致安装失败也不要怕，操作中你应该保留了一份原来的镜像，按照最后一步的方法将原来的镜像重新刷回去就能正常开机。**</p>
-</div>
-<h3 id="_4">安装模块变砖防护策略</h3>
-<ul>
-<li>安装 MM管理器 或 自动神仙救砖 插件</li>
-<li>备份 Root 后的系统</li>
-</ul>
-<p>移除模块重新开机</p>
-<p>而如果你因为安装了未知模块而翻车无法顺利进入系统，请先冷静下来：解决此类问题有一个万能的命令<code>adb wait-for-device shell magisk --remove-modules</code>，此条指令将会在手机启动过程中生效。</p>
-<p>如果没有安装救砖模块，也可以在 cache 目录下面手动建立一个 disable_magisk 文件，禁用掉进系统，进了系统再把插件      删了。参考 <a href="https://www.v2ex.com/t/567090">这篇帖子</a></p>
-<h3 id="mtk"><strong>MTK恢复</strong></h3>
-<p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
-<p>自救命令，使用mtkclient写入备份的镜像
-<code>python mtk wl out</code></p>
-<h2 id="_5">系统分区解锁</h2>
+<h2 id="_3">系统分区解锁</h2>
 <p>现在几乎所有手机都不能动 system，也不建议解锁。</p>
 <p>现在除了部分手机可以用模块，剩下的方法只有第三方 Rec 了。</p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>自安卓7开始，很多手机的system分区默认为只读模式，不可进行删除读写，导致我们即使获取root后，也一样不能去系统文件进行深一层的修改改造。只有当我们解锁system后，再次修改system分区文件才可以正常修改，也可以更直接的进入system层，删除我们不想要的繁杂软件。这里最常见的就是解锁system分区后替换修改system/etc/hosts文件案例。未解锁system分区的机型，删除会出现失败或者直接删除后重启不能开机。</p>
 </div>
-<h2 id="_6">没有图标</h2>
+<h2 id="_4">没有图标</h2>
 <div class="admonition info">
 <p class="admonition-title">不能创建 Lsposed 图标？</p>
 <p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
@@ -740,13 +690,13 @@
 <p class="admonition-title">不能创建 Magisk 图标？</p>
 <p>面具设置中有生成图标的选项</p>
 </div>
-<h2 id="_7">小米刷原生</h2>
+<h2 id="_5">小米刷原生</h2>
 <p>刷机有风险 如果不会刷还请不要刷</p>
-<h3 id="_8">刷底包</h3>
+<h3 id="_6">刷底包</h3>
 <p>首先要解锁手机BL锁 。</p>
 <p>解锁完下载MIUI系统底包 必须要和类原生安卓版本一样 安卓9=安卓9 安卓10=安卓10请前往官网或者mi.fiime.cn下载相对应的系统底包，然后参考上面的教程刷第三方REC。</p>
 <p>刷完第三方rec会自动进入 进去之后把下载好的底包移动到手机里面进入清除 把按钮滑到右边 双清完再刷系统点击安装 选择下载好的底包 有个滑动按钮 滑到右边就开始刷了 记住 钩子不要勾</p>
-<h3 id="_9">通用教程</h3>
+<h3 id="_7">通用教程</h3>
 <p>刷完底包后请不要清除任何东西</p>
 <p>请直接刷完底包接着刷原生ROM包</p>
 <p>刷完，返回主页面 。</p>
@@ -792,7 +742,7 @@
 </div>
 <p>刷了这个<code>隐藏系统root</code>模块，会导致Momo提示找到Magisk，但是影响不大，<strong>更不会影响隐藏root</strong>。</p>
 <p>我个人建议，如果不是强迫症，建议不要在意这个了。如果你是MIUI开发版系统，比较在意Momo的提示，想让Momo不提示找到Magisk，那么你需要重刷一遍当前开发版系统(重刷系统这一步是为了关闭系统自带的root)。重刷完不要打开系统自带的root，不能用面具接管系统root的方式刷面具，你应该用第三方recovery或者修补boot的方式刷入面具。</p>
-<h3 id="_10">面具随机包名</h3>
+<h3 id="_8">面具随机包名</h3>
 <p>面具设置里，找到“隐藏Magisk应用”选项点开，会跳出一个对话框。这个对话框里已经有默认名称“Settings”，你可以把它删掉并输入你喜欢的名字。比如我输入<code>balabala</code>，点确定就不用管它了，它最后会自动跳转到新生成的面具界面里。</p>
 <p>期间无论跳转什么界面，你只需要点确定或者允许就行了。面具随机包名成功后，会看到原来的面具消失，桌面出现新生成的面具“MiaoHan”。如果随机包名失败或者“隐藏Magisk应用”一直转圈圈，那么你需要使用<strong>代理隧道</strong>(不懂请自己搜索，不要来问)。</p>
 <div class="admonition help">
@@ -825,7 +775,7 @@
 <p>如果你是MIUI系统的用户，对ZFB或者薇信以及其他金融类应用隐藏root后，用它们ZF时可能会弹出以下提醒。</p>
 <p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。SHamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
 <p>进入面具排除列表，然后右上角搜索手机管家，大概率都会搜索不到，主要是方法不对，以下教大家查找手机管家的正确方法。</p>
-<h3 id="_11">疑难解答</h3>
+<h3 id="_9">疑难解答</h3>
 <details class="help">
 <summary><strong>Momo提示找到Magisk解决方法</strong></summary>
 <p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk。</p>
@@ -896,7 +846,7 @@
 <p>适用场景：
 也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，模块描述里也显示的是“whitelist mode(白名单模式)”，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
 <p>原因分析：这种情况不是因为“Shamiko”模块白名单模式失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
-<h3 id="_12">隐藏应用列表</h3>
+<h3 id="_10">隐藏应用列表</h3>
 <p>隐藏应用列表完全没有隐藏root的作用，但是如果你有安装 LSPosed 它可以隐藏你的模块应用，隐藏 LSPosed 相关特征。</p>
 <p>银行类金融类游戏类应用，检测设备环境的优先级永远是先检测root，然后再检测应用列表或者不检测应用列表。大部分应用都不检测应用列表。</p>
 <h2 id="lsposed">安装 LSPosed</h2>
@@ -940,11 +890,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 06:35:58</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 12:04:21</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 06:35:58</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 12:04:21</span>
       
     
   </small>
