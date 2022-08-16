@@ -584,6 +584,7 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 <p class="admonition-title">Do you know?</p>
 <p>Magisk 是一个强大的 Android 框架，是一个通用的第三方 systemless 接口，通过这样的方式实现一些较强大的功能。它修改启动分区，并保留了系统文件。这种修改只是虚拟地覆盖在原始文件上。当某些东西请求系统文件时，修改后的版本将被发送到magisk指定的位置。但是由于所有系统文件都是完整的，因此可以欺骗SafetyNet认为一切正常。应用仍然可以在有被root的手机上运行。它通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。当被挂载的 Magisk 分区被隐藏甚至被取消挂载时，原有系统分区的完整性丝毫未损。因此严格来说 Magisk 可以被看作是一种文件系统。</p>
 </div>
+<p><img alt="示意图" src="https://s3.bmp.ovh/imgs/2022/08/16/95cafb324009b035.png" /></p>
 <h2 id="boot">线刷/深刷 修补 Boot 提取权限</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -602,7 +603,6 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 <p>Ramdisk 是系统中的一个小分区，Ramdisk 告诉系统接下来要加载哪些东西。Magisk 的目的是修改 Ramdsik，把自己加进开机需要加载的系统组件中。App 中 Ramdisk 的值为「否」时，表示需要修改的 Ramdisk 被放在了 recovery.img 中，我们需要提取并修改 recovery.img。具体操作方法见节尾。</p>
 </div>
 <p>Tips：极少数小米设备存在检测设备信息错误的问题，Ramdisk 虽然显示为「否」，但实际上是需要修改 boot.img。</p>
-<blockquote></blockquote>
 <h3 id="img">准备修补的img</h3>
 <p>官方 ROM 的压缩包，例如 <a href="https://developers.google.com/android/images">Google</a>、<a href="https://www.miui.com/shuaji-393.html">小米</a>、<a href="https://mirrors.lolinet.com/firmware/moto/">Moto</a>，由厂商发布，可从固定的发布页面、机型论坛等获取相关链接。一些厂商同时提供了 OTA 包和全量包，我们优先下载全量包，解压后即可获得 boot.img，也就是我们所需要的 boot 分区的镜像文件。请去官网或者其他平台下载<strong>符合</strong>你的<strong>机型和型号</strong>的rom包！
 使用ZIP解压工具解压完整的ROM卡刷包（最新MIUI系统安装包），找到<code>boot.img</code>
@@ -811,6 +811,9 @@ fastboot reboot
 <li id="fn:13">
 <p><strong><a href="https://blog.linioi.com/posts/8/">通过 ADB 给手机刷入第三方 Recovery</a></strong>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
+<li id="fn:21">
+<p><a href="https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B">底层刷机教程/全解析</a>&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -819,11 +822,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 04:24:11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 05:25:18</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 04:24:11</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 05:25:18</span>
       
     
   </small>

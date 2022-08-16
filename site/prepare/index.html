@@ -368,6 +368,13 @@
         
           <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    早期
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     深刷
   </a>
   
@@ -381,21 +388,35 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    软刷
+  <a href="#mtk" class="md-nav__link">
+    Mtk 深刷
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9008" class="md-nav__link">
+    高通 9008
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    厂刷
+    软刷
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    厂刷
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     线刷
   </a>
   
@@ -421,13 +442,20 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    刷机原理
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     准备设备
   </a>
   
@@ -435,21 +463,21 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     提前注意
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     准备驱动文件
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     准备设备和平台工具
   </a>
   
@@ -677,6 +705,14 @@
 <p>Google在Android 10开始引入了动态分区（Dynamic Partitions） 简单来说，就是把原来的system , vendor , product还有odm分区整合到了一起，构成super分区 在刷入设备的时候动态调整system等分区的大小</p>
 <p><strong>什么是GSI</strong></p>
 <p>GSI代表通用系统映像。这是一个文件系统映像，您可以将其刷到设备的系统分区。之所以具有通用性，是因为它使用新的标准化硬件API访问硬件（因此它可以在任何启用treble的设备上运行）。</p>
+<p><strong>Bootloader</strong>
+<sup id="fnref:36"><a class="footnote-ref" href="#fn:36">8</a></sup>
+Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理器相似，负责启动手机的用户层面操作系统。</p>
+<p>手机开机时进行开机自检和初始化手机硬件，它会指引手机找到系统分区并启动操作系统.</p>
+<p>如果BL锁了，即使你强行刷了非官方boot，因为BL会校验boot分区的数字签名，所以无法加载Android内核到RAM，也就无法启动system。</p>
+<p>锁定 Bootloader 一方面是为了用户安全（解锁就会发生格式化），另一方面也是为了维护厂商自身利益。</p>
+<p>部分厂商对于 Bootloader 采用硬件层面上的熔丝机制，一旦你解锁了就回不到出厂 locked 状态，就是失去了保修。</p>
+<p><img alt="" src="https://s3.bmp.ovh/imgs/2022/08/16/f010caf0576cf10b.png" /></p>
 <p><strong>字库(分区)</strong></p>
 <p>字库是硬件，就相当于电脑的硬盘。</p>
 <p>功能机时代，很多手机程序、控制信息、字库信息是存储在一个专用芯片里面，芯片中主要部分是字库，所以一些售后和维修人员就习惯把这个存储芯片称做字库芯片。不过，到了智能机时代，这个存储芯片的功能已经远远超越了存储字库这么简单，所以它也远不是“字库”所能概括的，更准确的表述应该为eMMC芯片(embedded MultiMediaCard）。　</p>
@@ -695,6 +731,10 @@
 <p>当手机系统文件被损坏从而不能正常启动时，我们可以进入recovery小系统对主体系统进行修复。</p>
 <p><strong>第三方Recovery</strong></p>
 <p>官方的recovery功能较少，一般可以清除缓存，擦除所有数据，刷入官方指定的系统，而不能刷第三方系统，所以就有人做 Recovery 去代替官方 (即第三方Recovery) 的，这样就能刷非官方的ROM了。</p>
+<p>分为CMW和TWRP两种recovery</p>
+<p>我们开机进入系统自带Re清除数据时音量上下键操作的界面就是CMW的版本。</p>
+<p>TWRP就是可以触摸的版本，而TWRP的功能更为强大。
+　　</p>
 <p><strong>FastbootD</strong></p>
 <p>据我所知, fastbootd 是用户空间中的 fastboot。</p>
 <p>在动态分区手机. <code>data</code>, <code>system</code>等原来的物理分区, 现在都被放到一个共同的<code>super</code>分区下. 这种"虚拟分区"只在用户空间(Android系统里)可见, 也就是说原版fastboot只能识别到整个<code>super</code>, 而<code>super</code>里的<code>data</code>这些却不行.</p>
@@ -702,7 +742,13 @@
 <p><img alt="a5nZlt.png" src="https://s1.328888.xyz/2022/08/13/TGOJ6.png" /></p>
 <p><a href="https://www.droidwin.com/fastbootd-mode/">What is FastbootD? How to Boot to FastbootD Mode - DroidWin</a></p>
 <h2 id="_2">了解刷机</h2>
-<h3 id="_3"><strong>深刷</strong></h3>
+<h3 id="_3"><strong>早期</strong></h3>
+<p>早先的Android手机要想获取Root权限可以有以下几种方式[]：</p>
+<p>1）使用本地提权漏洞利用工具来直接Root，这是最原始最纯洁的方式。随着厂商对Rom的升级，这些内核的漏洞随时都可能被修补，因此，这种Root方法在时间与空间上都有着很大的局限性。</p>
+<p>2）由于手机厂商对硬件的封闭，加上内核补丁修补很完全，这个时候获取Root权限就更难了，这个时候刷机与Root就联合起来了，由于不能从系统内部通过Exploits来获取Root权限，只能通过修改Rom包来达到Root的目的，这也是目前很多第三方Rom包自带了Root的原因，然而手机厂商也不是吃干饭的，手机厂商在OTA升级时使用Recovery对包签名进行验证来防止用户刷入修改过的包。对于这种变态的厂商，只能通过FastBoot来线刷了，这里内容就不再展开了。</p>
+<p>3）当然，还有一部分厂商，为了吸引更多用户购买他们的手机，还是在手机中偷偷的留了后门的，比如不锁BootLoader，让用户刷第三方的Recovery，又或是干脆留个以前的漏洞不补，让用户自己来Exploits等等</p>
+<p><sup id="fnref:33"><a class="footnote-ref" href="#fn:33">7</a></sup></p>
+<h3 id="_4"><strong>深刷</strong></h3>
 <p>深刷就是底层刷机，顾名思义，这是一种从底层刷写手机分区的方式，与正常的程序相比，这种方式更为彻底，无视所有软件层面的权限，例如BL锁。</p>
 <p>底层刷机模式常用于使用卡刷（Recovery下以及一系列使用ADB刷机方式的统称）或者线刷（Bootloader下使用Bootloader命令刷机的方式）刷成砖后救砖的场景下。按照主流处理器，高通为9008刷机模式，MTK为MTK PreLoader模式，海思麒麟为eRecovery模式（类rec操作）和eDownload模式。</p>
 <div class="admonition note">
@@ -715,11 +761,15 @@
 <p>OTA 意思就是<strong>增量升级</strong>，就是在原先系统的基础上增加新功能，也许是给手机打个补丁，也许是对性能的优化。<strong>手机要活着能进系统且未修改才能用</strong>。OTA 不会删除资料和系统的设定。备份资料放的位置要问官方，但通常不需要知道位置，内建备份也有还原功能，还能选择要还原的东西，还原的时候有问题的部分可以选择略过。</p>
 <p>有些档案用 patch 的方式处理了, 有些用覆盖的方式 (要看做这个 OTA 包的人怎么做), 所以, 如果有档案与预期的不同 (通常是 root 后会删除或修改档案),  OTA 会失败。</p>
 <p>你也可以解 OTA 的包进行修补获取Root权限。</p>
-<h3 id="_4"><strong>软刷</strong></h3>
+<h3 id="mtk"><strong>Mtk 深刷</strong></h3>
+<p>是一直底层的刷机方法</p>
+<h3 id="9008"><strong>高通 9008</strong></h3>
+<p>是一种最底层的联机模式，机器rec，fb都被篡改或清除时，唯一能进入还不会被摧毁的就是download模式。联机后驱动会显示9008或9007或900e等。所以大家都叫9008深度刷机。</p>
+<h3 id="_5"><strong>软刷</strong></h3>
 <p>软件刷就是刷机大师，刷机精灵等的第三方刷机软件刷，现在已经绝迹了；</p>
-<h3 id="_5"><strong>厂刷</strong></h3>
+<h3 id="_6"><strong>厂刷</strong></h3>
 <p>寄回厂子……</p>
-<h3 id="_6"><strong>线刷</strong></h3>
+<h3 id="_7"><strong>线刷</strong></h3>
 <p>线刷是 Fastboot 模式刷机。</p>
 <p>线刷是用 Fastboot，一般都是直接刷镜像，由 uboot 以直接写入闪存的办法把镜像直接写到闪存对应的位置（或者说分区）。</p>
 <p>线刷时备份资料可以使用PC端的程式来管理，出问题的话三清之后再选择性恢复，再不行就全部设定和资料重头来过。线刷 要有电脑, 执行特定的程式. (通常就算手机挂到都进不去 Recovery 也能刷)</p>
@@ -735,18 +785,20 @@
 <p>卡刷可以用手机直接下载卡刷包，更名Update.zip后进入recovery刷机，刷后资料还会在，但是通常不做资料清除的话很容易发生问题，严重的就是一直出现系统错误，轻的则是偶尔出现闪退。</p>
 <p>所以基本上刷完机最好进Recovery三清，刷前做三清也行，重点就是该清的要清一清，不然问题很多。接着要还原备份的时候如果系统本差异太大最好不要还原系统设定和App之类的资料，还原一些使用者data就好。卡刷需要存储空间，一般能进 recovery 就能刷。</p>
 <p>卡刷包有比较复杂些的目录结构，除了用来更新的文件外，也包括一个可执行文件和脚本，但这两个脚本是给recovery来用的，而不是用户。</p>
-<div class="admonition info">
-<p class="admonition-title"><strong>什么是第三方REC？？</strong></p>
-<p>Recovery像是一个独立的微型系统，可以不依赖于安卓操作系统主体单独运行。Recovery的中文名是恢复，顾名思义，当手机系统文件被损坏从而不能正常启动时，我们可以进入recovery小系统对主体系统进行修复。可是官方的recovery功能较少，一般可以清除缓存，擦除所有数据，刷入官方指定的系统，而不能刷第三方系统，所以就有人做 Recovery 去代替官方 (即第三方Recovery) 的，这样就能刷非官方的ROM了。像是所有的官改包，第三方是配的包，国际版的包以及原生系统，都是用第三方REC刷入。可以说，有了第三方REC，是你刷机的出发点，想刷什么都可以（当然刷的东西兼容你的设备）有了它，你就可以各种不同的系统，开始真正的刷机之路。但是，大部分的第三方REC不支持OTA升级，也就是说，每次你收到系统更新的时候，都必须要下载完整包更新。</p>
-</div>
 <h4 id="recovery">第三方Recovery</h4>
 <p>第三方Recovery有很多种，最常用的是 <code>TWRP</code> ，还有很多基于 <code>TWRP</code> 修改的种类，比如 <code>橙狐Recovery</code>，<code>SHRP</code>，<code>PBRP</code>，<code>奇兔Recovery</code> 等等。</p>
 <p>可以去 TWRP 官网 <a href="https://twrp.me/Devices/">Here</a> 搜索，或者在 TWRP 官方APP下载，但是速度可能不是很好,也可以去<a href="https://orangefox.download/zh-CN">橙狐官网</a>找。</p>
 <p>如果以上途径都找不到，可以去酷安找你机型的话题，在话题内搜索关键词：<code>TWRP，rec，橙狐，oringe，pbrp，沥青，shrp。</code></p>
-<h2 id="_7">准备设备</h2>
+<div class="admonition info">
+<p class="admonition-title"><strong>什么是第三方REC？？</strong></p>
+<p>Recovery像是一个独立的微型系统，可以不依赖于安卓操作系统主体单独运行。Recovery的中文名是恢复，顾名思义，当手机系统文件被损坏从而不能正常启动时，我们可以进入recovery小系统对主体系统进行修复。可是官方的recovery功能较少，一般可以清除缓存，擦除所有数据，刷入官方指定的系统，而不能刷第三方系统，所以就有人做 Recovery 去代替官方 (即第三方Recovery) 的，这样就能刷非官方的ROM了。像是所有的官改包，第三方是配的包，国际版的包以及原生系统，都是用第三方REC刷入。可以说，有了第三方REC，是你刷机的出发点，想刷什么都可以（当然刷的东西兼容你的设备）有了它，你就可以各种不同的系统，开始真正的刷机之路。但是，大部分的第三方REC不支持OTA升级，也就是说，每次你收到系统更新的时候，都必须要下载完整包更新。</p>
+</div>
+<h3 id="_8">刷机原理</h3>
+<p>见关于页面</p>
+<h2 id="_9">准备设备</h2>
 <hr />
 <p>本教程用到的工具我<strong>已经打入附带的文件包</strong> <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
-<h3 id="_8">提前注意</h3>
+<h3 id="_10">提前注意</h3>
 <p><strong>安卓系统的版本需要是 5.0~12.0 之间 (2022)</strong></p>
 <div class="admonition warning">
 <p class="admonition-title">注意</p>
@@ -766,7 +818,7 @@
 </ul>
 </div>
 <p>不建议你在主力机上解锁 Bootloader，而且，如果厂商明确表示不能解锁 Bootloader ，<strong>请放弃</strong>。如果一定要刷机并且报着变砖的觉悟，可以尝试<strong>深刷</strong>强解。</p>
-<h3 id="_9">准备驱动文件</h3>
+<h3 id="_11">准备驱动文件</h3>
 <p>准备你的手机对应的机型的驱动文件，文件包提供 Vivo 和 Oppo 的两种驱动文件[1^]。
 个人建议下载一个泛用型驱动 <a href="https://adb.clockworkmod.com/">universal adb drivers</a>。少数情况下不能识别的话，需要我们用「手机厂商名 + adb driver」的关键词搜索得到相关的下载和安装教程。</p>
 <p>安装完驱动请重启。 <a href="https://mi.fiime.cn/qudong">相关手机驱动下载-FiimeROM</a>
@@ -775,7 +827,7 @@
 <p class="admonition-title"><strong>对于非深刷玩家如何检查是否链接？</strong></p>
 <p>💡 重启后在设备开机状态下连接电脑，打开终端，输入<code>adb devices</code>，如果返回了设备名称，说明 adb 配置完成；用 <code>adb reboot bootloader</code>进入 fastboot 界面（这步不适用fastbootd设备,即安卓十），键入 <code>fastboot reboot</code>后，若设备重启，说明 fastboot 正常。</p>
 </div>
-<h3 id="_10">准备设备和平台工具</h3>
+<h3 id="_12">准备设备和平台工具</h3>
 <p>Win7 或以上电脑一台，能传输文件的数据线一条（<strong>最好是原装线</strong>），电脑下载解压<a href="https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip">安卓平台文件包</a>或<a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">Linux版本安卓平台工具包</a>或<a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">Mac版本</a>，退出所有手机助手类软件。</p>
 <p>解压工具包，你会看到 adb 和 fastboot ，这是我们针对 Android 设备进行高级调试和安装的工具。</p>
 <p>如果你不想配置ADB全局环境的话，以后执行 Adb 命令需要在工具目录下，按住 Shift 右键鼠标打开终端，命令替换为<code>.\adb</code>或者<code>.\fastboot</code>，如果需要配置全局环境，请按照<a href="https://www.sunzn.com/2018/08/02/Windows-10-%E4%B8%8B%E9%85%8D%E7%BD%AE-ADB-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">这篇文档</a>配置。</p>
@@ -867,6 +919,12 @@
 <li id="fn:30">
 <p>简单认识手机各个分区 https://www.coolapk.com/feed/38367093&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
+<li id="fn:33">
+<p>Android Root原理分析及防Root新思路 https://blog.csdn.net/hsluoyc/article/details/50560782&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:36">
+<p>Bootloader 原理 https://www.zhihu.com/question/47496619/answer/195494376&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -875,11 +933,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 04:24:11</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 05:25:18</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 04:24:11</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 05:25:18</span>
       
     
   </small>
