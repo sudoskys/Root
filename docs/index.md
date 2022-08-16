@@ -58,7 +58,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 三个章节展开相关叙述，其中在第二节会描述不同的常用对策方法
 
 
-## 交流原则
+## **交流原则**
 
 在与人交流情况下，请**务必遵循**以下守则:
 
@@ -124,7 +124,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 - Aidenpers Ultra
 - 小迅的皮套
 - Chi_Tang
-
+- slQYa
 
 ## 引录
 
