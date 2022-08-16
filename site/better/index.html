@@ -454,6 +454,13 @@
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
+    没有图标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
     小米刷原生
   </a>
   
@@ -461,14 +468,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     刷底包
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     通用教程
   </a>
   
@@ -495,7 +502,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     面具随机包名
   </a>
   
@@ -503,7 +510,7 @@
         
           <li class="md-nav__item">
   <a href="#shamiko" class="md-nav__link">
-    SHamiko
+    安装 SHamiko
   </a>
   
 </li>
@@ -530,6 +537,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    疑难解答
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#shamiko_1" class="md-nav__link">
     “Shamiko”白名单模式
   </a>
@@ -537,7 +551,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     隐藏应用列表
   </a>
   
@@ -717,13 +731,22 @@
 <p class="admonition-title">Help</p>
 <p>自安卓7开始，很多手机的system分区默认为只读模式，不可进行删除读写，导致我们即使获取root后，也一样不能去系统文件进行深一层的修改改造。只有当我们解锁system后，再次修改system分区文件才可以正常修改，也可以更直接的进入system层，删除我们不想要的繁杂软件。这里最常见的就是解锁system分区后替换修改system/etc/hosts文件案例。未解锁system分区的机型，删除会出现失败或者直接删除后重启不能开机。</p>
 </div>
-<h2 id="_6">小米刷原生</h2>
+<h2 id="_6">没有图标</h2>
+<div class="admonition info">
+<p class="admonition-title">不能创建 Lsposed 图标？</p>
+<p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">不能创建 Magisk 图标？</p>
+<p>面具设置中有生成图标的选项</p>
+</div>
+<h2 id="_7">小米刷原生</h2>
 <p>刷机有风险 如果不会刷还请不要刷</p>
-<h3 id="_7">刷底包</h3>
+<h3 id="_8">刷底包</h3>
 <p>首先要解锁手机BL锁 。</p>
 <p>解锁完下载MIUI系统底包 必须要和类原生安卓版本一样 安卓9=安卓9 安卓10=安卓10请前往官网或者mi.fiime.cn下载相对应的系统底包，然后参考上面的教程刷第三方REC。</p>
 <p>刷完第三方rec会自动进入 进去之后把下载好的底包移动到手机里面进入清除 把按钮滑到右边 双清完再刷系统点击安装 选择下载好的底包 有个滑动按钮 滑到右边就开始刷了 记住 钩子不要勾</p>
-<h3 id="_8">通用教程</h3>
+<h3 id="_9">通用教程</h3>
 <p>刷完底包后请不要清除任何东西</p>
 <p>请直接刷完底包接着刷原生ROM包</p>
 <p>刷完，返回主页面 。</p>
@@ -742,6 +765,9 @@
 <p class="admonition-title">Warning</p>
 <p>Riru 已经停止维护，所以本节只讲 Zygisk</p>
 </div>
+<p>首先你要安装 Magisk 测试软件来检测你的 ROOT 是否隐藏良好。</p>
+<p>点击 <a href="https://github.com/Dr-TSNG/ApplistDetector/releases">这里</a> 下载相关应用，如果不能下载 Github 文件请复制 apk 链接填入<a href="https://ghproxy.com/">这里</a>下载。</p>
+<p>你也可以在文件包得到 Momo检测软件，地址在文档首页。</p>
 <p><strong><em>*ROOT目前主流的检测方法</em></strong>*</p>
 <p>1、检查常用目录是否存在su</p>
 <p>2、使用which命令查看是否存在su</p>
@@ -756,7 +782,7 @@
 <p>本节内容部分都是 @MiaoHan 的 酷安专栏内容。</p>
 </div>
 <h3 id="zygisk">开启 Zygisk 的面具</h3>
-<p>如果你现在用的阿尔法(Alpha)版面具，开了 MagiskHide 功能，要先关闭 MagiskHide 功能，然后开启Zygisk才能用本期教程的方案。(Hide不是过时了吗？)</p>
+<p>如果你现在用的阿尔法(Alpha)版面具，开了 MagiskHide 功能，要先关闭 MagiskHide 功能，然后开启Zygisk才能用本期教程的方案。(Hide已经在正式版本中被取消了，详见关于页面)</p>
 <p><strong>不管哪一个版本，只开启Zygisk，不要开启遵守排除列表！</strong></p>
 <p>开启Zygisk后要重启手机，Zygisk才能生效。</p>
 <p><strong>如果</strong>你每次打开面具，它都会提示“检测到不属于Magisk的su文件”，对于这种情况，你一定要安装一个名为“隐藏系统root”的面具模块，文件包里有，或者删除system\xbin目录下一个名为“su”的文件。我建议你安装模块，不建议你删除su文件。因为个别系统System只读，删不掉此文件。个别系统删掉开机也会自动恢复。</p>
@@ -764,29 +790,42 @@
 <p class="admonition-title">Danger</p>
 <p><strong>如果没提示这个，不要试图安装“隐藏系统root”模块。</strong></p>
 </div>
-<p>刷了这个“隐藏系统root”模块，会导致Momo提示找到Magisk，但是影响不大，更不会影响隐藏root。我个人建议，如果不是强迫症，建议不要在意这个了。如果你是MIUI开发版系统，比较在意Momo的提示，想让Momo不提示找到Magisk，那么你需要重刷一遍当前开发版系统(重刷系统这一步是为了关闭系统自带的root)。重刷完不要打开系统自带的root，不能用面具接管系统root的方式刷面具，你应该用第三方recovery或者修补boot的方式刷入面具。</p>
-<h3 id="_9">面具随机包名</h3>
-<p>面具设置里，找到“隐藏Magisk应用”选项点开，会跳出一个对话框。这个对话框里已经有默认名称“Settings”，你可以把它删掉并输入你喜欢的名字。比如我输入MiaoHan，点确定就不用管它了，它最后会自动跳转到新生成的面具界面里。期间无论跳转什么界面，你只需要点确定或者允许就行了。面具随机包名成功后，会看到原来的面具消失，桌面出现新生成的面具“MiaoHan”。如果随机包名失败或者“隐藏Magisk应用”一直转圈圈，那么你需要使用代理隧道。</p>
+<p>刷了这个<code>隐藏系统root</code>模块，会导致Momo提示找到Magisk，但是影响不大，<strong>更不会影响隐藏root</strong>。</p>
+<p>我个人建议，如果不是强迫症，建议不要在意这个了。如果你是MIUI开发版系统，比较在意Momo的提示，想让Momo不提示找到Magisk，那么你需要重刷一遍当前开发版系统(重刷系统这一步是为了关闭系统自带的root)。重刷完不要打开系统自带的root，不能用面具接管系统root的方式刷面具，你应该用第三方recovery或者修补boot的方式刷入面具。</p>
+<h3 id="_10">面具随机包名</h3>
+<p>面具设置里，找到“隐藏Magisk应用”选项点开，会跳出一个对话框。这个对话框里已经有默认名称“Settings”，你可以把它删掉并输入你喜欢的名字。比如我输入<code>balabala</code>，点确定就不用管它了，它最后会自动跳转到新生成的面具界面里。</p>
+<p>期间无论跳转什么界面，你只需要点确定或者允许就行了。面具随机包名成功后，会看到原来的面具消失，桌面出现新生成的面具“MiaoHan”。如果随机包名失败或者“隐藏Magisk应用”一直转圈圈，那么你需要使用<strong>代理隧道</strong>(不懂请自己搜索，不要来问)。</p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>如果面具随机包名后，出现 “ 还原Magisk 应用”的提示，重启一下手机就好了。<strong>不用点安装，只需重启一遍手机。</strong></p>
 </div>
-<h3 id="shamiko">SHamiko</h3>
+<div class="admonition info">
+<p class="admonition-title">Magisk 图标好丑！</p>
+<p>面具的设置中有生成一个图标的选项</p>
+</div>
+<h3 id="shamiko">安装 SHamiko</h3>
 <p>一个面具模块，可以在面具开启Zygisk的情况下，实现类似于MagiskHide的隐藏root效果，可以对应用隐藏Magisk、Zygisk本身和二进制文件“su”。你可以把它简单理解为，就是隐藏root的模块。</p>
+<p>文件在文档首页的<strong>资源仓库支持中均有，请自行下载</strong>。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>安装 Shamiko 只能隐藏你的 Root ，不能过谷歌的 SafetyNet。</p>
+</div>
 <h3 id="momo-app">安装 Momo APP检查情况</h3>
-<p>打开面具，右上角点击齿轮进入面具设置界面。在面具设置界面下滑找到配置排除列表选项，点配置排除列表选项进入排除列表界面。在“Shamiko”模块的加持下，理论上你在排除列表勾选哪个应用，哪个应用就检测不到root。</p>
-<p>建议在面具排除列表勾选应用(即对应用隐藏root)后，最好检查一下应用是否在后台运行。如果是在后台运行，你最好结束一下，再打开应用。如果不是在后台运行，你就可以直接打开应用。<strong>注意彻底结束进程</strong></p>
-<p>当面具排除列表勾选Momo后，打开Momo可以看到Momo已经不再提示找到可执行程序“su”、Magisk、Zygisk，说明“Shamiko”模块配合面具排除列表隐藏root是有效的。接下来我们如法炮制，在排除列表勾选那些检测到root后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到root，也就可以正常运行了。</p>
+<p>打开面具，右上角点击齿轮进入面具设置界面。在面具设置界面下滑找到配置排除列表选项，点配置排除列表选项进入排除列表界面。在 Shamiko 模块的加持下，理论上你在排除列表勾选哪个应用，哪个应用就检测不到 root。</p>
+<p>建议在面具排除列表勾选应用(即对应用隐藏 root )后，最好检查一下应用是否在后台运行。</p>
+<p>如果是在后台运行，你最好结束一下 (<strong>注意长按打开应用信息界面彻底结束进程</strong>) ，再打开应用。如果不是在后台运行，你就可以直接打开应用。</p>
+<p>当面具排除列表勾选 Momo 后，打开 Momo 可以看到 Momo 已经不再提示找到可执行程序 “su”、Magisk、Zygisk，说明 “Shamiko” 模块配合面具排除列表隐藏 root 是有效的。接下来我们如法炮制，在排除列表勾选那些检测到 root 后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到 root ，也就可以正常运行了。</p>
+<p><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png" /></p>
 <h3 id="zfb-root">用排除列表对 ZFB 隐藏root</h3>
-<p>玩机的朋友可能会知道，当root后ZFB可能会无法刷脸，归根结底还是因为ZFB检测到了root。我们需要对ZFB隐藏root，相关步骤如下：</p>
-<p>进入面具排除列表，然后右上角搜索找到ZFB，点击ZFB图标把它展开如图四，这里面显示的一条条都是ZFB的进程。当我们勾选ZFB的所有进程，ZFB就检测不到root了，也就是对ZFB隐藏root了。不用一个个点，展开后点ZFB右边的方框即可全部勾选这些进程。把这些进程全部勾选后，如图六，可以看到ZFB上面的进度条全满。这个进度条表示里面的进程有没有全部勾选，如果没有全部勾选，进度条就不会全满。就像图七图八进度条不全满，里面的进程就没有全部勾选，这样是不行的。必须全部勾选里面的进程，才能完全隐藏root。</p>
-<p>非必需操作：排除列表勾选完ZFB后，退出面具。然后长按桌面的ZFB图标，ZFB图标上会出现“应用信息”四个字，点“应用信息”进入“应用信息”界面。如果你是显示图一那样，你就直接去打开ZFB，也不用点“结束运行”。如果你是显示图二那样，就点一下“结束运行”，然后再去打开ZFB。</p>
-<p>好了，不出意外的话，当排除列表勾选ZFB后，打开ZFB就会发现刷脸功能又可以使用了。</p>
+<p>玩机的朋友可能会知道，当 root 后 ZFB 可能会无法刷脸，归根结底还是因为ZFB检测到了 root。我们需要对 ZFB 隐藏r oot，相关步骤如下：</p>
+<p>进入面具排除列表，然后右上角搜索找到 ZFB，点击 ZFB 图标把它展开如图四，这里面显示的一条条都是 ZFB 的进程。当我们勾选 ZFB 的所有进程， ZFB 就检测不到 root 了，也就是对 ZFB 隐藏 root 了。不用一个个点，展开后点 ZFB 右边的方框即可全部勾选这些进程。把这些进程全部勾选后，如图六，可以看到 ZFB 上面的进度条全满。这个进度条表示里面的进程有没有全部勾选，如果没有全部勾选，进度条就不会全满。就像图七图八进度条不全满，里面的进程就没有全部勾选，这样是不行的。必须全部勾选里面的进程，才能完全隐藏 root 。</p>
+<p>非必需操作：排除列表勾选完 ZFB 后，退出面具。然后长按桌面的 ZFB 图标， ZFB 图标上会出现“应用信息”四个字，点“应用信息”进入“应用信息”界面。如果你是显示图一那样，你就直接去打开 ZFB，也不用点“结束运行”。如果你是显示图二那样，就点一下“结束运行”，然后再去打开 ZFB。</p>
+<p>好了，不出意外的话，当排除列表勾选 ZFB 后，打开 ZFB 就会发现刷脸功能又可以使用了。</p>
 <h3 id="rootmiui">排除列表对手机管家隐藏root(MIUI系统专属)</h3>
 <p>如果你是MIUI系统的用户，对ZFB或者薇信以及其他金融类应用隐藏root后，用它们ZF时可能会弹出以下提醒。</p>
 <p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。SHamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
 <p>进入面具排除列表，然后右上角搜索手机管家，大概率都会搜索不到，主要是方法不对，以下教大家查找手机管家的正确方法。</p>
-<p><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png" /></p>
+<h3 id="_11">疑难解答</h3>
 <details class="help">
 <summary><strong>Momo提示找到Magisk解决方法</strong></summary>
 <p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk。</p>
@@ -817,7 +856,7 @@
 <p>启用“Shamiko”白名单模式后，你手机里安装的所有应用(也包括系统应用)都检测不到root了。你不用再像第(一)期教程中的那样，想对哪个应用隐藏root，还必须得在面具排除列表勾选哪个应用才行。启用白名单模式后，你可以跟排除列表繁琐的勾选步骤说再见了，不用再去配置排除列表了。</p>
 </details>
 <details class="help">
-<summary>还不行？停用部分面具模块</summary>
+<summary><strong>还不行？停用部分面具模块</strong></summary>
 <p>适用场景：
 也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
 <p>原因分析：这种情况不是因为“Shamiko”模块失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
@@ -857,10 +896,9 @@
 <p>适用场景：
 也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，模块描述里也显示的是“whitelist mode(白名单模式)”，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
 <p>原因分析：这种情况不是因为“Shamiko”模块白名单模式失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
-<h3 id="_10">隐藏应用列表</h3>
-<p>隐藏应用列表完全没有隐藏root的作用。</p>
+<h3 id="_12">隐藏应用列表</h3>
+<p>隐藏应用列表完全没有隐藏root的作用，但是如果你有安装 LSPosed 它可以隐藏你的模块应用，隐藏 LSPosed 相关特征。</p>
 <p>银行类金融类游戏类应用，检测设备环境的优先级永远是先检测root，然后再检测应用列表或者不检测应用列表。大部分应用都不检测应用列表。</p>
-<p>但是可以隐藏你的模块应用，隐藏 LSPosed 相关特征.</p>
 <h2 id="lsposed">安装 LSPosed</h2>
 <p>面具设置中开启 Zygisk（riru已经停止维护）
 如果你使用Zygisk，那么Riru就无法使用。</p>
@@ -869,6 +907,14 @@
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>如果不能下载请复制Github的 apk 链接请填入<a href="https://ghproxy.com/">镜像站</a> 下载</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>请勿安装多个框架</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">不能创建 Lsposed 图标？</p>
+<p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
 </div>
 <p>刷入教程看下一节。</p>
 <div class="footnote">
@@ -894,11 +940,11 @@
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 03:26:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 04:06:13</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 03:26:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 04:06:13</span>
       
     
   </small>
