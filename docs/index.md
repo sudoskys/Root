@@ -199,3 +199,5 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 [^37]:[MTK刷机原理](https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/)
 
 [^38]:[高通9008刷机原理](https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/)
+
+[^39]:[为什么内存不叫运存？](https://www.zhihu.com/question/327171923/answer/716602933)
