@@ -47,7 +47,7 @@
 
 [LSPosed](https://t.me/s/LSPosed)
 
-下载模块后，在面具的设置中开启 Zygsik，同时在模块中从本地安装 LSposed。重启设备，桌面就新增 LSPosed 的APP。
+下载模块后，在面具的设置中开启 Zygisk，同时在模块中从本地安装 LSposed。重启设备，桌面就新增 LSPosed 的APP。
 
 ## 安全验证
 
