@@ -130,6 +130,10 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 - Chi_Tang
 - slQYa
 
+**由以下服务商托管运行**
+
+![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white)
+
 ## 引录
 
 
