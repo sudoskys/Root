@@ -599,7 +599,7 @@
 <p>阅读者<strong>需要自己承担因尝试 Root 导致的后果</strong>。如果你对自己的动手能力感到怀疑，可以请人！</p>
 <p>深刷的，能去售后就去售后</p>
 </div>
-<p>熟悉 Linux 的童鞋都知道，我们只需要打上 su 的命令，就可以拥有管理员权限。
+<p>在 Linux 中，我们只需要打上 su 的命令，就可以拥有管理员权限。
 su是运行环境变量PATH下面的一个可执行文件，当任意软件运行su时，软件的权限就会被提升到Root权限。</p>
 <p>未Root的安卓系统是没有su这个文件的，所以Root一个手机，就是将su文件放入到系统运行环境变量PATH下面。 之后软件运行su程序，就可以提升到Root权限。</p>
 <p>所以Root就是赋予手机管理员权限，本质就是将su程序放入手机系统文件夹下面。</p>
@@ -609,7 +609,7 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 <p><strong>用户手段有深刷，实现方式有卡刷，线刷。</strong></p>
 <div class="admonition tip">
 <p class="admonition-title">Do you know?</p>
-<p>Magisk 是一个强大的 Android 框架，是一个通用的第三方 systemless 接口，通过这样的方式实现一些较强大的功能。它修改启动分区，并保留了系统文件。这种修改只是虚拟地覆盖在原始文件上。当某些东西请求系统文件时，修改后的版本将被发送到magisk指定的位置。但是由于所有系统文件都是完整的，因此可以欺骗SafetyNet认为一切正常。应用仍然可以在有被root的手机上运行。它通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。当被挂载的 Magisk 分区被隐藏甚至被取消挂载时，原有系统分区的完整性丝毫未损。因此严格来说 Magisk 可以被看作是一种文件系统。</p>
+<p>Magisk 是一个强大的 Android 框架，是一个通用的第三方 systemless 接口，通过这样的方式实现一些较强大的功能。它修改启动分区，并保留了系统文件。这种修改只是虚拟地覆盖在原始文件 上。当某些东西请求系统文件时，修改后的版本将被发送到magisk指定的位置。但是由于所有系统文件都是完整的，因此可以欺骗SafetyNet认为一切正常。应用仍然可以在有被root的手机上运行。它通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。当被挂载的 Magisk 分区被隐藏甚至被取消挂载时，原有系统分区的完整性丝毫未损。因此严格来说 Magisk 可以被看作是一种文件系统。</p>
 </div>
 <p><img alt="示意图" src="https://s3.bmp.ovh/imgs/2022/08/16/95cafb324009b035.png" /></p>
 <h2 id="boot">线刷/深刷 修补 Boot 提取权限</h2>
@@ -876,11 +876,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:30:48</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:33:46</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:30:48</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:33:46</span>
       
     
   </small>
