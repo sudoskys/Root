@@ -37,7 +37,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 - Twrp官方 https://twrp.me/Devices
 - 小米Rom下载站？ http://xiaomirom.com
 - XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
-
+- viQOO工具箱 https://gitee.com/mouzei/viqoo
 
 
 ##  **文档结构**
