@@ -123,12 +123,13 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 **由以下人士参与校对**
 
-- [ZH/NSFW]狼-公开备忘录
-- 笨蛋ovo 
-- Aidenpers Ultra
-- 小迅的皮套
-- Chi_Tang
-- slQYa
+- tg@[ZH/NSFW]狼-公开备忘录
+- tg@笨蛋ovo 
+- tg@Aidenpers Ultra
+- tg@小迅的皮套
+- tg@Chi_Tang
+- tg@slQYa
+- github@solstice23
 
 **由以下服务商托管运行**
 
