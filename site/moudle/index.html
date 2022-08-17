@@ -408,15 +408,22 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#adb" class="md-nav__link">
-    ADB
+  <a href="#_4" class="md-nav__link">
+    救砖模块
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    救砖模块
+  <a href="#adb" class="md-nav__link">
+    ADB 保险
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#adb_1" class="md-nav__link">
+    ADB 命令
   </a>
   
 </li>
@@ -562,16 +569,35 @@
 <h2 id="_2">模块安装方法</h2>
 <p>打开 模块 页面，点击 从本地ZIP安装 ，选择模块压缩包文件，然后等待刷入完毕。</p>
 <h2 id="_3">装模块装砖了</h2>
-<h3 id="adb">ADB</h3>
+<p><sup id="fnref:40"><a class="footnote-ref" href="#fn:40">4</a></sup></p>
+<h3 id="_4">救砖模块</h3>
+<p>社区中有一种自动救砖模块可以使用。你可以在首页资源支持的某个仓库下载。</p>
+<h3 id="adb">ADB 保险</h3>
+<p>Magisk 从2019年其实施了一项故障保险，如果你的 Xposed 使用 Magisk（自从 Oreo 之后就没有使用 Xposed）它会起作用。</p>
+<p><strong>如果启用了 adb 调试</strong></p>
 <p>将不断重复开机的手机关机，用数据线链接手机电脑，打开 ADB 环境(前文已经叙述)</p>
 <p>电脑端打开命令行窗口并执行  <code>adb wait-for-device shell magisk --remove-modules</code></p>
-<p>长按电源键开机</p>
+<p>长按电源键开机...</p>
+<p><strong>如果没有启用 adb 调试</strong></p>
+<p>刷入你 原有备份的 boot.img，启用 USB 调试，再刷入 magisk_patched_boot.img，然后运行命令。</p>
+<p>这样就算 SystemUI 崩溃，运行这个命令也会删除所有模块。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>先执行再开机</p>
 </div>
-<h3 id="_4">救砖模块</h3>
-<p>社区中有一种自动救砖模块可以使用。你可以在首页资源支持中下载到它。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>如果你可以刷入 非 root 的 <code>boot.img</code> 并启用 USB 调试，就可以在 root 时修复软重启。
+如果在 adb 调试模式之前在引导期间卡住了.....通常这种问题比砖你的 Magisk 模块更严重。</p>
+</div>
+<h3 id="adb_1">ADB 命令</h3>
+<p>打开 CMD 并输入 <code>adb shell</code></p>
+<p>切换到目录 <code>cd /data/adb/modules</code></p>
+<p>查找模块 <code>ls -Ral /data/adb/modules</code></p>
+<p>删除 magisk 模块 <code>rm -r /data/adb/modules/module_name</code></p>
+<blockquote>
+<p>Adb安全验证被禁用时，所有设备都可以获得授权。</p>
+</blockquote>
 <h3 id="twrp">Twrp</h3>
 <p>进<code>twrp</code>，删除<code>data/adb/modules</code>，里面是你的magisk模块。</p>
 <h2 id="_5">模块什么东东？</h2>
@@ -808,6 +834,9 @@ service myservice <span class="si">${</span><span class="nv">MAGISKTMP</span><sp
 <li id="fn:27">
 <p>MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html&#160;<a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
+<li id="fn:40">
+<p><a href="https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/">Guide Remove magisk modules without TWRP</a>&#160;<a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -816,11 +845,11 @@ service myservice <span class="si">${</span><span class="nv">MAGISKTMP</span><sp
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:05:30</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:28:30</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:05:30</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:28:30</span>
       
     
   </small>
