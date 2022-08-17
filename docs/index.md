@@ -39,6 +39,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 - XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
 - viQOO工具箱 https://gitee.com/mouzei/viqoo
 
+>本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
 
 ##  **文档结构**
 
