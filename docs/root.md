@@ -26,6 +26,16 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 ![示意图](https://s3.bmp.ovh/imgs/2022/08/16/95cafb324009b035.png)
 
 
+
+
+
+
+!!! danger
+    下面开始刷机，请不要在晚上刷机！
+    
+    
+    
+    
 ## 线刷/深刷 修补 Boot 提取权限
 
 !!! warning
@@ -38,7 +48,6 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 
 
 ### 准备 **Magisk**
-
 
 
 你可以从 [Github](https://github.com/topjohnwu/Magisk/releases) 或者 文件包 [1^] 下载它，推荐去 Github 下载，越新越好。如果不能下载 Github 文件请复制 apk 链接填入[这里](https://ghproxy.com/)
@@ -387,9 +396,6 @@ fastboot reboot
 `python mtk wl out`
 
 
-
-!!! danger
-    下面开始刷机，请不要在晚上刷机！
 
 ## **面具 Ramdisk 为「否」的机型？**"
     
