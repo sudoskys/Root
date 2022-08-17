@@ -185,15 +185,25 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 [^22]:[**高通9008线刷救黑砖教程**](https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
 
 [^23]:[保留root去更新系统](https://www.coolapk.com/feed/37647626)
+
 [^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk.com/feed/16164846)
+
 [^25]:[自制简易Magisk模块教程](https://www.coolapk.com/feed/37576170)
+
 [^26]:[MagiskInstallation](https://topjohnwu.github.io/Magisk/install.html)
+
 [^27]:[MagiskDeveloperGuides](https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html)
+
 [^28]:[联发科不建议玩机](https://www.coolapk.com/feed/37080982)
+
 [^29]:[Root升级系统](https://www.coolapk.com/feed/34860331)
+
 [^30]:[简单认识手机各个分区](https://www.coolapk.com/feed/38367093)
+
 [^31]:[手动给予安卓应用root权限的方法](https://www.coolapk.com/feed/37543497)
+
 [^32]:[如何提问，并获得高回复率] (https://zhuanlan.zhihu.com/p/19779979)
+
 [^33]:[Android Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
 
 [^34]:[Root卡刷原理](https://www.zhihu.com/question/20098750/answer/173038749)
@@ -208,5 +218,10 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 [^39]:[为什么内存不叫运存？](https://www.zhihu.com/question/327171923/answer/716602933)
 
-
 [^40]:[Guide Remove magisk modules without TWRP](https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/)
+
+[^41]:[[新手必看]华为刷机你一定要知道的](https://zhuanlan.zhihu.com/p/416456337)
+
+[^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
+
+[^43]:[部分华为麒麟手动获取BL解锁码](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)

@@ -375,6 +375,49 @@ fastboot reboot
 !!! note
     因为未知原因导致安装失败也不要怕，操作中你应该保留了一份原来的镜像，按照最后一步的方法将原来的镜像重新刷回去就能正常开机。**
 
+
+### 华为深刷救砖[^43]
+
+这里还是酷安@某贼的教程
+
+[华为线刷工具](https://miao202.lanzouj.com/ihGpU09qfebg)
+
+[华为解锁相关驱动与工具](https://miao202.lanzouj.com/igAzW09qew7e)
+
+!!! info
+    华为官方包一般是一个压缩包的形式，我们需要解压使用。
+    解压后里面还可能有若干层压缩包，需要继续解压，直到解压出UPDATE.APP（大包）和update_sd_XXX-XXXX_XXX_cn.app（小包,只需要解压对应你手机型号的就好。EMUI4及以前的系统包是没有小包的，只有一个大包。
+
+
+首先将手机连接电脑,打开短接图查看器，搜索你的手机,然后点击查看相应短接图（如果你的手机已经处于深刷，则可以免去拆机这一步）。
+
+!!! help
+   有些图不是短接图。一般注明一个或两个点位的是短接图。
+
+如果图上标出的是两个点，就用镊子短接这两个点，如果只有一个就短接这个点和旁边的保护罩（或者悬空也可以）,然后手机会黑屏进入深刷模式，电脑任务管理器会显示端口（如果显示的是未知设备USB_SER，就说明驱动没有安装好）。
+
+然后镊子可以松开了。打开华为线刷工具，首次打开可能弹登陆框，关掉重开就好了。
+
+
+右侧切换到救砖写底层选项卡，选择你的处理器类型（一定不要选错），点击下方开始。然后会自动写入临时解锁的底层。
+
+完成后手机会自动重启到Fastboot模式，设备管理器显示Android Bootloader Interface或Android Sooner Single ADB Interface设备。
+
+然后切换到线刷降级选项卡，点击右下方“...”按钮选择你下载的官方包的大包（UPDATE.APP），端口选项改成Fastboot。
+
+
+点击开始后,前面几个分区会失败，后面的都会成功。刷的时间也很长，请耐心等待，刷好后手机会自动重启。
+
+但是这样一般是不能开机的，长按电源键，音量加和音量减三键，重启到升级模式（手机显示正在安装升级包5%），在线刷工具里选择配套的小包，端口改成自动（Auto） 点击开始。刷入完成后重启手机一般就可以正常开机了。
+
+如果刷入失败或成功但仍然不能正常开机，可以在官方Recovery里恢复出厂，或者在eRecovery下载最新包恢复，或者进Fastboot连接电脑华为助手修复系统。某些用华为设备魔改的学习系统也可以用此方法刷回正常官方系统。
+
+!!! info
+    在BL锁已经解锁的情况下，可以尝试线刷关键分区 system，boot，recovery，cust 实现救砖。
+
+[其他方法](https://www.coolapk.com/feed/26205215?shareKey=MzUxMDU3ODVmMjY0NjEwZDQ5M2M~&shareUid=3463951&shareFrom=com.coolapk.market_11.3)
+
+
 ### 安装模块变砖防护策略
 
 - 安装 MM管理器 或 自动神仙救砖 插件
@@ -394,6 +437,17 @@ fastboot reboot
 
 自救命令，使用mtkclient写入备份的镜像
 `python mtk wl out`
+
+
+
+## 华为？
+
+请先根据前一节内容慎重考虑华为 Root 。
+
+而且需要解锁 Bootloader 。
+
+去年华为关闭了官网上的ROM下载通道，你可以去万维论坛或者 [Huawei Firm Finder](https://professorjtj.github.io/)
+
 
 
 
@@ -418,4 +472,6 @@ fastboot reboot
 
 [^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
+[^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
+[^43]:[部分华为麒麟手动获取BL解锁码](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
