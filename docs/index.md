@@ -201,3 +201,6 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 [^38]:[高通9008刷机原理](https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/)
 
 [^39]:[为什么内存不叫运存？](https://www.zhihu.com/question/327171923/answer/716602933)
+
+
+[^40]:[Guide Remove magisk modules without TWRP](https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/)
