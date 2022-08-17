@@ -401,6 +401,33 @@
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    装模块装砖了
+  </a>
+  
+    <nav class="md-nav" aria-label="装模块装砖了">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adb" class="md-nav__link">
+    ADB
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    救砖模块
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     模块什么东东？
   </a>
   
@@ -429,28 +456,28 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     自定义
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     模块技巧
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     启动脚本
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     根目录覆盖系统
   </a>
   
@@ -527,7 +554,18 @@
 <p>推荐先装一个救砖模块，这个模块自己搜索上面的仓库</p>
 <h2 id="_2">模块安装方法</h2>
 <p>打开 模块 页面，点击 从本地ZIP安装 ，选择模块压缩包文件，然后等待刷入完毕。</p>
-<h2 id="_3">模块什么东东？</h2>
+<h2 id="_3">装模块装砖了</h2>
+<h3 id="adb">ADB</h3>
+<p>将不断重复开机的手机关机，用数据线链接手机电脑，打开 ADB 环境(前文已经叙述)</p>
+<p>电脑端打开命令行窗口并执行  <code>adb wait-for-device shell magisk --remove-modules</code></p>
+<p>长按电源键开机</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>先执行再开机</p>
+</div>
+<h3 id="_4">救砖模块</h3>
+<p>社区中有一种自动救砖模块可以使用。你可以在首页资源支持中下载到它。</p>
+<h2 id="_5">模块什么东东？</h2>
 <p>面具模块的主要作用是修改系统文件和替换系统文件，但是又不是彻底修改，修改之后可以通过关闭或删除模块恢复原样。
 下载好的Magisk模块，可以解压，查看文件结构.[25^]</p>
 <p>通常模块安装程序是打包成zip文件的Magisk模块，可以在Magisk应用程序或第三方recovery(如TWRP)中进行刷入。安装程序的文件结构与Magisk模块的文件结构相同(请查看上一部分以获取更多信息)。最简单的Magisk模块安装程序只是一个打包为zip文件的Magisk模块，此外还包含以下文件：</p>
@@ -609,7 +647,7 @@ ID必须匹配这个正则表达式：^[a-zA-Z][a-zA-Z0-9._-]+$。
 <p>该文件中的每一行都将被视为策略声明。要详细了解策略声明的格式，请查看magiskpolicy的文档</p>
 <p><strong>system文件夹</strong>
 您希望Magisk为您替换/插入的所有文件都应放在此文件夹中。请查看Magic挂载 部分，以了解Magisk如何挂载文件。</p>
-<h3 id="_4">自定义</h3>
+<h3 id="_6">自定义</h3>
 <p>如果您需要自定义模块安装过程，则可以选择在安装程序中创建一个名为<code>customize.sh</code>的脚本。这个脚本会在所有文件以默认<code>permissions</code>和<code>secontext</code>应用后，由<code>update-binary</code>调用(不是执行！)。如果您的模块包含基于<code>ABI</code>的其他文件，或者您需要为某些文件(例如<code>/system/bin</code>中的文件)，设置特殊的<code>permissions/secontext</code>，这将非常有用。</p>
 <p>如果您需要更多的自定义，并且希望自己做所有事情请在<code>customize.sh</code>中标注<code>SKIPUNZIP=1</code>以跳过提取操作并应用默认<code>permissions/secontext</code>。请注意，这样做后，你的<code>customize.sh</code>将负责自行安装所有内容。</p>
 <p><strong><code>customize.sh</code>的运行环境</strong></p>
@@ -663,7 +701,7 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
 由于历史原因，<strong>请勿</strong>在模块安装程序中添加名为<code>install.sh</code>的文件。该文件以前曾被使用过，将被区别对待。
 不要在<code>customize.sh</code>末尾使用<code>exit</code>。模块安装程序将会自行完成。</p>
 </div>
-<h3 id="_5">模块技巧</h3>
+<h3 id="_7">模块技巧</h3>
 <div class="admonition note">
 <p class="admonition-title"><strong>删除文件</strong></p>
 </div>
@@ -673,7 +711,7 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
 <p>与上述相同，实际上使文件夹删除是不值得的。用一个空文件夹替换它应该已经足够了！对于模块开发人员来说，一个方便的技巧是将要删除的文件夹添加到customize.sh中的REPLACE列表中。</p>
 <p>如果您的模块没有提供相应的文件夹，它将创建一个空文件夹，并自动将.replace添加到该空文件夹中，以便虚拟文件夹可以正确替换/system中的一个文件夹。</p>
 </div>
-<h3 id="_6">启动脚本</h3>
+<h3 id="_8">启动脚本</h3>
 <p>在Magisk中，您可以以两种不同的模式运行启动脚本: post-fs-data和late_start service模式</p>
 <ul>
 <li>post-fs-data 模式</li>
@@ -706,7 +744,7 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
 <li>需要启动脚本的模块应仅使用模块脚本而不是常规脚本</li>
 </ul>
 <p>这些脚本将在启用了“独立模式”Magisk的BusyBox ash shell中运行.</p>
-<h3 id="_7">根目录覆盖系统</h3>
+<h3 id="_9">根目录覆盖系统</h3>
 <p>由于<code>/</code>在<code>system-as-root</code>设备上是只读的, 因此Magisk提供了一个覆盖系统，使开发人员可以替换根目录中的文件或添加新的<code>*.rc</code>脚本。此功能主要是为自定义内核开发人员设计的。</p>
 <p>覆盖文件应放在boot镜像ramdisk的<code>overlay.d</code>文件夹中并遵循以下规则:</p>
 <ul>
@@ -769,11 +807,11 @@ service myservice <span class="si">${</span><span class="nv">MAGISKTMP</span><sp
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 23:31:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:02:52</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 16, 2022 23:31:06</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 03:02:52</span>
       
     
   </small>
