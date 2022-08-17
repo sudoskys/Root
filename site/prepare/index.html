@@ -488,6 +488,19 @@
     准备深度测试或申请解锁BL（深刷可跳过）
   </a>
   
+    <nav class="md-nav" aria-label="准备深度测试或申请解锁BL（深刷可跳过）">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    什么，你是华为？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
         
           <li class="md-nav__item">
@@ -864,6 +877,7 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>如果你已经安装了 <a href="https://chocolatey.org/">choco</a> 或 <a href="https://brew.sh/">homebrew</a> 等包管理工具的话，Windows 输入<code>choco install adb universal adb-drivers -y</code>，Mac 输入 <code>brew install android-platform-tools</code>能最方便的完成 adb 和 fastboot 的配置。Windows 用户可以参照  <a href="https://sspai.com/post/40471">Windows 操作系统下的 ADB 环境配置</a> 这篇文章；macOS 用户可以尝试  <a href="https://github.com/corbindavenport/nexus-tools">此脚本</a> 或是参考 <a href="https://sspai.com/post/38535">使用 Mac 为 Android 手机刷原生系统</a> 进行手动配置。最后最最不济，可以尝试在 Google  <a href="https://developer.android.com/studio/releases/platform-tools?hl=zh-cn">开发者页面</a> 下载对应 adb 包，解压后在对应的目录下执行指令亦可，或者是尝试 <a href="https://app.webadb.com/#/">WebADB</a> 或  <a href="https://adb.http.gs/">adb 在线执行器</a> 这样的在线 adb 工具，比较考验浏览器的兼容性。</p>
 </div>
 <p>然后打开手机的USB调试开关允许计算机调试，确认你的<strong>驱动线和驱动</strong>都<strong>没有问题</strong>！</p>
+<p>华为工具在软件包内(看引用)</p>
 <h3 id="bl">准备深度测试或申请解锁BL（深刷可跳过）</h3>
 <blockquote>
 <p>BL 是 bootloader 的简称 就是 手机开机时，最先运行的小程序：开机引导程序 ，Bootloader 锁，主要是在引导过程中对系统签名，内核签名及 Recovery 签名进行检验，如果签名不一致，即终止引导。绿机器人儿用它来进行开机自检和初始化手机硬件，它会指引手机找到系统分区并启动操作系统，相当于电脑上的BIOS。</p>
@@ -874,7 +888,7 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p class="admonition-title">Danger</p>
 <p><strong>解bl锁会清除手机（恢复出厂设置）所有数据，记得提前备份好。</strong></p>
 </div>
-<p>不同的手机解锁方式不同，你甚至可以去线下店让服务人员解锁。或者从自己的社区中获取本机型的解锁信息。部分手机解锁很麻烦，比如华为，想要解锁只能去淘宝买解锁码，而且当你刷回官方 ROM 时，会自动加锁。当然，华为的解锁码是和硬件相关的，买到解锁码把它记下，下次进 FASTBOOOT 输入<code>fastboot oem unlock 解锁码</code>就可以了。</p>
+<p>不同的手机解锁方式不同，你甚至可以去线下店让服务人员解锁。或者从自己的社区中获取本机型的解锁信息。部分手机解锁很麻烦，比如华为，想要解锁只能去淘宝买解锁码，而且当你刷回官方 ROM 时，会自动加锁。</p>
 <p>而对于小米手机，可以通过这个地址 <a href="https://www.miui.com/unlock/download.html">申请解锁</a> 下载工具，然后打开手机设置，进入关于手机–&gt;系统版本点10下，在<code>设备解锁状态</code>中绑定账号和设备，进入<code>Fastboot</code>模式(关机后，同时按住开机键和音量下键)，打开刚才下载的工具，点击 <code>解锁</code> 后系统会恢复出厂系统并解锁。也可以通过OEM解锁</p>
 <div class="admonition danger">
 <p class="admonition-title">不可逆</p>
@@ -888,6 +902,69 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>一些古董机型是没有BL锁的，比如红米Note。</p>
 </div>
 <p>附上<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=28646781&amp;boardId=5415551&amp;isComment=&amp;isRecommend=0&amp;app_version=dev.211029&amp;ref=share">小米解锁教程</a>.</p>
+<h4 id="_13">什么，你是华为？</h4>
+<p>这节的教程来自酷安@某贼 <sup id="fnref:41"><a class="footnote-ref" href="#fn:41">10</a></sup></p>
+<p>推荐直接看<a href="https://zhuanlan.zhihu.com/p/397173427">知乎上他的文章</a></p>
+<p><a href="https://miao202.lanzouj.com/igAzW09qew7e">华为解锁相关驱动与工具</a></p>
+<p><a href="https://github.com/mashed-potatoes/PotatoNV">解锁华为 bootloader 工具，适用 Kirin 960/95х/65x/620</a> ，如果不能下载请复制Github的 zip 链接请填入<a href="https://ghproxy.com/">镜像站</a> 下载。<sup id="fnref:42"><a class="footnote-ref" href="#fn:42">11</a></sup></p>
+<p><strong>拆机短接解锁深刷端口</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>如果你没有拆机经验，建议找你附近的手机店帮拆一下，以免操作不当造成物理损坏。一般只需要拆后盖即可，但有几个机型还需要拆屏蔽罩，具体参考猎人短接图上的点位。</p>
+</div>
+<blockquote>
+<p>猎人短接图使用方法：打开后在左下方搜索手机名称，比如荣耀9i就搜索9i即可,可能会搜索出两个结果，选择带 <code>TP</code> 字样的即可。</p>
+</blockquote>
+<p>找到短接图后就可以按图短接了。一般是关机状态下短接再插线连电脑。<strong>注意不要拆电池</strong>。</p>
+<p>其中有的图箭头指向两个触点，意思是用镊子短接这两个点。有的图是一个箭头，意思是用镊子一端接这个点，另一端悬空或接旁边的金属保护罩。有的图两个箭头分别指向触点和保护罩，意思是短接这个触点和保护罩。</p>
+<p>电脑提前打开设备管理器，短接插线后注意观察电脑反应，如果成功的话电脑会有设备连接提示音并在设备管理器里刷新出华为麒麟深刷端口。</p>
+<p>如果有提示音但显示未知设备USB-SER说明你没装驱动。</p>
+<p>如果电脑没任何反应，你应该检查短接工具，数据线，电脑插口，手机是否关机状态，然后多短接几次试试。出端口之后就可以松手了。</p>
+<p>不用看手机，注意端口就行，进入深刷后手机是黑屏无显示的。</p>
+<p><strong>更改解锁码</strong></p>
+<p>短接成功之后打开PotatoNV，第一项一般会被自动识别，在Bootloader一项里选你的处理器，通常情况下659选方案A即可。</p>
+<p>点击 Start ，软件会随机生成一个16位解锁码显示在输出信息里。改好解锁码重启。</p>
+<p><strong>华为</strong>的解锁码是和硬件相关的，如果有解锁码进 FASTBOOOT 输入<code>fastboot oem unlock 解锁码</code>就可以了。</p>
+<hr />
+<p><strong>解锁困难</strong></p>
+<p>如果你是华为手机，<strong>不推荐</strong> 麒麟990以及更高的手机解锁，解锁过程困难且限制大。</p>
+<p>之所以说 <strong>华为解BL锁很困难</strong>，是因为华为官方在18年就<strong>关停</strong>了官方获取解锁码通道，所以无法从官方拿解锁码。但是我们仍然可以选择通过第三方软件，淘宝商家获取解锁码或者手动拆机短接改解锁码。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>顺带一提，华为联发科解不了BL</p>
+</div>
+<p>而且华为通过解锁码解锁的BL叫做用户BL，只开放少数分区比如system，boot，recovery，userdata等。工厂BL则开放全分区，但需要第三方软件解锁（需要很多钱），而且只能在Fastboot里临时解锁，重启即失效。</p>
+<p>普通用户就只能解特供用户BL。</p>
+<p><strong>data分区是敏感肌</strong></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>如果你在使用官方系统，华为喜欢把某些系统组件放到data里,请避免双清＆格式化data,执意操作会导致这些组件丢失，不能开机。如果你需要格式化，可以恢复官方的 Recovery 来格式化。如果格式化导致无法开机，可以提取官方包里的userdata分区，进入Fastboot用fastboot flash userdata 刷入来恢复。</p>
+<p>华为这里很多TWRP不支持解密data，那就别解密了，插SD卡或者adb sideload刷包。</p>
+</div>
+<p><strong>救砖困难</strong></p>
+<p>华为官方并没有给用户提供传统意义上的卡刷和线刷方式。一般是在升级模式用的（即所谓“三键强刷”包）华为官方包是.APP格式，由一堆分区镜像组合而成。</p>
+<p>但是升级模式是官方 Rec 的一部分，刷包校验十分严格，包括华为签名（是否官方包），系统版本等等。升级模式无法满足救砖的需要。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>官方没有卡刷包。APP那个zip一般不能直接拿来卡刷。</p>
+</div>
+<p>如果使用Fastboot,借助第三方工具可以用APP包线刷，但是上面说了用户特供用户BL是没有解锁全部分区的，这将导致设备的分区大半无法刷入。实现全分区临时解锁除了借助第三方工具（moneymoney很多钱），唯一自己能操作的办法就是拆机短接。救砖教程请看下一节。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>华为官方给用户提供的官方救砖途径是eRecovery恢复和Hisuite修复，但是华为封锁了这两条途径……
+这两个方法都是从官方服务器下载包然后恢复，但很多旧机型已经无法再从官方获取到包，也就无法再进行官方救砖。</p>
+</div>
+<p><strong>刷第三方包容易变砖</strong></p>
+<p>包括官改移植类原生。</p>
+<p><strong>华为各个模式</strong></p>
+<p>Recovery：不连接电脑，关机状态长按电源键和音量加，出现 logo 松开电源键继续按住音量加，直到进入。</p>
+<p>eRecovery：关机状态,<strong>数据传输线</strong>连接电脑，长按电源键和音量加。</p>
+<p>Fastboot：关机状态,<strong>数据传输线</strong>连接电脑，长按电源键和音量减。</p>
+<p>升级模式（所谓三键强刷）：关机状态下，长按电源键，音量加和音量减。如果你的系统包在手机存储里，则不需要链接直接按，如果你想要用电脑工具辅助，则需要使用<strong>数据传输线</strong>连接电脑。</p>
+<details class="info">
+<summary>关于 Recovery 和 eRecovery</summary>
+<p>Recovery和eRecovery是有区别的。Recovery就是我们熟知的那个Recovery，而eRecovery是独立于Recovery的另一个分区。二者功能不同，在Recovery里我们可以做恢复出厂，清除cache等本地操作，而在eRecovery里可以连接WiFi下载适用于你的手机的系统包并自动安装恢复。刷TWRP只是替换掉了Recovery，eRecovery仍然保留。</p>
+</details>
 <h3 id="3">备份完整分区<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">3</a></sup></h3>
 <p>这里的分区就是字库。</p>
 <p>什么是备份完整字库？我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
@@ -955,6 +1032,12 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <li id="fn:39">
 <p><a href="https://www.zhihu.com/question/327171923/answer/716602933">为什么内存不叫运存？</a>&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
+<li id="fn:41">
+<p><a href="https://zhuanlan.zhihu.com/p/416456337">[新手必看]华为刷机你一定要知道的</a>&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:42">
+<p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -963,11 +1046,11 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:18:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 16:32:07</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:18:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 16:32:07</span>
       
     
   </small>

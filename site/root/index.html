@@ -497,6 +497,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    华为深刷救砖4
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
     安装模块变砖防护策略
   </a>
@@ -512,6 +519,13 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    华为？
+  </a>
   
 </li>
       
@@ -837,6 +851,33 @@ fastboot reboot
 <p class="admonition-title">Note</p>
 <p>因为未知原因导致安装失败也不要怕，操作中你应该保留了一份原来的镜像，按照最后一步的方法将原来的镜像重新刷回去就能正常开机。**</p>
 </div>
+<h3 id="4">华为深刷救砖<sup id="fnref:43"><a class="footnote-ref" href="#fn:43">4</a></sup></h3>
+<p>这里还是酷安@某贼的教程</p>
+<p><a href="https://miao202.lanzouj.com/ihGpU09qfebg">华为线刷工具</a></p>
+<p><a href="https://miao202.lanzouj.com/igAzW09qew7e">华为解锁相关驱动与工具</a></p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>华为官方包一般是一个压缩包的形式，我们需要解压使用。
+解压后里面还可能有若干层压缩包，需要继续解压，直到解压出UPDATE.APP（大包）和update_sd_XXX-XXXX_XXX_cn.app（小包,只需要解压对应你手机型号的就好。EMUI4及以前的系统包是没有小包的，只有一个大包。</p>
+</div>
+<p>首先将手机连接电脑,打开短接图查看器，搜索你的手机,然后点击查看相应短接图（如果你的手机已经处于深刷，则可以免去拆机这一步）。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+</div>
+<p>有些图不是短接图。一般注明一个或两个点位的是短接图。</p>
+<p>如果图上标出的是两个点，就用镊子短接这两个点，如果只有一个就短接这个点和旁边的保护罩（或者悬空也可以）,然后手机会黑屏进入深刷模式，电脑任务管理器会显示端口（如果显示的是未知设备USB_SER，就说明驱动没有安装好）。</p>
+<p>然后镊子可以松开了。打开华为线刷工具，首次打开可能弹登陆框，关掉重开就好了。</p>
+<p>右侧切换到救砖写底层选项卡，选择你的处理器类型（一定不要选错），点击下方开始。然后会自动写入临时解锁的底层。</p>
+<p>完成后手机会自动重启到Fastboot模式，设备管理器显示Android Bootloader Interface或Android Sooner Single ADB Interface设备。</p>
+<p>然后切换到线刷降级选项卡，点击右下方“...”按钮选择你下载的官方包的大包（UPDATE.APP），端口选项改成Fastboot。</p>
+<p>点击开始后,前面几个分区会失败，后面的都会成功。刷的时间也很长，请耐心等待，刷好后手机会自动重启。</p>
+<p>但是这样一般是不能开机的，长按电源键，音量加和音量减三键，重启到升级模式（手机显示正在安装升级包5%），在线刷工具里选择配套的小包，端口改成自动（Auto） 点击开始。刷入完成后重启手机一般就可以正常开机了。</p>
+<p>如果刷入失败或成功但仍然不能正常开机，可以在官方Recovery里恢复出厂，或者在eRecovery下载最新包恢复，或者进Fastboot连接电脑华为助手修复系统。某些用华为设备魔改的学习系统也可以用此方法刷回正常官方系统。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>在BL锁已经解锁的情况下，可以尝试线刷关键分区 system，boot，recovery，cust 实现救砖。</p>
+</div>
+<p><a href="https://www.coolapk.com/feed/26205215?shareKey=MzUxMDU3ODVmMjY0NjEwZDQ5M2M~&amp;shareUid=3463951&amp;shareFrom=com.coolapk.market_11.3">其他方法</a></p>
 <h3 id="_7">安装模块变砖防护策略</h3>
 <ul>
 <li>安装 MM管理器 或 自动神仙救砖 插件</li>
@@ -850,6 +891,10 @@ fastboot reboot
 <p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
 <p>自救命令，使用mtkclient写入备份的镜像
 <code>python mtk wl out</code></p>
+<h2 id="_8">华为？</h2>
+<p>请先根据前一节内容慎重考虑华为 Root 。</p>
+<p>而且需要解锁 Bootloader 。</p>
+<p>去年华为关闭了官网上的ROM下载通道，你可以去万维论坛或者 <a href="https://professorjtj.github.io/">Huawei Firm Finder</a></p>
 <h2 id="ramdisk"><strong>面具 Ramdisk 为「否」的机型？</strong>"</h2>
 <ol>
 <li>下载当前系统的全量包，如果你使用了第三方 Recovery，那么 recovery.img 就是这个第三方的镜像。提取 recovery.img <strong>或者</strong> MTK 中执行 <code>python mtk r recovery recovery.img</code>，备份，然后传到手机上</li>
@@ -869,6 +914,12 @@ fastboot reboot
 <li id="fn:21">
 <p><a href="https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B">底层刷机教程/全解析</a>&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
+<li id="fn:42">
+<p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:43">
+<p><a href="https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&amp;shareUid=3463951&amp;shareFrom=com.coolapk.market_11.4.2">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -877,11 +928,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:18:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 16:32:07</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:18:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 16:32:07</span>
       
     
   </small>
