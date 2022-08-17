@@ -612,6 +612,10 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 <p>Magisk 是一个强大的 Android 框架，是一个通用的第三方 systemless 接口，通过这样的方式实现一些较强大的功能。它修改启动分区，并保留了系统文件。这种修改只是虚拟地覆盖在原始文件 上。当某些东西请求系统文件时，修改后的版本将被发送到magisk指定的位置。但是由于所有系统文件都是完整的，因此可以欺骗SafetyNet认为一切正常。应用仍然可以在有被root的手机上运行。它通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。当被挂载的 Magisk 分区被隐藏甚至被取消挂载时，原有系统分区的完整性丝毫未损。因此严格来说 Magisk 可以被看作是一种文件系统。</p>
 </div>
 <p><img alt="示意图" src="https://s3.bmp.ovh/imgs/2022/08/16/95cafb324009b035.png" /></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>下面开始刷机，请不要在晚上刷机！</p>
+</div>
 <h2 id="boot">线刷/深刷 修补 Boot 提取权限</h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -846,10 +850,6 @@ fastboot reboot
 <p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
 <p>自救命令，使用mtkclient写入备份的镜像
 <code>python mtk wl out</code></p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>下面开始刷机，请不要在晚上刷机！</p>
-</div>
 <h2 id="ramdisk"><strong>面具 Ramdisk 为「否」的机型？</strong>"</h2>
 <ol>
 <li>下载当前系统的全量包，如果你使用了第三方 Recovery，那么 recovery.img 就是这个第三方的镜像。提取 recovery.img <strong>或者</strong> MTK 中执行 <code>python mtk r recovery recovery.img</code>，备份，然后传到手机上</li>
@@ -877,11 +877,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:08:14</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:11:47</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:08:14</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:11:47</span>
       
     
   </small>
