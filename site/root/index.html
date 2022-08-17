@@ -387,33 +387,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    突发救砖
-  </a>
-  
-    <nav class="md-nav" aria-label="突发救砖">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    安装模块变砖防护策略
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mtk" class="md-nav__link">
-    MTK恢复
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#recovery" class="md-nav__link">
     卡刷 第三方 Recovery
   </a>
@@ -422,7 +395,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     特殊情况说明
   </a>
   
@@ -442,7 +415,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     刷包成功后出现的几种情况
   </a>
   
@@ -454,7 +427,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#mtk_1" class="md-nav__link">
+  <a href="#mtk" class="md-nav__link">
     深刷 MTK联发科 刷入/强解
   </a>
   
@@ -462,14 +435,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#mtk_2" class="md-nav__link">
+  <a href="#mtk_1" class="md-nav__link">
     准备 MTK 工具/工具箱
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     初始化
   </a>
   
@@ -509,9 +482,36 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     结束
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    突发救砖
+  </a>
+  
+    <nav class="md-nav" aria-label="突发救砖">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    安装模块变砖防护策略
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mtk_2" class="md-nav__link">
+    MTK恢复
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -655,33 +655,6 @@ python3 payload_dumper.py payload.bin
 <p class="admonition-title">警告</p>
 <p>⚠️ <strong>你所用到的镜像(提取或修改)都要留存副本！否则变砖警告！</strong></p>
 </div>
-<h2 id="_2">突发救砖</h2>
-<hr />
-<ol>
-<li>刷机包与手机自带的BOOT版本不匹配，这个时候只需要从ROM包里提取boot.img文件单刷，然后再重新刷机就好了。</li>
-<li>刷完后卡在第一屏或重启，可以进 RECOVERY 里面，双WIPE (<strong>清除手机数据) 之后再刷机就可以解决问题</strong>，一些ROM包会提示不用WIPE，但如果你出现上述情况，也可以双WIPE试试。</li>
-<li>如果你实在不行了，那么准备好保存好的原始 boot.img 和 vbmeta.img 刷入。</li>
-</ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>因为未知原因导致安装失败也不要怕，操作中你应该保留了一份原来的镜像，按照最后一步的方法将原来的镜像重新刷回去就能正常开机。**</p>
-</div>
-<h3 id="_3">安装模块变砖防护策略</h3>
-<ul>
-<li>安装 MM管理器 或 自动神仙救砖 插件</li>
-<li>备份 Root 后的系统</li>
-</ul>
-<p>移除模块重新开机</p>
-<p>而如果你因为安装了未知模块而翻车无法顺利进入系统，请先冷静下来：解决此类问题有一个万能的命令<code>adb wait-for-device shell magisk --remove-modules</code>，此条指令将会在手机启动过程中生效。</p>
-<p>如果没有安装救砖模块，也可以在 cache 目录下面手动建立一个 disable_magisk 文件，禁用掉进系统，进了系统再把插件      删了。参考 <a href="https://www.v2ex.com/t/567090">这篇帖子</a></p>
-<h3 id="mtk"><strong>MTK恢复</strong></h3>
-<p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
-<p>自救命令，使用mtkclient写入备份的镜像
-<code>python mtk wl out</code></p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p>下面开始刷机，请不要在晚上刷机！</p>
-</div>
 <h2 id="recovery">卡刷 第三方 Recovery</h2>
 <p>有的Recovery作者附带了刷入脚本，这样的直接运行脚本按着走就行了，这里讲一下通用方法。</p>
 <p>手机关机，<strong>长按 音量减键 + 电源键</strong> 进入 <code>FASTBOOT</code> 模式。用数据线把手机和电脑连接起来。以 <code>OrangeFox</code> 为示例。在上述步骤的下载后会得到一个压缩包，打开该压缩包，解压其中的 <code>recovery.img</code> 到任意一个位置。 压缩包是为了在有第三方 Recovery 的情况下刷入/更新 OrangeFox ，但是我们目前并没有，所以我们需要解压其中的 <code>recovery.img</code> 来使用 <code>fastboot</code> 刷入。如果你选择使用 LR.Team 定制版 TWRP，可以选择一键刷入版，就不会有下一步~~复杂~~
@@ -709,7 +682,7 @@ finished.
 <blockquote></blockquote>
 <p><sup id="fnref:13"><a class="footnote-ref" href="#fn:13">1</a></sup></p>
 <p>💡 给手机刷入 Recovery 其实也不需要电脑，用另一部手机借助 <a href="https://f-droid.org/zh_Hans/packages/com.termux/">Termux</a> 也是同样可以的。在 Termux 配置好 ADB 环境后，照上述步骤刷入即可。安装 Termux 的那部手机无需 ROOT。</p>
-<h3 id="_4">特殊情况说明</h3>
+<h3 id="_2">特殊情况说明</h3>
 <p><strong>新款联发科机型必须关闭AVB2.0校验</strong></p>
 <p>否则任何对系统的修改都会导致卡在Fastboot。涉及的机型包括但不限于红米6，6A，9，9A，红米Note8Pro，红米10X4G，5G，红米K30U，小米Play，以及之后的联发科机型。至于AVB2.0怎么关闭，不同机型不同安卓版本方法不用，可以在TWRP里找这个功能，或者找刷过的大佬问方法。</p>
 <p><strong>红米3S进入Recovery模式的方法是长按三键</strong></p>
@@ -753,16 +726,16 @@ finished.
 <p>运行该线刷工具，需要电脑识别到端口9008，在电脑设备管理器中可以找到，如果没有反应需要电脑安装9008的驱动。
 <code>https://www.aliyundrive.com/s/KTLkyyjTsDB</code></p>
 <p>接着需要下载官方固刷包进行刷入就可以了</p>
-<h3 id="_5">刷包成功后出现的几种情况</h3>
+<h3 id="_3">刷包成功后出现的几种情况</h3>
 <p>1.数据线自动断开链接，手机充电灯亮起-----刷写成功</p>
 <p>2.无反应！------换包刷写，或试另一种刷写方式</p>
 <p><strong>💡 按住手机上下音量+电源调试手机进入9008模式，其次电脑识别到9008端口</strong></p>
-<h2 id="mtk_1">深刷 MTK联发科 刷入/强解</h2>
+<h2 id="mtk">深刷 MTK联发科 刷入/强解</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>联发科的底层刷机模式没有高通那么麻烦。该模式在 MTK 内部被称为 MTK in-house developed loader。MTK 的该模式与高通略有不同，该模式具有帮助系统寻找Uboot的功能。该模式除了具有启动功能之外，还具有下载功能。首先还是需要明确的是mtk芯片都有一个boot rom，如果没有这个rom，那么程序是无法被下载到 Nand Flash中的，然后此时的Flash上是为空的，没有任何数据的。系统在上电之后它会检测是启动模式还是下载模式，如果是下载模式，它会初始化一个usb的串口，将Preloader加载到内部的SRAM中，跳转到Preloader中去执行，初始化好Flash和外部RAM之后，依次将preloader、lk、kernel、android下载到nand flash中去。刷机工具是SP Flash Tools ，需要验证的对应的DA文件，或者 MTKclinet</p>
 </div>
-<h3 id="mtk_2">准备 MTK 工具/工具箱</h3>
+<h3 id="mtk_1">准备 MTK 工具/工具箱</h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>最好备份好完整字库</p>
@@ -776,7 +749,7 @@ finished.
 <p>MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从文件包或从 <a href="https://www.python.org/downloads/">Download Python | Python.org</a> 安装Python（<strong>确保安装时勾选 ADD PYTHON to PATH</strong>）</p>
 <p>并使用 <code>pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</code> 配置国内镜像源。</p>
 <p>这里以Windows系统为演示系统。乌班图看<a href="https://zhuanlan.zhihu.com/p/452973221">这里</a></p>
-<h3 id="_6">初始化</h3>
+<h3 id="_4">初始化</h3>
 <p>在 mtkclient-main 文件夹下右键打开命令行
 执行 <code>python setup.py install</code></p>
 <p>🛠 下面每执行一次命令，都需要重复关机状态下 “插上USB同时按住音量加减及开机键，待到看到命令行变成这个后就松手”步骤。   <strong>一定不要输错命令！！！！！！！</strong></p>
@@ -842,12 +815,40 @@ fastboot reboot
 <p>如果想要谨慎一点，比如说修改的镜像文件是从网上下载的，想先试试看能否正常启动，则可以用命令：<code>fastboot boot</code>。这样顺利启动系统后即可暂时拥有 Magisk ，不过重启后就会失效。</p>
 <p>文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）</p>
 <hr />
-<h2 id="_7">结束</h2>
+<h2 id="_5">结束</h2>
 <p>确认 Root 没有问题后，再打开 Magisk App 中选择<strong>安装 &gt; 直接安装</strong>，来「永久」写入 Magisk。</p>
 <p>系统更新时想要保留 Magisk 的，重新打包刷入一次是最为通用稳妥的办法。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Magisk 工作机制是「拦截」，Magisk通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。Magisk 可以被看作是一种文件系统，这种文件系统通过巧妙的实现方式避开了对系统文件的直接修改</p>
+</div>
+<h2 id="_6">突发救砖</h2>
+<hr />
+<ol>
+<li>刷机包与手机自带的BOOT版本不匹配，这个时候只需要从ROM包里提取boot.img文件单刷，然后再重新刷机就好了。</li>
+<li>刷完后卡在第一屏或重启，可以进 RECOVERY 里面，双WIPE (<strong>清除手机数据) 之后再刷机就可以解决问题</strong>，一些ROM包会提示不用WIPE，但如果你出现上述情况，也可以双WIPE试试。</li>
+<li>如果你实在不行了，那么准备好保存好的原始 boot.img 和 vbmeta.img 刷入。</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>因为未知原因导致安装失败也不要怕，操作中你应该保留了一份原来的镜像，按照最后一步的方法将原来的镜像重新刷回去就能正常开机。**</p>
+</div>
+<h3 id="_7">安装模块变砖防护策略</h3>
+<ul>
+<li>安装 MM管理器 或 自动神仙救砖 插件</li>
+<li>备份 Root 后的系统</li>
+</ul>
+<p>移除模块重新开机</p>
+<p>而如果你因为安装了未知模块而翻车无法顺利进入系统，请先冷静下来：解决此类问题有一个万能的命令<code>adb wait-for-device shell magisk --remove-modules</code>，此条指令将会在手机启动过程中生效。</p>
+<p>如果没有安装救砖模块，也可以在 cache 目录下面手动建立一个 disable_magisk 文件，禁用掉进系统，进了系统再把插件删了。参考 <a href="https://www.v2ex.com/t/567090">这篇帖子</a></p>
+<p>在后面模块那节中也有详细叙述。</p>
+<h3 id="mtk_2"><strong>MTK恢复</strong></h3>
+<p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
+<p>自救命令，使用mtkclient写入备份的镜像
+<code>python mtk wl out</code></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>下面开始刷机，请不要在晚上刷机！</p>
 </div>
 <h2 id="ramdisk"><strong>面具 Ramdisk 为「否」的机型？</strong>"</h2>
 <ol>
@@ -876,11 +877,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 04:20:57</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:08:14</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 04:20:57</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 17, 2022 07:08:14</span>
       
     
   </small>
