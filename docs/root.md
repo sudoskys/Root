@@ -415,7 +415,7 @@ fastboot reboot
 !!! info
     在BL锁已经解锁的情况下，可以尝试线刷关键分区 system，boot，recovery，cust 实现救砖。
 
-[其他方法](https://www.coolapk.com/feed/26205215)
+[其他方法](https://www.coolapk.com/feed/26205215?shareKey=MzUxMDU3ODVmMjY0NjEwZDQ5M2M~&shareUid=3463951&shareFrom=com.coolapk.market_11.3)
 
 
 ### 安装模块变砖防护策略
@@ -474,4 +474,4 @@ fastboot reboot
 
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
-[^43]:[部分华为麒麟手动获取BL解锁码](https://www.coolapk.com/feed/26830366)
+[^43]:[部分华为麒麟手动获取BL解锁码](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
