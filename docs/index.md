@@ -1,17 +1,15 @@
 # 前言
 
 
-Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全详细的刷机起步指导，不必因为教程老旧，描述不清而发愁。
+Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基础，致力于给予小白全详细的刷机起步指导，不必因为教程老旧，描述不清而发愁。
 
 同时，本仓库 issue 不接受具体指导的提问，只接受文档的改进建议，如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
 
 但是，你可以在 [这里](https://github.com/sudoskys/Root/discussions) 发起讨论，但是！如果问题是太过简单可以自力更生搜索到的，提问会被打回。
 
 
+你可以点击右上角来对文档提出修改，或者使用 [GithubDev](https://github.dev/sudoskys/Root) 添加内容
 
-你可以点击右上角来对文档提出修改，或者使用 [GithubDev](https://github.dev/sudoskys/Root)
-
->本站大多数资料都是综合收集来的，不许商用，需要商用请和引用页内的源取得授权
 
 
 ## **资料连结**
@@ -41,6 +39,8 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 
 >本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
 
+
+
 ##  **文档结构**
 
 本教程仅供参考，阅读者**需要自己承担因尝试解锁导致的后果**。
@@ -60,6 +60,9 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，致力于给予小白全�
 - 优化
 
 三个章节展开相关叙述，其中在第二节会描述不同的常用对策方法
+
+
+>本站大多数资料都是综合收集来的，不许商用，需要商用请和引用页内的源取得授权
 
 
 ## **交流原则**
