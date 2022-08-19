@@ -469,6 +469,8 @@ Linux 需要使用其自带包管理器安装 `android-platform-tools`
 
 [解锁华为 bootloader 工具，适用 Kirin 960/95х/65x/620](https://github.com/mashed-potatoes/PotatoNV) ，如果不能下载请复制Github的 zip 链接请填入[镜像站](https://ghproxy.com/) 下载。[^42]
 
+!!! danger
+   如果你选择了强解Bl,将不能更新系统。官方解锁可以正常OTA。
 
 **拆机短接解锁深刷端口**
 
