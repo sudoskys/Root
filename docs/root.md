@@ -150,6 +150,28 @@ finished.
 
 💡 给手机刷入 Recovery 其实也不需要电脑，用另一部手机借助 [Termux](https://f-droid.org/zh_Hans/packages/com.termux/) 也是同样可以的。在 Termux 配置好 ADB 环境后，照上述步骤刷入即可。安装 Termux 的那部手机无需 ROOT。
 
+### Magisk刷入[^44]
+
+先下载Magisk到你的电脑设备，接着重启至你所使用的第三方 Recovery
+
+```
+adb reboot recovery
+```
+
+选择 `Apply update Apply from ADB` 以启动 ADB Sideload 模式，刷入 Magisk
+
+``
+adb sideload Magisk-xxx.apk
+``
+>将 Magisk-xxx.apk 替换为你所下载的文件名
+
+完成后，在 Recovery 中重启手机至系统.
+
+最后，安装 Magisk Manager
+```
+adb install Magisk-xxx.apk
+```
+打开手机上新增的 Magisk 应用，若下方的 超级用户 和 模块 菜单能够点击，就代表已经成功获取了 Root 权限.
 
 
 ### 特殊情况说明
@@ -479,3 +501,6 @@ fastboot reboot
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
 [^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
+
+[^44]:[小米11搞机指南](https://blog.chitang.dev/posts/mi11/)
+
