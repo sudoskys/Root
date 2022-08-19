@@ -4,8 +4,9 @@ nav:
     - 前言: index.md
     - 准备: prepare.md
     - 刷机: root.md
-    - 优化: better.md
-    - 模块: moudle.md
+    - 优化: optimize.md
+    - 模块: module.md
+    - 内核: kernel.md
     - 关于: about.md
 theme:
   name: material
