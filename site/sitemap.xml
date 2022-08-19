@@ -11,7 +11,17 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
-         <loc>https://root.dianas.cyou/better/</loc>
+         <loc>https://root.dianas.cyou/kernel/</loc>
+         <lastmod>2022-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://root.dianas.cyou/module/</loc>
+         <lastmod>2022-08-19</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://root.dianas.cyou/optimize/</loc>
          <lastmod>2022-08-19</lastmod>
          <changefreq>daily</changefreq>
     </url>
