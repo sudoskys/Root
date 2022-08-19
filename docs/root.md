@@ -446,9 +446,13 @@ fastboot reboot
 
 而且需要解锁 Bootloader 。
 
+
+!!! info
+    华为的EMUI9以上魔改了分区，修补boot没有什么用,需要刷入第三方 rec
+
+具体过程你需要读[这篇文档](https://zhuanlan.zhihu.com/p/435008942)
+
 去年华为关闭了官网上的ROM下载通道，你可以去万维论坛或者 [Huawei Firm Finder](https://professorjtj.github.io/)
-
-
 
 
 ## **面具 Ramdisk 为「否」的机型？**"
@@ -474,4 +478,4 @@ fastboot reboot
 
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
-[^43]:[部分华为麒麟手动获取BL解锁码](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
+[^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
