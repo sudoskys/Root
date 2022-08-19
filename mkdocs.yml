@@ -42,7 +42,6 @@ plugins:
   - git-revision-date-localized:
       type: datetime
       enable_creation_date: true
-      fallback_to_build_date: true
   - search
 
 
