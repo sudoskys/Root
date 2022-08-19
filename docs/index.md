@@ -127,7 +127,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 **由以下人士参与校对**
 
-- tg@[ZH/NSFW]狼-公开备忘录
+- tg@狼 |ZH/EN/(JA)|o0kam1
 - tg@笨蛋ovo 
 - tg@Aidenpers Ultra
 - tg@小迅的皮套
