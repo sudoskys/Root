@@ -125,14 +125,14 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 本教程由 Sudoskys 引录编辑 
 [Jasmine](https://blog.dianas.cyou/)
 
-**由以下人士参与校对**
+**由以下人士参与校对/编写**
 
 - github@Scirese
 - tg@狼 |ZH/EN/(JA)|o0kam1
+- tg@Chi_Tang
 - tg@笨蛋ovo 
 - tg@Aidenpers Ultra
 - tg@小迅的皮套
-- tg@Chi_Tang
 - tg@slQYa
 - github@solstice23
 
