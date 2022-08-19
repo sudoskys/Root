@@ -414,42 +414,43 @@
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    自定义系统内核
-  </a>
-  
-    <nav class="md-nav" aria-label="自定义系统内核">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
     看前须知
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    为什么自定义系统内核
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
+    准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
     准备环境
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
     准备配置并开始编译
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
     打包并刷入内核
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -496,72 +497,73 @@
 
   <h1>内核</h1>
 
+<p>本节为非必须部分，上手需要<strong>一定的知识储备</strong>，如果你<strong>没事</strong>或者<strong>不清楚为什么搞内核</strong>，可以看下一节。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>本部分内容对小白可能太难了，建议有一定知识储备后再来。</p>
+<p>当你在执行时，因为每个人所使用的系统操作环境不同，很可能会出现不可控的奇怪报错，出现问题提问前请确保严格按照本教程操作。<strong>提问要给出详细信息和测试结果，并参考首页的提问指南</strong></p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>在操作本部分时，由于每个系统的环境都有差别，很可能会出现无法预料的奇怪报错，对此我们无法解决。除非你严格按照本教程操作之后还有问题，否则请不要提问。</p>
-</div>
-<h2 id="_1">自定义系统内核</h2>
+<h4 id="_1">看前须知</h4>
+<p>首先，你需要确认你的手机内核是<strong>开源</strong>的。如果不开源，那就不用继续看了。</p>
+<h3 id="_2">为什么自定义系统内核</h3>
 <p>我们都知道,安卓使用 Linux 内核，但是系统内核的功能被严重阉割，导致有些东西(例如 Docker)跑不起来。</p>
 <p>这时候，我们就需要构建自己的 Linux 内核，来补全这些功能，让我们需要的软件能正常运行。</p>
 <p>修改内核能做到的当然不止如此，在安卓上，Linux 内核扮演的角色大致相当与电脑的 BIOS+系统内核，也就是说，你还可以通过修改内核来优化性能，甚至超频。不过这就是后话了。</p>
 <p>本教程将以一加8t为例，从头开始构建一个支持 Docker 的内核。其他手机的步骤和这个基本相同。</p>
-<hr />
-<h4 id="_2">看前须知</h4>
-<hr />
-<p>首先，你需要确认你的手机内核是开源的。如果不开源，那就不用继续看了。</p>
+<h3 id="_3">准备</h3>
 <p>你可以去 <a href="https://forum.xda-developers.com">XDA开发者论坛(英文)</a> 寻找你手机的内核源码，直接在论坛内搜索你的手机型号即可。这里的内核一般是经过大佬修改的第三方版，带有性能优化或额外功能。本人推荐去这里查找。</p>
 <p>如果没有也别沮丧。可能只是还没人做而已。 一般来讲，小米几乎所有手机和一加所有手机的内核都是开源的。</p>
 <p>小米开源内核目录<a href="https://github.com/micode/xiaomi_kernel_opensource">在这里</a>，直接查找你手机的型号即可。</p>
 <p>一加开源内核<a href="https://github.com/orgs/oneplusoss/repositories">在这里</a>，对于初学者，在这个目录找到你手机对应的源码比较难，所以推荐直接谷歌 “一加xx内核源码”。</p>
 <p>对于其他品牌，你可以试着谷歌 “你的手机型号+内核源码”。</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>要注意内核是和安卓版本对应的，不要找错了。</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>注意内核应该和安卓版本对应</strong></p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>有些设备有多个版本的内核可用(例如红米Note7可用的版本有 <code>4.4</code>,<code>4.9</code>,<code>4.14</code>,<code>4.19</code>)，这些内核版本和 ROM 是对应的，刷入其他版本会导致无法开机，所以你应该记住你当前的内核版本。</p>
+<p>有些设备有多个版本的内核可用(例如红米Note7可用的版本有 <code>4.4</code>,<code>4.9</code>,<code>4.14</code>,<code>4.19</code>)，这些内核版本和 ROM 是对应的，刷入其他版本会导致<strong>无法开机</strong>，所以你应该记住你当前的内核     版本。</p>
 </div>
 <p>如果能找到(一般内核源码都是放在Github)，那么就可以继续了。</p>
-<hr />
-<h4 id="_3">准备环境</h4>
-<hr />
-<p>编译 Linux 内核肯定是需要 Linux 的，目前无非就是这几种方法：</p>
+<h3 id="_4">准备环境</h3>
+<p>编译 Linux 内核肯定是需要 Linux 的，目前有如下几种方法</p>
 <ul>
-<li>实机安装一个 Linux 发行版(推荐 Ubuntu)</li>
-<li>使用 Windows 的 Linux 子系统v2(WSL2)安装一个Linux发行版(同样推荐 Ubuntu)</li>
-<li>手机上 Chroot 安装一个 Linux 发行版(还是推荐 Ubuntu)</li>
+<li>
+<p>实机安装一个 Linux 发行版(比如 Ubuntu)</p>
+</li>
+<li>
+<p>使用 Windows 的 Linux 子系统v2(WSL2)安装一个Linux发行版(推荐 Ubuntu)</p>
+</li>
+<li>
+<p>手机上 Chroot 安装一个 Linux 发行版(推荐 Ubuntu，至于安装，可以使用 <a href="https://github.com/2moe/tmoe">tmoe</a> 项目)</p>
+</li>
 </ul>
 <p>除非迫不得已，否则我不建议你用手机编译来折磨自己。</p>
 <p>如果电脑配置不大行，建议实机安装。</p>
-<p>对于如何安装以上的系统，本教程不多赘述，请直接谷歌。</p>
+<p>对于如何安装以上的系统不在本文主题内，如果你不懂，可以搜索一下。</p>
 <p>本教程以 Ubuntu18.04 为例.</p>
-<p>首先，我们要把软件源更换为国内镜像源，在终端输入以下命令:
+<p>首先，我们要把软件源更换为国内镜像源，在终端输入以下命令:</p>
 <div class="highlight"><pre><span></span><code>sudo sed -i <span class="s2">&quot;s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&quot;</span> /etc/apt/sources.list
 sudo sed -i <span class="s2">&quot;s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&quot;</span> /etc/apt/sources.list
 sudo apt update
 </code></pre></div>
-以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令:
-<div class="highlight"><pre><span></span><code>sudo apt install -y bc bison build-essential ccache cpio curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev unzip openjdk-8-jdk language-pack-zh-hans python vim
+<p>以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令:</p>
+<p><div class="highlight"><pre><span></span><code>sudo apt install -y bc bison build-essential ccache cpio curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-
+dev unzip openjdk-8-jdk language-pack-zh-hans python vim
 </code></pre></div>
-在上述命令执行完后，我们需要下载编译器，这里使用clang。
+在上述命令执行完后，我们需要下载编译器，这里使用clang。</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~ <span class="o">&amp;&amp;</span> git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/kdrag0n/proton-clang.git
-</code></pre></div></p>
+</code></pre></div>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>如果克隆很慢，尝试把源地址中的<code>github.com</code>改成<code>hub.fastgit.xyz</code>。</p>
 </div>
-<p>下载完后，我们在终端输入<code>vi ~/.bashrc</code>打开编辑器，按下键盘上的 "Insert" 键，使用方向键滑到文件底部，加上以下代码：
+<p>下载完后，我们在终端输入<code>vi ~/.bashrc</code>打开编辑器，按下键盘上的 "Insert" 键，使用方向键滑到文件底部，加上以下代码：</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;~/proton-clang/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
 <span class="nb">export</span> <span class="nv">CROSS_COMPILE</span><span class="o">=</span>aarch64-linux-gnu-
 <span class="nb">export</span> <span class="nv">CROSS_COMPILE_ARM32</span><span class="o">=</span>arm-linux-gnueabi-
 <span class="nb">export</span> <span class="nv">ARCH</span><span class="o">=</span>arm64
 </code></pre></div>
-然后按下 “Esc” 键，输入<code>:wq!</code>保存退出。</p>
+<p>然后按下 “Esc” 键，输入<code>:wq!</code>保存退出。</p>
 <p>接着输入以下命令 <code>source ~/.bashrc &amp;&amp; clang --version</code>，它应该有大概长这样的输出(因人而异)：
 <div class="highlight"><pre><span></span><code>Proton clang version 13.0.0 (https://github.com/llvm/llvm-project b4fd512c36ca344a3ff69350219e8b0a67e9472a)
 Target: x86_64-unknown-linux-gnu
@@ -569,9 +571,7 @@ Thread model: posix
 InstalledDir: /home/proton-clang/bin
 </code></pre></div>
 如果没有，说明某一步操作有问题，你必须回头纠正。</p>
-<hr />
-<h4 id="_4">准备配置并开始编译</h4>
-<hr />
+<h3 id="_5">准备配置并开始编译</h3>
 <p>现在环境已经准备好了，我们需要下载我们之前找到的内核源码。</p>
 <p><a href="https://github.com/flypatriot/crdroid_12_kernel" title="本教程作为示例所使用的内核源码在这里">本教程作为示例所使用的内核源码在这里</a></p>
 <p>一般内核都使用 Git 源，我们应该通过这种方法下载：
@@ -589,7 +589,7 @@ InstalledDir: /home/proton-clang/bin
 </div>
 <p>为了实现 Docker 支持，我们需要修改手机内核的默认配置。
 进入 <code>arch/arm64/configs</code> 使用 <code>ls</code> 命令查看一下。一般会有几个文件，还有个<code>vendor</code>文件夹。
-例：
+例：</p>
 <div class="highlight"><pre><span></span><code>march7th@march7th-pc:~/crdroid_12_kernel/arch/arm64/configs$ ls -al
 total 392
 drwxr-xr-x 1 march7th march7th    166 Aug 13 06:22 .
@@ -601,12 +601,12 @@ drwxr-xr-x 1 march7th march7th    178 Aug 13 05:25 ..
 -rw-r--r-- 1 march7th march7th   7579 Aug 13 05:25 ranchu64_defconfig
 drwxr-xr-x 1 march7th march7th    468 Aug 13 05:25 vendor
 </code></pre></div>
-可以看到，有一个 <code>op8-perf_defconfig</code>。我们的示例手机是一加8T。所以这就是我们要找的默认配置。</p>
+<p>可以看到，有一个 <code>op8-perf_defconfig</code>。我们的示例手机是一加8T。所以这就是我们要找的默认配置。</p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>如果<code>arch/arm64/configs</code>下没有你要的配置，不妨进入<code>vendor</code>文件夹一看。</p>
 </div>
-<p>使用文本编辑器打开该文件。在文件底部添加：
+<p>使用文本编辑器打开该文件。在文件底部添加：</p>
 <div class="highlight"><pre><span></span><code>CONFIG_NAMESPACES=y
 CONFIG_NET_NS=y
 CONFIG_PID_NS=y
@@ -637,14 +637,14 @@ CONFIG_NF_NAT_IPV4=y
 CONFIG_NF_NAT_NEEDED=y
 CONFIG_OVERLAY_FS=y
 </code></pre></div>
-然后保存退出，回到源码目录，执行：
+<p>然后保存退出，回到源码目录，执行：</p>
 <div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out op8-perf_defconfig
 </code></pre></div>
-加载默认配置。</p>
+<p>加载默认配置。</p>
 <p>此时我们已经可以开始编译。不过你可能还想修改一下别的，所以我们执行：
 <div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out  menuconfig
-</code></pre></div>
-比如我们还想修改内核名，那我们需要修改这一项：
+</code></pre></div></p>
+<p>比如我们还想修改内核名，那我们需要修改这一项：
 <code>General setup -&gt; Local version - append to kernel release</code>
 修改完后，直接 ”Esc“ 保存退出</p>
 <p>然后我们开始编译，输入以下命令
@@ -652,14 +652,12 @@ CONFIG_OVERLAY_FS=y
 </code></pre></div>
 <code>nproc</code>会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把<code>$(nproc)</code>换成一个比你 CPU 的线程数小的数字。</p>
 <p>然后便是等待。等他出现<code>Ready</code>字样时就说明你成功了。</p>
-<hr />
-<h4 id="_5">打包并刷入内核</h4>
-<hr />
+<h3 id="_6">打包并刷入内核</h3>
 <p>考虑到有些手机并没有可用的第三方 Recovery ，所以我们不使用 Anykernel3 ，而是通过修改boot镜像手动刷入。</p>
 <p>终端输入以下命令下载工具：
 <div class="highlight"><pre><span></span><code>curl https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300923/ | tar xzvf -
-</code></pre></div>
-然后我们需要从手机中提取 Boot 镜像，并将其传到电脑上的工具目录内。如何提取镜像在前面 Root 的环节已经提到。</p>
+</code></pre></div></p>
+<p>然后我们需要从手机中提取 Boot 镜像，并将其传到电脑上的工具目录内。如何提取镜像在前面 Root 的环节已经提到。</p>
 <p>接着:
 <div class="highlight"><pre><span></span><code>./unpackimg.sh &lt;Boot 镜像文件名&gt;
 </code></pre></div>
@@ -667,19 +665,19 @@ CONFIG_OVERLAY_FS=y
 <p>编译好的内核在源码目录<code>arch/arm64/boot</code>目录下。一般来说文件名是<code>Image.gz-dtb</code>，把它复制到这里，替换掉原来的文件。</p>
 <p>然后：
 <div class="highlight"><pre><span></span><code>./repackimg.sh
-</code></pre></div>
-重新打包内核文件，然后刷入重启。你应该会看到内核变化了。大功告成。</p>
+</code></pre></div></p>
+<p>重新打包内核文件，然后刷入重启。你应该会看到内核变化了。大功告成。</p>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:37:15</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:55:06</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:37:15</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:55:06</span>
       
     
   </small>
