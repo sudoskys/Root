@@ -395,6 +395,13 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#magisk5" class="md-nav__link">
+    Magisk刷入5
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     特殊情况说明
   </a>
@@ -700,6 +707,20 @@ finished.
 <blockquote></blockquote>
 <p><sup id="fnref:13"><a class="footnote-ref" href="#fn:13">1</a></sup></p>
 <p>💡 给手机刷入 Recovery 其实也不需要电脑，用另一部手机借助 <a href="https://f-droid.org/zh_Hans/packages/com.termux/">Termux</a> 也是同样可以的。在 Termux 配置好 ADB 环境后，照上述步骤刷入即可。安装 Termux 的那部手机无需 ROOT。</p>
+<h3 id="magisk5">Magisk刷入<sup id="fnref:44"><a class="footnote-ref" href="#fn:44">5</a></sup></h3>
+<p>先下载Magisk到你的电脑设备，接着重启至你所使用的第三方 Recovery</p>
+<div class="highlight"><pre><span></span><code>adb reboot recovery
+</code></pre></div>
+<p>选择 <code>Apply update Apply from ADB</code> 以启动 ADB Sideload 模式，刷入 Magisk</p>
+<p><code>adb sideload Magisk-xxx.apk</code></p>
+<blockquote>
+<p>将 Magisk-xxx.apk 替换为你所下载的文件名</p>
+</blockquote>
+<p>完成后，在 Recovery 中重启手机至系统.</p>
+<p>最后，安装 Magisk Manager
+<div class="highlight"><pre><span></span><code>adb install Magisk-xxx.apk
+</code></pre></div>
+打开手机上新增的 Magisk 应用，若下方的 超级用户 和 模块 菜单能够点击，就代表已经成功获取了 Root 权限.</p>
 <h3 id="_2">特殊情况说明</h3>
 <p><strong>新款联发科机型必须关闭AVB2.0校验</strong></p>
 <p>否则任何对系统的修改都会导致卡在Fastboot。涉及的机型包括但不限于红米6，6A，9，9A，红米Note8Pro，红米10X4G，5G，红米K30U，小米Play，以及之后的联发科机型。至于AVB2.0怎么关闭，不同机型不同安卓版本方法不用，可以在TWRP里找这个功能，或者找刷过的大佬问方法。</p>
@@ -925,6 +946,9 @@ fastboot reboot
 <li id="fn:43">
 <p><a href="https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&amp;shareUid=3463951&amp;shareFrom=com.coolapk.market_11.4.2">华为麒麟深刷救砖［变砖绝杀技］</a>&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
+<li id="fn:44">
+<p><a href="https://blog.chitang.dev/posts/mi11/">小米11搞机指南</a>&#160;<a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -933,11 +957,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 04:39:55</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:06:55</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 04:39:55</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:06:55</span>
       
     
   </small>
