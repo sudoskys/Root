@@ -235,7 +235,7 @@ curl https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300
 ```
 工具目录下会出现一个`split_img`文件夹，其中的` <Boot 镜像文件名>-kernel`就是我们要替换的文件。
 
-编译好的内核在源码目录`arch/arm64/boot`目录下。一般来说文件名是`Image.gz-dtb`，把它复制到这里，替换掉原来的文件。
+编译好的内核在源码目录`out/arch/arm64/boot`目录下。一般来说文件名带有`Image`字样，把它复制到这里，替换掉原来的文件。
 
 然后：
 ```
