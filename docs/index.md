@@ -229,3 +229,6 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 
 [^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
+
+
+[^44]:[小米11搞机指南](https://blog.chitang.dev/posts/mi11/)
