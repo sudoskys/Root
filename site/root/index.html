@@ -586,10 +586,10 @@
         
           <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    动态分区？
+    动态分区
   </a>
   
-    <nav class="md-nav" aria-label="动态分区？">
+    <nav class="md-nav" aria-label="动态分区">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1097,11 +1097,11 @@ adb pull /sdcard/persist.img
 <p>只有当 Project Treble 通过检测才表明此手机可以刷 gsi 镜像包。</p>
 <p>如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。</p>
 <h3 id="cpu">Cpu 架构</h3>
-<p>将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：</p>
+<p>将手机链接电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：</p>
 <div class="highlight"><pre><span></span><code>adb shell getprop ro.product.cpu.abi
 </code></pre></div>
 <p>或者.... 上网查找你所使用手机的 Cpu 架构</p>
-<p>如过架构是<code>arm64-v8a</code>，那么你应该去找 ARM64 的包，如果是<code>armeabi-v7a</code>，那么你应该去寻找 ARM32 的包。</p>
+<p>如过架构是<code>arm64-v8a</code>，那么你应该去找 ARM64 的包，如果是<code>armeabi-v7a</code>，那么你应该去寻找 ARM32 的包。a-only和a/b的gsi不通用。</p>
 <h3 id="_9">寻找镜像</h3>
 <p>我贴了一个 <code>通用镜像列表</code> 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。</p>
 <details class="help">
@@ -1115,16 +1115,15 @@ adb pull /sdcard/persist.img
 后面带有<code>gapps</code>字样的刷机包，表明其内置了谷歌服务。</p>
 </div>
 <h3 id="_10">刷入镜像</h3>
-<p>先双清。</p>
+<p>主要任务是刷写 system 分区，所以 fastboot 和 twrp 都可。</p>
 <p>刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。<sup id="fnref2:49"><a class="footnote-ref" href="#fn:49">11</a></sup></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>Data分区的强制加密要关掉</p>
-<p>刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版，若以安卓9为底包，不能刷入安卓8的gsi，需要刷入同等级的gsi</p>
-<p>a-only和a/b的gsi不通用</p>
-<p>刷 <code>gsi</code> 从准备刷入到开机完成前都不可以刷任何东西，twrp都不可以。</p>
-<p>刷<code>gsi</code>不应该用<code>twrp</code>刷。应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。</p>
-<p>刷完系统后记得双清（data和cache）</p>
+<p>刷写Gsi需要擦除用户数据，嗯就是双清。（data和cache）</p>
+<p>Data 分区的强制加密要关掉</p>
+<p>刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版.</p>
+<p>需要刷入同等级的gsi</p>
+<p>应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。</p>
 </div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -1140,9 +1139,23 @@ adb pull /sdcard/persist.img
 如果已经安装了 Magisk，可以跳过本步骤，但未来要一直安装着 Magisk，否则 system 分区通不过校验可能会被禁用，需要重刷</p>
 </div>
 <p><strong>还原官方recovery</strong></p>
-<p>首先，你需要确保你的设备正在使用的是<strong>原厂的rec</strong>，目的是可以启动fastbootd，或者使用twrp里的用户空间fastboot也可以，注意如果twrp有这个功能可以不用刷回 recovery。</p>
-<p>然后呢，将手机重启至fastbootd模式（<code>fastboot reboot fastboot</code>）</p>
-<p>输入<code>fastboot flash system system.img</code>，刷写完成后，使用<code>fastboot -w</code>清除数据，这一步会格式化data,防止加密（注意提前备份）。</p>
+<p>首先，你需要确保你的设备正在使用的是<strong>原厂的rec</strong>，目的是可以启动 <code>fastbootd</code> (一些twrp会阻止...见<a href="https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227">这里</a>)，或者使用twrp里的用户空间<code>fastboot</code>也可以，注意如果twrp有这个功能可以不用刷回 recovery。</p>
+<p>然后呢，将手机重启至<code>fastbootd</code>模式（<code>fastboot reboot fastboot</code>）</p>
+<p>对于A-only,输入<code>fastboot flash system system.img</code></p>
+<p>对于A/B，输入
+<div class="highlight"><pre><span></span><code>fastboot flash system_a GSI.img
+fastboot flash system_b GSI.img
+</code></pre></div></p>
+<p>注意看你下载的包的说明。</p>
+<p>刷写完成后，使用<code>fastboot -w</code>清除数据，这一步会格式化data注意提前备份）。</p>
+<p>在具有较小系统分区的 Android 10 或更高版本设备上，刷写 GSI 时可能会出现以下错误消息</p>
+<div class="highlight"><pre><span></span><code>    Resizing &#39;system_a&#39;    FAILED (remote: &#39;Not enough space to resize partition&#39;)
+    fastboot: error: Command failed
+</code></pre></div>
+<p>您可以使用以下命令删除产品分区并为系统分区释放空间。这可以为刷写 GSI 提供额外的空间：</p>
+<div class="highlight"><pre><span></span><code>fastboot delete-logical-partition product_a
+</code></pre></div>
+<p>后缀 _a 应与 system 分区的槽位 ID 匹配，例如本示例中的 system_a。</p>
 <p><strong>重启</strong>
 <div class="highlight"><pre><span></span><code>fastboot reboot recovery
 </code></pre></div>
@@ -1156,7 +1169,7 @@ adb pull /sdcard/persist.img
 <p class="admonition-title">Info</p>
 <p>刷了gsi收不到短信 但是电话和流量都能用，是votle问题</p>
 </div>
-<h3 id="_11">动态分区？</h3>
+<h3 id="_11">动态分区</h3>
 <p>Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。</p>
 <h4 id="dsu">使用动态系统更新（DSU)</h4>
 <p>安卓10正式版及以上，可以在开发者选项中Feature flags &gt; settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.</p>
@@ -1374,7 +1387,7 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
 <p><a href="https://www.irom.net/post/9.html">安卓手机刷入GSI镜像教程</a>&#160;<a class="footnote-backref" href="#fnref:46" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:47">
-<p><a href="https://www.bilibili.com/read/cv15133756">小白刷机指南——GSI</a>&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p><a href="https://source.android.com/docs/setup/build/gsi#flashing-gsis">刷写 GSI 的要求</a>&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:48">
 <p><a href="https://www.chaptsand.top/posts/da8abb0.html">动态分区刷GSI-通用镜像-的正确姿势</a>&#160;<a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:48" title="Jump back to footnote 10 in the text">&#8617;</a></p>
@@ -1390,11 +1403,11 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:04:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:47:42</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:04:46</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:47:42</span>
       
     
   </small>

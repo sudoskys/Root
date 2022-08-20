@@ -762,6 +762,8 @@
 <p>刷机时经常会刷写的分区(system,vendor,boot,recovery等等)。userdata分区就是用户分区，格式化data就是格式化的这个分区。需要注意的是，格式化data和清空data，是两个不同的概念，经常会有小白把这两个概念搞混淆。</p>
 <p>格式化data就是把userdata的分区进行格式化操作，就像你格式化U盘一样，是格式化操作。</p>
 <p>而清空data，是删除data分区的所有文件及文件夹。当你遇到data挂载不上时，你清空data是没有效果的，这个时候，你需要进行格式化data操作，才能挂载data，所以，这两个不要搞混淆了</p>
+<p>官方文档见 <a href="https://source.android.com/devices/tech/ota/virtual_ab">这里</a></p>
+<p>附 <a href="https://blog.xzr.moe/archives/30/">对Virtual A/B 分区工作方式的进一步探索</a></p>
 <p><strong>通用系统映像(GSI/SGSI)</strong></p>
 <p><a href="https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement">https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement</a></p>
 <p>Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新</p>
@@ -816,6 +818,10 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>所以fastbootd 就是动态分区手机的 fastboot(指非动态分区手机的).</p>
 <p><img alt="a5nZlt.png" src="https://s1.328888.xyz/2022/08/13/TGOJ6.png" /></p>
 <p><a href="https://www.droidwin.com/fastbootd-mode/">What is FastbootD? How to Boot to FastbootD Mode - DroidWin</a></p>
+<p><strong>ADB Android 调试桥 (ADB)</strong></p>
+<p>Android 调试桥 (ADB) 可让您将开发工作站直接连接到 Android 设备进行通信，以便安装软件包并评估更改。</p>
+<p><img alt="adb" src="https://oss-emcsprod-public.modb.pro/wechatSpider/modb_20220420_bc3dbe04-c08f-11ec-8f56-fa163eb4f6be.png" /></p>
+<p>了解更多：https://source.android.com/docs/setup/build/adb</p>
 <h2 id="_2">了解刷机</h2>
 <h3 id="_3"><strong>早期</strong></h3>
 <p>早先的Android手机要想获取Root权限可以有以下几种方式[]：</p>
@@ -1052,11 +1058,11 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:04:46</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:47:42</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:04:46</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:47:42</span>
       
     
   </small>
