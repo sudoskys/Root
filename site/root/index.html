@@ -551,34 +551,41 @@
         
           <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    怎么查
+    备份
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    查一下架构
+    怎么查
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    找？
+    查一下架构
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    刷入..
+    找？
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_12" class="md-nav__link">
+    刷入..
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
     动态分区？
   </a>
   
@@ -593,15 +600,36 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     安装前的准备
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     安装操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    系统升级
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#safetynet11" class="md-nav__link">
+    SafetyNet11
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#drm11" class="md-nav__link">
+    DRM11
   </a>
   
 </li>
@@ -624,7 +652,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     华为机型简单介绍
   </a>
   
@@ -646,14 +674,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_18" class="md-nav__link">
     有必要吗？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_19" class="md-nav__link">
     如何备份？
   </a>
   
@@ -1053,18 +1081,28 @@ finished.
 <p>如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)</p>
 <p><sup id="fnref:46"><a class="footnote-ref" href="#fn:46">8</a></sup></p>
 <p><sup id="fnref:47"><a class="footnote-ref" href="#fn:47">9</a></sup></p>
-<h3 id="_8">怎么查</h3>
+<p><sup id="fnref:49"><a class="footnote-ref" href="#fn:49">11</a></sup></p>
+<h3 id="_8">备份</h3>
+<p>Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经Root的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。</p>
+<p><div class="highlight"><pre><span></span><code>adb shell
+su # 获取 root 权限，请在手机上确认
+dd if=/dev/block/bootdevice/by-name/persist of=/sdcard/persist.img
+# 此时按两次 Ctrl + D，退出 adb shell
+adb pull /sdcard/persist.img
+</code></pre></div>
+长期保存，避免丢失</p>
+<h3 id="_9">怎么查</h3>
 <p>首先，需要确认你的设备是否支持project treble，你需要下载一个<a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble">treble check</a></p>
 <p>打开软件，查看检测结果。</p>
 <p>只有当 Project Treble 通过检测才表明此手机可以刷 gsi 镜像包。</p>
 <p>如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。</p>
-<h3 id="_9">查一下架构</h3>
+<h3 id="_10">查一下架构</h3>
 <p>将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：</p>
 <div class="highlight"><pre><span></span><code>adb shell getprop ro.product.cpu.abi
 </code></pre></div>
 <p>或者.... 上网查找你所使用手机的 Cpu 架构</p>
 <p>如过架构是<code>arm64-v8a</code>，那么你应该去找 ARM64 的包，如果是<code>armeabi-v7a</code>，那么你应该去寻找 ARM32 的包。</p>
-<h3 id="_10">找？</h3>
+<h3 id="_11">找？</h3>
 <p>我贴了一个 <code>通用镜像列表</code> 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。</p>
 <details class="help">
 <summary>不会...</summary>
@@ -1076,8 +1114,9 @@ finished.
 一般<code>gsi</code>的格式：系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否
 后面带有<code>gapps</code>字样的刷机包，表明其内置了谷歌服务。</p>
 </div>
-<h3 id="_11">刷入..</h3>
+<h3 id="_12">刷入..</h3>
 <p>先双清。</p>
+<p>刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。<sup id="fnref2:49"><a class="footnote-ref" href="#fn:49">11</a></sup></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>Data分区的强制加密要关掉</p>
@@ -1092,28 +1131,38 @@ finished.
 <p>Android 10引入了 启动时验证 (AVB)，在刷写 GSI之前，先下载并刷入vbmeta.img以停用 AVB，vbmeta.img一般包含会随gsi镜像一起发布。</p>
 </div>
 <p><strong>刷入vbmeta.img停用AVB验证</strong></p>
-<p><div class="highlight"><pre><span></span><code>fastboot --disable-verification flash vbmeta vbmeta.img
+<p>刷入从底包中提取的vbmeta文件，否则会卡米</p>
+<div class="highlight"><pre><span></span><code>fastboot --disable-verification flash vbmeta vbmeta.img
 </code></pre></div>
-刷入从底包中提取的vbmeta文件，否侧会卡米.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>此步骤用于停用 Verified Boot 分区验证，只需执行一次
+如果已经安装了 Magisk，可以跳过本步骤，但未来要一直安装着 Magisk，否则 system 分区通不过校验可能会被禁用，需要重刷</p>
+</div>
 <p><strong>还原官方recovery</strong></p>
 <p>首先，你需要确保你的设备正在使用的是<strong>原厂的rec</strong>，目的是可以启动fastbootd，或者使用twrp里的用户空间fastboot也可以，注意如果twrp有这个功能可以不用刷回 recovery。</p>
-<p>然后呢，将手机重启至bootloader/fastboot模式，亦或者fastbootd模式fastbootd模式（<code>fastboot reboot fastboot</code>）</p>
+<p>然后呢，将手机重启至fastbootd模式（<code>fastboot reboot fastboot</code>）</p>
 <p>输入<code>fastboot flash system system.img</code>，刷写完成后，使用<code>fastboot -w</code>清除数据，这一步会格式化data,防止加密（注意提前备份）。</p>
 <p><strong>重启</strong>
-<div class="highlight"><pre><span></span><code>fastboot reboot
-</code></pre></div></p>
+<div class="highlight"><pre><span></span><code>fastboot reboot recovery
+</code></pre></div>
+进入 Recovery 后，按提示操作清除数据并重启系统。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>刷入不同类型 ROM 或版本降级时必须清除数据，否则无法进入系统。</p>
 <p>开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>刷了gsi收不到短信 但是电话和流量都能用，是votle问题</p>
 </div>
-<h3 id="_12">动态分区？</h3>
+<h3 id="_13">动态分区？</h3>
 <p>Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。</p>
 <h4 id="dsu">使用动态系统更新（DSU)</h4>
 <p>安卓10正式版及以上，可以在开发者选项中Feature flags &gt; settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.</p>
 <div class="highlight"><pre><span></span><code>adb shell setprop persist.sys.fflag.override.settings_dynamic_system true
 </code></pre></div>
-<h4 id="_13">安装前的准备</h4>
+<h4 id="_14">安装前的准备</h4>
 <p>通过DSU安装的GSI需要是可直接刷写的raw格式镜像，在开始前先检查你的镜像是不是raw格式
 linux或者mac系统可以用<code>file system.img</code>命令查看</p>
 <div class="highlight"><pre><span></span><code>file system.img
@@ -1127,7 +1176,7 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 <p class="admonition-title">Tip</p>
 <p>一般gsi镜像都是simg格式，先检查转换</p>
 </div>
-<h4 id="_14">安装操作</h4>
+<h4 id="_15">安装操作</h4>
 <p><strong>将镜像打包为gz格式</strong></p>
 <div class="highlight"><pre><span></span><code>gzip -c system_raw.img &gt; system_raw.gz
 </code></pre></div>
@@ -1137,6 +1186,8 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 </div>
 <p><strong>用adb推到手机内置储存</strong></p>
 <p><code>adb push system_raw.gz /storage/emulated/0/Download/</code></p>
+<h4 id="_16">系统升级</h4>
+<p>建议非必要不升级。升级前务必备份好所有数据，升级后有可能无法开机，需要清数据重刷。</p>
 <p><strong>安装动态系统更新</strong></p>
 <p>复制后一起执行。
 <div class="highlight"><pre><span></span><code>adb shell am start-activity \
@@ -1177,16 +1228,57 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
     &gt; /system/vendor/lib64/soundfx</p>
 <ol>
 <li>改变 vendor 文件夹的权限为 <code>rw-r--r--</code></li>
-<li>重启手机</li>
+<li>重启手机
+上面的内容来自  <sup id="fnref2:48"><a class="footnote-ref" href="#fn:48">10</a></sup>
+下面的内容来自 https://dev.moe/2716 <sup id="fnref5:49"><a class="footnote-ref" href="#fn:49">11</a></sup>
+<strong>修复屏幕状态栏圆角</strong></li>
 </ol>
-<p><strong>修复屏幕状态栏圆角</strong></p>
 <p>adb 输入以下命令(最后的数字根据自己喜好任意修改):
 <div class="highlight"><pre><span></span><code>adb shell settings put secure sysui_rounded_content_padding 20
 </code></pre></div></p>
+<p><strong>开启 120 Hz</strong>
+<div class="highlight"><pre><span></span><code>adb shell settings put system min_refresh_rate 120
+adb shell settings put system peak_refresh_rate 120
+</code></pre></div></p>
+<p>如果设置里有 Phh Treble Settings 的话，也可以在里面直接改（Misc features -&gt; Force FPS）。</p>
+<p><strong>移除屏幕锐化</strong>
+https://dev.moe/wp-content/uploads/2022/06/Remove-screen-sharpening-Mi-Pad-5-Pro.zip</p>
+<p><strong>修复音频</strong>
+https://dev.moe/wp-content/uploads/2022/06/GSI-Audio-Stutter-Fix-Mi-Pad-5-Pro-elish.zip</p>
+<p>https://forum.xda-developers.com/t/run-an-gsi-on-your-mi-pad-5.4352591/page-9#post-86447857</p>
+<p><strong>修复任务栏</strong>
+https://github.com/Coxxs/hide-tablet-taskbar</p>
 </details>
+<h4 id="safetynet11">SafetyNet<sup id="fnref3:49"><a class="footnote-ref" href="#fn:49">11</a></sup></h4>
+<p>SafetyNet 的修复根据不同 ROM 分成几种情况.</p>
+<p><strong>PixelExperience ROM</strong> 已经模拟了设备信息，只需在 Magisk DenyList 对 Play Services 隐藏即可。</p>
+<p><strong>Lineage OS</strong> 可能由于自带了 <code>su</code>，我没能成功通过 Basic integrity 测试（可能要自己修改 ROM 了）。</p>
+<p><strong>Android 13 GSI</strong> 需要 <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">MagiskHidePropsConf</a> + <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> + Magisk DenyList，其中 MagiskHidePropsConf 设置成 MIUI 系统的 fingerprint，外加将 <code>ro.build.version.security_patch</code> 设置成 MIUI 系统对应版本的值（可以用 7z 打开线刷包的 <code>system.img</code>，在 <code>system/build.props</code> 里找到）。</p>
+<p><strong>Magisk DenyList 配置方法</strong></p>
+<ol>
+<li>打开 Magisk，设置里选择 Hide the Magisk app</li>
+<li>打开 Magisk，设置里启用 Zygisk 及 Enforce DenyList</li>
+<li>进入 Configure DenyList，找到 Google Play services，只需勾选 <code>com.google.android.gms</code> 及 <code>com.google.android.gms.unstable</code> 两项。</li>
+<li>进入设置，清除 Google Play services 及 Google Play Store 的数据。</li>
+</ol>
+<h4 id="drm11">DRM<sup id="fnref4:49"><a class="footnote-ref" href="#fn:49">11</a></sup></h4>
+<p>DRM 方面，Widevine 无需任何操作，保持在 L1，修复 Safetynet 后即可直接观看 Disney+。</p>
+<p>Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复到 L1：</p>
+<ol>
+<li>确保 SafetyNet 已通过</li>
+<li>将 Netflix 添加到 DenyList 列表</li>
+<li>用 Magisk 模块在 <code>build.prop</code> 添加一行 <code>ro.netflix.bsp_rev=Q8250-19134-1</code><ul>
+<li>该值仅适用于小米平板 5 Pro</li>
+<li>Magisk 模块写法非常简单，可以参考上面的「移除屏幕锐化」模块</li>
+<li>修改 <code>build.prop</code> 后需要清除 Netflix 应用数据重新登录</li>
+<li>该修改<a href="https://github.com/phhusson/device_phh_treble/pull/313/files">已合并至上游</a>，一段时间后的新版 ROM 可能已经自带了</li>
+<li>Dev.moe:感谢几位朋友的帮助！</li>
+</ul>
+</li>
+</ol>
 <h2 id="sony-xperia-xz1">Sony Xperia XZ1 强刷</h2>
 <p>按照 <a href="https://www.himiku.com/archives/flashing-xperia-xz1.html">Sony Xperia XZ1 （G8342） 强刷教程</a></p>
-<h2 id="_15">华为机型简单介绍</h2>
+<h2 id="_17">华为机型简单介绍</h2>
 <p>请先根据前一节内容慎重考虑华为 Root 。</p>
 <p>而且需要解锁 Bootloader 。</p>
 <div class="admonition info">
@@ -1208,14 +1300,14 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 <h2 id="1">备份完整字库数据(分区)<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup></h2>
 <p>手机的字库指的是手机硬件(类比硬盘+Bios)，但是我们这里讲的是里面的数据啦。</p>
 <p>我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
-<h3 id="_16">有必要吗？</h3>
+<h3 id="_18">有必要吗？</h3>
 <p>有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
 <p>假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
 <p>那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。</p>
 <p>如果你是频繁刷机的玩家，比如你刷Gsi(通用系统镜像)把基带刷丢了怎么办？或者装了格机模块被格式化全分区数据了怎么办？</p>
 <p>所以，Root后第一件事，就是备份完整字库，以防不测。</p>
 <p>基带丢失，其实也就是基带分区的数据损坏了，只需要刷入正常的分区镜像就可以修复。但是，基带分区究竟是哪一个我们不得而知，所以需要备份完整的分区。</p>
-<h3 id="_17">如何备份？</h3>
+<h3 id="_19">如何备份？</h3>
 <p>你可以去下载 <a href="https://www.coolapk.com/apk/com.example.ourom">这个分区备份软件</a> 或者在 <strong><a href="https://gjzsr.com/">搞机助手</a></strong> 等等中备份你的手机分区镜像或者打包当前系统ROM,到时候用线刷工具/深刷工具救回来。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1285,7 +1377,10 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 <p><a href="https://www.bilibili.com/read/cv15133756">小白刷机指南——GSI</a>&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:48">
-<p><a href="https://www.chaptsand.top/posts/da8abb0.html">动态分区刷GSI-通用镜像-的正确姿势</a>&#160;<a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p><a href="https://www.chaptsand.top/posts/da8abb0.html">动态分区刷GSI-通用镜像-的正确姿势</a>&#160;<a class="footnote-backref" href="#fnref:48" title="Jump back to footnote 10 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:48" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+</li>
+<li id="fn:49">
+<p><a href="https://dev.moe/2716">小米平板 5 Pro 刷入 GSI Android 教程</a>&#160;<a class="footnote-backref" href="#fnref:49" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:49" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:49" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:49" title="Jump back to footnote 11 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:49" title="Jump back to footnote 11 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1295,11 +1390,11 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 05:16:40</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 06:43:57</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 05:16:40</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 06:43:57</span>
       
     
   </small>
