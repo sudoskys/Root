@@ -161,7 +161,7 @@ adb shell getprop ro.product.cpu.abi
 
 或者.... 上网查找你所使用手机的 Cpu 架构
 
-如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`arm64-v7a`，那么你应该去寻找 ARM32 的包。
+如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。
 
 
 #### 找？
