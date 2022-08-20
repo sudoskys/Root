@@ -649,22 +649,30 @@
 闪存是最常见的存储芯片。固态硬盘、U盘，手机内的存储空间均使用闪存芯片，但芯片的组织方式和主控有所区别。</p>
 <p><strong>手机的存储空间到底应该叫什么？</strong></p>
 <p>叫外存，叫闪存，叫存储空间都行。叫ROM属于错误，叫内存属于有毒。</p>
-<p><strong>双清:</strong> Dalvik/ART Cache Cache 其目的就是清除分区以及数据，简称重置手机。</p>
-<p><strong>三清:</strong> Dalvik/ART Cache Cache Data 刷机前基本上必选三清，目的是使新系统的兼容性达到最佳。</p>
-<p><strong>四清:</strong> Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。</p>
+<p><strong>双清:</strong> </p>
+<p>Dalvik/ART Cache Cache 其目的就是清除分区以及数据，简称重置手机。</p>
+<p><strong>三清:</strong> </p>
+<p>Dalvik/ART Cache Cache Data 刷机前基本上必选三清，目的是使新系统的兼容性达到最佳。</p>
+<p><strong>四清</strong> </p>
+<p>Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。</p>
 <div class="admonition warning end">
 <p class="admonition-title">Warning</p>
 <p>重要！
  四清后不刷入系统无法开机进系统！！只能电脑刷或者储存卡刷。</p>
 </div>
-<p><strong>五清:</strong> Dalvik/ART Cache Cache Data System Internal Storage（内置储存） </p>
+<p><strong>五清</strong> </p>
+<p>Dalvik/ART Cache Cache Data System Internal Storage（内置储存） </p>
 <div class="admonition warning end">
 <p class="admonition-title">Warning</p>
 <p>一旦选了这个清除，那手机内置存储上的东西就都没有了！就不能从手机选择卡刷包了！</p>
 </div>
-<p><strong>六清:</strong> Dalvik/ART Cache Cache Data System.</p>
-<p><strong>底包:</strong>既不是ROM也不是OTA软件包，它是一组<strong>低级驱动程序</strong>，可帮助操作系统完成其想做的任何事情。 它包括调制解调器，蓝牙，引导程序，DSP等各种内容。支持所有Snapdragon和MTK设备，包括仅限中国的设备。底包就相当于一个纯净版或者内核版的系统包</p>
-<p><strong>MTK</strong>:联发科。</p>
+<p><strong>六清</strong> </p>
+<p>Dalvik/ART Cache Cache Data System.</p>
+<p><strong>底包</strong></p>
+<p>既不是ROM也不是OTA软件包，它是一组<strong>低级驱动程序</strong>，可帮助操作系统完成其想做的任何事情。 它包括调制解调器，蓝牙，引导程序，DSP等各种内容。支持所有Snapdragon和MTK设备，包括仅限中国的设备。</p>
+<p>底包就相当于一个纯净版或者内核版的系统包，包含基带，字库。</p>
+<p><strong>MTK</strong></p>
+<p>联发科。</p>
 <p>MTK和高通是生产手机CPU的厂家。MTK平台和高通平台指的是这两家的操作系统。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -752,9 +760,18 @@
 <p>而清空data，是删除data分区的所有文件及文件夹。当你遇到data挂载不上时，你清空data是没有效果的，这个时候，你需要进行格式化data操作，才能挂载data，所以，这两个不要搞混淆了</p>
 <p><strong>通用系统映像(GSI/SGSI)</strong></p>
 <p><a href="https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement">https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement</a></p>
-<p>从Android 9开始，Google更改了要求，所有设备都必须使用[system-as-root]</p>
-<p>GSI则由A-only和A/B进行区分刷入</p>
-<p>GSI则是一种可以忽略厂商定制的通用刷机包</p>
+<p>Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新</p>
+<p>而 Android 9 开始，Google更改了要求，所有设备都必须使用[system-as-root]</p>
+<p>GSI由此以A-only和A/B进行区分。</p>
+<p>GSI则是一种可以忽略厂商定制的通用刷机包，sgsi只支持高通设备且不自带内核。，而gsi理论上支持任何设备。</p>
+<p><sup id="fnref:45"><a class="footnote-ref" href="#fn:45">11</a></sup></p>
+<p>它的优点是在机器还没有适配第三方 ROM 的时候，可以提前体验到类原生系统。但是因为没有针对具体机型进行优化，所以会存在部分问题。</p>
+<p>贴一个 通用系统镜像的列表:<a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">Generic System Image (GSI) List</a></p>
+<p><strong>Project Treble(PT)</strong></p>
+<p>方便手机厂商给手机升级系统。</p>
+<p>为了解决Android碎片化问题，减少技术支持层面的拖累，谷歌将原本由芯片厂商负责的代码修改工作纳入到Android项目中，绕过芯片厂而直接将打包好处理器适配性的系统发送给手机厂商，从而大大节省时间和研发难度，让手机厂商升级系统的门槛变得更低。</p>
+<p>pt的分区又有着不同区别，分别是a-only和a/b。部分机子升级至安卓8.0级以上安卓版本时，部分良心手机厂商的机子会支持pt计划的新分区，叫vendor分区</p>
+<p>只要你的手机支持pt，也就能以支持pt的rom为底包，双清刷入gsi，尝鲜类原生，但因为是通用系统镜像，部分机型刷入后可能会有部分传感器丢失的现象，比如指纹，相机不可用，得自己搞定驱动。</p>
 <p><strong>动态分区</strong></p>
 <p>Google在Android 10开始引入了动态分区（Dynamic Partitions） 简单来说，就是把原来的system , vendor , product还有odm分区整合到了一起，构成super分区 在刷入设备的时候动态调整system等分区的大小</p>
 <p><strong>什么是GSI</strong></p>
@@ -1020,6 +1037,9 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <li id="fn:42">
 <p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
+<li id="fn:45">
+<p><a href="https://bbs.liuxingw.com/t/9315/2.html">关于Project Treble和Android GSI</a>&#160;<a class="footnote-backref" href="#fnref:45" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -1028,11 +1048,11 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:36:31</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 04:29:59</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:36:31</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 04:29:59</span>
       
     
   </small>

@@ -399,6 +399,60 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#fastboot" class="md-nav__link">
+    线刷 Fastboot刷入镜像
+  </a>
+  
+    <nav class="md-nav" aria-label="线刷 Fastboot刷入镜像">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#gsi" class="md-nav__link">
+    Gsi？？
+  </a>
+  
+    <nav class="md-nav" aria-label="Gsi？？">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    怎么查
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    查一下架构
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    找？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    刷入..
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recovery" class="md-nav__link">
     卡刷 第三方 Recovery
   </a>
@@ -414,7 +468,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     特殊情况说明
   </a>
   
@@ -434,7 +488,7 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     刷包成功后出现的几种情况
   </a>
   
@@ -461,7 +515,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+  <a href="#_8" class="md-nav__link">
     初始化
   </a>
   
@@ -494,21 +548,14 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#fastboot" class="md-nav__link">
-    线刷 Fastboot刷入镜像
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_9" class="md-nav__link">
     结束
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_10" class="md-nav__link">
     突发救砖
   </a>
   
@@ -523,7 +570,7 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+  <a href="#_11" class="md-nav__link">
     安装模块变砖防护策略
   </a>
   
@@ -542,7 +589,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     华为？
   </a>
   
@@ -564,14 +611,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     有必要吗？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     如何备份？
   </a>
   
@@ -710,6 +757,7 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 </div>
 <p>Tips：极少数小米设备存在检测设备信息错误的问题，Ramdisk 虽然显示为「否」，但实际上是需要修改 boot.img。</p>
 <h3 id="img">准备修补的img</h3>
+<p>这里你可以看一下首页的链接支持</p>
 <p>官方 ROM 的压缩包，例如 <a href="https://developers.google.com/android/images">Google</a>、<a href="https://www.miui.com/shuaji-393.html">小米</a>、<a href="https://mirrors.lolinet.com/firmware/moto/">Moto</a>，由厂商发布，可从固定的发布页面、机型论坛等获取相关链接。一些厂商同时提供了 OTA 包和全量包，我们优先下载全量包，解压后即可获得 boot.img，也就是我们所需要的 boot 分区的镜像文件。请去官网或者其他平台下载<strong>符合</strong>你的<strong>机型和型号</strong>的rom包！
 使用ZIP解压工具解压完整的ROM卡刷包（最新MIUI系统安装包），找到<code>boot.img</code>
 和<code>vbmeta.img</code>两个文件，复制出来备用。</p>
@@ -733,6 +781,67 @@ python3 payload_dumper.py payload.bin
 <div class="admonition danger">
 <p class="admonition-title">警告</p>
 <p>⚠️ <strong>你所用到的镜像(提取或修改)都要在电脑上留存副本！否则变砖警告！</strong></p>
+</div>
+<h2 id="fastboot">线刷 Fastboot刷入镜像</h2>
+<p>卡刷是最值得推荐的，过程也不复杂，只要刷机过程保持电量充足，刷机包正确，刷机过程不对手机进行操作，一般都是能成功刷入的。</p>
+<ol>
+<li>无需第三方 <strong>Recovery</strong></li>
+<li>不影响系统升级（完整包升级）</li>
+</ol>
+<p>复制修改镜像后的完整路径（<strong>在 Windows 中，选中文件 &gt; Shift + 右键，会多出「复制为路径」命令</strong>），在终端中输入：</p>
+<div class="highlight"><pre><span></span><code>## 手机重启到 Bootloader
+adb reboot bootloader
+## 如果 Ramdisk 为 yes
+fastboot flash boot &lt;修改后的 boot.img 路径&gt;
+ ## 刷入完成后重启
+fastboot reboot
+</code></pre></div>
+<p>如果想要谨慎一点，比如说修改的镜像文件是从网上下载的，想先试试看能否正常启动，则可以用命令：<code>fastboot boot</code>。这样顺利启动系统后即可暂时拥有 Magisk ，不过重启后就会失效。</p>
+<p>文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）</p>
+<h3 id="gsi">Gsi？？</h3>
+<p>如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)</p>
+<p><sup id="fnref:46"><a class="footnote-ref" href="#fn:46">8</a></sup></p>
+<p><sup id="fnref:47"><a class="footnote-ref" href="#fn:47">9</a></sup></p>
+<h4 id="_2">怎么查</h4>
+<p>首先，需要确认你的设备是否支持project treble，你需要下载一个<a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble">treble check</a></p>
+<p>打开软件，查看检测结果。</p>
+<p>只有当 Project Treble 通过检测才表明此手机可以刷 gsi 镜像包。</p>
+<p>如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。</p>
+<h4 id="_3">查一下架构</h4>
+<p>将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：</p>
+<div class="highlight"><pre><span></span><code>adb shell getprop ro.product.cpu.abi
+</code></pre></div>
+<p>或者.... 上网查找你所使用手机的 Cpu 架构</p>
+<p>如过架构是<code>arm64-v8a</code>，那么你应该去找 ARM64 的包，如果是<code>arm64-v7a</code>，那么你应该去寻找 ARM32 的包。</p>
+<h4 id="_4">找？</h4>
+<p>我贴了一个 <code>通用镜像列表</code> 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。</p>
+<details class="help">
+<summary>不会...</summary>
+<p>呃.... 如果不会找的话，推荐换个流行的手机（？）或者（￥-5）请人找。</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在XDA查找gsi包，需要查看最前面的标签是<code>gsi</code>，<code>Treble</code>或<code>Project Treble</code>，而不是 <code>rom</code>
+一般<code>gsi</code>的格式：系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否
+后面带有<code>gapps</code>字样的刷机包，表明其内置了谷歌服务。</p>
+</div>
+<h4 id="_5">刷入..</h4>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Data分区的强制加密要关掉</p>
+<p>若以安卓9为底包，不能刷入安卓8的gsi，需要刷入同等级的gsi</p>
+<p>刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版。</p>
+<p>a-only和a/b的gsi不通用</p>
+<p>刷 <code>gsi</code> 从准备刷入到开机完成前都不可以刷任何东西，twrp都不可以。</p>
+<p>刷<code>gsi</code>不应该用<code>twrp</code>刷。应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。</p>
+<p>刷完系统后记得双清（data和cache）</p>
+</div>
+<p>首先，你需要确保你的设备正在使用的是<strong>原厂的rec</strong></p>
+<p>然后呢，将手机重启至bootloader/fastboot模式，亦或者fastbootd模式（看上面！），输入<code>fastboot flash system</code> （你下载下来的gsi镜像），刷写完成后，接着重启至rec，恢复出厂设置。</p>
+<p>开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>刷了gsi收不到短信 但是电话和流量都能用，是votle问题</p>
 </div>
 <h2 id="recovery">卡刷 第三方 Recovery</h2>
 <p>有的Recovery作者附带了刷入脚本，这样的直接运行脚本按着走就行了，这里讲一下通用方法。</p>
@@ -775,7 +884,7 @@ finished.
 <div class="highlight"><pre><span></span><code>adb install Magisk-xxx.apk
 </code></pre></div>
 打开手机上新增的 Magisk 应用，若下方的 超级用户 和 模块 菜单能够点击，就代表已经成功获取了 Root 权限.</p>
-<h3 id="_2">特殊情况说明</h3>
+<h3 id="_6">特殊情况说明</h3>
 <p><strong>新款联发科机型必须关闭AVB2.0校验</strong></p>
 <p>否则任何对系统的修改都会导致卡在Fastboot。涉及的机型包括但不限于红米6，6A，9，9A，红米Note8Pro，红米10X4G，5G，红米K30U，小米Play，以及之后的联发科机型。至于AVB2.0怎么关闭，不同机型不同安卓版本方法不用，可以在TWRP里找这个功能，或者找刷过的大佬问方法。</p>
 <p><strong>红米3S进入Recovery模式的方法是长按三键</strong></p>
@@ -819,7 +928,7 @@ finished.
 <p>运行该线刷工具，需要电脑识别到端口9008，在电脑设备管理器中可以找到，如果没有反应需要电脑安装9008的驱动。
 <code>https://www.aliyundrive.com/s/KTLkyyjTsDB</code></p>
 <p>接着需要下载官方固刷包进行刷入就可以了</p>
-<h3 id="_3">刷包成功后出现的几种情况</h3>
+<h3 id="_7">刷包成功后出现的几种情况</h3>
 <p>1.数据线自动断开链接，手机充电灯亮起-----刷写成功</p>
 <p>2.无反应！------换包刷写，或试另一种刷写方式</p>
 <p><strong>💡 按住手机上下音量+电源调试手机进入9008模式，其次电脑识别到9008端口</strong></p>
@@ -838,7 +947,7 @@ finished.
 <p>MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从文件包或从 <a href="https://www.python.org/downloads/">Download Python | Python.org</a> 安装Python（<strong>确保安装时勾选 ADD PYTHON to PATH</strong>）</p>
 <p>并使用 <code>pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple</code> 配置国内镜像源。</p>
 <p>这里以Windows系统为演示系统。乌班图看<a href="https://zhuanlan.zhihu.com/p/452973221">这里</a></p>
-<h3 id="_4">初始化</h3>
+<h3 id="_8">初始化</h3>
 <p>在 mtkclient-main 文件夹下右键打开命令行
 执行 <code>python setup.py install</code></p>
 <p>🛠 下面每执行一次命令，都需要重复关机状态下 “插上USB同时按住音量加减及开机键，待到看到命令行变成这个后就松手”步骤。   <strong>一定不要输错命令！！！！！！！</strong></p>
@@ -891,31 +1000,15 @@ finished.
 <p class="admonition-title">Help</p>
 <p>🛠 如果在解锁中遇到问题请先去 <a href="https://github.com/bkerler/mtkclient/issues">https://github.com/bkerler/mtkclient/issues</a> ，搜索遇到的问题，如果是新的bug欢迎向作者反馈。需注明机型和提供相应的preloader。还有就是花钱请人救砖。</p>
 </div>
-<h2 id="fastboot">线刷 Fastboot刷入镜像</h2>
-<p>卡刷是最值得推荐的，过程也不复杂，只要刷机过程保持电量充足，刷机包正确，刷机过程不对手机进行操作，一般都是能成功刷入的。</p>
-<ol>
-<li>无需第三方 <strong>Recovery</strong></li>
-<li>不影响系统升级（完整包升级）</li>
-</ol>
-<p>复制修改镜像后的完整路径（<strong>在 Windows 中，选中文件 &gt; Shift + 右键，会多出「复制为路径」命令</strong>），在终端中输入：</p>
-<div class="highlight"><pre><span></span><code>## 手机重启到 Bootloader
-adb reboot bootloader
-## 如果 Ramdisk 为 yes
-fastboot flash boot &lt;修改后的 boot.img 路径&gt;
- ## 刷入完成后重启
-fastboot reboot
-</code></pre></div>
-<p>如果想要谨慎一点，比如说修改的镜像文件是从网上下载的，想先试试看能否正常启动，则可以用命令：<code>fastboot boot</code>。这样顺利启动系统后即可暂时拥有 Magisk ，不过重启后就会失效。</p>
-<p>文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）</p>
 <hr />
-<h2 id="_5">结束</h2>
+<h2 id="_9">结束</h2>
 <p>确认 Root 没有问题后，再打开 Magisk App 中选择<strong>安装 &gt; 直接安装</strong>，来「永久」写入 Magisk。</p>
 <p>系统更新时想要保留 Magisk 的，重新打包刷入一次是最为通用稳妥的办法。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
 <p>Magisk 工作机制是「拦截」，Magisk通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。Magisk 可以被看作是一种文件系统，这种文件系统通过巧妙的实现方式避开了对系统文件的直接修改</p>
 </div>
-<h2 id="_6">突发救砖</h2>
+<h2 id="_10">突发救砖</h2>
 <hr />
 <ol>
 <li>刷机包与手机自带的BOOT版本不匹配，这个时候只需要从ROM包里提取boot.img文件单刷，然后再重新刷机就好了。</li>
@@ -953,7 +1046,7 @@ fastboot reboot
 <p>在BL锁已经解锁的情况下，可以尝试线刷关键分区 system，boot，recovery，cust 实现救砖。</p>
 </div>
 <p><a href="https://www.coolapk.com/feed/26205215?shareKey=MzUxMDU3ODVmMjY0NjEwZDQ5M2M~&amp;shareUid=3463951&amp;shareFrom=com.coolapk.market_11.3">其他方法</a></p>
-<h3 id="_7">安装模块变砖防护策略</h3>
+<h3 id="_11">安装模块变砖防护策略</h3>
 <ul>
 <li>安装 MM管理器 或 自动神仙救砖 插件</li>
 <li>备份 Root 后的系统</li>
@@ -966,7 +1059,7 @@ fastboot reboot
 <p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
 <p>自救命令，使用mtkclient写入备份的镜像
 <code>python mtk wl out</code></p>
-<h2 id="_8">华为？</h2>
+<h2 id="_12">华为？</h2>
 <p>请先根据前一节内容慎重考虑华为 Root 。</p>
 <p>而且需要解锁 Bootloader 。</p>
 <div class="admonition info">
@@ -988,14 +1081,14 @@ fastboot reboot
 <h2 id="1">备份完整字库数据(分区)<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup></h2>
 <p>手机的字库指的是手机硬件(类比硬盘+Bios)，但是我们这里讲的是里面的数据啦。</p>
 <p>我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
-<h3 id="_9">有必要吗？</h3>
+<h3 id="_13">有必要吗？</h3>
 <p>有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
 <p>假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
 <p>那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。</p>
 <p>如果你是频繁刷机的玩家，比如你刷Gsi(通用系统镜像)把基带刷丢了怎么办？或者装了格机模块被格式化全分区数据了怎么办？</p>
 <p>所以，Root后第一件事，就是备份完整字库，以防不测。</p>
 <p>基带丢失，其实也就是基带分区的数据损坏了，只需要刷入正常的分区镜像就可以修复。但是，基带分区究竟是哪一个我们不得而知，所以需要备份完整的分区。</p>
-<h3 id="_10">如何备份？</h3>
+<h3 id="_14">如何备份？</h3>
 <p>你可以去下载 <a href="https://www.coolapk.com/apk/com.example.ourom">这个分区备份软件</a> 或者在 <strong><a href="https://gjzsr.com/">搞机助手</a></strong> 等等中备份你的手机分区镜像或者打包当前系统ROM,到时候用线刷工具/深刷工具救回来。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1055,6 +1148,15 @@ fastboot reboot
 <li id="fn:44">
 <p><a href="https://blog.chitang.dev/posts/mi11/">小米11搞机指南</a>&#160;<a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
+<li id="fn:45">
+<p><a href="https://bbs.liuxingw.com/t/9315/2.html">关于ProjectTreble和AndroidGSI</a>&#160;<a class="footnote-backref" href="#fnref:45" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+</li>
+<li id="fn:46">
+<p><a href="https://www.irom.net/post/9.html">安卓手机刷入GSI镜像教程</a>&#160;<a class="footnote-backref" href="#fnref:46" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+</li>
+<li id="fn:47">
+<p><a href="https://www.bilibili.com/read/cv15133756">小白刷机指南——GSI</a>&#160;<a class="footnote-backref" href="#fnref:47" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+</li>
 </ol>
 </div>
 
@@ -1063,11 +1165,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:36:31</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 04:29:59</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:36:31</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 04:29:59</span>
       
     
   </small>
