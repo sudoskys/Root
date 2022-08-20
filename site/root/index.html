@@ -557,8 +557,28 @@
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    备份完整分区1
+    备份完整字库数据(分区)1
   </a>
+  
+    <nav class="md-nav" aria-label="备份完整字库数据(分区)1">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    有必要吗？
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    如何备份？
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -965,13 +985,22 @@ fastboot reboot
 合键，这样才能挂载 Magisk 。这是因为我们是通过修改 recovery.img 的方式挂载 Magisk 的，只有在按下组合键的情况下，设备才会启动 recovery 分区，从而实现 Magisk 的挂载。</p>
 <p>按下组合键后，设备不会进入 Recovery 模式，而是会闪屏过后直接进入一个有 Magisk 的系统。每一次重启都要这样做才能挂载 Magisk。进入系统后就没有特别需要注意的问题了。</p>
 <p>而想要进入真正的 Recovery ，我们需要在按下组合键后的闪屏界面长按音量 + 键。</p>
-<h2 id="1">备份完整分区<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup></h2>
-<p>这里的分区就是字库。</p>
-<p>什么是备份完整字库？我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
-<p>所以，Root后第一件事，就是备份完整字库，以防不测。有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
-<p>原因：假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
+<h2 id="1">备份完整字库数据(分区)<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup></h2>
+<p>手机的字库指的是手机硬件(类比硬盘+Bios)，但是我们这里讲的是里面的数据啦。</p>
+<p>我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
+<h3 id="_9">有必要吗？</h3>
+<p>有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
+<p>假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
 <p>那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。</p>
-<p>备份文件下载链接 <a href="http://pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw">作者给出</a> 提取码:<code>vo15</code> ，或者我打包的文件中[^1],文件来自<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">1</a></sup>。或者使用<a href="https://miao202.lanzouj.com/i9pJX09kzq8j">蓝奏云</a></p>
+<p>如果你是频繁刷机的玩家，比如你刷Gsi(通用系统镜像)把基带刷丢了怎么办？或者装了格机模块被格式化全分区数据了怎么办？</p>
+<p>所以，Root后第一件事，就是备份完整字库，以防不测。</p>
+<p>基带丢失，其实也就是基带分区的数据损坏了，只需要刷入正常的分区镜像就可以修复。但是，基带分区究竟是哪一个我们不得而知，所以需要备份完整的分区。</p>
+<h3 id="_10">如何备份？</h3>
+<p>你可以去下载 <a href="https://www.coolapk.com/apk/com.example.ourom">这个分区备份软件</a> 或者在 <strong><a href="https://gjzsr.com/">搞机助手</a></strong> 等等中备份你的手机分区镜像或者打包当前系统ROM,到时候用线刷工具/深刷工具救回来。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>如果救回来基带未知，可以试试官方线刷包单刷 persist.img</p>
+</div>
 <p><strong>高通机型备份字库</strong></p>
 <p>安装个MT管理器，使用root权限执行【高通字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。</p>
 <p><strong>高通机型还原字库</strong></p>
@@ -1000,13 +1029,16 @@ fastboot reboot
 <p>然后终端命令：<code>busybox fdisk /dev/block/sda</code> 回车，然后再输入p回车，就可以看到sda这块硬盘的所有分区信息了。adb,adc,add,ade,adf</p>
 <p>同理,emmc闪存手机的命令是：busybox fdisk /dev/block/mmcblk0回车，再输入p回车，就能看到所有分区信息了。</p>
 </details>
-<p>如果你的手机已经出现问题，且没有备份完整字库……去售后换主板，或者找个同机型的，用他的完整备份字库刷入，当然我并不确定是否成功，因为会不会黑砖，这是个待验证的问题。</p>
-<p>而且最好别全部使用别人的手机的全字库备份，就算不黑砖，也会大概率出现 bootlocker 永久锁定，永久无法再次解锁，只能换主板。</p>
+<p>如果你的手机已经出现问题，且没有备份完整字库。
+需要去售后换主板(-300)，或者找一台同机型的手机，提取完整备份字库刷入救机，是否成功看运气，因为会不会黑砖，这是个待验证的问题。</p>
+<p>最好不要使用别人的手机的全字库备份，就算不发生手机黑屏变砖的情况，也会大概率出现 Bootlocker 永久锁定，永久无法再次解锁。</p>
+<p>如果刷入另一台同型号手机的基带，两台手机会有相同的串号。</p>
+<p>备份的基带，只要不换主板就可以一直用。</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:15">
-<p>告诉大家如何防止掉基带问题 <a href="https://www.coolapk.com/feed/21305538">https://www.coolapk.com/feed/21305538</a>&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p>告诉大家如何防止掉基带问题 <a href="https://www.coolapk.com/feed/21305538">https://www.coolapk.com/feed/21305538</a>&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:13">
 <p><strong><a href="https://blog.linioi.com/posts/8/">通过 ADB 给手机刷入第三方 Recovery</a></strong>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 2 in the text">&#8617;</a></p>
@@ -1031,11 +1063,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 02:59:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:34:10</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 02:59:43</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:34:10</span>
       
     
   </small>
