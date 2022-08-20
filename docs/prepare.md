@@ -1,7 +1,7 @@
 # 准备
 
 !!! danger
-   刷机有风险，出事我不管。
+    刷机有风险，出事我不管。
 
 先下载一个 [Mt管理器](https://www.coolapk.com/apk/bin.mt.plus)，用来执行文件操作。
 
