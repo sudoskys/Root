@@ -364,8 +364,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    了解术语4
+  <a href="#3" class="md-nav__link">
+    了解术语3
   </a>
   
 </li>
@@ -515,13 +515,6 @@
   
 </li>
         
-          <li class="md-nav__item">
-  <a href="#3" class="md-nav__link">
-    备份完整分区3
-  </a>
-  
-</li>
-        
       </ul>
     </nav>
   
@@ -634,7 +627,7 @@
 <h2 id="root">我的手机能 Root 吗？</h2>
 <p>第一看手机能不能解锁Bl,第二看你是否有全量包或者对应的第三方Recovery.</p>
 <p>如果不是很小众，端口什么的也没有封锁(需要手动验证),大部分手机都可以 Root.</p>
-<h2 id="4">了解术语<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">4</a></sup></h2>
+<h2 id="3">了解术语<sup id="fnref:17"><a class="footnote-ref" href="#fn:17">3</a></sup></h2>
 <p><strong>内存/运存/闪存/Ram/Rom</strong></p>
 <p>首先<strong>没有运存这种东西</strong>，只有内存。</p>
 <p>除了手机外，你把闪存/硬盘/存储空间当内存说都是会被骂的。</p>
@@ -658,7 +651,7 @@
 <ul>
 <li>闪存是什么？</li>
 </ul>
-<p><sup id="fnref:39"><a class="footnote-ref" href="#fn:39">9</a></sup>
+<p><sup id="fnref:39"><a class="footnote-ref" href="#fn:39">8</a></sup>
 闪存是最常见的存储芯片。固态硬盘、U盘，手机内的存储空间均使用闪存芯片，但芯片的组织方式和主控有所区别。</p>
 <p><strong>手机的存储空间到底应该叫什么？</strong></p>
 <p>叫外存，叫闪存，叫存储空间都行。叫ROM属于错误，叫内存属于有毒。</p>
@@ -681,7 +674,7 @@
 <p>MTK和高通是生产手机CPU的厂家。MTK平台和高通平台指的是这两家的操作系统。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p><sup id="fnref:28"><a class="footnote-ref" href="#fn:28">5</a></sup>
+<p><sup id="fnref:28"><a class="footnote-ref" href="#fn:28">4</a></sup>
 联发科不建议玩机，尤其是动分区，什么 logo, dtbo, boot, vendor_boot 等等，特别容易寄，当然它大部分时候也不是真砖，就是只能反复一屏重启，也不让你进 Bootloader。不过不让你进 Bootloader 基本也就等于砖了，因为你只能去售后了。（补充0，如果只是解锁之后搞下 Magisk、LSPosed 这种，那还是没什么问题的）</p>
 <p>要是以前也还好，漏洞允许我们深刷绕过小米售后账号权限。现在新机深刷不能自己来不说，联发科他自己的深刷工具对动态分区的支持还不好，如果刷错分区死在 B 槽位，很大概率深刷也刷不好，等着换主板吧。</p>
 <p>虽然我们制作了这些处理器的 TWRP，但并不建议任何没有丰富经验的人刷入使用。由于 GKI2.0 内核的特性，dtb 和 内核模块 都位于 vendor_boot 内，而 Recovery 也被移动到这，一旦官方有更新这部分，就会导致无法引导进系统，这种情况还好，Bootloader 是可以进的，恢复官方的 vendor_boot 即可。而一旦遇到反复重启到第一屏的情况，就只能去售后深刷。根据最新的测试结果来看，现在单纯刷入我们制作的 TWRP 理论上不会再遇到这种问题了，但用它来刷包等操作，还是不能保证。
@@ -689,7 +682,7 @@
 （补充2，也由于 GKI2.0 的原因，整个 boot 分区只有 kernel，所以理论上为其编译内核只需要使用 android common kernel 合入 mtk 专有 gki 部分，就可以正常开机了）</p>
 </div>
 <p><strong>手机分区</strong></p>
-<p>内容来自<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">6</a></sup></p>
+<p>内容来自<sup id="fnref:30"><a class="footnote-ref" href="#fn:30">5</a></sup></p>
 <ul>
 <li>boot</li>
 </ul>
@@ -773,7 +766,7 @@
 <p><strong>什么是GSI</strong></p>
 <p>GSI代表通用系统映像。这是一个文件系统映像，您可以将其刷到设备的系统分区。之所以具有通用性，是因为它使用新的标准化硬件API访问硬件（因此它可以在任何启用treble的设备上运行）。</p>
 <p><strong>Bootloader</strong>
-<sup id="fnref:36"><a class="footnote-ref" href="#fn:36">8</a></sup>
+<sup id="fnref:36"><a class="footnote-ref" href="#fn:36">7</a></sup>
 Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理器相似，负责启动手机的用户层面操作系统。</p>
 <p>手机开机时进行开机自检和初始化手机硬件，它会指引手机找到系统分区并启动操作系统.</p>
 <p>如果BL锁了，即使你强行刷了非官方boot，因为BL会校验boot分区的数字签名，所以无法加载Android内核到RAM，也就无法启动system。</p>
@@ -814,7 +807,7 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>1）使用本地提权漏洞利用工具来直接Root，这是最原始最纯洁的方式。随着厂商对Rom的升级，这些内核的漏洞随时都可能被修补，因此，这种Root方法在时间与空间上都有着很大的局限性。</p>
 <p>2）由于手机厂商对硬件的封闭，加上内核补丁修补很完全，这个时候获取Root权限就更难了，这个时候刷机与Root就联合起来了，由于不能从系统内部通过Exploits来获取Root权限，只能通过修改Rom包来达到Root的目的，这也是目前很多第三方Rom包自带了Root的原因，然而手机厂商也不是吃干饭的，手机厂商在OTA升级时使用Recovery对包签名进行验证来防止用户刷入修改过的包。对于这种变态的厂商，只能通过FastBoot来线刷了，这里内容就不再展开了。</p>
 <p>3）当然，还有一部分厂商，为了吸引更多用户购买他们的手机，还是在手机中偷偷的留了后门的，比如不锁BootLoader，让用户刷第三方的Recovery，又或是干脆留个以前的漏洞不补，让用户自己来Exploits等等</p>
-<p><sup id="fnref:33"><a class="footnote-ref" href="#fn:33">7</a></sup></p>
+<p><sup id="fnref:33"><a class="footnote-ref" href="#fn:33">6</a></sup></p>
 <h3 id="_4"><strong>深刷</strong></h3>
 <p>深刷就是底层刷机，顾名思义，这是一种从底层刷写手机分区的方式。与正常的线刷卡刷相比，这种方式更为彻底，不仅不需要开机，还可以强行解BL锁。</p>
 <p>底层刷机模式常用于使用卡刷（Recovery下以及一系列使用ADB刷机方式的统称）或者线刷（Bootloader下使用Bootloader命令刷机的方式）刷成砖后救砖的场景下。按照主流处理器，高通为9008刷机模式，MTK为MTK PreLoader模式，海思麒麟为eRecovery模式（类rec操作）和eDownload模式。</p>
@@ -930,10 +923,10 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 </div>
 <p>附上<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=28646781&amp;boardId=5415551&amp;isComment=&amp;isRecommend=0&amp;app_version=dev.211029&amp;ref=share">小米解锁教程</a>.</p>
 <h4 id="_13">什么，你是华为？</h4>
-<p>这节的教程来自酷安@某贼 <sup id="fnref:41"><a class="footnote-ref" href="#fn:41">10</a></sup></p>
+<p>这节的教程来自酷安@某贼 <sup id="fnref:41"><a class="footnote-ref" href="#fn:41">9</a></sup></p>
 <p>推荐直接看<a href="https://zhuanlan.zhihu.com/p/397173427">知乎上他的文章</a></p>
 <p><a href="https://miao202.lanzouj.com/igAzW09qew7e">华为解锁相关驱动与工具</a></p>
-<p><a href="https://github.com/mashed-potatoes/PotatoNV">解锁华为 bootloader 工具，适用 Kirin 960/95х/65x/620</a> ，如果不能下载请复制Github的 zip 链接请填入<a href="https://ghproxy.com/">镜像站</a> 下载。<sup id="fnref:42"><a class="footnote-ref" href="#fn:42">11</a></sup></p>
+<p><a href="https://github.com/mashed-potatoes/PotatoNV">解锁华为 bootloader 工具，适用 Kirin 960/95х/65x/620</a> ，如果不能下载请复制Github的 zip 链接请填入<a href="https://ghproxy.com/">镜像站</a> 下载。<sup id="fnref:42"><a class="footnote-ref" href="#fn:42">10</a></sup></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 </div>
@@ -996,78 +989,38 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <summary>关于 Recovery 和 eRecovery</summary>
 <p>Recovery和eRecovery是有区别的。Recovery就是我们熟知的那个Recovery，而eRecovery是独立于Recovery的另一个分区。二者功能不同，在Recovery里我们可以做恢复出厂，清除cache等本地操作，而在eRecovery里可以连接WiFi下载适用于你的手机的系统包并自动安装恢复。刷TWRP只是替换掉了Recovery，eRecovery仍然保留。</p>
 </details>
-<h3 id="3">备份完整分区<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">3</a></sup></h3>
-<p>这里的分区就是字库。</p>
-<p>什么是备份完整字库？我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
-<p>所以，解锁bl后第一件事，就是备份完整字库，以防不测。有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
-<p>原因：假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
-<p>那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。</p>
-<p>备份文件下载链接 <a href="http://pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw">作者给出</a> 提取码:<code>vo15</code> ，或者我打包的文件中<sup id="fnref2:1"><a class="footnote-ref" href="#fn:1">1</a></sup>,文件来自<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">3</a></sup>。或者使用<a href="https://miao202.lanzouj.com/i9pJX09kzq8j">蓝奏云</a></p>
-<p><strong>高通机型备份字库</strong></p>
-<p>安装个MT管理器，使用root权限执行【高通字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。</p>
-<p><strong>高通机型还原字库</strong></p>
-<p>提前把之前备份好的Rannki文件夹，复制到 <code>/sdcard/Rannki</code>，安装个MT管理器，使用root权限执行【高通字库还原.sh】即可。</p>
-<p><strong>MTK 机型备份字库</strong></p>
-<p>安装个MT管理器，使用root权限执行【MTK字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。</p>
-<p><strong>MTK 机型还原字库</strong></p>
-<p>提前把之前备份好的Rannki文件夹，复制到 <code>/sdcard/Rannki</code>，安装个MT管理器，使用root权限执行【MTK 字库还原.sh】即可。</p>
-<p>字库备份还原，解决的不只是基带问题，</p>
-<p>是：除硬盘物理损坏外的所有问题，解决率为100％。</p>
-<p><strong>以上如何防止掉基带教程由酷安 Rannki 原创</strong></p>
-<details class="note">
-<summary>详细叙述</summary>
-<p><strong>UFS闪存手机</strong></p>
-<p>主板一般被分成了6个硬盘，即<strong>sda，sdb，sdc，sdd，sde，sdf。</strong></p>
-<p>所以，主板设备代码分别是：<code>/dev/block/sda，/dev/block/sde，/dev/block/sdc，/dev/block/sdd，/dev/block/sde，/dev/block/sdf</code></p>
-<p>备份分区的代码举例：<code>dd if=/dev/block/sda1 of=/sdcard/1.img,dd if=/dev/block/sda2 of=/sdcard/2.img</code>等等等等............................</p>
-<p>还原分区的代码举例：<code>dd if=/sdcard/1.img of=/dev/block/sda1,dd if=/sdcard/2.img of=/dev/block/sda2</code> 等等等等............................</p>
-<p><strong>Emmc闪存手机</strong></p>
-<p>主板设备代码：<strong>/dev/block/mmcblk0</strong></p>
-<p>备份分区的代码举例：<code>dd if=/dev/block/mmcblk0p1 of=/sdcard/1.img,dd if=/dev/block/mmcblk0p2 of=/sdcard/2.img</code>等等等等............................</p>
-<p>还原分区的代码举例：<code>dd if=/sdcard/1.img of=/dev/block/mmcblk0p1,dd if=/sdcard/2.img of=/dev/block/mmcblk0p2</code>等等等等............................</p>
-<p>当然，像 system 分区， vendor 分区，userdata 分区，super 分区，这些分区就没必要进行备份还原了。</p>
-<p>查看分区信息的命令：</p>
-<p>先安装busybox的面具模块：链接: <code>pan.baidu.com/s/1hFQr0nvXprzcz2gyQxtFzQ</code> 提取码: <code>y61r</code></p>
-<p>然后终端命令：<code>busybox fdisk /dev/block/sda</code> 回车，然后再输入p回车，就可以看到sda这块硬盘的所有分区信息了。adb,adc,add,ade,adf</p>
-<p>同理,emmc闪存手机的命令是：busybox fdisk /dev/block/mmcblk0回车，再输入p回车，就能看到所有分区信息了。</p>
-</details>
-<p>如果你的手机已经出现问题，且没有备份完整字库……去售后换主板，或者找个同机型的，用他的完整备份字库刷入，当然我并不确定是否成功，因为会不会黑砖，这是个待验证的问题。</p>
-<p>而且最好别全部使用别人的手机的全字库备份，就算不黑砖，也会大概率出现 bootlocker 永久锁定，永久无法再次解锁，只能换主板。</p>
 <div class="footnote">
 <hr />
 <ol>
 <li id="fn:1">
-<p><strong>所需资料打包</strong><a href="https://push.dianas.cyou/LIS/Share/Root/">https://push.dianas.cyou/LIS/Share/Root/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><strong>所需资料打包</strong><a href="https://push.dianas.cyou/LIS/Share/Root/">https://push.dianas.cyou/LIS/Share/Root/</a>&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
 </li>
 <li id="fn:3">
 <p><a href="https://sspai.com/post/67932">Android 玩家必备神器入门：从零开始安装 Magisk - 少数派 (sspai.com)</a>&#160;<a class="footnote-backref" href="#fnref:3" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
-<li id="fn:15">
-<p>告诉大家如何防止掉基带问题 <a href="https://www.coolapk.com/feed/21305538">https://www.coolapk.com/feed/21305538</a>&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 3 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 3 in the text">&#8617;</a></p>
-</li>
 <li id="fn:17">
-<p>常识基础 <a href="https://mi.fiime.cn/tutorial">https://mi.fiime.cn/tutorial</a>&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p>常识基础 <a href="https://mi.fiime.cn/tutorial">https://mi.fiime.cn/tutorial</a>&#160;<a class="footnote-backref" href="#fnref:17" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:28">
-<p>联发科不建议玩机 https://www.coolapk.com/feed/37080982&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p>联发科不建议玩机 https://www.coolapk.com/feed/37080982&#160;<a class="footnote-backref" href="#fnref:28" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:30">
-<p>简单认识手机各个分区 https://www.coolapk.com/feed/38367093&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 6 in the text">&#8617;</a></p>
+<p>简单认识手机各个分区 https://www.coolapk.com/feed/38367093&#160;<a class="footnote-backref" href="#fnref:30" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:33">
-<p>Android Root原理分析及防Root新思路 https://blog.csdn.net/hsluoyc/article/details/50560782&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 7 in the text">&#8617;</a></p>
+<p>Android Root原理分析及防Root新思路 https://blog.csdn.net/hsluoyc/article/details/50560782&#160;<a class="footnote-backref" href="#fnref:33" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 <li id="fn:36">
-<p>Bootloader 原理 https://www.zhihu.com/question/47496619/answer/195494376&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 8 in the text">&#8617;</a></p>
+<p>Bootloader 原理 https://www.zhihu.com/question/47496619/answer/195494376&#160;<a class="footnote-backref" href="#fnref:36" title="Jump back to footnote 7 in the text">&#8617;</a></p>
 </li>
 <li id="fn:39">
-<p><a href="https://www.zhihu.com/question/327171923/answer/716602933">为什么内存不叫运存？</a>&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 9 in the text">&#8617;</a></p>
+<p><a href="https://www.zhihu.com/question/327171923/answer/716602933">为什么内存不叫运存？</a>&#160;<a class="footnote-backref" href="#fnref:39" title="Jump back to footnote 8 in the text">&#8617;</a></p>
 </li>
 <li id="fn:41">
-<p><a href="https://zhuanlan.zhihu.com/p/416456337">[新手必看]华为刷机你一定要知道的</a>&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 10 in the text">&#8617;</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/416456337">[新手必看]华为刷机你一定要知道的</a>&#160;<a class="footnote-backref" href="#fnref:41" title="Jump back to footnote 9 in the text">&#8617;</a></p>
 </li>
 <li id="fn:42">
-<p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 11 in the text">&#8617;</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 10 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -1077,11 +1030,11 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 01:43:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 02:50:00</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 01:43:12</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 02:50:00</span>
       
     
   </small>

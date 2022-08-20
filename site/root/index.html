@@ -407,8 +407,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#magisk5" class="md-nav__link">
-    Magisk刷入5
+  <a href="#magisk6" class="md-nav__link">
+    Magisk刷入6
   </a>
   
 </li>
@@ -483,7 +483,7 @@
         
           <li class="md-nav__item">
   <a href="#root" class="md-nav__link">
-    备份 Root 后的手机
+    备份 Root 后的手机字库（分区）
   </a>
   
 </li>
@@ -516,8 +516,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#4" class="md-nav__link">
-    华为深刷救砖4
+  <a href="#5" class="md-nav__link">
+    华为深刷救砖5
   </a>
   
 </li>
@@ -551,6 +551,13 @@
         <li class="md-nav__item">
   <a href="#ramdisk" class="md-nav__link">
     面具 Ramdisk 为「否」的机型？"
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    备份完整分区1
   </a>
   
 </li>
@@ -705,7 +712,7 @@ python3 payload_dumper.py payload.bin
 <p>准备好 boot.img 后，打开打开<code>Magisk Manager</code>APP，点击<code>Magisk</code>后边的<code>安装</code>，选择安装方式为<code>选择并修改一个文件</code>，从电脑端复制 <code>boot.img</code> 文件到手机并选中该文件，点击<code>开始</code> ，仔细阅读修改结果并从结果中复制patch后的文件（一般在<code>Download</code>文件夹下，文件名类似<code>magisk_patched-24100_gk0te.img</code>）到电脑。</p>
 <div class="admonition danger">
 <p class="admonition-title">警告</p>
-<p>⚠️ <strong>你所用到的镜像(提取或修改)都要留存副本！否则变砖警告！</strong></p>
+<p>⚠️ <strong>你所用到的镜像(提取或修改)都要在电脑上留存副本！否则变砖警告！</strong></p>
 </div>
 <h2 id="recovery">卡刷 第三方 Recovery</h2>
 <p>有的Recovery作者附带了刷入脚本，这样的直接运行脚本按着走就行了，这里讲一下通用方法。</p>
@@ -732,9 +739,9 @@ finished.
 <p>橙狐改简体中文：点击底部的 <code>Menu</code> –&gt; 右上角的齿轮图标 –&gt; <code>Regional</code> –&gt; 点击 <code>Language</code> 下的 <code>English</code> ，选择 <code>Chinese Simplified</code> 。</p>
 </div>
 <blockquote></blockquote>
-<p><sup id="fnref:13"><a class="footnote-ref" href="#fn:13">1</a></sup></p>
+<p><sup id="fnref:13"><a class="footnote-ref" href="#fn:13">2</a></sup></p>
 <p>💡 给手机刷入 Recovery 其实也不需要电脑，用另一部手机借助 <a href="https://f-droid.org/zh_Hans/packages/com.termux/">Termux</a> 也是同样可以的。在 Termux 配置好 ADB 环境后，照上述步骤刷入即可。安装 Termux 的那部手机无需 ROOT。</p>
-<h3 id="magisk5">Magisk刷入<sup id="fnref:44"><a class="footnote-ref" href="#fn:44">5</a></sup></h3>
+<h3 id="magisk6">Magisk刷入<sup id="fnref:44"><a class="footnote-ref" href="#fn:44">6</a></sup></h3>
 <p>先下载Magisk到你的电脑设备，接着重启至你所使用的第三方 Recovery</p>
 <div class="highlight"><pre><span></span><code>adb reboot recovery
 </code></pre></div>
@@ -802,10 +809,6 @@ finished.
 <p>联发科的底层刷机模式没有高通那么麻烦。该模式在 MTK 内部被称为 MTK in-house developed loader。MTK 的该模式与高通略有不同，该模式具有帮助系统寻找Uboot的功能。该模式除了具有启动功能之外，还具有下载功能。首先还是需要明确的是mtk芯片都有一个boot rom，如果没有这个rom，那么程序是无法被下载到 Nand Flash中的，然后此时的Flash上是为空的，没有任何数据的。系统在上电之后它会检测是启动模式还是下载模式，如果是下载模式，它会初始化一个usb的串口，将Preloader加载到内部的SRAM中，跳转到Preloader中去执行，初始化好Flash和外部RAM之后，依次将preloader、lk、kernel、android下载到nand flash中去。刷机工具是SP Flash Tools ，需要验证的对应的DA文件，或者 MTKclinet</p>
 </div>
 <h3 id="mtk_1">准备 MTK 工具/工具箱</h3>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>最好备份好完整字库</p>
-</div>
 <p>💡 <strong>解释</strong>：MTk 工具依赖安卓的一种漏洞来实现 Root ，提取 boot.img，在使用前请关注你的社区（酷安等）。工具箱的使用都有说明，请自行咨询或查阅资料。</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -850,10 +853,14 @@ finished.
 </div>
 <p>执行命令刷入，重启手机，安装面具即可发现root成功
 <code>python mtk w boot,vbmeta boot.patched,vbmeta.img.empty</code></p>
-<h3 id="root">备份 Root 后的手机</h3>
+<h3 id="root">备份 Root 后的手机字库（分区）</h3>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>你可以使用mtk工具备份各个分区。</p>
+</div>
 <p>使用如下命令备份手机全部镜像，以便可以在手机变砖时进行自救。
-<code>python mtk rl out</code>
-自救命令，使用mtkclient写入备份的镜像
+<code>python mtk rl out</code></p>
+<p>自救命令，使用mtkclient写入备份的镜像
 <code>python mtk wl out</code></p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -899,7 +906,7 @@ fastboot reboot
 <p class="admonition-title">Note</p>
 <p>因为未知原因导致安装失败也不要怕，操作中你应该保留了一份原来的镜像，按照最后一步的方法将原来的镜像重新刷回去就能正常开机。**</p>
 </div>
-<h3 id="4">华为深刷救砖<sup id="fnref:43"><a class="footnote-ref" href="#fn:43">4</a></sup></h3>
+<h3 id="5">华为深刷救砖<sup id="fnref:43"><a class="footnote-ref" href="#fn:43">5</a></sup></h3>
 <p>这里还是酷安@某贼的教程</p>
 <p><a href="https://miao202.lanzouj.com/ihGpU09qfebg">华为线刷工具</a></p>
 <p><a href="https://miao202.lanzouj.com/igAzW09qew7e">华为解锁相关驱动与工具</a></p>
@@ -958,23 +965,63 @@ fastboot reboot
 合键，这样才能挂载 Magisk 。这是因为我们是通过修改 recovery.img 的方式挂载 Magisk 的，只有在按下组合键的情况下，设备才会启动 recovery 分区，从而实现 Magisk 的挂载。</p>
 <p>按下组合键后，设备不会进入 Recovery 模式，而是会闪屏过后直接进入一个有 Magisk 的系统。每一次重启都要这样做才能挂载 Magisk。进入系统后就没有特别需要注意的问题了。</p>
 <p>而想要进入真正的 Recovery ，我们需要在按下组合键后的闪屏界面长按音量 + 键。</p>
+<h2 id="1">备份完整分区<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup></h2>
+<p>这里的分区就是字库。</p>
+<p>什么是备份完整字库？我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
+<p>所以，Root后第一件事，就是备份完整字库，以防不测。有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
+<p>原因：假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
+<p>那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。</p>
+<p>备份文件下载链接 <a href="http://pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw">作者给出</a> 提取码:<code>vo15</code> ，或者我打包的文件中[^1],文件来自<sup id="fnref2:15"><a class="footnote-ref" href="#fn:15">1</a></sup>。或者使用<a href="https://miao202.lanzouj.com/i9pJX09kzq8j">蓝奏云</a></p>
+<p><strong>高通机型备份字库</strong></p>
+<p>安装个MT管理器，使用root权限执行【高通字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。</p>
+<p><strong>高通机型还原字库</strong></p>
+<p>提前把之前备份好的Rannki文件夹，复制到 <code>/sdcard/Rannki</code>，安装个MT管理器，使用root权限执行【高通字库还原.sh】即可。</p>
+<p><strong>MTK 机型备份字库</strong></p>
+<p>安装个MT管理器，使用root权限执行【MTK字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。</p>
+<p><strong>MTK 机型还原字库</strong></p>
+<p>提前把之前备份好的Rannki文件夹，复制到 <code>/sdcard/Rannki</code>，安装个MT管理器，使用root权限执行【MTK 字库还原.sh】即可。</p>
+<p>字库备份还原，解决的不只是基带问题，</p>
+<p>是：除硬盘物理损坏外的所有问题，解决率为100％。</p>
+<p><strong>以上如何防止掉基带教程由酷安 Rannki 原创</strong></p>
+<details class="note">
+<summary>详细叙述</summary>
+<p><strong>UFS闪存手机</strong></p>
+<p>主板一般被分成了6个硬盘，即<strong>sda，sdb，sdc，sdd，sde，sdf。</strong></p>
+<p>所以，主板设备代码分别是：<code>/dev/block/sda，/dev/block/sde，/dev/block/sdc，/dev/block/sdd，/dev/block/sde，/dev/block/sdf</code></p>
+<p>备份分区的代码举例：<code>dd if=/dev/block/sda1 of=/sdcard/1.img,dd if=/dev/block/sda2 of=/sdcard/2.img</code>等等等等............................</p>
+<p>还原分区的代码举例：<code>dd if=/sdcard/1.img of=/dev/block/sda1,dd if=/sdcard/2.img of=/dev/block/sda2</code> 等等等等............................</p>
+<p><strong>Emmc闪存手机</strong></p>
+<p>主板设备代码：<strong>/dev/block/mmcblk0</strong></p>
+<p>备份分区的代码举例：<code>dd if=/dev/block/mmcblk0p1 of=/sdcard/1.img,dd if=/dev/block/mmcblk0p2 of=/sdcard/2.img</code>等等等等............................</p>
+<p>还原分区的代码举例：<code>dd if=/sdcard/1.img of=/dev/block/mmcblk0p1,dd if=/sdcard/2.img of=/dev/block/mmcblk0p2</code>等等等等............................</p>
+<p>当然，像 system 分区， vendor 分区，userdata 分区，super 分区，这些分区就没必要进行备份还原了。</p>
+<p>查看分区信息的命令：</p>
+<p>先安装busybox的面具模块：链接: <code>pan.baidu.com/s/1hFQr0nvXprzcz2gyQxtFzQ</code> 提取码: <code>y61r</code></p>
+<p>然后终端命令：<code>busybox fdisk /dev/block/sda</code> 回车，然后再输入p回车，就可以看到sda这块硬盘的所有分区信息了。adb,adc,add,ade,adf</p>
+<p>同理,emmc闪存手机的命令是：busybox fdisk /dev/block/mmcblk0回车，再输入p回车，就能看到所有分区信息了。</p>
+</details>
+<p>如果你的手机已经出现问题，且没有备份完整字库……去售后换主板，或者找个同机型的，用他的完整备份字库刷入，当然我并不确定是否成功，因为会不会黑砖，这是个待验证的问题。</p>
+<p>而且最好别全部使用别人的手机的全字库备份，就算不黑砖，也会大概率出现 bootlocker 永久锁定，永久无法再次解锁，只能换主板。</p>
 <div class="footnote">
 <hr />
 <ol>
+<li id="fn:15">
+<p>告诉大家如何防止掉基带问题 <a href="https://www.coolapk.com/feed/21305538">https://www.coolapk.com/feed/21305538</a>&#160;<a class="footnote-backref" href="#fnref:15" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:15" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
 <li id="fn:13">
-<p><strong><a href="https://blog.linioi.com/posts/8/">通过 ADB 给手机刷入第三方 Recovery</a></strong>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><strong><a href="https://blog.linioi.com/posts/8/">通过 ADB 给手机刷入第三方 Recovery</a></strong>&#160;<a class="footnote-backref" href="#fnref:13" title="Jump back to footnote 2 in the text">&#8617;</a></p>
 </li>
 <li id="fn:21">
-<p><a href="https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B">底层刷机教程/全解析</a>&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B">底层刷机教程/全解析</a>&#160;<a class="footnote-backref" href="#fnref:21" title="Jump back to footnote 3 in the text">&#8617;</a></p>
 </li>
 <li id="fn:42">
-<p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/397173427">部分华为麒麟手动获取BL解锁码</a>&#160;<a class="footnote-backref" href="#fnref:42" title="Jump back to footnote 4 in the text">&#8617;</a></p>
 </li>
 <li id="fn:43">
-<p><a href="https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&amp;shareUid=3463951&amp;shareFrom=com.coolapk.market_11.4.2">华为麒麟深刷救砖［变砖绝杀技］</a>&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p><a href="https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&amp;shareUid=3463951&amp;shareFrom=com.coolapk.market_11.4.2">华为麒麟深刷救砖［变砖绝杀技］</a>&#160;<a class="footnote-backref" href="#fnref:43" title="Jump back to footnote 5 in the text">&#8617;</a></p>
 </li>
 <li id="fn:44">
-<p><a href="https://blog.chitang.dev/posts/mi11/">小米11搞机指南</a>&#160;<a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 5 in the text">&#8617;</a></p>
+<p><a href="https://blog.chitang.dev/posts/mi11/">小米11搞机指南</a>&#160;<a class="footnote-backref" href="#fnref:44" title="Jump back to footnote 6 in the text">&#8617;</a></p>
 </li>
 </ol>
 </div>
@@ -984,11 +1031,11 @@ fastboot reboot
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 01:43:12</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 02:50:00</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 01:43:12</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 02:50:00</span>
       
     
   </small>
