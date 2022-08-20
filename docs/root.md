@@ -573,7 +573,21 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 **还原官方recovery**
 
 
+
 首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动 `fastbootd` (一些twrp会阻止...见[这里](https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227))，或者使用twrp里的用户空间`fastboot`也可以，注意如果twrp有这个功能可以不用刷回 recovery。
+
+!!! tip "明明是刷写system分区，为什么需要使用Fastboot而不推荐Twrp？"
+    [官方文档](https://source.android.com/docs/core/bootloader/fastbootd?hl=zh-cn)
+    为支持 fastbootd，引导加载程序必须实现一个新的启动控制块 (BCB) 命令：boot-fastboot。如需进入 fastbootd 模式，引导加载程序应将 boot-fastboot 写入 BCB 消息的命令字段，并保持 BCB 的 recovery 字段不变（以重启中断的恢复任务）。status、stage 和 reserved 字段也保持不变。引导加载程序在 BCB 命令字段中发现 boot-fastboot 时，会加载并启动到恢复映像。然后，recovery 会解析 BCB 消息并切换到 fastbootd 模式。
+
+    如果twrp支持 用户空间`fastboot` 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
+    ```
+    fastboot flash system system-arm64-ab-vanilla.img 
+    Sending sparse 'system' 1/3 (676429 KB)            OKAY [ 22.9843s]
+    Writing sparse 'system' 1/3                        FAILED (remote: 'Partition not found')
+    Finished. Total time: 23.050s
+    ```
+
 
 
 然后呢，将手机重启至`fastbootd`模式（`fastboot reboot fastboot`）
