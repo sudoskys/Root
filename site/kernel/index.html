@@ -498,6 +498,10 @@
   <h1>内核</h1>
 
 <p>本节为非必须部分，上手需要<strong>一定的知识储备</strong>，如果你<strong>没事</strong>或者<strong>不清楚为什么搞内核</strong>，可以看下一节。</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>如果你的手机内核版本为<code>5.x</code>，那它多半使用了 GKI(Generic Kernel Image)，为这些手机制作内核需要额外步骤，不能按照以下教程进行。否则可能会导致手机部分设备(如触摸屏，尾插等)无法工作。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>当你在执行时，因为每个人所使用的系统操作环境不同，很可能会出现不可控的奇怪报错，出现问题提问前请确保严格按照本教程操作。<strong>提问要给出详细信息和测试结果，并参考首页的提问指南</strong></p>
@@ -668,6 +672,7 @@ CONFIG_OVERLAY_FS=y
 <div class="highlight"><pre><span></span><code>./repackimg.sh
 </code></pre></div></p>
 <p>重新打包内核文件，然后刷入重启。你应该会看到内核变化了。大功告成。</p>
+<p>此时你可以试着在 Termux 里安装 Docker ，不出意料就能够正常运行了。</p>
 
   <hr>
 <div class="md-source-file">
@@ -678,7 +683,7 @@ CONFIG_OVERLAY_FS=y
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 14:24:39</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:27:51</span>
       
     
   </small>
