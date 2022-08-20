@@ -500,18 +500,12 @@
     准备深度测试或申请解锁BL（深刷可跳过）
   </a>
   
-    <nav class="md-nav" aria-label="准备深度测试或申请解锁BL（深刷可跳过）">
-      <ul class="md-nav__list">
+</li>
         
           <li class="md-nav__item">
   <a href="#_13" class="md-nav__link">
     什么，你是华为？
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
         
@@ -888,7 +882,7 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>💡 重启后在设备开机状态下连接电脑，打开终端，输入<code>adb devices</code>，如果返回了设备名称，说明 adb 配置完成；用 <code>adb reboot bootloader</code>进入 fastboot 界面（这步不适用fastbootd设备,即安卓十），键入 <code>fastboot reboot</code>后，若设备重启，说明 fastboot 正常。</p>
 </div>
 <h3 id="_12">准备设备和平台工具</h3>
-<p>Win7 或以上电脑一台，能传输文件的数据线一条（<strong>最好是原装线</strong>），电脑下载解压<a href="https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip">安卓平台文件包</a>或<a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">Linux版本安卓平台工具包</a>或<a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">Mac版本</a>，退出所有手机助手类软件。</p>
+<p>Win7 或以上电脑一台，能传输文件的数据线一条（<strong>最好是原装线，不能用充电线</strong>），电脑下载解压<a href="https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip">安卓平台文件包</a>或<a href="https://dl.google.com/android/repository/platform-tools-latest-linux.zip">Linux版本安卓平台工具包</a>或<a href="https://dl.google.com/android/repository/platform-tools-latest-darwin.zip">Mac版本</a>，退出所有手机助手类软件。</p>
 <p>解压工具包，你会看到 adb 和 fastboot ，这是我们针对 Android 设备进行高级调试和安装的工具。</p>
 <p>如果你不想配置ADB全局环境的话，以后执行 Adb 命令需要在工具目录下，按住 Shift 右键鼠标打开终端，命令替换为<code>.\adb</code>或者<code>.\fastboot</code>，如果需要配置全局环境，请按照<a href="https://www.sunzn.com/2018/08/02/Windows-10-%E4%B8%8B%E9%85%8D%E7%BD%AE-ADB-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">这篇文档</a>配置。</p>
 <p>Linux 需要使用其自带包管理器安装 <code>android-platform-tools</code></p>
@@ -897,6 +891,10 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>如果你已经安装了 <a href="https://chocolatey.org/">choco</a> 或 <a href="https://brew.sh/">homebrew</a> 等包管理工具的话，Windows 输入<code>choco install adb universal adb-drivers -y</code>，Mac 输入 <code>brew install android-platform-tools</code>能最方便的完成 adb 和 fastboot 的配置。Windows 用户可以参照  <a href="https://sspai.com/post/40471">Windows 操作系统下的 ADB 环境配置</a> 这篇文章；macOS 用户可以尝试  <a href="https://github.com/corbindavenport/nexus-tools">此脚本</a> 或是参考 <a href="https://sspai.com/post/38535">使用 Mac 为 Android 手机刷原生系统</a> 进行手动配置。最后最最不济，可以尝试在 Google  <a href="https://developer.android.com/studio/releases/platform-tools?hl=zh-cn">开发者页面</a> 下载对应 adb 包，解压后在对应的目录下执行指令亦可，或者是尝试 <a href="https://app.webadb.com/#/">WebADB</a> 或  <a href="https://adb.http.gs/">adb 在线执行器</a> 这样的在线 adb 工具，比较考验浏览器的兼容性。</p>
 </div>
 <p>然后打开手机的USB调试开关允许计算机调试，确认你的<strong>驱动线和驱动</strong>都<strong>没有问题</strong>！</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>通过adb devices命令确认已经连上手机。</p>
+</div>
 <p>华为工具在软件包内(看引用)</p>
 <h3 id="bl">准备深度测试或申请解锁BL（深刷可跳过）</h3>
 <blockquote>
@@ -922,7 +920,7 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>一些古董机型是没有BL锁的，比如红米Note。</p>
 </div>
 <p>附上<a href="https://web.vip.miui.com/page/info/mio/mio/detail?postId=28646781&amp;boardId=5415551&amp;isComment=&amp;isRecommend=0&amp;app_version=dev.211029&amp;ref=share">小米解锁教程</a>.</p>
-<h4 id="_13">什么，你是华为？</h4>
+<h3 id="_13"><strong>什么，你是华为？</strong></h3>
 <p>这节的教程来自酷安@某贼 <sup id="fnref:41"><a class="footnote-ref" href="#fn:41">9</a></sup></p>
 <p>推荐直接看<a href="https://zhuanlan.zhihu.com/p/397173427">知乎上他的文章</a></p>
 <p><a href="https://miao202.lanzouj.com/igAzW09qew7e">华为解锁相关驱动与工具</a></p>
@@ -1030,11 +1028,11 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:34:10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:36:31</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:34:10</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 03:36:31</span>
       
     
   </small>
