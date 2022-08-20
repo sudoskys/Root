@@ -294,6 +294,14 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 TWRP就是可以触摸的版本，而TWRP的功能更为强大。
 　　
 
+
+**Fastboot**
+
+fastboot 主要是用来与bootloader的USB通讯的PC命令行工具，也用来向bootloader传送刷机文件进行文件分区重烧。
+
+开机后它会初始化硬件环境，实现一个小系统，然后和PC通讯，将PC上的刷机包写入至Emmc中，实现刷机。Recovery此时不起作用。
+
+
 **FastbootD**
 
 据我所知, fastbootd 是用户空间中的 fastboot。
@@ -375,7 +383,7 @@ OTA 意思就是**增量升级**，就是在原先系统的基础上增加新功
 
 ### **线刷**
 
-线刷是 Fastboot 模式刷机。
+线刷是 Fastboot 模式刷机，因为需要有一个PC机并且USB线要始终联着。所以这种方式称为线刷。
 
 线刷是用 Fastboot，一般都是直接刷镜像，由 uboot 以直接写入闪存的办法把镜像直接写到闪存对应的位置（或者说分区）。
 

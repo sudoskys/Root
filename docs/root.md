@@ -576,17 +576,18 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 
 首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动 `fastbootd` (一些twrp会阻止...见[这里](https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227))，或者使用twrp里的用户空间`fastboot`也可以，注意如果twrp有这个功能可以不用刷回 recovery。
 
-!!! tip "明明是刷写system分区，为什么需要使用Fastboot而不推荐Twrp？"
+??? tip "刷写system分区，关于Twrp问题"
     [官方文档](https://source.android.com/docs/core/bootloader/fastbootd?hl=zh-cn)
     为支持 fastbootd，引导加载程序必须实现一个新的启动控制块 (BCB) 命令：boot-fastboot。如需进入 fastbootd 模式，引导加载程序应将 boot-fastboot 写入 BCB 消息的命令字段，并保持 BCB 的 recovery 字段不变（以重启中断的恢复任务）。status、stage 和 reserved 字段也保持不变。引导加载程序在 BCB 命令字段中发现 boot-fastboot 时，会加载并启动到恢复映像。然后，recovery 会解析 BCB 消息并切换到 fastbootd 模式。
-
-    如果twrp支持 用户空间`fastboot` 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
+   
+    在使用fastbootd的设备上，如果twrp支持 用户空间`fastboot` 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
     ```
     fastboot flash system system-arm64-ab-vanilla.img 
     Sending sparse 'system' 1/3 (676429 KB)            OKAY [ 22.9843s]
     Writing sparse 'system' 1/3                        FAILED (remote: 'Partition not found')
     Finished. Total time: 23.050s
     ```
+    **但是现在一般都会支持 Fastbootd，所以一般没什么要担心的**
 
 
 
@@ -642,7 +643,15 @@ fastboot reboot recovery
 
 Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。
 
+
+如果你想简单点或者不想向下看，可以使用 https://github.com/VegaBobo/DSU-Sideloader
+
 #### 使用动态系统更新（DSU)
+
+
+[官方文档](https://source.android.google.cn/docs/core/ota/dynamic-system-updates?hl=zh-cn)
+
+
 
 安卓10正式版及以上，可以在开发者选项中Feature flags > settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.
 
