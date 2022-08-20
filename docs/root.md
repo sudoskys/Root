@@ -178,7 +178,7 @@ adb shell getprop ro.product.cpu.abi
 
 #### 刷入..
 
-
+先双清。
 
 !!! danger
 
