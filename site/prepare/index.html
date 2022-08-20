@@ -812,6 +812,9 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <p>我们开机进入系统自带Re清除数据时音量上下键操作的界面就是CMW的版本。</p>
 <p>TWRP就是可以触摸的版本，而TWRP的功能更为强大。
 　　</p>
+<p><strong>Fastboot</strong></p>
+<p>fastboot 主要是用来与bootloader的USB通讯的PC命令行工具，也用来向bootloader传送刷机文件进行文件分区重烧。</p>
+<p>开机后它会初始化硬件环境，实现一个小系统，然后和PC通讯，将PC上的刷机包写入至Emmc中，实现刷机。Recovery此时不起作用。</p>
 <p><strong>FastbootD</strong></p>
 <p>据我所知, fastbootd 是用户空间中的 fastboot。</p>
 <p>在动态分区手机. <code>data</code>, <code>system</code>等原来的物理分区, 现在都被放到一个共同的<code>super</code>分区下. 这种"虚拟分区"只在用户空间(Android系统里)可见, 也就是说原版fastboot只能识别到整个<code>super</code>, 而<code>super</code>里的<code>data</code>这些却不行.</p>
@@ -851,7 +854,7 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
 <h3 id="_6"><strong>厂刷</strong></h3>
 <p>寄回厂子……</p>
 <h3 id="_7"><strong>线刷</strong></h3>
-<p>线刷是 Fastboot 模式刷机。</p>
+<p>线刷是 Fastboot 模式刷机，因为需要有一个PC机并且USB线要始终联着。所以这种方式称为线刷。</p>
 <p>线刷是用 Fastboot，一般都是直接刷镜像，由 uboot 以直接写入闪存的办法把镜像直接写到闪存对应的位置（或者说分区）。</p>
 <p>线刷时备份资料可以使用PC端的程式来管理，出问题的话三清之后再选择性恢复，再不行就全部设定和资料重头来过。线刷 要有电脑, 执行特定的程式. (通常就算手机挂到都进不去 Recovery 也能刷)</p>
 <p>所以线刷包实际一般就是包含了 Fastboot 程序和各个系统镜像以及一个可执行的脚本的包，用户直接运行那个脚本，脚本调用 Fastboot 来刷。</p>
@@ -1058,11 +1061,11 @@ Bootloader是好几个启动阶段的统称，bootloader与电脑的启动管理
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:58:10</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 08:16:34</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:58:10</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 08:16:34</span>
       
     
   </small>
