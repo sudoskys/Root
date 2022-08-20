@@ -483,6 +483,21 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 
 [^47]
 
+[^49]
+
+### 备份
+
+
+Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经Root的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。
+
+```
+adb shell
+su # 获取 root 权限，请在手机上确认
+dd if=/dev/block/bootdevice/by-name/persist of=/sdcard/persist.img
+# 此时按两次 Ctrl + D，退出 adb shell
+adb pull /sdcard/persist.img
+```
+长期保存，避免丢失
 
 ### 怎么查
 
@@ -526,6 +541,8 @@ adb shell getprop ro.product.cpu.abi
 
 先双清。
 
+刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]
+
 !!! danger
 
     Data分区的强制加密要关掉
@@ -546,11 +563,15 @@ adb shell getprop ro.product.cpu.abi
 
 **刷入vbmeta.img停用AVB验证**
 
+刷入从底包中提取的vbmeta文件，否则会卡米
+
 ```
 fastboot --disable-verification flash vbmeta vbmeta.img
 ```
-刷入从底包中提取的vbmeta文件，否侧会卡米.
 
+!!! info
+    此步骤用于停用 Verified Boot 分区验证，只需执行一次
+    如果已经安装了 Magisk，可以跳过本步骤，但未来要一直安装着 Magisk，否则 system 分区通不过校验可能会被禁用，需要重刷
 
 **还原官方recovery**
 
@@ -558,15 +579,20 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动fastbootd，或者使用twrp里的用户空间fastboot也可以，注意如果twrp有这个功能可以不用刷回 recovery。
 
 
-然后呢，将手机重启至bootloader/fastboot模式，亦或者fastbootd模式fastbootd模式（`fastboot reboot fastboot`）
+然后呢，将手机重启至fastbootd模式（`fastboot reboot fastboot`）
+
 
 输入`fastboot flash system system.img`，刷写完成后，使用`fastboot -w`清除数据，这一步会格式化data,防止加密（注意提前备份）。
 
 **重启**
 ```
-fastboot reboot
-```
 
+fastboot reboot recovery
+```
+进入 Recovery 后，按提示操作清除数据并重启系统。
+!!! tip
+   刷入不同类型 ROM 或版本降级时必须清除数据，否则无法进入系统。
+   
 开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？
 
 !!! info
@@ -619,6 +645,12 @@ gzip -c system_raw.img > system_raw.gz
  ```
 adb push system_raw.gz /storage/emulated/0/Download/
  ```
+
+#### 系统升级
+
+建议非必要不升级。升级前务必备份好所有数据，升级后有可能无法开机，需要清数据重刷。
+
+
 
 **安装动态系统更新**
 
@@ -674,13 +706,67 @@ adb shell am start-activity \
         
     3.  改变 vendor 文件夹的权限为 `rw-r--r--`
     4.  重启手机
-
+    上面的内容来自  [^48]
+    下面的内容来自 https://dev.moe/2716 [^49]
     **修复屏幕状态栏圆角**
 
     adb 输入以下命令(最后的数字根据自己喜好任意修改):
     ```
     adb shell settings put secure sysui_rounded_content_padding 20
     ```
+    
+    **开启 120 Hz**
+    ```
+    adb shell settings put system min_refresh_rate 120
+    adb shell settings put system peak_refresh_rate 120
+    ```
+
+    如果设置里有 Phh Treble Settings 的话，也可以在里面直接改（Misc features -> Force FPS）。
+
+    **移除屏幕锐化**
+    https://dev.moe/wp-content/uploads/2022/06/Remove-screen-sharpening-Mi-Pad-5-Pro.zip
+
+    **修复音频**
+    https://dev.moe/wp-content/uploads/2022/06/GSI-Audio-Stutter-Fix-Mi-Pad-5-Pro-elish.zip
+
+    https://forum.xda-developers.com/t/run-an-gsi-on-your-mi-pad-5.4352591/page-9#post-86447857
+
+    **修复任务栏**
+    https://github.com/Coxxs/hide-tablet-taskbar
+
+
+#### SafetyNet[^49]
+
+SafetyNet 的修复根据不同 ROM 分成几种情况.
+
+**PixelExperience ROM** 已经模拟了设备信息，只需在 Magisk DenyList 对 Play Services 隐藏即可。
+
+**Lineage OS** 可能由于自带了 `su`，我没能成功通过 Basic integrity 测试（可能要自己修改 ROM 了）。
+
+**Android 13 GSI** 需要 [MagiskHidePropsConf](https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf) + [Universal SafetyNet Fix](https://github.com/kdrag0n/safetynet-fix) + Magisk DenyList，其中 MagiskHidePropsConf 设置成 MIUI 系统的 fingerprint，外加将 `ro.build.version.security_patch` 设置成 MIUI 系统对应版本的值（可以用 7z 打开线刷包的 `system.img`，在 `system/build.props` 里找到）。
+
+**Magisk DenyList 配置方法**
+
+1.  打开 Magisk，设置里选择 Hide the Magisk app
+2.  打开 Magisk，设置里启用 Zygisk 及 Enforce DenyList
+3.  进入 Configure DenyList，找到 Google Play services，只需勾选 `com.google.android.gms` 及 `com.google.android.gms.unstable` 两项。
+4.  进入设置，清除 Google Play services 及 Google Play Store 的数据。
+
+#### DRM[^49]
+
+DRM 方面，Widevine 无需任何操作，保持在 L1，修复 Safetynet 后即可直接观看 Disney+。
+
+Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复到 L1：
+
+1.  确保 SafetyNet 已通过
+2.  将 Netflix 添加到 DenyList 列表
+3.  用 Magisk 模块在 `build.prop` 添加一行 `ro.netflix.bsp_rev=Q8250-19134-1`
+    -   该值仅适用于小米平板 5 Pro
+    -   Magisk 模块写法非常简单，可以参考上面的「移除屏幕锐化」模块
+    -   修改 `build.prop` 后需要清除 Netflix 应用数据重新登录
+    -   该修改[已合并至上游](https://github.com/phhusson/device_phh_treble/pull/313/files)，一段时间后的新版 ROM 可能已经自带了
+    -   Dev.moe:感谢几位朋友的帮助！
+
 
 
 ## Sony Xperia XZ1 强刷
@@ -836,3 +922,5 @@ adb shell am start-activity \
 
 
 [^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)
+
+[^49]:[小米平板 5 Pro 刷入 GSI Android 教程](https://dev.moe/2716)
