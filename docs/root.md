@@ -129,86 +129,6 @@ fastboot reboot
 文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）
 
 
-### Gsi？？
-
-如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)
-
-[^46]
-
-[^47]
-
-
-#### 怎么查
-
-首先，需要确认你的设备是否支持project treble，你需要下载一个[treble check](https://play.google.com/store/apps/details?id=com.kevintresuelo.treble)
-
-打开软件，查看检测结果。
-
-只有当 Project Treble 通过检测才表明此手机可以刷 gsi 镜像包。
-
-如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。
-
-
-
-#### 查一下架构
-
-
-将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：
-
-```
-adb shell getprop ro.product.cpu.abi
-```
-
-或者.... 上网查找你所使用手机的 Cpu 架构
-
-如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。
-
-
-#### 找？
-
-我贴了一个 `通用镜像列表` 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。
-
-??? help "不会..."
-    呃.... 如果不会找的话，推荐换个流行的手机（？）或者（￥-5）请人找。
-
-!!! tip
-    在XDA查找gsi包，需要查看最前面的标签是`gsi`，`Treble`或`Project Treble`，而不是 `rom`
-    一般`gsi`的格式：系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否
-    后面带有`gapps`字样的刷机包，表明其内置了谷歌服务。
-
-#### 刷入..
-
-先双清。
-
-!!! danger
-
-    Data分区的强制加密要关掉
-
-    若以安卓9为底包，不能刷入安卓8的gsi，需要刷入同等级的gsi
-
-    刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版。
-
-    a-only和a/b的gsi不通用
-    
-    刷 `gsi` 从准备刷入到开机完成前都不可以刷任何东西，twrp都不可以。
-    
-    刷`gsi`不应该用`twrp`刷。应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。
-
-    刷完系统后记得双清（data和cache）
-
-
-
-首先，你需要确保你的设备正在使用的是**原厂的rec**
-
-然后呢，将手机重启至bootloader/fastboot模式，亦或者fastbootd模式（看上面！），输入`fastboot flash system` （你下载下来的gsi镜像），刷写完成后，接着重启至rec，恢复出厂设置。
-
-
-
-开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？
-
-!!! info
-    刷了gsi收不到短信 但是电话和流量都能用，是votle问题
-
 
 
 
@@ -323,7 +243,7 @@ adb install Magisk-xxx.apk
 
 !!! note
     高通的 QPST线刷模式，因联机之后端口名字叫Qualcomm HS-USB QDLoader 9008 (COMx)而得名。该模式下，用户可通过QPST及其衍生工具（本质为QPST命令行调用）直接对手机的Flash芯片进行读写操作，而不需要解锁Bootloader。常见刷机工具有QPST，MiFlash（Pro）等工具，刷机包中一般会有一个分区表xml文件。以及一个eif文件。XML文件命名一般为Rawprogram（数字）.XML和Patch（数字）.XML,EIF文件一般命名为prog_存储芯片类型（比如UFS和EMMC）*firehose*(SOC型号，比如MSM8998或者SDM855)_（内存类型，一般是DDR）.eif，只要带有这两个文件的，一般都是高通支持9008的刷机包。 进入9008模式，高通略为麻烦。MSM8994及以前的SoC，可以通过Fastboot命令直接进入9008模式：`adb reboot edl`
-> 
+
 
 ---
 
@@ -472,7 +392,12 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 
 !!! info
     Magisk 工作机制是「拦截」，Magisk通过挂载一个与系统文件相隔离的文件系统来加载自定义内容，为系统分区打开了一个通往平行世界的入口，所有改动在那个世界（Magisk 分区）里发生，在必要的时候却又可以被认为是（从系统分区的角度而言）没有发生过。Magisk 可以被看作是一种文件系统，这种文件系统通过巧妙的实现方式避开了对系统文件的直接修改
- 
+
+
+
+
+
+
 ## 突发救砖
 
 ---
@@ -547,12 +472,191 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 自救命令，使用mtkclient写入备份的镜像
 `python mtk wl out`
 
-## Sony Xperia XZ1
+
+## Gsi？？
+
+本节适合有刷机经验的同学。
+
+如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)
+
+[^46]
+
+[^47]
 
 
-参考 [Sony Xperia XZ1 （G8342） 强刷教程](https://www.himiku.com/archives/flashing-xperia-xz1.html)
+### 怎么查
 
-## 华为？
+首先，需要确认你的设备是否支持project treble，你需要下载一个[treble check](https://play.google.com/store/apps/details?id=com.kevintresuelo.treble)
+
+打开软件，查看检测结果。
+
+只有当 Project Treble 通过检测才表明此手机可以刷 gsi 镜像包。
+
+如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。
+
+
+
+### 查一下架构
+
+
+将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：
+
+```
+adb shell getprop ro.product.cpu.abi
+```
+
+或者.... 上网查找你所使用手机的 Cpu 架构
+
+如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。
+
+
+### 找？
+
+我贴了一个 `通用镜像列表` 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。
+
+??? help "不会..."
+    呃.... 如果不会找的话，推荐换个流行的手机（？）或者（￥-5）请人找。
+
+!!! tip
+    在XDA查找gsi包，需要查看最前面的标签是`gsi`，`Treble`或`Project Treble`，而不是 `rom`
+    一般`gsi`的格式：系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否
+    后面带有`gapps`字样的刷机包，表明其内置了谷歌服务。
+
+### 刷入..
+
+先双清。
+
+!!! danger
+
+    Data分区的强制加密要关掉
+
+    刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版，若以安卓9为底包，不能刷入安卓8的gsi，需要刷入同等级的gsi
+
+    a-only和a/b的gsi不通用
+    
+    刷 `gsi` 从准备刷入到开机完成前都不可以刷任何东西，twrp都不可以。
+    
+    刷`gsi`不应该用`twrp`刷。应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。
+
+    刷完系统后记得双清（data和cache）
+
+
+!!! tip
+    Android 10引入了 启动时验证 (AVB)，在刷写 GSI之前，先下载并刷入vbmeta.img以停用 AVB，vbmeta.img一般包含会随gsi镜像一起发布。
+
+**刷入vbmeta.img停用AVB验证**
+
+```
+fastboot --disable-verification flash vbmeta vbmeta.img
+```
+
+**还原官方recovery**
+
+
+首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动fastbootd，或者使用twrp里的用户空间fastboot也可以，注意如果twrp有这个功能可以不用刷回 recovery。
+
+
+然后呢，将手机重启至bootloader/fastboot模式，亦或者fastbootd模式fastbootd模式（`fastboot reboot fastboot`）
+
+输入`fastboot flash system system.img`，刷写完成后，使用`fastboot -w`清除数据，这一步会格式化data,防止加密（注意提前备份）。
+
+**重启**
+```
+fastboot reboot
+```
+
+开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？
+
+!!! info
+    刷了gsi收不到短信 但是电话和流量都能用，是votle问题
+
+### 动态分区？
+
+Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。
+
+#### 使用动态系统更新（DSU)
+
+安卓10正式版及以上，可以在开发者选项中Feature flags > settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.
+
+```
+adb shell setprop persist.sys.fflag.override.settings_dynamic_system true
+```
+
+#### 安装前的准备
+
+通过DSU安装的GSI需要是可直接刷写的raw格式镜像，在开始前先检查你的镜像是不是raw格式
+linux或者mac系统可以用`file system.img`命令查看
+
+```
+file system.img
+system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f81f7ca3301 (extents) (large files) (huge files)
+```
+
+若返回值是这样的就是raw格式
+若为稀疏格式（simg），可以使用以下命令把system镜像转为raw格式镜像
+
+```
+simg2img system.img system_raw.img
+```
+!!! tip
+    一般gsi镜像都是simg格式，先检查转换
+
+#### 安装操作
+
+**将镜像打包为gz格式**
+
+```
+gzip -c system_raw.img > system_raw.gz
+```
+!!! tip
+    也可以直接用压缩工具压缩为gzip压缩包
+
+
+**用adb推到手机内置储存**
+ 
+ ```
+adb push system_raw.gz /storage/emulated/0/Download/
+ ```
+
+**安装动态系统更新**
+
+复制后一起执行。
+```
+adb shell am start-activity \
+    -n com.android.dynsystem/com.android.dynsystem.VerificationActivity  \
+    -a android.os.image.action.START_INSTALL    \
+    -d file:///storage/emulated/0/Download/system_raw.gz  \
+    --el KEY_SYSTEM_SIZE $(du -b system_raw.img|cut -f1)  \
+    --el KEY_USERDATA_SIZE 8589934592	
+```
+
+!!! tip
+    这里第五行的$(du -b system_raw.img|cut -f1)可直接用 system_raw.img 的大小代替，不然用windows刷会报错
+
+    大小使用 `ls -la`看
+
+    比如`system_raw.img`的大小为`2370265088`
+    ```
+    adb shell am start-activity \
+    -n com.android.dynsystem/com.android.dynsystem.VerificationActivity  \
+    -a android.os.image.action.START_INSTALL    \
+    -d file:///storage/emulated/0/Download/system_raw.gz  \
+    --el KEY_SYSTEM_SIZE 2370265088  \
+    --el KEY_USERDATA_SIZE 2370265088
+    ```
+
+然后你就会看到状态栏有正在安装的动态更新的提示，安装完重启进入第二个系统
+
+小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp gsi。
+
+
+## Sony Xperia XZ1 强刷
+
+
+按照 [Sony Xperia XZ1 （G8342） 强刷教程](https://www.himiku.com/archives/flashing-xperia-xz1.html)
+
+
+## 华为机型简单介绍
 
 请先根据前一节内容慎重考虑华为 Root 。
 
