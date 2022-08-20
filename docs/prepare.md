@@ -195,6 +195,10 @@ A/B系统实现了无缝升级(seamless updates)，有以下特点：出厂时�
 
 而清空data，是删除data分区的所有文件及文件夹。当你遇到data挂载不上时，你清空data是没有效果的，这个时候，你需要进行格式化data操作，才能挂载data，所以，这两个不要搞混淆了
 
+官方文档见 [这里](https://source.android.com/devices/tech/ota/virtual_ab)
+
+附 [对Virtual A/B 分区工作方式的进一步探索](https://blog.xzr.moe/archives/30/)
+
 **通用系统映像(GSI/SGSI)**
 
 [https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement](https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement)
@@ -301,6 +305,17 @@ TWRP就是可以触摸的版本，而TWRP的功能更为强大。
 ![a5nZlt.png](https://s1.328888.xyz/2022/08/13/TGOJ6.png)
 
 [What is FastbootD? How to Boot to FastbootD Mode - DroidWin](https://www.droidwin.com/fastbootd-mode/)
+
+**ADB Android 调试桥 (ADB)**
+
+Android 调试桥 (ADB) 可让您将开发工作站直接连接到 Android 设备进行通信，以便安装软件包并评估更改。
+
+![adb](https://oss-emcsprod-public.modb.pro/wechatSpider/modb_20220420_bc3dbe04-c08f-11ec-8f56-fa163eb4f6be.png)
+
+
+了解更多：https://source.android.com/docs/setup/build/adb
+
+
 
 ## 了解刷机
 

@@ -514,7 +514,7 @@ adb pull /sdcard/persist.img
 ### Cpu 架构
 
 
-将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：
+将手机链接电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：
 
 ```
 adb shell getprop ro.product.cpu.abi
@@ -522,7 +522,7 @@ adb shell getprop ro.product.cpu.abi
 
 或者.... 上网查找你所使用手机的 Cpu 架构
 
-如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。
+如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。a-only和a/b的gsi不通用。
 
 
 ### 寻找镜像
@@ -539,23 +539,20 @@ adb shell getprop ro.product.cpu.abi
 
 ### 刷入镜像
 
-先双清。
+主要任务是刷写 system 分区，所以 fastboot 和 twrp 都可。
 
 刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]
 
 !!! danger
+    刷写Gsi需要擦除用户数据，嗯就是双清。（data和cache）
 
-    Data分区的强制加密要关掉
+    Data 分区的强制加密要关掉
 
-    刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版，若以安卓9为底包，不能刷入安卓8的gsi，需要刷入同等级的gsi
-
-    a-only和a/b的gsi不通用
+    刷GSI之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版.
     
-    刷 `gsi` 从准备刷入到开机完成前都不可以刷任何东西，twrp都不可以。
-    
-    刷`gsi`不应该用`twrp`刷。应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。
+    需要刷入同等级的gsi
 
-    刷完系统后记得双清（data和cache）
+    应该进入fastboot使用fastboot指令刷，如果有第三方rec就下专包卡刷。
 
 
 !!! tip
@@ -576,13 +573,42 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 **还原官方recovery**
 
 
-首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动fastbootd，或者使用twrp里的用户空间fastboot也可以，注意如果twrp有这个功能可以不用刷回 recovery。
+首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动 `fastbootd` (一些twrp会阻止...见[这里](https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227))，或者使用twrp里的用户空间`fastboot`也可以，注意如果twrp有这个功能可以不用刷回 recovery。
 
 
-然后呢，将手机重启至fastbootd模式（`fastboot reboot fastboot`）
+然后呢，将手机重启至`fastbootd`模式（`fastboot reboot fastboot`）
 
 
-输入`fastboot flash system system.img`，刷写完成后，使用`fastboot -w`清除数据，这一步会格式化data,防止加密（注意提前备份）。
+对于A-only,输入`fastboot flash system system.img`
+
+对于A/B，输入
+```shell
+fastboot flash system_a GSI.img
+fastboot flash system_b GSI.img
+```
+
+注意看你下载的包的说明。
+
+
+刷写完成后，使用`fastboot -w`清除数据，这一步会格式化data注意提前备份）。
+
+
+在具有较小系统分区的 Android 10 或更高版本设备上，刷写 GSI 时可能会出现以下错误消息
+
+```
+    Resizing 'system_a'    FAILED (remote: 'Not enough space to resize partition')
+    fastboot: error: Command failed
+```
+
+您可以使用以下命令删除产品分区并为系统分区释放空间。这可以为刷写 GSI 提供额外的空间：
+
+```shell
+fastboot delete-logical-partition product_a
+```
+
+后缀 _a 应与 system 分区的槽位 ID 匹配，例如本示例中的 system_a。
+
+
 
 **重启**
 ```
@@ -598,7 +624,7 @@ fastboot reboot recovery
 !!! info
     刷了gsi收不到短信 但是电话和流量都能用，是votle问题
 
-### 动态分区？
+### 动态分区
 
 Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。
 
@@ -918,7 +944,7 @@ Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复
 
 [^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
 
-[^47]:[小白刷机指南——GSI](https://www.bilibili.com/read/cv15133756)
+[^47]:[刷写 GSI 的要求](https://source.android.com/docs/setup/build/gsi#flashing-gsis)
 
 
 [^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)
