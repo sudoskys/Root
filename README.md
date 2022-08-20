@@ -4,6 +4,8 @@
 <p align="center">
   <img src="https://img.shields.io/badge/USE-MKdocs-green" alt="PYTHON" >
   <img src="https://img.shields.io/github/stars/sudoskys/root.svg" alt="Stars">
+  <a href="https://github.com/sudoskys/root/issues"><img src="https://img.shields.io/github/issues/sudoskys/root" alt="Issues"></a>
+  <a href="https://github.com/sudoskys/root/actions/workflows/ci.yml"><img src="https://github.com/sudoskys/root/actions/workflows/ci.yml/badge.svg" alt="Test"></a>
 </p>
 
 
