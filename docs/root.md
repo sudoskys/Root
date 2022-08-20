@@ -549,6 +549,8 @@ adb shell getprop ro.product.cpu.abi
 ```
 fastboot --disable-verification flash vbmeta vbmeta.img
 ```
+刷入从底包中提取的vbmeta文件，否侧会卡米.
+
 
 **还原官方recovery**
 
@@ -648,6 +650,37 @@ adb shell am start-activity \
 然后你就会看到状态栏有正在安装的动态更新的提示，安装完重启进入第二个系统
 
 小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp gsi。
+
+
+
+
+
+
+??? help "修复 GSI 可能存在的基础问题"
+    **修复自动亮度失效**
+    1.  下载 [framework-res\_\_auto\_generated\_rro.apk](https://drive.google.com/open?id=1DF-v-gwG1rQT-SbAZQYlTwFZFcOPKI9U)
+    2.  用re管理器将其复制到 vendor/overlay 文件夹
+    3.  修改 overlay 文件夹权限为 `rwxr-xr-x`
+    4.  手机打开 Termux 输入以下命令
+    ```
+    mount -o remount -w /vendor chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay;chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay/framework-res__auto_generated_rro.apk
+    ```
+
+    **修复扬声器失真**
+    1.  手机下载 Root Explorer
+    2.  删除两个文件夹
+        > /system/vendor/lib/soundfx  
+        > /system/vendor/lib64/soundfx
+        
+    3.  改变 vendor 文件夹的权限为 `rw-r--r--`
+    4.  重启手机
+
+    **修复屏幕状态栏圆角**
+
+    adb 输入以下命令(最后的数字根据自己喜好任意修改):
+    ```
+    adb shell settings put secure sysui_rounded_content_padding 20
+    ```
 
 
 ## Sony Xperia XZ1 强刷
