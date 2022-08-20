@@ -473,7 +473,7 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 `python mtk wl out`
 
 
-## Gsi？？
+## Gsi 通用系统镜像
 
 本节适合有刷机经验的同学。[^48]
 
@@ -485,7 +485,7 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 
 [^49]
 
-### 备份
+### 备份 Persist
 
 
 Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经Root的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。
@@ -499,7 +499,7 @@ adb pull /sdcard/persist.img
 ```
 长期保存，避免丢失
 
-### 怎么查
+### 支持查询
 
 首先，需要确认你的设备是否支持project treble，你需要下载一个[treble check](https://play.google.com/store/apps/details?id=com.kevintresuelo.treble)
 
@@ -511,7 +511,7 @@ adb pull /sdcard/persist.img
 
 
 
-### 查一下架构
+### Cpu 架构
 
 
 将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：
@@ -525,7 +525,7 @@ adb shell getprop ro.product.cpu.abi
 如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。
 
 
-### 找？
+### 寻找镜像
 
 我贴了一个 `通用镜像列表` 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。
 
@@ -537,7 +537,7 @@ adb shell getprop ro.product.cpu.abi
     一般`gsi`的格式：系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否
     后面带有`gapps`字样的刷机包，表明其内置了谷歌服务。
 
-### 刷入..
+### 刷入镜像
 
 先双清。
 
