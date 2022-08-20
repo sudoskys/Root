@@ -547,7 +547,10 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 自救命令，使用mtkclient写入备份的镜像
 `python mtk wl out`
 
+## Sony Xperia XZ1
 
+
+参考 [Sony Xperia XZ1 （G8342） 强刷教程](https://www.himiku.com/archives/flashing-xperia-xz1.html)
 
 ## 华为？
 
