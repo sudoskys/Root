@@ -543,49 +543,49 @@
       
         <li class="md-nav__item">
   <a href="#gsi" class="md-nav__link">
-    Gsi？？
+    Gsi 通用系统镜像
   </a>
   
-    <nav class="md-nav" aria-label="Gsi？？">
+    <nav class="md-nav" aria-label="Gsi 通用系统镜像">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#persist" class="md-nav__link">
+    备份 Persist
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    备份
+    支持查询
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cpu" class="md-nav__link">
+    Cpu 架构
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    怎么查
+    寻找镜像
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_10" class="md-nav__link">
-    查一下架构
+    刷入镜像
   </a>
   
 </li>
         
           <li class="md-nav__item">
   <a href="#_11" class="md-nav__link">
-    找？
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_12" class="md-nav__link">
-    刷入..
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_13" class="md-nav__link">
     动态分区？
   </a>
   
@@ -600,21 +600,21 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#_14" class="md-nav__link">
+  <a href="#_12" class="md-nav__link">
     安装前的准备
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_15" class="md-nav__link">
+  <a href="#_13" class="md-nav__link">
     安装操作
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_16" class="md-nav__link">
+  <a href="#_14" class="md-nav__link">
     系统升级
   </a>
   
@@ -652,7 +652,7 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#_17" class="md-nav__link">
+  <a href="#_15" class="md-nav__link">
     华为机型简单介绍
   </a>
   
@@ -674,14 +674,14 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_18" class="md-nav__link">
+  <a href="#_16" class="md-nav__link">
     有必要吗？
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_19" class="md-nav__link">
+  <a href="#_17" class="md-nav__link">
     如何备份？
   </a>
   
@@ -1076,13 +1076,13 @@ finished.
 <p>如果移除模块仍然无法开机，刷入系统备份（上文MTK提到了）。</p>
 <p>自救命令，使用mtkclient写入备份的镜像
 <code>python mtk wl out</code></p>
-<h2 id="gsi">Gsi？？</h2>
+<h2 id="gsi">Gsi 通用系统镜像</h2>
 <p>本节适合有刷机经验的同学。<sup id="fnref:48"><a class="footnote-ref" href="#fn:48">10</a></sup></p>
 <p>如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)</p>
 <p><sup id="fnref:46"><a class="footnote-ref" href="#fn:46">8</a></sup></p>
 <p><sup id="fnref:47"><a class="footnote-ref" href="#fn:47">9</a></sup></p>
 <p><sup id="fnref:49"><a class="footnote-ref" href="#fn:49">11</a></sup></p>
-<h3 id="_8">备份</h3>
+<h3 id="persist">备份 Persist</h3>
 <p>Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经Root的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。</p>
 <p><div class="highlight"><pre><span></span><code>adb shell
 su # 获取 root 权限，请在手机上确认
@@ -1091,18 +1091,18 @@ dd if=/dev/block/bootdevice/by-name/persist of=/sdcard/persist.img
 adb pull /sdcard/persist.img
 </code></pre></div>
 长期保存，避免丢失</p>
-<h3 id="_9">怎么查</h3>
+<h3 id="_8">支持查询</h3>
 <p>首先，需要确认你的设备是否支持project treble，你需要下载一个<a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble">treble check</a></p>
 <p>打开软件，查看检测结果。</p>
 <p>只有当 Project Treble 通过检测才表明此手机可以刷 gsi 镜像包。</p>
 <p>如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。</p>
-<h3 id="_10">查一下架构</h3>
+<h3 id="cpu">Cpu 架构</h3>
 <p>将手机接入电脑，在 shell 进入 adb 环境(前面有讲环境配置)，接着输入指令：</p>
 <div class="highlight"><pre><span></span><code>adb shell getprop ro.product.cpu.abi
 </code></pre></div>
 <p>或者.... 上网查找你所使用手机的 Cpu 架构</p>
 <p>如过架构是<code>arm64-v8a</code>，那么你应该去找 ARM64 的包，如果是<code>armeabi-v7a</code>，那么你应该去寻找 ARM32 的包。</p>
-<h3 id="_11">找？</h3>
+<h3 id="_9">寻找镜像</h3>
 <p>我贴了一个 <code>通用镜像列表</code> 在首页，也可以去 XDA 论坛或者问一下刷机群里的人。</p>
 <details class="help">
 <summary>不会...</summary>
@@ -1114,7 +1114,7 @@ adb pull /sdcard/persist.img
 一般<code>gsi</code>的格式：系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否
 后面带有<code>gapps</code>字样的刷机包，表明其内置了谷歌服务。</p>
 </div>
-<h3 id="_12">刷入..</h3>
+<h3 id="_10">刷入镜像</h3>
 <p>先双清。</p>
 <p>刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。<sup id="fnref2:49"><a class="footnote-ref" href="#fn:49">11</a></sup></p>
 <div class="admonition danger">
@@ -1156,13 +1156,13 @@ adb pull /sdcard/persist.img
 <p class="admonition-title">Info</p>
 <p>刷了gsi收不到短信 但是电话和流量都能用，是votle问题</p>
 </div>
-<h3 id="_13">动态分区？</h3>
+<h3 id="_11">动态分区？</h3>
 <p>Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。</p>
 <h4 id="dsu">使用动态系统更新（DSU)</h4>
 <p>安卓10正式版及以上，可以在开发者选项中Feature flags &gt; settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.</p>
 <div class="highlight"><pre><span></span><code>adb shell setprop persist.sys.fflag.override.settings_dynamic_system true
 </code></pre></div>
-<h4 id="_14">安装前的准备</h4>
+<h4 id="_12">安装前的准备</h4>
 <p>通过DSU安装的GSI需要是可直接刷写的raw格式镜像，在开始前先检查你的镜像是不是raw格式
 linux或者mac系统可以用<code>file system.img</code>命令查看</p>
 <div class="highlight"><pre><span></span><code>file system.img
@@ -1176,7 +1176,7 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 <p class="admonition-title">Tip</p>
 <p>一般gsi镜像都是simg格式，先检查转换</p>
 </div>
-<h4 id="_15">安装操作</h4>
+<h4 id="_13">安装操作</h4>
 <p><strong>将镜像打包为gz格式</strong></p>
 <div class="highlight"><pre><span></span><code>gzip -c system_raw.img &gt; system_raw.gz
 </code></pre></div>
@@ -1186,7 +1186,7 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 </div>
 <p><strong>用adb推到手机内置储存</strong></p>
 <p><code>adb push system_raw.gz /storage/emulated/0/Download/</code></p>
-<h4 id="_16">系统升级</h4>
+<h4 id="_14">系统升级</h4>
 <p>建议非必要不升级。升级前务必备份好所有数据，升级后有可能无法开机，需要清数据重刷。</p>
 <p><strong>安装动态系统更新</strong></p>
 <p>复制后一起执行。
@@ -1278,7 +1278,7 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
 </ol>
 <h2 id="sony-xperia-xz1">Sony Xperia XZ1 强刷</h2>
 <p>按照 <a href="https://www.himiku.com/archives/flashing-xperia-xz1.html">Sony Xperia XZ1 （G8342） 强刷教程</a></p>
-<h2 id="_17">华为机型简单介绍</h2>
+<h2 id="_15">华为机型简单介绍</h2>
 <p>请先根据前一节内容慎重考虑华为 Root 。</p>
 <p>而且需要解锁 Bootloader 。</p>
 <div class="admonition info">
@@ -1300,14 +1300,14 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
 <h2 id="1">备份完整字库数据(分区)<sup id="fnref:15"><a class="footnote-ref" href="#fn:15">1</a></sup></h2>
 <p>手机的字库指的是手机硬件(类比硬盘+Bios)，但是我们这里讲的是里面的数据啦。</p>
 <p>我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。</p>
-<h3 id="_18">有必要吗？</h3>
+<h3 id="_16">有必要吗？</h3>
 <p>有人会说，不是有9008吗？有必要备份完整字库吗？有必要。</p>
 <p>假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。</p>
 <p>那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。</p>
 <p>如果你是频繁刷机的玩家，比如你刷Gsi(通用系统镜像)把基带刷丢了怎么办？或者装了格机模块被格式化全分区数据了怎么办？</p>
 <p>所以，Root后第一件事，就是备份完整字库，以防不测。</p>
 <p>基带丢失，其实也就是基带分区的数据损坏了，只需要刷入正常的分区镜像就可以修复。但是，基带分区究竟是哪一个我们不得而知，所以需要备份完整的分区。</p>
-<h3 id="_19">如何备份？</h3>
+<h3 id="_17">如何备份？</h3>
 <p>你可以去下载 <a href="https://www.coolapk.com/apk/com.example.ourom">这个分区备份软件</a> 或者在 <strong><a href="https://gjzsr.com/">搞机助手</a></strong> 等等中备份你的手机分区镜像或者打包当前系统ROM,到时候用线刷工具/深刷工具救回来。</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -1390,11 +1390,11 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 06:44:34</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:04:46</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 06:44:34</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:04:46</span>
       
     
   </small>
