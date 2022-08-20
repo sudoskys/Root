@@ -475,7 +475,7 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 
 ## Gsi？？
 
-本节适合有刷机经验的同学。
+本节适合有刷机经验的同学。[^48]
 
 如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)
 
@@ -800,3 +800,6 @@ adb shell am start-activity \
 [^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
 
 [^47]:[小白刷机指南——GSI](https://www.bilibili.com/read/cv15133756)
+
+
+[^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)

@@ -240,3 +240,5 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 [^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
 
 [^47]:[小白刷机指南——GSI](https://www.bilibili.com/read/cv15133756)
+
+[^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)
