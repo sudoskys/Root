@@ -411,7 +411,7 @@ OTA 意思就是**增量升级**，就是在原先系统的基础上增加新功
 
 ### 准备设备和平台工具
 
-Win7 或以上电脑一台，能传输文件的数据线一条（**最好是原装线**），电脑下载解压[安卓平台文件包](https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip)或[Linux版本安卓平台工具包](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)或[Mac版本](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)，退出所有手机助手类软件。
+Win7 或以上电脑一台，能传输文件的数据线一条（**最好是原装线，不能用充电线**），电脑下载解压[安卓平台文件包](https://dl.google.com/android/repository/platform-tools_r33.0.2-windows.zip)或[Linux版本安卓平台工具包](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)或[Mac版本](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip)，退出所有手机助手类软件。
 
 解压工具包，你会看到 adb 和 fastboot ，这是我们针对 Android 设备进行高级调试和安装的工具。
 
@@ -424,6 +424,10 @@ Linux 需要使用其自带包管理器安装 `android-platform-tools`
 
 
 然后打开手机的USB调试开关允许计算机调试，确认你的**驱动线和驱动**都**没有问题**！
+
+!!! info
+    通过adb devices命令确认已经连上手机。
+
 
 华为工具在软件包内(看引用)
 
@@ -458,7 +462,7 @@ Linux 需要使用其自带包管理器安装 `android-platform-tools`
 
 
 
-#### 什么，你是华为？
+### **什么，你是华为？**
 
 
 这节的教程来自酷安@某贼 [^41]
