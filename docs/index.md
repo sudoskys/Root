@@ -36,6 +36,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 - 小米Rom下载站？ http://xiaomirom.com
 - XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
 - viQOO工具箱 https://gitee.com/mouzei/viqoo
+- 通用系统镜像列表 https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list
 
 >本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
 
@@ -162,13 +163,13 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^9]:**酷安MiaoHan 的专栏** [https://www.coolapk.com/feed/32286938](https://www.coolapk.com/feed/32286938)
 
-[^10]:[APKMirror - Free APK Downloads - Free and safe Android APK downloads](https://www.apkmirror.com/)
+[^10]:[APKMirror-FreeAPK-Downloads-FreeandsafeAndroidAPKdownloads](https://www.apkmirror.com/)
 
-[^11]:[Clash For Magisk简介 - CFM (adlyq.ml)](https://docs.adlyq.ml/)
+[^11]:[Clash-For-Magisk简介-CFM](https://docs.adlyq.ml/)
 
 [^12]:****小米手機各種刷機方式的疑問?**** [https://www.mobile01.com/topicdetail.php?f=634&t=3725269](https://www.mobile01.com/topicdetail.php?f=634&t=3725269)
 
-[^13]:****[通过 ADB 给手机刷入第三方 Recovery](https://blog.linioi.com/posts/8/)**** 
+[^13]:****[通过ADB给手机刷入第三方Recovery](https://blog.linioi.com/posts/8/)**** 
 
 [^14]:****小米如何刷入第三方Recovery**** [https://zhuanlan.zhihu.com/p/428730333](https://zhuanlan.zhihu.com/p/428730333)
 
@@ -180,9 +181,9 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^18]:**刷入原生ROM的通用教程等教程** [https://fiime.cn/thread/359](https://fiime.cn/thread/359)
 
-[^19]:****[Violet 机型 PE/Plus 刷入教程](https://blog.linioi.com/posts/10/)****
+[^19]:****[Violet-机型PE/Plus刷入教程](https://blog.linioi.com/posts/10/)****
 
-[^20]:****[如何在 Redmi Note 7 Pro 上刷机？](https://blog.linioi.com/posts/11/)****
+[^20]:****[如何在RedmiNote7Pro上刷机？](https://blog.linioi.com/posts/11/)****
 
 [^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
@@ -208,13 +209,13 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^32]:[如何提问，并获得高回复率] (https://zhuanlan.zhihu.com/p/19779979)
 
-[^33]:[Android Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
+[^33]:[Android-Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
 
 [^34]:[Root卡刷原理](https://www.zhihu.com/question/20098750/answer/173038749)
 
-[^35]:[Fastboot 原理](https://wowothink.com/5ade33b8/)
+[^35]:[Fastboot原理](https://wowothink.com/5ade33b8/)
 
-[^36]:[Bootloader 原理](https://www.zhihu.com/question/47496619/answer/195494376)
+[^36]:[Bootloader原理](https://www.zhihu.com/question/47496619/answer/195494376)
 
 [^37]:[MTK刷机原理](https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/)
 
@@ -222,7 +223,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^39]:[为什么内存不叫运存？](https://www.zhihu.com/question/327171923/answer/716602933)
 
-[^40]:[Guide Remove magisk modules without TWRP](https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/)
+[^40]:[Guide-Remove-magisk-modules-without-TWRP](https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/)
 
 [^41]:[[新手必看]华为刷机你一定要知道的](https://zhuanlan.zhihu.com/p/416456337)
 
@@ -233,3 +234,9 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 
 [^44]:[小米11搞机指南](https://blog.chitang.dev/posts/mi11/)
+
+[^45]:[关于ProjectTreble和AndroidGSI](https://bbs.liuxingw.com/t/9315/2.html)
+
+[^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
+
+[^47]:[小白刷机指南——GSI](https://www.bilibili.com/read/cv15133756)

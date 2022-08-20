@@ -50,11 +50,17 @@ ROM是只读存储器（Read Only Memory），但是很多可以读可以写的�
 
 
 
-**双清:** Dalvik/ART Cache Cache 其目的就是清除分区以及数据，简称重置手机。
+**双清:** 
 
-**三清:** Dalvik/ART Cache Cache Data 刷机前基本上必选三清，目的是使新系统的兼容性达到最佳。
+Dalvik/ART Cache Cache 其目的就是清除分区以及数据，简称重置手机。
 
-**四清:** Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。
+**三清:** 
+
+Dalvik/ART Cache Cache Data 刷机前基本上必选三清，目的是使新系统的兼容性达到最佳。
+
+**四清** 
+
+Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。
  
 !!! warning  end
 
@@ -62,16 +68,26 @@ ROM是只读存储器（Read Only Memory），但是很多可以读可以写的�
      四清后不刷入系统无法开机进系统！！只能电脑刷或者储存卡刷。
 
 
-**五清:** Dalvik/ART Cache Cache Data System Internal Storage（内置储存） 
+**五清** 
+
+Dalvik/ART Cache Cache Data System Internal Storage（内置储存） 
 !!! warning  end
 
     一旦选了这个清除，那手机内置存储上的东西就都没有了！就不能从手机选择卡刷包了！
 
-**六清:** Dalvik/ART Cache Cache Data System.
+**六清** 
 
-**底包:**既不是ROM也不是OTA软件包，它是一组**低级驱动程序**，可帮助操作系统完成其想做的任何事情。 它包括调制解调器，蓝牙，引导程序，DSP等各种内容。支持所有Snapdragon和MTK设备，包括仅限中国的设备。底包就相当于一个纯净版或者内核版的系统包
+Dalvik/ART Cache Cache Data System.
 
-**MTK**:联发科。
+**底包**
+
+既不是ROM也不是OTA软件包，它是一组**低级驱动程序**，可帮助操作系统完成其想做的任何事情。 它包括调制解调器，蓝牙，引导程序，DSP等各种内容。支持所有Snapdragon和MTK设备，包括仅限中国的设备。
+
+底包就相当于一个纯净版或者内核版的系统包，包含基带，字库。
+
+**MTK**
+
+联发科。
 
 MTK和高通是生产手机CPU的厂家。MTK平台和高通平台指的是这两家的操作系统。
 
@@ -180,11 +196,31 @@ A/B系统实现了无缝升级(seamless updates)，有以下特点：出厂时�
 
 [https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement](https://source.android.google.cn/devices/tech/ota/dynamic_partitions/implement)
 
-从Android 9开始，Google更改了要求，所有设备都必须使用[system-as-root]
+Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬件驱动开始分离存放，更新系统时只需要更新系统文件即可。此项举措意在方便厂商加快 Android 大版本更新的步伐，自然也同样方便了第三方 ROM 的开发和更新
 
-GSI则由A-only和A/B进行区分刷入
+而 Android 9 开始，Google更改了要求，所有设备都必须使用[system-as-root]
 
-GSI则是一种可以忽略厂商定制的通用刷机包
+GSI由此以A-only和A/B进行区分。
+
+GSI则是一种可以忽略厂商定制的通用刷机包，sgsi只支持高通设备且不自带内核。，而gsi理论上支持任何设备。
+
+[^45]
+
+它的优点是在机器还没有适配第三方 ROM 的时候，可以提前体验到类原生系统。但是因为没有针对具体机型进行优化，所以会存在部分问题。
+
+贴一个 通用系统镜像的列表:[Generic System Image (GSI) List](https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list)
+
+
+**Project Treble(PT)**
+
+方便手机厂商给手机升级系统。
+
+为了解决Android碎片化问题，减少技术支持层面的拖累，谷歌将原本由芯片厂商负责的代码修改工作纳入到Android项目中，绕过芯片厂而直接将打包好处理器适配性的系统发送给手机厂商，从而大大节省时间和研发难度，让手机厂商升级系统的门槛变得更低。
+
+pt的分区又有着不同区别，分别是a-only和a/b。部分机子升级至安卓8.0级以上安卓版本时，部分良心手机厂商的机子会支持pt计划的新分区，叫vendor分区
+
+只要你的手机支持pt，也就能以支持pt的rom为底包，双清刷入gsi，尝鲜类原生，但因为是通用系统镜像，部分机型刷入后可能会有部分传感器丢失的现象，比如指纹，相机不可用，得自己搞定驱动。
+
 
 **动态分区**
 
@@ -593,3 +629,5 @@ Fastboot：关机状态,**数据传输线**连接电脑，长按电源键和音�
 [^41]:[[新手必看]华为刷机你一定要知道的](https://zhuanlan.zhihu.com/p/416456337)
 
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
+
+[^45]:[关于Project Treble和Android GSI](https://bbs.liuxingw.com/t/9315/2.html)
