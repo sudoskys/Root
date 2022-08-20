@@ -1092,8 +1092,9 @@ finished.
 <p>Android 10引入了 启动时验证 (AVB)，在刷写 GSI之前，先下载并刷入vbmeta.img以停用 AVB，vbmeta.img一般包含会随gsi镜像一起发布。</p>
 </div>
 <p><strong>刷入vbmeta.img停用AVB验证</strong></p>
-<div class="highlight"><pre><span></span><code>fastboot --disable-verification flash vbmeta vbmeta.img
+<p><div class="highlight"><pre><span></span><code>fastboot --disable-verification flash vbmeta vbmeta.img
 </code></pre></div>
+刷入从底包中提取的vbmeta文件，否侧会卡米.</p>
 <p><strong>还原官方recovery</strong></p>
 <p>首先，你需要确保你的设备正在使用的是<strong>原厂的rec</strong>，目的是可以启动fastbootd，或者使用twrp里的用户空间fastboot也可以，注意如果twrp有这个功能可以不用刷回 recovery。</p>
 <p>然后呢，将手机重启至bootloader/fastboot模式，亦或者fastbootd模式fastbootd模式（<code>fastboot reboot fastboot</code>）</p>
@@ -1160,6 +1161,29 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 </div>
 <p>然后你就会看到状态栏有正在安装的动态更新的提示，安装完重启进入第二个系统</p>
 <p>小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp gsi。</p>
+<details class="help">
+<summary>修复 GSI 可能存在的基础问题</summary>
+<p><strong>修复自动亮度失效</strong>
+1.  下载 <a href="https://drive.google.com/open?id=1DF-v-gwG1rQT-SbAZQYlTwFZFcOPKI9U">framework-res__auto_generated_rro.apk</a>
+2.  用re管理器将其复制到 vendor/overlay 文件夹
+3.  修改 overlay 文件夹权限为 <code>rwxr-xr-x</code>
+4.  手机打开 Termux 输入以下命令
+<div class="highlight"><pre><span></span><code>mount -o remount -w /vendor chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay;chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay/framework-res__auto_generated_rro.apk
+</code></pre></div></p>
+<p><strong>修复扬声器失真</strong>
+1.  手机下载 Root Explorer
+2.  删除两个文件夹
+    &gt; /system/vendor/lib/soundfx<br />
+    &gt; /system/vendor/lib64/soundfx</p>
+<ol>
+<li>改变 vendor 文件夹的权限为 <code>rw-r--r--</code></li>
+<li>重启手机</li>
+</ol>
+<p><strong>修复屏幕状态栏圆角</strong></p>
+<p>adb 输入以下命令(最后的数字根据自己喜好任意修改):
+<div class="highlight"><pre><span></span><code>adb shell settings put secure sysui_rounded_content_padding 20
+</code></pre></div></p>
+</details>
 <h2 id="sony-xperia-xz1">Sony Xperia XZ1 强刷</h2>
 <p>按照 <a href="https://www.himiku.com/archives/flashing-xperia-xz1.html">Sony Xperia XZ1 （G8342） 强刷教程</a></p>
 <h2 id="_15">华为机型简单介绍</h2>
@@ -1271,11 +1295,11 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 05:11:43</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 05:16:40</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 05:11:43</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 05:16:40</span>
       
     
   </small>
