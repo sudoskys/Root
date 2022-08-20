@@ -101,7 +101,7 @@ Tips：极少数小米设备存在检测设备信息错误的问题，Ramdisk �
 准备好 boot.img 后，打开打开`Magisk Manager`APP，点击`Magisk`后边的`安装`，选择安装方式为`选择并修改一个文件`，从电脑端复制 `boot.img` 文件到手机并选中该文件，点击`开始` ，仔细阅读修改结果并从结果中复制patch后的文件（一般在`Download`文件夹下，文件名类似`magisk_patched-24100_gk0te.img`）到电脑。
 
 !!! danger "警告"
-    ⚠️ **你所用到的镜像(提取或修改)都要留存副本！否则变砖警告！**
+    ⚠️ **你所用到的镜像(提取或修改)都要在电脑上留存副本！否则变砖警告！**
 
 
 
@@ -263,8 +263,6 @@ adb install Magisk-xxx.apk
 
 ### 准备 MTK 工具/工具箱
 
-!!! tip 
-    最好备份好完整字库
 
 💡 **解释**：MTk 工具依赖安卓的一种漏洞来实现 Root ，提取 boot.img，在使用前请关注你的社区（酷安等）。工具箱的使用都有说明，请自行咨询或查阅资料。
 
@@ -336,10 +334,14 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 执行命令刷入，重启手机，安装面具即可发现root成功
 `python mtk w boot,vbmeta boot.patched,vbmeta.img.empty`
 
-### 备份 Root 后的手机
+### 备份 Root 后的手机字库（分区）
+
+!!! tip 
+    你可以使用mtk工具备份各个分区。
 
 使用如下命令备份手机全部镜像，以便可以在手机变砖时进行自救。
 `python mtk rl out`
+
 自救命令，使用mtkclient写入备份的镜像
 `python mtk wl out`
 
@@ -492,7 +494,85 @@ fastboot reboot
 
 
 
+## 备份完整分区[^15]
 
+这里的分区就是字库。
+
+什么是备份完整字库？我们说的64GB，128GB，256GB等等，这个就是说的主板的储存容量，也就是字库。某个分区的数据损坏，好听的说法是分区数据坏了，难听的说法是字库损坏了。
+
+所以，Root后第一件事，就是备份完整字库，以防不测。有人会说，不是有9008吗？有必要备份完整字库吗？有必要。
+
+原因：假如一个手机所有分区加起来有100个，9008大概会刷写30个左右，剩下的70个不会刷写。
+
+那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。
+
+备份文件下载链接 [作者给出](http://pan.baidu.com/s/1Yp3ljJWWvKMdpUpSUkt_Sw) 提取码:`vo15` ，或者我打包的文件中[^1],文件来自[^15]。或者使用[蓝奏云](https://miao202.lanzouj.com/i9pJX09kzq8j)
+
+**高通机型备份字库**
+
+安装个MT管理器，使用root权限执行【高通字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。
+
+**高通机型还原字库**
+
+提前把之前备份好的Rannki文件夹，复制到 `/sdcard/Rannki`，安装个MT管理器，使用root权限执行【高通字库还原.sh】即可。
+
+**MTK 机型备份字库**
+
+安装个MT管理器，使用root权限执行【MTK字库备份.sh】即可。备份的文件在/sdcard/Rannki目录中。
+
+**MTK 机型还原字库**
+
+提前把之前备份好的Rannki文件夹，复制到 `/sdcard/Rannki`，安装个MT管理器，使用root权限执行【MTK 字库还原.sh】即可。
+
+字库备份还原，解决的不只是基带问题，
+
+是：除硬盘物理损坏外的所有问题，解决率为100％。
+
+**以上如何防止掉基带教程由酷安 Rannki 原创**
+
+
+
+??? note "详细叙述"
+    
+    
+    **UFS闪存手机**
+    
+    主板一般被分成了6个硬盘，即**sda，sdb，sdc，sdd，sde，sdf。**
+    
+    所以，主板设备代码分别是：`/dev/block/sda，/dev/block/sde，/dev/block/sdc，/dev/block/sdd，/dev/block/sde，/dev/block/sdf`
+    
+    备份分区的代码举例：`dd if=/dev/block/sda1 of=/sdcard/1.img,dd if=/dev/block/sda2 of=/sdcard/2.img`等等等等............................
+    
+    还原分区的代码举例：`dd if=/sdcard/1.img of=/dev/block/sda1,dd if=/sdcard/2.img of=/dev/block/sda2` 等等等等............................
+    
+    **Emmc闪存手机**
+    
+    主板设备代码：**/dev/block/mmcblk0**
+    
+    备份分区的代码举例：`dd if=/dev/block/mmcblk0p1 of=/sdcard/1.img,dd if=/dev/block/mmcblk0p2 of=/sdcard/2.img`等等等等............................
+    
+    还原分区的代码举例：`dd if=/sdcard/1.img of=/dev/block/mmcblk0p1,dd if=/sdcard/2.img of=/dev/block/mmcblk0p2`等等等等............................
+    
+    当然，像 system 分区， vendor 分区，userdata 分区，super 分区，这些分区就没必要进行备份还原了。
+    
+    查看分区信息的命令：
+    
+    先安装busybox的面具模块：链接: `pan.baidu.com/s/1hFQr0nvXprzcz2gyQxtFzQ` 提取码: `y61r`
+    
+    然后终端命令：`busybox fdisk /dev/block/sda` 回车，然后再输入p回车，就可以看到sda这块硬盘的所有分区信息了。adb,adc,add,ade,adf
+    
+    同理,emmc闪存手机的命令是：busybox fdisk /dev/block/mmcblk0回车，再输入p回车，就能看到所有分区信息了。
+    
+
+如果你的手机已经出现问题，且没有备份完整字库……去售后换主板，或者找个同机型的，用他的完整备份字库刷入，当然我并不确定是否成功，因为会不会黑砖，这是个待验证的问题。
+
+而且最好别全部使用别人的手机的全字库备份，就算不黑砖，也会大概率出现 bootlocker 永久锁定，永久无法再次解锁，只能换主板。
+
+
+
+
+
+[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538)
 
 [^13]:**[通过 ADB 给手机刷入第三方 Recovery](https://blog.linioi.com/posts/8/)**
 
