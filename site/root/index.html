@@ -406,6 +406,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#miflash" class="md-nav__link">
+    小米线刷工具 MIflash
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#recovery" class="md-nav__link">
     卡刷 第三方 Recovery
   </a>
@@ -861,6 +868,12 @@ fastboot reboot
 </code></pre></div>
 <p>如果想要谨慎一点，比如说修改的镜像文件是从网上下载的，想先试试看能否正常启动，则可以用命令：<code>fastboot boot</code>。这样顺利启动系统后即可暂时拥有 Magisk ，不过重启后就会失效。</p>
 <p>文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）</p>
+<h2 id="miflash">小米线刷工具 MIflash</h2>
+<p>MiFlash 是由小米发布的刷机工具。</p>
+<p>线刷还是偏好使用 MiFlash。可以选择刷机不上 BL 锁（对刷 MIUI 海外版来说是必须），自定义刷机脚本，EDL 刷机模式等。</p>
+<p>你可以在以下地址获取它的相关信息，因为是特定机型工具，所以不展开叙述。</p>
+<p>https://miuiver.com/miflash/</p>
+<p>https://xiaomirom.com/download-xiaomi-flash-tool-miflash/</p>
 <h2 id="recovery">卡刷 第三方 Recovery</h2>
 <p>有的Recovery作者附带了刷入脚本，这样的直接运行脚本按着走就行了，这里讲一下通用方法。</p>
 <p>手机关机，<strong>长按 音量减键 + 电源键</strong> 进入 <code>FASTBOOT</code> 模式。用数据线把手机和电脑连接起来。以 <code>OrangeFox</code> 为示例。在上述步骤的下载后会得到一个压缩包，打开该压缩包，解压其中的 <code>recovery.img</code> 到任意一个位置。 压缩包是为了在有第三方 Recovery 的情况下刷入/更新 OrangeFox ，但是我们目前并没有，所以我们需要解压其中的 <code>recovery.img</code> 来使用 <code>fastboot</code> 刷入。如果你选择使用 LR.Team 定制版 TWRP，可以选择一键刷入版，就不会有下一步~~复杂~~
@@ -1417,11 +1430,11 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
   <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 10:52:47</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 21, 2022 06:30:13</span>
       
         <br>
         创建日期:
-        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 10:52:47</span>
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 21, 2022 06:30:13</span>
       
     
   </small>
