@@ -106,6 +106,7 @@ Tips：极少数小米设备存在检测设备信息错误的问题，Ramdisk �
     ⚠️ **你所用到的镜像(提取或修改)都要在电脑上留存副本！否则变砖警告！**
 
 
+
 ## 线刷 Fastboot刷入镜像
 
 卡刷是最值得推荐的，过程也不复杂，只要刷机过程保持电量充足，刷机包正确，刷机过程不对手机进行操作，一般都是能成功刷入的。
@@ -130,7 +131,17 @@ fastboot reboot
 
 
 
+## 小米线刷工具 MIflash
 
+MiFlash 是由小米发布的刷机工具。
+
+线刷还是偏好使用 MiFlash。可以选择刷机不上 BL 锁（对刷 MIUI 海外版来说是必须），自定义刷机脚本，EDL 刷机模式等。
+
+你可以在以下地址获取它的相关信息，因为是特定机型工具，所以不展开叙述。
+
+https://miuiver.com/miflash/
+
+https://xiaomirom.com/download-xiaomi-flash-tool-miflash/
 
 
 

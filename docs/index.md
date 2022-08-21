@@ -37,6 +37,8 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 - XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
 - viQOO工具箱 https://gitee.com/mouzei/viqoo
 - 通用系统镜像列表 https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list
+- 小米各机型 MIUI 历史版本分类索引 https://miuiver.com/
+
 
 >本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
 
