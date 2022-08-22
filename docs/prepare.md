@@ -14,6 +14,24 @@
 
 如果不是很小众，端口什么的也没有封锁(需要手动验证),大部分手机都可以 Root.
 
+## 经过后面的尝试，我发现我不能Root,但是想用模块.....
+
+你可以去试一下 LSPatch？
+
+>LSPatch: A non-root Xposed framework extending from LSPosed
+
+支持安卓9以上系统。
+
+这里放上相关链接。
+
+- [简单的 LSPatch 使用教程](https://duzhaokun123.github.io/2022/05/06/simple-lspatch-guide.html#q0-lspatch-%E6%98%AF%E4%BB%80%E4%B9%88)
+
+- [项目与下载地址](https://github.com/LSPosed/LSPatch)
+
+- [一个教程](https://www.jipa.work/lspatch)
+
+嗯。
+
 ## 了解术语[^17]
 
 **内存/运存/闪存/Ram/Rom**
