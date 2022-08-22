@@ -133,7 +133,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 - github@Scirese
 - tg@狼 |ZH/EN/(JA)|o0kam1
 - tg@Chi_Tang
-- tg@笨蛋ovo 
+- github@liuran001 
 - tg@Aidenpers Ultra
 - tg@小迅的皮套
 - tg@slQYa
