@@ -73,15 +73,21 @@ ROM是只读存储器（Read Only Memory），但是很多可以读可以写的�
 
 **双清:** 
 
-Dalvik/ART Cache Cache 其目的就是清除分区以及数据，简称重置手机。
+Dalvik/ART Cache ,Cache 
+
+清除分区以及数据，简称重置手机。
 
 **三清:** 
 
-Dalvik/ART Cache Cache Data 刷机前基本上必选三清，目的是使新系统的兼容性达到最佳。
+Dalvik/ART Cache ,Cache ,Data 
+
+刷机前基本上必选三清，使新系统的兼容性达到最佳。
 
 **四清** 
 
-Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。
+Dalvik/ART Cache ,Cache ,Data ,System 
+
+四清针对版本差异过大的系统,四清后不刷入系统无法进系统(因为系统分区寄掉了)
  
 !!! warning  end
 
@@ -94,7 +100,7 @@ Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。
 Dalvik/ART Cache ,Cache ,Data ,System ,Internal Storage（内置储存） 
 !!! warning  end
 
-    一旦选了这个清除，那手机内置存储上的东西就都没有了！就不能从手机选择卡刷包了！
+    如果选择这个方式，手机内置存储上的东西会被删除，也就不能从手机选择卡刷包了。
 
 **六清** 
 
