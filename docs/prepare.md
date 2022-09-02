@@ -91,14 +91,14 @@ Dalvik/ART Cache Cache Data System 四清针对版本差异过大的系统。
 
 **五清** 
 
-Dalvik/ART Cache Cache Data System Internal Storage（内置储存） 
+Dalvik/ART Cache ,Cache ,Data ,System ,Internal Storage（内置储存） 
 !!! warning  end
 
     一旦选了这个清除，那手机内置存储上的东西就都没有了！就不能从手机选择卡刷包了！
 
 **六清** 
 
-Dalvik/ART Cache Cache Data System.
+Dalvik/ART Cache ,Cache ,Data ,System ,Internal Storage（内置储存）,USB OTG.
 
 **底包**
 
