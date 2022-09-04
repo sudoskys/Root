@@ -460,7 +460,7 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 !!! info
     在BL锁已经解锁的情况下，可以尝试线刷关键分区 system，boot，recovery，cust 实现救砖。
 
-[其他方法](https://www.coolapk.com/feed/26205215?shareKey=MzUxMDU3ODVmMjY0NjEwZDQ5M2M~&shareUid=3463951&shareFrom=com.coolapk.market_11.3)
+[其他方法](https://www.coolapk1s.com/feed/26205215)
 
 
 ### 安装模块变砖防护策略
@@ -965,7 +965,7 @@ Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复
 
 
 
-[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538)
+[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk1s.com/feed/21305538](https://www.coolapk1s.com/feed/21305538)
 
 [^13]:**[通过 ADB 给手机刷入第三方 Recovery](https://blog.linioi.com/posts/8/)**
 
@@ -973,7 +973,7 @@ Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复
 
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
-[^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
+[^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk1s.com/feed/26830366)
 
 [^44]:[小米11搞机指南](https://blog.chitang.dev/posts/mi11/)
 

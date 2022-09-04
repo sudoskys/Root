@@ -365,7 +365,7 @@ service myservice ${MAGISKTMP}/myscript.sh
 
 刷入此包即可:[Clash养老版,自带说明](https://t.me/nanie1/48)
 
-[^24]:自制简易Magisk模块教程-辉少菌 https://www.coolapk.com/feed/16164846
-[^25]:自制简易Magisk模块教程 https://www.coolapk.com/feed/37576170
+[^24]:自制简易Magisk模块教程-辉少菌 https://www.coolapk1s.com/feed/16164846
+[^25]:自制简易Magisk模块教程 https://www.coolapk1s.com/feed/37576170
 [^27]:MagiskDeveloperGuides https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html
 [^40]:[Guide Remove magisk modules without TWRP](https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/)
