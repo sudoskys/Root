@@ -163,9 +163,9 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^7]:[Android 玩机「神器」的矛盾与新生：Magisk Canary 更新详解 - 少数派 (sspai.com)](https://sspai.com/post/69945)
 
-[^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk.com/feed/37950576)
+[^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk1s.com/feed/37950576)
 
-[^9]:**酷安MiaoHan 的专栏** [https://www.coolapk.com/feed/32286938](https://www.coolapk.com/feed/32286938)
+[^9]:**酷安MiaoHan 的专栏** [https://www.coolapk1s.com/feed/32286938](https://www.coolapk1s.com/feed/32286938)
 
 [^10]:[APKMirror-FreeAPK-Downloads-FreeandsafeAndroidAPKdownloads](https://www.apkmirror.com/)
 
@@ -177,9 +177,9 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^14]:****小米如何刷入第三方Recovery**** [https://zhuanlan.zhihu.com/p/428730333](https://zhuanlan.zhihu.com/p/428730333)
 
-[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538)
+[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk1s.com/feed/21305538](https://www.coolapk1s.com/feed/21305538)
 
-[^16]:酷安Rannki原创 [https://www.coolapk.com/feed/21305538](https://www.coolapk.com/feed/21305538?shareKey=NWMzMGQxYTU4OWMwNWZlNzJjZTc~&shareUid=1294855&shareFrom=com.coolapk.market_10.5.3)
+[^16]:酷安Rannki原创 [https://www.coolapk1s.com/feed/21305538](https://www.coolapk1s.com/feed/21305538)
 
 [^17]:常识基础 [https://mi.fiime.cn/tutorial](https://mi.fiime.cn/tutorial)
 
@@ -193,23 +193,23 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^22]:[**高通9008线刷救黑砖教程**](https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
 
-[^23]:[保留root去更新系统](https://www.coolapk.com/feed/37647626)
+[^23]:[保留root去更新系统](https://www.coolapk1s.com/feed/37647626)
 
-[^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk.com/feed/16164846)
+[^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk1s.com/feed/16164846)
 
-[^25]:[自制简易Magisk模块教程](https://www.coolapk.com/feed/37576170)
+[^25]:[自制简易Magisk模块教程](https://www.coolapk1s.com/feed/37576170)
 
 [^26]:[MagiskInstallation](https://topjohnwu.github.io/Magisk/install.html)
 
 [^27]:[MagiskDeveloperGuides](https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html)
 
-[^28]:[联发科不建议玩机](https://www.coolapk.com/feed/37080982)
+[^28]:[联发科不建议玩机](https://www.coolapk1s.com/feed/37080982)
 
-[^29]:[Root升级系统](https://www.coolapk.com/feed/34860331)
+[^29]:[Root升级系统](https://www.coolapk1s.com/feed/34860331)
 
-[^30]:[简单认识手机各个分区](https://www.coolapk.com/feed/38367093)
+[^30]:[简单认识手机各个分区](https://www.coolapk1s.com/feed/38367093)
 
-[^31]:[手动给予安卓应用root权限的方法](https://www.coolapk.com/feed/37543497)
+[^31]:[手动给予安卓应用root权限的方法](https://www.coolapk1s.com/feed/37543497)
 
 [^32]:[如何提问，并获得高回复率] (https://zhuanlan.zhihu.com/p/19779979)
 
@@ -234,7 +234,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
 
-[^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk.com/feed/26830366?shareKey=N2Q2ZTRjNTU0NjkxNjE1OTBkZDI~&shareUid=3463951&shareFrom=com.coolapk.market_11.4.2)
+[^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk1s.com/feed/26830366)
 
 
 [^44]:[小米11搞机指南](https://blog.chitang.dev/posts/mi11/)

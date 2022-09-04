@@ -667,8 +667,8 @@ Fastboot：关机状态,**数据传输线**连接电脑，长按电源键和音�
 [^1]:**所需资料打包**<https://push.dianas.cyou/LIS/Share/Root/>
 [^3]:[Android 玩家必备神器入门：从零开始安装 Magisk - 少数派 (sspai.com)](https://sspai.com/post/67932)
 [^17]:常识基础 [https://mi.fiime.cn/tutorial](https://mi.fiime.cn/tutorial)
-[^28]:联发科不建议玩机 https://www.coolapk.com/feed/37080982
-[^30]:简单认识手机各个分区 https://www.coolapk.com/feed/38367093
+[^28]:联发科不建议玩机 https://www.coolapk1s.com/feed/37080982
+[^30]:简单认识手机各个分区 https://www.coolapk1s.com/feed/38367093
 
 [^33]:Android Root原理分析及防Root新思路 https://blog.csdn.net/hsluoyc/article/details/50560782
 

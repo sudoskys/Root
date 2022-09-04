@@ -437,13 +437,13 @@ Lsposed已经推出了Zygisk版本。Zygisk模式下用Shamiko模块的白名单
 
 ## 华为降级
 
-[华为麒麟の系统降级教程](https://www.coolapk.com/feed/27132475?shareKey=ZjBlNWU2NDE2ZDVhNjEwZDQ5NTE~&shareUid=3463951&shareFrom=com.coolapk.market_11.3)
+[华为麒麟の系统降级教程](https://www.coolapk1s.com/feed/27132475)
 
 
-[^23]:保留root去更新系统 https://www.coolapk.com/feed/37647626
+[^23]:保留root去更新系统 https://www.coolapk1s.com/feed/37647626
 
-[^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk.com/feed/37950576)
+[^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk1s.com/feed/37950576)
 
 [^14]:****小米如何刷入第三方Recovery**** [https://zhuanlan.zhihu.com/p/428730333](https://zhuanlan.zhihu.com/p/428730333)
 
-[^29]:Root升级系统 https://www.coolapk.com/feed/37080982
+[^29]:Root升级系统 https://www.coolapk1s.com/feed/37080982
