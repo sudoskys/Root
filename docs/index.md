@@ -28,7 +28,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 在操作过程中，你可以在**以下平台获取相关支持**
 
-- 分享站 https://kamiui.ml/E52shuaji/
+- 分享站/模块 https://kamiui.ml/E52shuaji/
 - 橘色小狐狸官网 https://orangefox.download/zh-CN
 - 搞机助手 https://gjzsr.com/
 - 还可以的论坛 https://mi.fiime.cn
@@ -38,6 +38,8 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 - viQOO工具箱 https://gitee.com/mouzei/viqoo
 - 通用系统镜像列表 https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list
 - 小米各机型 MIUI 历史版本分类索引 https://miuiver.com/
+- 面具模块 https://magisk.suchenqaq.club/
+
 
 
 >本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
