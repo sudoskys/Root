@@ -9,7 +9,7 @@ Welcome to IdontKnowRoot
 
 本仓库 issue 不接受关于具体刷机如何操作的询问，只接受文档的改进建议，如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
 
-但是，你可以在 [Github-Discussions](https://github.com/sudoskys/Root/discussions) 发起讨论。但是请提问前先查阅网络信息。描述不清晰的，一看就没读文档的，模糊的提问会被关闭。
+不过，你可以在 [Github-Discussions](https://github.com/sudoskys/Root/discussions) 发起讨论。但是请提问前先查阅网络信息。描述不清晰的，一看就没读文档的，模糊的提问会被关闭。
 
 !!! tip "开始之前，你需要知道的..."
     本教程仅供参考，阅读者**需要自己承担因尝试解锁，Root导致的后果**。
