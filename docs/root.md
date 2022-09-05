@@ -965,9 +965,9 @@ Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复
 
 
 
-[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk1s.com/feed/21305538](https://www.coolapk1s.com/feed/21305538)
+[^15]:[告诉大家如何防止掉基带问题](https://www.coolapk1s.com/feed/21305538)
 
-[^13]:**[通过 ADB 给手机刷入第三方 Recovery](https://blog.linioi.com/posts/8/)**
+[^13]:[**通过ADB给手机刷入第三方Recovery**](https://blog.linioi.com/posts/8/)**** 
 
 [^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
@@ -981,9 +981,10 @@ Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复
 
 [^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
 
-[^47]:[刷写 GSI 的要求](https://source.android.com/docs/setup/build/gsi#flashing-gsis)
+[^47]:[刷写GSI的要求](https://source.android.com/docs/setup/build/gsi#flashing-gsis)
 
 
 [^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)
 
-[^49]:[小米平板 5 Pro 刷入 GSI Android 教程](https://dev.moe/2716)
+[^49]:[小米平板5Pro刷入GSIAndroid教程](https://dev.moe/2716)
+
