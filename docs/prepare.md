@@ -665,14 +665,21 @@ Fastboot：关机状态,**数据传输线**连接电脑，长按电源键和音�
 
 
 [^1]:**所需资料打包**<https://push.dianas.cyou/LIS/Share/Root/>
-[^3]:[Android 玩家必备神器入门：从零开始安装 Magisk - 少数派 (sspai.com)](https://sspai.com/post/67932)
-[^17]:常识基础 [https://mi.fiime.cn/tutorial](https://mi.fiime.cn/tutorial)
-[^28]:联发科不建议玩机 https://www.coolapk1s.com/feed/37080982
-[^30]:简单认识手机各个分区 https://www.coolapk1s.com/feed/38367093
 
-[^33]:Android Root原理分析及防Root新思路 https://blog.csdn.net/hsluoyc/article/details/50560782
+[^3]:[Android玩家必备神器入门：从零开始安装Magisk](https://sspai.com/post/67932)
 
-[^36]:Bootloader 原理 https://www.zhihu.com/question/47496619/answer/195494376
+
+[^17]:[一些常识基础](https://mi.fiime.cn/tutorial)
+
+[^28]:[联发科不建议玩机](https://www.coolapk1s.com/feed/37080982)
+
+
+[^30]:[简单认识手机各个分区](https://www.coolapk1s.com/feed/38367093)
+
+
+[^33]:[Android-Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
+
+[^36]:[Bootloader原理](https://www.zhihu.com/question/47496619/answer/195494376)
 
 [^39]:[为什么内存不叫运存？](https://www.zhihu.com/question/327171923/answer/716602933)
 
@@ -680,4 +687,4 @@ Fastboot：关机状态,**数据传输线**连接电脑，长按电源键和音�
 
 [^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
-[^45]:[关于Project Treble和Android GSI](https://bbs.liuxingw.com/t/9315/2.html)
+[^45]:[关于ProjectTreble和AndroidGSI](https://bbs.liuxingw.com/t/9315/2.html)
