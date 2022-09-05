@@ -151,7 +151,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^1]:**所需资料打包**<https://push.dianas.cyou/LIS/Share/Root/>
 
-[^2]: ****root、刷rec、rom通用教程<****[sudo0m.github.io/2022/05/29/root、刷rec、rom通用教程/](http://sudo0m.github.io/2022/05/29/root%E3%80%81%E5%88%B7rec%E3%80%81rom%E9%80%9A%E7%94%A8%E6%95%99%E7%A8%8B/)****>****
+[^2]: [**root、刷rec、rom通用教程<**](http://sudo0m.github.io/2022/05/29/root%E3%80%81%E5%88%B7rec%E3%80%81rom%E9%80%9A%E7%94%A8%E6%95%99%E7%A8%8B/)
 
 [^3]:[Android玩家必备神器入门：从零开始安装Magisk](https://sspai.com/post/67932)
 
@@ -243,7 +243,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
 
-[^47]:[小白刷机指南——GSI](https://www.bilibili.com/read/cv15133756)
+[^47]:[刷写GSI的要求](https://source.android.com/docs/setup/build/gsi#flashing-gsis)
 
 [^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)
 
