@@ -1,11 +1,13 @@
 # 前言
 
 
-Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基础，打破圈层壁垒，致力于给予小白全详细的刷机起步指导或给经常刷机的人一个速查手册，不必因为教程混乱，分散，老旧或描述不清而耗费心力。
+Welcome to IdontKnowRoot 
+
+本站基于广泛调研的基础，打破圈层壁垒，致力于给予小白全详细的刷机起步指导或给经常刷机的人一个速查手册，不必因为教程混乱，分散，老旧或描述不清而耗费心力。
 
 你可以点击右上角来对文档提出修改，或者使用 [GithubDev](https://github.dev/sudoskys/Root) 添加内容！
 
-本仓库 issue 不接受关于具体刷机操作提问，只接受文档的改进建议，如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
+本仓库 issue 不接受关于具体刷机如何操作的询问，只接受文档的改进建议，如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
 
 但是，你可以在 [Github-Discussions](https://github.com/sudoskys/Root/discussions) 发起讨论。但是请提问前先查阅网络信息。描述不清晰的，一看就没读文档的，模糊的提问会被关闭。
 
@@ -153,6 +155,9 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 **由以下服务商托管运行**
 
 ![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white)
+
+**Theme:Mkdocs.org**
+
 
 
 
