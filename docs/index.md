@@ -1,19 +1,48 @@
 # 前言
 
 
-Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基础，致力于给予小白全详细的刷机起步指导，不必因为教程老旧，描述不清而发愁。
+Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基础，打破圈层壁垒，致力于给予小白全详细的刷机起步指导或给经常刷机的人一个速查手册，不必因为教程混乱，分散，老旧或描述不清而耗费心力。
 
-同时，本仓库 issue 不接受具体指导的提问，只接受文档的改进建议，如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
+你可以点击右上角来对文档提出修改，或者使用 [GithubDev](https://github.dev/sudoskys/Root) 添加内容！
 
-但是，你可以在 [这里](https://github.com/sudoskys/Root/discussions) 发起讨论，但是！如果问题是太过简单可以自力更生搜索到的，提问会被打回。
+本仓库 issue 不接受关于具体刷机操作提问，只接受文档的改进建议，如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ！
+
+但是，你可以在 [Github-Discussions](https://github.com/sudoskys/Root/discussions) 发起讨论。但是请提问前先查阅网络信息。描述不清晰的，一看就没读文档的，模糊的提问会被关闭。
+
+!!! tip "开始之前，你需要知道的..."
+    本教程仅供参考，阅读者**需要自己承担因尝试解锁，Root导致的后果**。
 
 
-你可以点击右上角来对文档提出修改，或者使用 [GithubDev](https://github.dev/sudoskys/Root) 添加内容
 
 
 
-## **资料连结**
+##  **文档结构简介**
 
+
+如果你对自己的动手能力感到怀疑，可以选择拿钱请专业人士操作。
+
+**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。最好使用 Win10 ，避免驱动问题** 
+
+
+**刷机大概有几种方法：** rec，fastboot，fastbootd，9008，mtk端口。
+![c3v64ptb34tc8qacv7jg.png](https://s1.328888.xyz/2022/08/13/TGFaP.png)
+
+同时因为 Android 阵营厂商众多，的确很难保证他们步伐齐一，也就不存在某种一定通行的「通法」能够搞定任一 Android 设备的 `Magisk` 刷入。
+
+但是本文档会从 
+
+- 准备
+- 刷机
+- 优化
+
+三个章节展开相关叙述，其中在第二节会描述不同的常用对策方法
+
+
+>本站大多数资料都是综合收集来的，不许商用，需要商用请和引用页内的源取得授权
+
+
+
+## **相关资料连结**
 
 
 原始导出的长文PDF版本在 [这里](https://github.com/sudoskys/Root/)
@@ -41,36 +70,11 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 - 面具模块 https://magisk.suchenqaq.club/
 
 
-
 >本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
 
 
 
-##  **文档结构**
-
-本教程仅供参考，阅读者**需要自己承担因尝试解锁导致的后果**。
-
-如果你对自己的动手能力感到怀疑，可以选择付费请人！**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。最好使用 Win10 ，避免驱动问题** 
-
-
-**刷机大概有几种方法：** rec，fastboot，fastbootd，9008，mtk端口。
-![c3v64ptb34tc8qacv7jg.png](https://s1.328888.xyz/2022/08/13/TGFaP.png)
-
-同时因为 Android 阵营厂商众多，的确很难保证他们步伐齐一，也就不存在某种一定通行的「通法」能够搞定任一 Android 设备的 `Magisk` 刷入。
-
-但是本文档会从 
-
-- 准备
-- 刷机
-- 优化
-
-三个章节展开相关叙述，其中在第二节会描述不同的常用对策方法
-
-
->本站大多数资料都是综合收集来的，不许商用，需要商用请和引用页内的源取得授权
-
-
-## **交流原则**
+## **社区交流原则**
 
 在与人交流情况下，请**务必遵循**以下守则:
 
@@ -144,6 +148,11 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 **由以下服务商托管运行**
 
 ![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white)
+
+
+
+下面，让我们开始刷机！
+
 
 ## 引录
 
