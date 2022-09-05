@@ -153,45 +153,45 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^2]: ****root、刷rec、rom通用教程<****[sudo0m.github.io/2022/05/29/root、刷rec、rom通用教程/](http://sudo0m.github.io/2022/05/29/root%E3%80%81%E5%88%B7rec%E3%80%81rom%E9%80%9A%E7%94%A8%E6%95%99%E7%A8%8B/)****>****
 
-[^3]:[Android 玩家必备神器入门：从零开始安装 Magisk - 少数派 (sspai.com)](https://sspai.com/post/67932)
+[^3]:[Android玩家必备神器入门：从零开始安装Magisk](https://sspai.com/post/67932)
 
-[^4]:Magisk官方教程<[https://topjohnwu.github.io/Magisk/](https://topjohnwu.github.io/Magisk/)>
+[^4]:[Magisk官方教程](https://topjohnwu.github.io/Magisk/)
 
-[^5]:Magisk官方论坛<[https://forum.xda-developers.com/f/magisk.5903/](https://forum.xda-developers.com/f/magisk.5903/)>
+[^5]:[MagiskXDA官方论坛](https://forum.xda-developers.com/f/magisk.5903/)
 
-[^6]:[每个 Android 玩家都不可错过的神器（一）：Magisk 初识与安装 - 少数派 (sspai.com)](https://sspai.com/post/53043)
+[^6]:[每个Android玩家都不可错过的神器（一）：Magisk初识与安装](https://sspai.com/post/53043)
 
-[^7]:[Android 玩机「神器」的矛盾与新生：Magisk Canary 更新详解 - 少数派 (sspai.com)](https://sspai.com/post/69945)
+[^7]:[Android玩机「神器的矛盾与新生：MagiskCanary更新详解](https://sspai.com/post/69945)
 
-[^8]:**Root隐藏教程**：[图文分享 - 酷安 (coolapk.com)](https://www.coolapk1s.com/feed/37950576)
+[^8]:[**Root隐藏教程**图文分享](https://www.coolapk1s.com/feed/37950576)
 
-[^9]:**酷安MiaoHan 的专栏** [https://www.coolapk1s.com/feed/32286938](https://www.coolapk1s.com/feed/32286938)
+[^9]:[**酷安MiaoHan的专栏**](https://www.coolapk1s.com/feed/32286938)
 
 [^10]:[APKMirror-FreeAPK-Downloads-FreeandsafeAndroidAPKdownloads](https://www.apkmirror.com/)
 
 [^11]:[Clash-For-Magisk简介-CFM](https://docs.adlyq.ml/)
 
-[^12]:****小米手機各種刷機方式的疑問?**** [https://www.mobile01.com/topicdetail.php?f=634&t=3725269](https://www.mobile01.com/topicdetail.php?f=634&t=3725269)
+[^12]:[**小米手機各種刷機方式的疑問?**](https://www.mobile01.com/topicdetail.php?f=634&t=3725269)
 
-[^13]:****[通过ADB给手机刷入第三方Recovery](https://blog.linioi.com/posts/8/)**** 
+[^13]:[**通过ADB给手机刷入第三方Recovery**](https://blog.linioi.com/posts/8/)**** 
 
-[^14]:****小米如何刷入第三方Recovery**** [https://zhuanlan.zhihu.com/p/428730333](https://zhuanlan.zhihu.com/p/428730333)
+[^14]:[**小米如何刷入第三方Recovery**](https://zhuanlan.zhihu.com/p/428730333)
 
-[^15]: 告诉大家如何防止掉基带问题 [https://www.coolapk1s.com/feed/21305538](https://www.coolapk1s.com/feed/21305538)
+[^15]:[告诉大家如何防止掉基带问题](https://www.coolapk1s.com/feed/21305538)
 
-[^16]:酷安Rannki原创 [https://www.coolapk1s.com/feed/21305538](https://www.coolapk1s.com/feed/21305538)
+[^16]:[酷安Rannki原创](https://www.coolapk1s.com/feed/21305538)
 
-[^17]:常识基础 [https://mi.fiime.cn/tutorial](https://mi.fiime.cn/tutorial)
+[^17]:[一些常识基础](https://mi.fiime.cn/tutorial)
 
-[^18]:**刷入原生ROM的通用教程等教程** [https://fiime.cn/thread/359](https://fiime.cn/thread/359)
+[^18]:[**刷入原生ROM的通用教程等教程**](https://fiime.cn/thread/359)
 
-[^19]:****[Violet-机型PE/Plus刷入教程](https://blog.linioi.com/posts/10/)****
+[^19]:[**Violet-机型PE/Plus刷入教程**](https://blog.linioi.com/posts/10/)
 
-[^20]:****[如何在RedmiNote7Pro上刷机？](https://blog.linioi.com/posts/11/)****
+[^20]:[**如何在RedmiNote7Pro上刷机？**](https://blog.linioi.com/posts/11/)
 
 [^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
-[^22]:[**高通9008线刷救黑砖教程**](https://www.bilibili.com/read/cv15031395/](https://www.bilibili.com/read/cv15031395/)
+[^22]:[**高通9008线刷救黑砖教程**](https://www.bilibili.com/read/cv15031395/)
 
 [^23]:[保留root去更新系统](https://www.coolapk1s.com/feed/37647626)
 
@@ -211,7 +211,7 @@ Welcome to IdontKnowRoot ，本站基于 mkdocs.org，基于广泛调研的基�
 
 [^31]:[手动给予安卓应用root权限的方法](https://www.coolapk1s.com/feed/37543497)
 
-[^32]:[如何提问，并获得高回复率] (https://zhuanlan.zhihu.com/p/19779979)
+[^32]:[如何提问，并获得高回复率](https://zhuanlan.zhihu.com/p/19779979)
 
 [^33]:[Android-Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
 
