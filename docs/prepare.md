@@ -541,7 +541,7 @@ Linux 需要使用其自带包管理器安装 `android-platform-tools`
 **如果你的设备不能进行官方解锁，可以尝试深刷强解 。**
 
 !!! note
-    一些古董机型是没有BL锁的，比如红米Note。
+    在小米4c/4s发布时间以前的所有小米/红米机型没有BL锁，跳过此步骤即可。
 
 附上[小米解锁教程](https://web.vip.miui.com/page/info/mio/mio/detail?postId=28646781&boardId=5415551&isComment=&isRecommend=0&app_version=dev.211029&ref=share).
 
