@@ -238,6 +238,8 @@ Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬
 GSI/SGSI由此以A-only和A/B进行区分。
 PS: 在a11及以上已无A-only的GSI/SGSI
 
+GSI一般有两种类型，一种是erfans工具使用原包做出的gsi，另外一种则是phh-treble GSI。后者的开机率是最高的，vndk支持一般从27-32(Android8.1-12L)。因为他是从源码build的gsi，phh-treble本来就是一种通用的device tree。
+
 如果您的设备支持sar，可直接刷入AB的gsi/sgsi。如果不支持可在刷AB的GSI/SGSI前刷入makemesar补丁来让不支持sar的设备使用ab的GSI/SGSI
 
 GSI则是一种可以忽略厂商定制的通用system image(系统映像) 
