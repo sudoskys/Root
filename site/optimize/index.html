@@ -1,0 +1,1039 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://root.dianas.cyou/optimize/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
+    
+    
+      
+        <title>优化 - IdontKnowRoot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#magisk" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="IdontKnowRoot" class="md-header__button md-logo" aria-label="IdontKnowRoot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IdontKnowRoot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              优化
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sudoskys/Root" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      前言
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../prepare/" class="md-tabs__link">
+      准备
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../root/" class="md-tabs__link">
+      刷机
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      优化
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../module/" class="md-tabs__link">
+      模块
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../kernel/" class="md-tabs__link">
+      内核
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IdontKnowRoot" class="md-nav__button md-logo" aria-label="IdontKnowRoot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IdontKnowRoot
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sudoskys/Root" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        前言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prepare/" class="md-nav__link">
+        准备
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../root/" class="md-nav__link">
+        刷机
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          优化
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        优化
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#magisk" class="md-nav__link">
+    升级系统时 Magisk 的保留
+  </a>
+  
+    <nav class="md-nav" aria-label="升级系统时 Magisk 的保留">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    确定你的系统分区
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-only" class="md-nav__link">
+    如果，设备是A-Only分区机制：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ab-ab" class="md-nav__link">
+    如果设备是 A/B 分区或虚拟 A/B 分区：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rec" class="md-nav__link">
+    如果，你有第三方rec：
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    具体步骤
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    系统分区解锁
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    没有图标
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    小米刷原生
+  </a>
+  
+    <nav class="md-nav" aria-label="小米刷原生">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    刷底包
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    通用教程
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#root" class="md-nav__link">
+    隐藏 Root
+  </a>
+  
+    <nav class="md-nav" aria-label="隐藏 Root">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#zygisk" class="md-nav__link">
+    开启 Zygisk 的面具
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    面具随机包名
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shamiko" class="md-nav__link">
+    安装 SHamiko
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#momo-app" class="md-nav__link">
+    安装 Momo APP检查情况
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zfb-root" class="md-nav__link">
+    用排除列表对 ZFB 隐藏root
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rootmiui" class="md-nav__link">
+    排除列表对手机管家隐藏root(MIUI系统专属)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    疑难解答
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shamiko_1" class="md-nav__link">
+    “Shamiko”白名单模式
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    隐藏应用列表
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#lsposed" class="md-nav__link">
+    安装 LSPosed
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    华为降级
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        模块
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kernel/" class="md-nav__link">
+        内核
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <a href="https://github.com/sudoskys/Root/edit/main/docs/optimize.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>优化</h1>
+
+<p>因为在Google加强安全性之前，SuperSU 一直有效，直到 Android Marshmallow 出现。修改系统分区会向尝试检测根目录的应用发送红色标记。</p>
+<p>Google SafetyNet是一个用于监视系统的API，如果检测到篡改，它将阻止某些应用程序运行。您不能将Google Pay或Netflix与SuperSU一起使用。修改系统后，用户不会获得任何 OTA（Over The Air Updates， 无线下载 ）更新 。</p>
+<p>所以现在，只讲 Magisk</p>
+<h2 id="magisk"><strong>升级系统时 Magisk 的保留</strong></h2>
+<h3 id="_1">确定你的系统分区</h3>
+<p>首先确定你的系统分区机制，对于安卓11的机型，大多数都是Virtual-A/B的分区机制。安卓7.0以后有部分机型搭载A/B分区或者A-Only分区机制。</p>
+<p>安装<a href="https://www.coolapk.com/apk/net.imknown.android.forefrontinfo">这个应用</a>查看设备的分区机制。</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>动态分区的设备分区会有两个槽位，并且在系统更新时会来回替换分区。每次更新完成只需要重启手机，而不用进入Recovery来进行Update操作。</p>
+<p>A/B 无缝升级：通常拥有A/B的分区更新系统，会把需要刷入的新分区临时存储在用户数据分区。
+当用户进行重启之后，系统将会被切换到新的槽位。如设备正常启动，分区会被标记为成功启动，并把存储在用户数据分区的系统分区移动到新槽位。</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>注意，更新前关闭所有模块以防止设备无法启动</p>
+</div>
+<h3 id="a-only"><strong>如果，设备是A-Only分区机制</strong>：</h3>
+<p>很遗憾。这种设备不支持无缝更新，但是你可以操作自定义Recovery来进行卡刷达到系统更新和Magisk的重新刷入，设备内的模块因为在用户数据分区，所以不会消失。</p>
+<h3 id="ab-ab"><strong>如果设备是 A/B 分区或虚拟 A/B 分区</strong>：</h3>
+<p><strong>？增量更新Magisk</strong></p>
+<ul>
+<li>恢复原厂镜像</li>
+</ul>
+<p>安装了 Magisk 后记得关掉系统的自动更新。有更新的时候，写点卸载 Magisk &gt; 还原原厂镜像，<strong>不重启</strong>。</p>
+<div class="admonition help">
+<p class="admonition-title">联发科</p>
+<p>联发科设备由于其系统机制，在开机状态下，无法更改活动槽位的分区数据。还原原厂映像的执行方法是调用之前Magisk在系统内保存的原版分区映像文件并刷入。但是因为机制问题。所以此操作文字提示会成功，但是实际是失败的。对于没有进行过完整包更新的高通设备，第一次需要使用完整包更新保留Magisk，后续才可使用增量更新。</p>
+</div>
+<p>恢复完成之后，下载你的增量更新包，<strong>不重启</strong>。</p>
+<p>下载完毕进行下一步操作。打开Magisk应用程序，点击第一个“安装”，之后选择“安装到未使用的槽位，然后等待执行完毕。</p>
+<div class="admonition info">
+<p class="admonition-title">增量更新</p>
+<p>大部分情况下不会修改核心分区，系统执行自己的策略来进行更新。由于A/B的分区机制，每次更新会复制活动槽位Boot分区的镜像文件并刷入到新的槽位。系统更新程序会检测分区的完整性，之后才会进行更新。恢复完成之后，下载你的增量更新包。</p>
+</div>
+<p>成功后重启设备，增量更新就成功完成了。
+<sup id="fnref:23"><a class="footnote-ref" href="#fn:23">1</a></sup></p>
+<p><strong>？全量更新Magisk</strong></p>
+<p>按照上面[增量更新Magisk]的方法进行操作，但是不需要恢复原厂映像。
+全量更新需要下载完整包来进行更新，请不要直接下载增量包！</p>
+<h3 id="rec"><strong>如果，你有第三方rec</strong>：</h3>
+<ol>
+<li>
+<p>twrp为例，下载全量升级包，先关闭所有模块，去rec设置里面勾选升级后重装twrp，升级后用Magisk修补boot等选项，点安装，选择升级包以后把这三个勾都打勾升级即可开机拥有权限（所有需要打勾的参考下图）有些机型可能无法直接去修补，自行测试吧，有一定风险损失数据，如果不愿意冒险就选择另一种方法</p>
+</li>
+<li>
+<p>也可以只勾选重装twrp，升级好了之后再刷入面具的卡刷包就好了，有些twrp自带面具的，直接去高级里面安装Magisk就可以了。</p>
+</li>
+</ol>
+<p>目前各大品牌的旗舰手机均采用A/B架构（即同时有两套系统共存、其中一个作为备份、共用一份用户数据）。这就为我们升级系统提供了极大的便利。当我们安装更新后，在重启手机以前，新的系统将作为备份系统存在，这时我们可以利用现有系统仍保留的root权限修改备份系统的分区，刷入 Magisk 。</p>
+<p><img alt="AB分区示意" src="https://cdn.sspai.com/2019/02/26/1efd3d6a9eb66f6f441e8695aa0c2a0f.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" /></p>
+<p>扩展材料：<a href="https://sspai.com/post/53075">保留 Magisk 进行「无痛 OTA」</a>的方法 OTA 之后重新刷一次 Magisk。</p>
+<p>扩展文章：<a href="https://mi.fiime.cn/Dtech/65.html">AB分区保留面具升级系统</a></p>
+<details class="help">
+<summary>Google Pixel Android 10升级11因magisk模块不兼容11导致无法开机?</summary>
+<p>解决方法（2020年，或许已经失效，请询问高手确认）：
+1. 下载官方包提取里面的boot.img刷入手机开机，此时无magisk状态可开机
+2. 在无magisk内核的情况下卸载magisk主程序
+3. 重新生成最新版canary magisk boot文件,并使用fastboot boot (magisk内核路径）临时使用magisk boot启动后 此时没有magisk主程序模块不会被加载且开机成功。
+4. 别重启手机，直接重新安装canary magisk主程序然后更新magisk程序为最新版，然后下载re文件管理器进入data/adb里面把不兼容的模块删除。此时复制官方对应boot到机身，使用新版canary magisk生成magisk boot，选项为选择并修补一个文件：选中官方boot.img生成magisk boot，并把生成的文件复制到电脑。重启进fastboot模式
+5. 重新刷入生成的magisk boot内核。
+6. 开机 完成。
+仅供参考</p>
+</details>
+<h3 id="_2"><strong>具体步骤</strong></h3>
+<p>关闭系统自动更新。设置-系统-开发者选项。</p>
+<p>下载更新并安装更新。此时会提示检测到root需要下载全量包，为正常现象。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>待其安装好后，千万不要重启，否则你Magisk就没了，又得重装一遍。</p>
+</div>
+<p>这时候打开Magisk Manager。卸载-还原原厂镜像。安装-安装-安装到未使用的槽位（OTA后）。</p>
+<p>接着按提示重启即可。重启完成后系统应该是新系统，Magisk应该还在。</p>
+<p><a href="https://zhuanlan.zhihu.com/p/507103088">Redmi K50 ROOT刷Magisk（面具）教程</a></p>
+<h2 id="_3">系统分区解锁</h2>
+<p>现在几乎所有手机都不能动 system，也不建议解锁。</p>
+<p>现在除了部分手机可以用模块，剩下的方法只有第三方 Rec 了。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>自安卓7开始，很多手机的system分区默认为只读模式，不可进行删除读写，导致我们即使获取root后，也一样不能去系统文件进行深一层的修改改造。只有当我们解锁system后，再次修改system分区文件才可以正常修改，也可以更直接的进入system层，删除我们不想要的繁杂软件。这里最常见的就是解锁system分区后替换修改system/etc/hosts文件案例。未解锁system分区的机型，删除会出现失败或者直接删除后重启不能开机。</p>
+</div>
+<h2 id="_4">没有图标</h2>
+<div class="admonition info">
+<p class="admonition-title">不能创建 Lsposed 图标？</p>
+<p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">不能创建 Magisk 图标？</p>
+<p>面具设置中有生成图标的选项</p>
+</div>
+<h2 id="_5">小米刷原生</h2>
+<p>刷机有风险 如果不会刷还请不要刷</p>
+<h3 id="_6">刷底包</h3>
+<p>首先要解锁手机BL锁 。</p>
+<p>解锁完下载MIUI系统底包 必须要和类原生安卓版本一样 安卓9=安卓9 安卓10=安卓10请前往官网或者mi.fiime.cn下载相对应的系统底包，然后参考上面的教程刷第三方REC。</p>
+<p>刷完第三方rec会自动进入 进去之后把下载好的底包移动到手机里面进入清除 把按钮滑到右边 双清完再刷系统点击安装 选择下载好的底包 有个滑动按钮 滑到右边就开始刷了 记住 钩子不要勾</p>
+<h3 id="_7">通用教程</h3>
+<p>刷完底包后请不要清除任何东西</p>
+<p>请直接刷完底包接着刷原生ROM包</p>
+<p>刷完，返回主页面 。</p>
+<p>进入清除 格式化Data分区 。输入yes 三清就可以重启手机了。</p>
+<p><strong>注意:如果不格式化DATA可能导致卡开机动画且无法连接电脑读盘</strong></p>
+<p>三清:Dalvik/ART CacheCacheData刷机前基本上必选三清！目的是新系统的兼容性达到最佳。</p>
+<p>进入系统如果有谷歌验证的话 过不了，建议格frp锁。</p>
+<p><a href="https://atmb.top/guide/advanced/jump_google/">如何跳过Google开机设置/验证/向导</a></p>
+<blockquote>
+<p>或者刷入<a href="https://mi.fiime.cn/">https://mi.fiime.cn</a> 的跳过包？
+</p>
+</blockquote>
+<p>💡 第三方rec需要选择和安卓版本一样的包如果无限重启REC 请尝试刷入一次</p>
+<h2 id="root">隐藏 Root</h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Riru 已经停止维护，所以本节只讲 Zygisk</p>
+</div>
+<p>首先你要安装 Magisk 测试软件来检测你的 ROOT 是否隐藏良好。</p>
+<p>点击 <a href="https://github.com/Dr-TSNG/ApplistDetector/releases">这里</a> 下载相关应用，如果不能下载 Github 文件请复制 apk 链接填入<a href="https://ghproxy.com/">这里</a>下载。</p>
+<p>你也可以在文件包得到 Momo检测软件，地址在文档首页。</p>
+<p><strong><em>*ROOT目前主流的检测方法</em></strong>*</p>
+<p>1、检查常用目录是否存在su</p>
+<p>2、使用which命令查看是否存在su</p>
+<p>3、主动申请root权限</p>
+<p>4、执行busybox</p>
+<p>5、访问私有目录，如/data目录，查看读写权限</p>
+<p>6、读取build.prop中关键属性，如ro.build.tags和ro.build.type</p>
+<p>7、检查市面主流的模拟器</p>
+<p>8、检测frida、xposed等Hook框架的特征</p>
+<div class="admonition tip">
+<p class="admonition-title">注意</p>
+<p>本节内容部分都是 @我叫妙涵 的 酷安专栏内容。</p>
+</div>
+<h3 id="zygisk">开启 Zygisk 的面具</h3>
+<p>如果你现在用的阿尔法(Alpha)版面具，开了 MagiskHide 功能，要先关闭 MagiskHide 功能，然后开启Zygisk才能用本期教程的方案。(Hide已经在正式版本中被取消了，详见关于页面)</p>
+<p><strong>不管哪一个版本，只开启Zygisk，不要开启遵守排除列表！</strong></p>
+<p>开启Zygisk后要重启手机，Zygisk才能生效。</p>
+<p><strong>如果</strong>你每次打开面具，它都会提示“检测到不属于Magisk的su文件”，对于这种情况，你一定要安装一个名为“隐藏系统root”的面具模块，文件包里有，或者删除system\xbin目录下一个名为“su”的文件。我建议你安装模块，不建议你删除su文件。因为个别系统System只读，删不掉此文件。个别系统删掉开机也会自动恢复。</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>如果没提示这个，不要试图安装“隐藏系统root”模块。</strong></p>
+</div>
+<p>刷了这个<code>隐藏系统root</code>模块，会导致Momo提示找到Magisk，但是影响不大，<strong>更不会影响隐藏root</strong>。</p>
+<p>我个人建议，如果不是强迫症，建议不要在意这个了。如果你是MIUI开发版系统，比较在意Momo的提示，想让Momo不提示找到Magisk，那么你需要重刷一遍当前开发版系统(重刷系统这一步是为了关闭系统自带的root)。重刷完不要打开系统自带的root，不能用面具接管系统root的方式刷面具，你应该用第三方recovery或者修补boot的方式刷入面具。</p>
+<h3 id="_8">面具随机包名</h3>
+<p>面具设置里，找到“隐藏Magisk应用”选项点开，会跳出一个对话框。这个对话框里已经有默认名称“Settings”，你可以把它删掉并输入你喜欢的名字。比如我输入<code>balabala</code>，点确定就不用管它了，它最后会自动跳转到新生成的面具界面里。</p>
+<p>期间无论跳转什么界面，你只需要点确定或者允许就行了。面具随机包名成功后，会看到原来的面具消失，桌面出现新生成的面具“MiaoHan”。如果随机包名失败或者“隐藏Magisk应用”一直转圈圈，那么你需要使用<strong>代理隧道</strong>(不懂请自己搜索，不要来问)。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>如果面具随机包名后，出现 “ 还原Magisk 应用”的提示，重启一下手机就好了。<strong>不用点安装，只需重启一遍手机。</strong></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Magisk 图标好丑！</p>
+<p>面具的设置中有生成一个图标的选项</p>
+</div>
+<h3 id="shamiko">安装 SHamiko</h3>
+<p>一个面具模块，可以在面具开启Zygisk的情况下，实现类似于MagiskHide的隐藏root效果，可以对应用隐藏Magisk、Zygisk本身和二进制文件“su”。你可以把它简单理解为，就是隐藏root的模块。</p>
+<p>文件在文档首页的<strong>资源仓库支持中均有，请自行下载</strong>。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>安装 Shamiko 只能隐藏你的 Root ，不能过谷歌的 SafetyNet。</p>
+</div>
+<h3 id="momo-app">安装 Momo APP检查情况</h3>
+<p>打开面具，右上角点击齿轮进入面具设置界面。在面具设置界面下滑找到配置排除列表选项，点配置排除列表选项进入排除列表界面。在 Shamiko 模块的加持下，理论上你在排除列表勾选哪个应用，哪个应用就检测不到 root。</p>
+<p>建议在面具排除列表勾选应用(即对应用隐藏 root )后，最好检查一下应用是否在后台运行。</p>
+<p>如果是在后台运行，你最好结束一下 (<strong>注意长按打开应用信息界面彻底结束进程</strong>) ，再打开应用。如果不是在后台运行，你就可以直接打开应用。</p>
+<p>当面具排除列表勾选 Momo 后，打开 Momo 可以看到 Momo 已经不再提示找到可执行程序 “su”、Magisk、Zygisk，说明 “Shamiko” 模块配合面具排除列表隐藏 root 是有效的。接下来我们如法炮制，在排除列表勾选那些检测到 root 后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到 root ，也就可以正常运行了。</p>
+<p><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png" /></p>
+<h3 id="zfb-root">用排除列表对 ZFB 隐藏root</h3>
+<p>玩机的朋友可能会知道，当 root 后 ZFB 可能会无法刷脸，归根结底还是因为ZFB检测到了 root。我们需要对 ZFB 隐藏r oot，相关步骤如下：</p>
+<p>进入面具排除列表，然后右上角搜索找到 ZFB，点击 ZFB 图标把它展开如图四，这里面显示的一条条都是 ZFB 的进程。当我们勾选 ZFB 的所有进程， ZFB 就检测不到 root 了，也就是对 ZFB 隐藏 root 了。不用一个个点，展开后点 ZFB 右边的方框即可全部勾选这些进程。把这些进程全部勾选后，如图六，可以看到 ZFB 上面的进度条全满。这个进度条表示里面的进程有没有全部勾选，如果没有全部勾选，进度条就不会全满。就像图七图八进度条不全满，里面的进程就没有全部勾选，这样是不行的。必须全部勾选里面的进程，才能完全隐藏 root 。</p>
+<p>非必需操作：排除列表勾选完 ZFB 后，退出面具。然后长按桌面的 ZFB 图标， ZFB 图标上会出现“应用信息”四个字，点“应用信息”进入“应用信息”界面。如果你是显示图一那样，你就直接去打开 ZFB，也不用点“结束运行”。如果你是显示图二那样，就点一下“结束运行”，然后再去打开 ZFB。</p>
+<p>好了，不出意外的话，当排除列表勾选 ZFB 后，打开 ZFB 就会发现刷脸功能又可以使用了。</p>
+<h3 id="rootmiui">排除列表对手机管家隐藏root(MIUI系统专属)</h3>
+<p>如果你是MIUI系统的用户，对ZFB或者薇信以及其他金融类应用隐藏root后，用它们ZF时可能会弹出以下提醒。</p>
+<p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。SHamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
+<p>进入面具排除列表，然后右上角搜索手机管家，大概率都会搜索不到，主要是方法不对，以下教大家查找手机管家的正确方法。</p>
+<h3 id="_9">疑难解答</h3>
+<details class="help">
+<summary><strong>Momo提示找到Magisk解决方法</strong></summary>
+<p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk。</p>
+<p><strong>解决方法</strong>
+(1)去面具模块界面，检查有没有安装“隐藏系统root”模块。如果是安装了“隐藏系统root”模块，那就不要解决Momo提示找到Magisk了。因为就是这个模块，导致Momo提示找到Magisk。但是你又不能停用这个模块，停用它你就更加隐藏不了root。</p>
+<p>关于“隐藏系统root”这个模块的作用，我发现许多人对这个模块的作用存在很大误解。</p>
+<p>如果你每次打开面具时，它都会提示“检测到不属于Magisk的su文件”，那么你需要安装这个“隐藏系统root”模块，如果你打开面具没提示这个，就不能安装也不要安装。</p>
+<p>(2)去面具模块界面，检查有没有安装“隐藏系统root”模块。如果没安装这个模块，那说明是其他模块导致Momo提示找到Magisk。</p>
+<p>怎么排查是哪个面具模块引起Momo找到Magisk呢？我建议停用除“SHamiko”以外的所有模块，即“SHamiko”模块你不要停用，其余模块全部停用。PS:停用的面具模块，主要包括字体模块、桌面模块、调节音质、优化触控、停用温控、开启高刷、调整扬声器马达、开启快充等等这一类优化模块。</p>
+<p>停用后重启手机打开Momo再看看，如果停用面具模块解决了Momo找到Magisk的问题，那么我建议大家重新启用面具模块时，一个一个或者两个两个来启用。每启用一个或者两个，就重启下手机打开Momo再看看。直到Momo再次提示找到Magisk，就可以知道是哪个模块引起的了。知道是哪个模块引起的，就把哪个模块移除不用就行了。</p>
+</details>
+<details class="help">
+<summary><strong>Momo提示找到二进制文件“su”解决方法</strong></summary>
+<p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，特定用户也安装了“隐藏系统root”模块，打开Momo还是提示找到二进制文件“su”。</p>
+<p><strong>解决方法</strong>
+我建议停用除“SHamiko”以外的所有模块，即“SHamiko”模块你不要停用，剩余模块全部停用。如果你是安装了“隐藏系统root”模块的特定用户，那么你就停用除“隐藏系统root、SHamiko”以外的所有模块。即这两个SHamiko模块和隐藏系统root模块你不要停用，剩余模块全部停用。</p>
+<p>停用后重启手机打开Momo再看看，如果停用面具模块解决了Momo找到二进制文件“su”的问题，那么我建议大家重新启用面具模块时，一个一个或者两个两个来启用。每启用一个或者两个，就重启下手机打开Momo再看看。直到Momo再次提示找到二进制文件“su”，就可以知道是哪个模块引起的了。知道是哪个模块引起的，就把哪个模块移除不用就行了。</p>
+</details>
+<details class="help">
+<summary><strong>Momo提示找到Zygisk的解决方法</strong></summary>
+<p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Zygisk。</p>
+<p><strong>解决方法</strong>
+如果你隐藏应用列表的生效应用里选择了Momo，那么你应该取消对Momo的隐藏。Momo不会检测应用列表，你对Momo隐藏应用列表反而会导致Momo检测到Zygisk。</p>
+<p>如果隐藏应用列表生效应用里没选择Momo，Momo还是提示发现Zygisk。那么一般可能是因为面具版本太低或者Shamiko版本太低，总之发现Zygisk这个不太好解决。有时候你升级Momo版本，(升级后的Momo)就有可能发现Zygisk；或者你升级面具版本，也有可能导致Momo发现Zygisk。</p>
+<blockquote>
+<p>0.5.2版本的Shamiko模块是配合25.1以上版本的面具，才能对Momo隐藏Zygisk。想让Momo检测不到Zygisk，你可以升级面具版本到最新25.2。</p>
+</blockquote>
+<p>启用“Shamiko”白名单模式后，你手机里安装的所有应用(也包括系统应用)都检测不到root了。你不用再像第(一)期教程中的那样，想对哪个应用隐藏root，还必须得在面具排除列表勾选哪个应用才行。启用白名单模式后，你可以跟排除列表繁琐的勾选步骤说再见了，不用再去配置排除列表了。</p>
+</details>
+<details class="help">
+<summary><strong>还不行？停用部分面具模块</strong></summary>
+<p>适用场景：
+也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
+<p>原因分析：这种情况不是因为“Shamiko”模块失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
+</details>
+<h3 id="shamiko_1"><strong>“Shamiko”白名单模式</strong></h3>
+<p><strong>需要注意的事项</strong></p>
+<p>既然SHamiko白名单模式比黑名单模式有优势，那是不是可以不加分辨的启用白名单模式呢？还真不是这样的，在决定使用白名单模式前，我建议你知道一些注意事项：</p>
+<p>⑴白名单模式存在一些较为严重的Bug</p>
+<p>部分机型启用“Shamiko”白名单模式后，打开一些应用会闪退，并且部分应用自带的浏览器打不开网页。还有就是，开启白名单模式会造成手机性能的损耗，不过这点感知不强。</p>
+<p>⑵新安装应用无法获取root权限</p>
+<p>有些酷友不明白这句话的意思，我给大家详细解释一下：首先打开面具，进入超级用户界面，可以看到你授权过root的应用。当你启用“Shamiko”白名单模式后，也只有超级用户界面的应用能获取root了。你新安装的(需要root的)应用，以及你之前你没打开过(需要root)的应用，都获取不了root。我举个例子：比如你启用“Shamiko”白名单模式后，安装搞机助手(搞机助手需要root才能运行)，那么搞机助手就会获取不了root，进而无法运行。</p>
+<p><strong>“Shamiko”白名单模式的隐藏root方案</strong></p>
+<blockquote>
+<p>面具启用随机包名+开启Zygisk+遵守排除列表(不能开)+安装“SHamiko”模块+启用“Shamiko”白名单模式+安装“隐藏系统root”模块(特定用户安装)→若无效→停用或移除部分面具模块
+</p>
+</blockquote>
+<p>“ Shamiko”白名单模式跟黑名单模式一样，也需要关闭遵守排除列表，“Shamiko”模块才能生效。</p>
+<p>关于特定用户的安装“隐藏系统root”模块还是得再讲一下。如果你每次打开面具，它都会提示“检测到不属于Magisk的su文件”，那么你一定要安装一个名叫“隐藏系统root”的面具模块。如果没提示这个，你不能安装，也没必要安装。</p>
+<p>PS：这个“隐藏系统root”模块文件包里就有，下载后在面具里刷入即可。刷完记得重启手机</p>
+<p><strong>启用“SHamiko”白名单模式的方法</strong></p>
+<p>既然要启用“Shamiko”白名单模式，首先要学会判断当前“Shamiko”模块是处于哪种模式？如何判断呢？我们要看“Shamiko”的模块描述。首先我们打开面具进入模块界面，可以看到“Shamiko”笑脸正在工作。如果“Shamiko”的模块描述里显示的是“blacklist mode”，说明“Shamiko”处于黑名单模式，正在以黑名单模式运行；如果“Shamiko”的模块描述里显示的是“whitelist mode”，说明“Shamiko”处于白名单模式，正在以白名单模式运行。</p>
+<p>正常情况下，你的“Shamiko”模块描述里都应该显示“blacklist mode”，因为这是“Shamiko”模块的默认工作方式。</p>
+<p><strong>如何切换为“Shamiko”白名单模式呢？</strong></p>
+<p>有以下两种方法：</p>
+<p>⑴安装一个名叫“Shamiko”的软件</p>
+<p>这是个APP应用，我置顶评论的链接里就有下载。这是咱们酷安某位大佬开发的软件，我不知道是哪个大佬开发的，如果有知道的兄弟麻烦告诉我下。这个软件可以一键开启和关闭“Shamiko”黑名单模式，非常的方便，使用方法也很简单。</p>
+<p>首先确保“Shamiko”模块处于黑名单模式，然后下载和安装这个“Shamiko”软件。安装后打开，会有超级用户弹窗提示“Shamiko”软件要申请root权限，你点允许。给完“Shamiko”软件root权限后，打开中间那个“whitelist mode”选项，“Shamiko”模块就切换为白名单模式了。这时你进面具里，就会发现“Shamiko”模块已经处于“whitelist mode(白名单模式)”了，甚至不用重启手机，立即生效。切换回“blacklist mode(黑名单模式)”也很简单，关闭“whitelist mode”选项就行了。切换回也是不用重启手机，立即生效。</p>
+<p>PS：无论“Shamiko”模块是从黑名单模式切换为白名单模式，还是从白名单模式切换回黑名单模式。用这个“Shamiko”软件切换后无论关机还是重启，都会一直有效哦。还有这个“Shamiko”软件也不用保持后台运行，用完你可以在最近任务卡片里划掉它。</p>
+<p>⑵用MT管理器新建“whitelist”空文件</p>
+<p>首先确保“Shamiko”模块处于黑名单模式，打开MT管理器，点左上角三条横杠，进根目录。此时MT管理器若申请root权限你要点允许，否则无法访问根目录下的文件夹。给MT管理器root权限后，按/data/adb/shamiko的路径点进去， 在shamiko文件夹里建一个名为whitelist文件。文件名不好记，大家复制粘贴就好了。当文件建完也不用重启，“Shamiko”就启用了“whitelist mode(白名单模式)”。切换回“blacklist mode(黑名单模式)”也很简单，用MT管理器删除whitelist文件就行了。切换回也是不用重启手机，立即生效。</p>
+<p>PS：大家还记得我这篇教程第二部分讲的内容吗？当你开启“Shamiko”白名单模式后，你新安装的(需要root的)应用，以及你之前你没打开过(需要root)的应用，都获取不了root。当你现在“Shamiko”处于白名单模式，遇到新安装的应用申请不了root时，你可以先关闭白名单模式。关闭后白名单模式后，在黑名单模式下打开所需要root的应用，让它申请一遍root。然后再用“Shamiko”软件或者MT管理器打开“Shamiko”白名单模式。</p>
+<p><strong>测试“Shamiko”白名单模式隐藏root效果</strong></p>
+<p>当我们启用“Shamiko”模块白名单模式后，如何判断它有没有隐藏root的效果呢？还是需要用上我们强大的“Momo”APP了。PS：Momo是一个检测设备是否root的应用！如果打开Momo，Momo提示找到可执行程序“su”、Magisk、Zygisk说明检测到了root；如果打开Momo，Momo没有提示找到可执行程序“su”、Magisk、Zygisk说明隐藏root有效或者未root。</p>
+<p>如果你是从“Shamiko”黑名单模式切换为白名单模式的，我建议先去排除列表取消对Momo的勾选，再打开Momo看看检测结果。因为这样做，有助于判断“Shamiko”白名单模式是否有效隐藏root。当你排除列表取消对Momo的勾选，再次打开Momo，Momo依旧没有提示找到可执行程序“su”、Magisk、Zygisk说明白名单模式隐藏root是有效的。</p>
+<p>当确定“Shamiko”白名单模式隐藏root有效后，我们可以打开任何因为root打不开的银行类、金融类、游戏类应用。记住，你现在是白名单模式了，不需要用排除列表勾选了。若你切换回黑名单模式，一定要在排除列表勾选要隐藏root的应用。</p>
+<p><strong>如果隐藏无效就停用面具模块</strong></p>
+<p>适用场景：
+也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，模块描述里也显示的是“whitelist mode(白名单模式)”，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
+<p>原因分析：这种情况不是因为“Shamiko”模块白名单模式失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
+<h3 id="_10">隐藏应用列表</h3>
+<p>隐藏应用列表完全没有隐藏root的作用，但是如果你有安装 LSPosed 它可以隐藏你的模块应用，隐藏 LSPosed 相关特征。</p>
+<p>银行类金融类游戏类应用，检测设备环境的优先级永远是先检测root，然后再检测应用列表或者不检测应用列表。大部分应用都不检测应用列表。</p>
+<h2 id="lsposed">安装 LSPosed</h2>
+<p>面具设置中开启 Zygisk（riru已经停止维护）
+如果你使用Zygisk，那么Riru就无法使用。</p>
+<p>Lsposed已经推出了Zygisk版本。Zygisk模式下用Shamiko模块的白名单模式。</p>
+<p>你可以在<a href="https://github.com/LSPosed/LSPosed/releases/latest">这里</a>下载安装 zygisk 版本的 LSPosed 并刷入它，LSPosed 自带仓库。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>如果不能下载请复制Github的 apk 链接请填入<a href="https://ghproxy.com/">镜像站</a> 下载</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>请勿安装多个框架</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">不能创建 Lsposed 图标？</p>
+<p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
+</div>
+<p>刷入教程看下一节。</p>
+<h2 id="_11">华为降级</h2>
+<p>请读 <a href="https://www.coolapk1s.com/feed/27132475">华为麒麟の系统降级教程</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:23">
+<p><a href="https://www.coolapk1s.com/feed/37647626">保留root去更新系统</a>&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:8">
+<p><a href="https://www.coolapk1s.com/feed/37950576"><strong>Root隐藏教程</strong>图文分享</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:14">
+<p><a href="https://zhuanlan.zhihu.com/p/428730333"><strong>小米如何刷入第三方Recovery</strong></a>&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:29">
+<p><a href="https://www.coolapk1s.com/feed/34860331">Root升级系统</a>&#160;<a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">September 7, 2022 07:25:08</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 14, 2022 18:20:58</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../root/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 刷机" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              刷机
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../module/" class="md-footer__link md-footer__link--next" aria-label="下一页: 模块" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              模块
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 集体所有，以商用为目的的引用需遵守引录条目相应的知识协议或申请其作者的授权
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/gjzsr" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.integrate", "navigation.top", "navigation.instant"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2ab50757.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,0 +1,793 @@
+
+<!doctype html>
+<html lang="zh" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://root.dianas.cyou/kernel/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.3.1, mkdocs-material-8.4.3">
+    
+    
+      
+        <title>内核 - IdontKnowRoot</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.6b80c2a2.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.cbb835fc.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#4051b5">
+        
+      
+      
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="indigo" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          跳转至
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="页眉">
+    <a href=".." title="IdontKnowRoot" class="md-header__button md-logo" aria-label="IdontKnowRoot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IdontKnowRoot
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              内核
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="查找">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="清空当前内容" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/sudoskys/Root" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      前言
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../prepare/" class="md-tabs__link">
+      准备
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../root/" class="md-tabs__link">
+      刷机
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../optimize/" class="md-tabs__link">
+      优化
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../module/" class="md-tabs__link">
+      模块
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      内核
+    </a>
+  </li>
+
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href="../about/" class="md-tabs__link">
+      关于
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IdontKnowRoot" class="md-nav__button md-logo" aria-label="IdontKnowRoot" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+
+    </a>
+    IdontKnowRoot
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/sudoskys/Root" title="前往仓库" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        前言
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../prepare/" class="md-nav__link">
+        准备
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../root/" class="md-nav__link">
+        刷机
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../optimize/" class="md-nav__link">
+        优化
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../module/" class="md-nav__link">
+        模块
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          内核
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        内核
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目录">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    看前须知
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    为什么自定义系统内核
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    准备
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    准备环境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    准备配置并开始编译
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    打包并刷入内核
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        关于
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+
+  <a href="https://github.com/sudoskys/Root/edit/main/docs/kernel.md" title="编辑此页" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+  <h1>内核</h1>
+
+<p>本节为非必须部分，上手需要<strong>一定的知识储备</strong>，如果你<strong>没事</strong>或者<strong>不清楚为什么搞内核</strong>，可以看下一节。</p>
+<p>结合此文档阅读本节内容：<a href="https://source.android.com/docs/setup/build/building-kernels">构建内核</a></p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>如果你的手机内核版本为<code>5.x</code>，那它多半使用了 GKI(Generic Kernel Image)，为这些手机制作内核需要额外步骤，不能按照以下教程进行。否则可能会导致手机部分设备(如触摸屏，尾插等)无法工作。</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>当你在执行时，因为每个人所使用的系统操作环境不同，很可能会出现不可控的奇怪报错，出现问题提问前请确保严格按照本教程操作。<strong>提问要给出详细信息和测试结果，并参考首页的提问指南</strong></p>
+</div>
+<h4 id="_1">看前须知</h4>
+<p>首先，你需要确认你的手机内核是<strong>开源</strong>的（这个需要自己了解搜索信息）。</p>
+<p>如果不开源，那就不用继续看了。</p>
+<h3 id="_2">为什么自定义系统内核</h3>
+<p>我们都知道,安卓使用 Linux 内核，但是系统内核的功能被严重阉割，导致有些东西(例如 Docker)跑不起来。</p>
+<p>这时候，我们就需要构建自己的 Linux 内核，来补全这些功能，让我们需要的软件能正常运行。</p>
+<p>修改内核能做到的当然不止如此，在安卓上，Linux 内核扮演的角色大致相当与电脑的 BIOS+系统内核，也就是说，你还可以通过修改内核来优化性能，甚至超频。不过这就是后话了。</p>
+<p>本教程将以一加8t为例，从头开始构建一个支持 Docker 的内核。其他手机的步骤和这个基本相同。</p>
+<h3 id="_3">准备</h3>
+<p>你可以去 <a href="https://forum.xda-developers.com">XDA开发者论坛(英文)</a> 寻找你手机的内核源码，直接在论坛内搜索你的手机型号即可。这里的内核一般是经过大佬修改的第三方版，带有性能优化或额外功能。本人推荐去这里查找。</p>
+<p>如果没有也别沮丧。可能只是还没人做而已。 一般来讲，小米几乎所有手机和一加所有手机的内核都是开源的。</p>
+<p>小米开源内核目录<a href="https://github.com/micode/xiaomi_kernel_opensource">在这里</a>，直接查找你手机的型号即可。</p>
+<p>一加开源内核<a href="https://github.com/orgs/oneplusoss/repositories">在这里</a>，对于初学者，在这个目录找到你手机对应的源码比较难，所以推荐直接谷歌 “一加xx内核源码”。</p>
+<p>对于其他品牌，你可以试着谷歌 “你的手机型号+内核源码”。</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p><strong>注意内核应该和安卓版本对应</strong></p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>有些设备有多个版本的内核可用(例如红米Note7可用的版本有 <code>4.4</code>,<code>4.9</code>,<code>4.14</code>,<code>4.19</code>)，这些内核版本和 ROM 是对应的，刷入其他版本会导致<strong>无法开机</strong>，所以你应该记住你当前的内核     版本。</p>
+</div>
+<p>如果能找到(一般内核源码都是放在Github)，那么就可以继续了。</p>
+<h3 id="_4">准备环境</h3>
+<p>编译 Linux 内核肯定是需要 Linux 的，目前有如下几种方法</p>
+<ul>
+<li>
+<p>实机安装一个 Linux 发行版(比如 Ubuntu)</p>
+</li>
+<li>
+<p>使用 Windows 的 Linux 子系统v2(WSL2)安装一个Linux发行版(推荐 Ubuntu)</p>
+</li>
+<li>
+<p>手机上 Chroot 安装一个 Linux 发行版(推荐 Ubuntu，至于安装，可以使用 <a href="https://github.com/2moe/tmoe">tmoe</a> 项目)</p>
+</li>
+</ul>
+<p>除非迫不得已，否则我不建议你用手机编译来折磨自己。</p>
+<p>如果电脑配置不大行，建议实机安装。</p>
+<p>对于如何安装以上的系统不在本文主题内，如果你不懂，可以搜索一下。</p>
+<p>本教程以 Ubuntu18.04 为例.</p>
+<p>首先，我们要把软件源更换为国内镜像源，在终端输入以下命令:</p>
+<div class="highlight"><pre><span></span><code>sudo sed -i <span class="s2">&quot;s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&quot;</span> /etc/apt/sources.list
+sudo sed -i <span class="s2">&quot;s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g&quot;</span> /etc/apt/sources.list
+sudo apt update
+</code></pre></div>
+<p>以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令:</p>
+<p><div class="highlight"><pre><span></span><code>sudo apt install -y bc bison build-essential ccache cpio curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-
+dev unzip openjdk-8-jdk language-pack-zh-hans python vim
+</code></pre></div>
+在上述命令执行完后，我们需要下载编译器，这里使用clang。</p>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~ <span class="o">&amp;&amp;</span> git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/kdrag0n/proton-clang.git
+</code></pre></div>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>如果克隆很慢，尝试把源地址中的<code>github.com</code>改成<code>hub.fastgit.xyz</code>。</p>
+</div>
+<p>下载完后，我们在终端输入<code>vi ~/.bashrc</code>打开编辑器，按下键盘上的 "Insert" 键，使用方向键滑到文件底部，加上以下代码：</p>
+<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">&quot;~/proton-clang/bin:</span><span class="nv">$PATH</span><span class="s2">&quot;</span>
+<span class="nb">export</span> <span class="nv">CROSS_COMPILE</span><span class="o">=</span>aarch64-linux-gnu-
+<span class="nb">export</span> <span class="nv">CROSS_COMPILE_ARM32</span><span class="o">=</span>arm-linux-gnueabi-
+<span class="nb">export</span> <span class="nv">ARCH</span><span class="o">=</span>arm64
+</code></pre></div>
+<p>然后按下 “Esc” 键，输入<code>:wq!</code>保存退出。</p>
+<p>接着输入以下命令 <code>source ~/.bashrc &amp;&amp; clang --version</code>，它应该有大概长这样的输出(因人而异)：
+<div class="highlight"><pre><span></span><code>Proton clang version 13.0.0 (https://github.com/llvm/llvm-project b4fd512c36ca344a3ff69350219e8b0a67e9472a)
+Target: x86_64-unknown-linux-gnu
+Thread model: posix
+InstalledDir: /home/proton-clang/bin
+</code></pre></div>
+如果没有，说明某一步操作有问题，你必须回头纠正。</p>
+<h3 id="_5">准备配置并开始编译</h3>
+<p>现在环境已经准备好了，我们需要下载我们之前找到的内核源码。</p>
+<p><a href="https://github.com/flypatriot/crdroid_12_kernel" title="本教程作为示例所使用的内核源码在这里">本教程作为示例所使用的内核源码在这里</a></p>
+<p>一般内核都使用 Git 源，我们应该通过这种方法下载：
+<div class="highlight"><pre><span></span><code>git clone --depth<span class="o">=</span><span class="m">1</span> &lt;源地址&gt;
+</code></pre></div>
+其中 <code>--depth=1</code> 表示浅克隆，即不克隆提交记录，因为 Linux 历史悠久，提交记录非常多(比如本教程的示例内核有86万多个提交)如果将他们克隆下来，将会非常慢，最后源码目录也会非常大。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>如果克隆很慢，尝试把源地址中的<code>github.com</code>改成<code>hub.fastgit.xyz</code>。</p>
+</div>
+<p>克隆完成后，进入源码目录。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>本教程的 Docker 支持仅仅是一个例子。你需要在此步做出你想要的修改。</p>
+</div>
+<p>为了实现 Docker 支持，我们需要修改手机内核的默认配置。
+进入 <code>arch/arm64/configs</code> 使用 <code>ls</code> 命令查看一下。一般会有几个文件，还有个<code>vendor</code>文件夹。
+例：</p>
+<div class="highlight"><pre><span></span><code>march7th@march7th-pc:~/crdroid_12_kernel/arch/arm64/configs$ ls -al
+total 392
+drwxr-xr-x 1 march7th march7th    166 Aug 13 06:22 .
+drwxr-xr-x 1 march7th march7th    178 Aug 13 05:25 ..
+-rw-r--r-- 1 march7th march7th  16736 Aug 13 05:25 defconfig
+-rw-r--r-- 1 march7th march7th  13173 Aug 13 05:25 gki_defconfig
+-rw-r--r-- 1 march7th march7th 182835 Aug 13 06:22 nethunter_defconfig
+-rw-r--r-- 1 march7th march7th 168683 Aug 13 05:25 op8-perf_defconfig
+-rw-r--r-- 1 march7th march7th   7579 Aug 13 05:25 ranchu64_defconfig
+drwxr-xr-x 1 march7th march7th    468 Aug 13 05:25 vendor
+</code></pre></div>
+<p>可以看到，有一个 <code>op8-perf_defconfig</code>。我们的示例手机是一加8T。所以这就是我们要找的默认配置。</p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>如果<code>arch/arm64/configs</code>下没有你要的配置，不妨进入<code>vendor</code>文件夹一看。</p>
+</div>
+<p>使用文本编辑器打开该文件。在文件底部添加：</p>
+<div class="highlight"><pre><span></span><code>CONFIG_NAMESPACES=y
+CONFIG_NET_NS=y
+CONFIG_PID_NS=y
+CONFIG_IPC_NS=y
+CONFIG_UTS_NS=y
+CONFIG_CGROUPS=y
+CONFIG_CGROUP_CPUACCT=y
+CONFIG_CGROUP_DEVICE=y
+CONFIG_CGROUP_FREEZER=y
+CONFIG_CGROUP_SCHED=y
+CONFIG_CPUSETS=y
+CONFIG_MEMCG=y
+CONFIG_KEYS=y
+CONFIG_VETH=y
+CONFIG_BRIDGE=y
+CONFIG_BRIDGE_NETFILTER=y
+CONFIG_IP_NF_FILTER=y
+CONFIG_IP_NF_TARGET_MASQUERADE=y
+CONFIG_NETFILTER_XT_MATCH_ADDRTYPE=y
+CONFIG_NETFILTER_XT_MATCH_CONNTRACK=y
+CONFIG_NETFILTER_XT_MATCH_IPVS=y
+CONFIG_NETFILTER_XT_MARK=y
+CONFIG_IP_NF_NAT=y
+CONFIG_NF_NAT=y
+CONFIG_POSIX_MQUEUE=y
+CONFIG_DEVPTS_MULTIPLE_INSTANCES=y
+CONFIG_NF_NAT_IPV4=y
+CONFIG_NF_NAT_NEEDED=y
+CONFIG_OVERLAY_FS=y
+</code></pre></div>
+<p>然后保存退出，回到源码目录，执行：</p>
+<div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out op8-perf_defconfig
+</code></pre></div>
+<p>加载默认配置。</p>
+<p>此时我们已经可以开始编译。不过你可能还想修改一下别的，所以我们执行：
+<div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out  menuconfig
+</code></pre></div></p>
+<p>比如我们还想修改内核名，那我们需要修改这一项：
+<code>General setup -&gt; Local version - append to kernel release</code>
+修改完后，直接 ”Esc“ 保存退出</p>
+<p>然后我们开始编译，输入以下命令
+<div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out -j<span class="k">$(</span>nproc<span class="k">)</span>
+</code></pre></div>
+<code>nproc</code>会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把<code>$(nproc)</code>换成一个比你 CPU 的线程数小的数字。</p>
+<p>然后便是等待。等他出现<code>Ready</code>字样时就说明你成功了。</p>
+<h3 id="_6">打包并刷入内核</h3>
+<p>考虑到有些手机并没有可用的第三方 Recovery ，所以我们不使用 Anykernel3 ，而是通过修改boot镜像手动刷入。</p>
+<p>终端输入以下命令下载工具：
+<div class="highlight"><pre><span></span><code>curl https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300923/ | tar xzvf -
+</code></pre></div></p>
+<p>然后我们需要从手机中提取 Boot 镜像，并将其传到电脑上的工具目录内。如何提取镜像在前面 Root 的环节已经提到。</p>
+<p>接着:
+<div class="highlight"><pre><span></span><code>./unpackimg.sh &lt;Boot 镜像文件名&gt;
+</code></pre></div>
+工具目录下会出现一个<code>split_img</code>文件夹，其中的<code>&lt;Boot 镜像文件名&gt;-kernel</code>就是我们要替换的文件。</p>
+<p>编译好的内核在源码目录<code>out/arch/arm64/boot</code>目录下。一般来说文件名带有<code>Image</code>字样，把它复制到这里，替换掉原来的文件。</p>
+<p>然后：
+<div class="highlight"><pre><span></span><code>./repackimg.sh
+</code></pre></div></p>
+<p>重新打包内核文件，然后刷入重启。你应该会看到内核变化了。大功告成。</p>
+<p>此时你可以试着在 Termux 里安装 Docker ，不出意料就能够正常运行了。</p>
+
+  <hr>
+<div class="md-source-file">
+  <small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 20, 2022 07:47:42</span>
+      
+        <br>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:27:51</span>
+      
+    
+  </small>
+</div>
+
+
+
+
+              
+            </article>
+            
+          </div>
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            回到页面顶部
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="页脚" >
+      
+        
+        <a href="../module/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 模块" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                上一页
+              </span>
+              模块
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../about/" class="md-footer__link md-footer__link--next" aria-label="下一页: 关于" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                下一页
+              </span>
+              关于
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright &copy; 集体所有，以商用为目的的引用需遵守引录条目相应的知识协议或申请其作者的授权
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://t.me/gjzsr" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.integrate", "navigation.top", "navigation.instant"], "search": "../assets/javascripts/workers/search.ecf98df9.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.2ab50757.min.js"></script>
+      
+    
+  </body>
+</html>
