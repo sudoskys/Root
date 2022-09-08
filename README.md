@@ -8,7 +8,7 @@
   <a href="https://github.com/sudoskys/root/actions/workflows/ci.yml"><img src="https://github.com/sudoskys/root/actions/workflows/ci.yml/badge.svg" alt="Test"></a>
 </p>
 
-<h2 align="center">Root</h2>
+<h2 align="center">IdontKnowRoot</h2>
 
 
 欢迎，浏览内容请访问 **[在线文档](https://root.dianas.cyou/)** 获取最新文档支持。
