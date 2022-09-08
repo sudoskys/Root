@@ -10,6 +10,7 @@ nav:
     - 关于: about.md
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   # logo: https://github.com/sudoskys/Root/raw/main/logo.png
   palette:
