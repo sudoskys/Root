@@ -44,9 +44,9 @@ extra:
     description: >- 
       我们采用 cookie 来分析文档流量，此服务的提供商为 cloudflare.com。
     cookies:
-      analytics:
+      https://root.dianas.cyou/:
         name: Cloudflare Analytics
-        checked: false
+        checked: true
 plugins:
   # - git-authors
   - git-revision-date-localized:
