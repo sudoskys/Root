@@ -42,7 +42,8 @@ extra:
   consent:
     title: Cookie 请求
     description: >- 
-      我们采用 cookie 来分析文档流量，此服务的提供商为 cloudflare.com。
+      我们使用Cloudflare分析服务收集有关我们的网站用户的地理位置以及他们访问的页面的信息。
+      这样做是为了监测和改进站点配置，以便我们为用户对站点的需求提供最好的支持。同样的信息也用于组织内部以支持战略决策。 
     cookies:
       https://root.dianas.cyou/:
         name: Cloudflare Analytics
