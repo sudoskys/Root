@@ -35,6 +35,9 @@ extra:
   social:
     - icon: fontawesome/brands/telegram
       link: https://t.me/gjzsr
+  analytics:
+    provider: custom
+    property: foobar 
 
 
 plugins:
