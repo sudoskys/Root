@@ -146,6 +146,7 @@ Welcome to IdontKnowRoot
 - tg@狼 |ZH/EN/(JA)|o0kam1
 - tg@Chi_Tang
 - github@liuran001 
+- github@Dedicatus5457
 - github@lz233
 - tg@Aidenpers Ultra
 - tg@小迅的皮套
