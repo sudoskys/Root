@@ -202,7 +202,7 @@ Google SafetyNet是一个用于监视系统的API，如果检测到篡改，它�
 8、检测frida、xposed等Hook框架的特征
 
 !!! tip "注意"
-    本节内容部分都是 @MiaoHan 的 酷安专栏内容。
+    本节内容部分都是 @我叫妙涵 的 酷安专栏内容。
 
 
 ### 开启 Zygisk 的面具

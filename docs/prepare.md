@@ -235,9 +235,16 @@ Android 8 引入 Project Treble 后，手机的系统文件和底层的厂商硬
 
 而 Android 9 开始，Google更改了要求，所有设备都必须使用[system-as-root]
 
-GSI由此以A-only和A/B进行区分。
+GSI/SGSI由此以A-only和A/B进行区分。
+PS: 在a11及以上已无A-only的GSI/SGSI
 
-GSI则是一种可以忽略厂商定制的通用刷机包，sgsi只支持高通设备且不自带内核。，而gsi理论上支持任何设备。
+GSI一般有两种类型，一种是erfans工具使用原包做出的gsi，另外一种则是phh-treble GSI。后者的开机率是最高的，vndk支持一般从27-32(Android8.1-12L)。因为他是从源码构建的GSI，phh-treble本来就是一种通用的device tree。
+
+如果您的设备支持sar，可直接刷入AB的gsi/sgsi。如果不支持可在刷AB的GSI/SGSI前刷入makemesar补丁来让不支持sar的设备使用ab的GSI/SGSI
+
+GSI则是一种可以忽略厂商定制的通用system image(系统映像) 
+
+SGSI: Semi-GSI 理论上只支持高通机型，但在部分联发科机型上仍然可以开机（如: begonia) SGSI 在传统 GSI 的制作方法上做了改进，在原 system 不变的条件下提高 boot 和 vendor 的通用性，实际体验上比传统 GSI更好，但在开机率上不如传统 GSI。安卓11后常用 SGSI。
 
 [^45]
 
@@ -541,7 +548,7 @@ Linux 需要使用其自带包管理器安装 `android-platform-tools`
 **如果你的设备不能进行官方解锁，可以尝试深刷强解 。**
 
 !!! note
-    一些古董机型是没有BL锁的，比如红米Note。
+    在小米4c/4s发布时间以前的所有小米/红米机型没有BL锁，跳过此步骤即可。
 
 附上[小米解锁教程](https://web.vip.miui.com/page/info/mio/mio/detail?postId=28646781&boardId=5415551&isComment=&isRecommend=0&app_version=dev.211029&ref=share).
 
