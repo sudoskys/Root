@@ -38,7 +38,7 @@ extra:
 
 
 plugins:
-  - git-authors
+  # - git-authors
   - git-revision-date-localized:
       type: datetime
       enable_creation_date: true
