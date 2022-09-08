@@ -18,7 +18,7 @@ jobs:
       # - run: pip install mkdocs-git-committers-plugin-2
       
       # build docs
-      - run: mkdocs build --site-dir site
+      - run: mkdocs build --clean
       # - run: mkdocs gh-deploy --force
       - name: commit
         env:
