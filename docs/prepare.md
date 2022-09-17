@@ -14,6 +14,33 @@
 
 如果不是很小众，端口什么的也没有封锁(需要手动验证),大部分手机都可以 Root.
 
+### 我是想在模拟器中 Root...  怎么办？
+
+面具相比于模拟器自带的 Root，可以额外使用面具的模块，还可以通过模块阻止 App 检测安装的应用
+
++ 将 Magisk 集成到 Android-x86 项目中
+
+[项目地址](https://github.com/HuskyDG/initrd-magisk)
+
+[Wiki](https://github.com/HuskyDG/initrd-magisk/wiki)
+
++ 对于模拟器用户
+
+[Magisk Delta](https://huskydg.github.io/magisk-files/)支持将 Magisk 安装到 Magisk 应用程序的系统分区中 
+
+!!! info
+    支持 Android 7+ 模拟器：NoxPlayer、MEmu、LDPlayer
+
+
+### Root Windows WSA
+
+你可以看一下 [这个项目](https://github.com/LSPosed/MagiskOnWSA)
+
+!!! tip
+    此项目被 Github 关闭
+    请看这个新的 https://github.com/LSPosed/MagiskOnWSALocal
+
+
 ### 经过后面的尝试，我发现我不能Root,但是想用模块.....
 
 你可以去试一下 LSPatch？
