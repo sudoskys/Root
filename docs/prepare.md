@@ -18,13 +18,13 @@
 
 面具相比于模拟器自带的 Root，可以额外使用面具的模块，还可以通过模块阻止 App 检测安装的应用
 
-+ 将 Magisk 集成到 Android-x86 项目中
+#### 将 Magisk 集成到 Android-x86 项目中
 
 [项目地址](https://github.com/HuskyDG/initrd-magisk)
 
 [Wiki](https://github.com/HuskyDG/initrd-magisk/wiki)
 
-+ 对于模拟器用户
+#### 对于模拟器用户
 
 [Magisk Delta](https://huskydg.github.io/magisk-files/)支持将 Magisk 安装到 Magisk 应用程序的系统分区中 
 
