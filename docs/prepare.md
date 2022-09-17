@@ -29,7 +29,7 @@
 [Magisk Delta](https://huskydg.github.io/magisk-files/)支持将 Magisk 安装到 Magisk 应用程序的系统分区中 
 
 !!! info
-    支持 Android 7+ 模拟器：NoxPlayer、MEmu、LDPlayer
+    支持 Android 7+ 模拟器：NoxPlayer、MEmu、LDPlayer 等
 
 
 ### Root Windows WSA
