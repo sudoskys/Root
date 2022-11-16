@@ -194,15 +194,19 @@ Mtk 代指联发科，MTK和高通都是生产手机CPU的厂家。MTK平台和�
     路径：/dev/block/bootdevice/by-name/
     /dev/block/platform/bootdevice/by-name/
 
-- vbmeta
+- AVB
+
+为了让设备厂商更方便的引入 Verified boot 功能，Google 在 Android O上推出了一个统一的验证启动框架 Android verified boot 2.0.
 
 AVB/DM启动验证分区，主要是为了防止启动镜像（boot.img）被篡改。vbmeta启动效验通常导致MTK机型刷入magisk或者三方Recovery后陷入无限重启的情况。
 
-我们可以去掉这项验证，面具中也有相关选项。
+在部分机型中，可能由于vbmeta.img的验证导致设备无法启动，我们可以去掉这项验证，
 
 ```sh
 fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img 
 ```
+面具 `安装` 功能中也有相关选项。
+
 
 - recovery
 
@@ -380,6 +384,9 @@ Android 调试桥 (ADB) 可让您将开发工作站直接连接到 Android 设�
 
 了解更多：https://source.android.com/docs/setup/build/adb
 
+**验证启动**
+
+验证启动（Verified Boot）是Android一个重要的安全功能，主要是为了访问启动镜像被篡改，提高系统的抗攻击能力，简单描述做法就是在启动过程中增加一条校验链，即 ROM code 校验 BootLoader，确保 BootLoader 的合法性和完整性，BootLoader 则需要校验 boot image，确保 Kernel 启动所需 image 的合法性和完整性，而 Kernel 则负责校验 System 分区和 vendor 分区。
 
 
 ## 了解刷机
