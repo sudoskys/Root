@@ -5,8 +5,6 @@
 
     深刷的，能去售后就去售后
 
-
-    
 在 Linux 中，我们只需要打上 su 的命令，就可以拥有管理员权限。
 su是运行环境变量PATH下面的一个可执行文件，当任意软件运行su时，软件的权限就会被提升到Root权限。
 
@@ -27,16 +25,10 @@ su是运行环境变量PATH下面的一个可执行文件，当任意软件运�
 ![示意图](https://s3.bmp.ovh/imgs/2022/08/16/95cafb324009b035.png)
 
 
-
-
-
-
 !!! danger
     下面开始刷机，请不要在晚上刷机！
     
-    
-    
-    
+
 ## 线刷/深刷 修补 Boot 提取权限
 
 !!! warning
@@ -233,9 +225,6 @@ adb install Magisk-xxx.apk
 [OrangeFox Recovery Downloads](https://orangefox.download/zh-CN)
 
 [偶然发现的仓库](https://kamiui.ml/E52shuaji/)
-
-
-
 
 
 

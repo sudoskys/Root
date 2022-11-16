@@ -10,9 +10,7 @@
 
 <h2 align="center">IdontKnowRoot</h2>
 
-
 欢迎，浏览内容请访问 **[在线文档](https://root.dianas.cyou/)** 获取最新文档支持。
-
 
 文档基于 mkdocs.org，基于**广泛调研**的基础，致力于给予小白全详细的刷机起步指导，不必因为教程混乱分散无从下手而发愁。
 
@@ -21,12 +19,9 @@
 
 如果你发现了本文的的错误或不足，欢迎向[项目仓库](https://github.com/sudoskys/Root/)提 issue 和 PR ，或者使用 [GithubDev](https://github.dev/sudoskys/Root) 添加内容！
 
-
 issue 不接受具体指导的提问，只接受文档的改进建议。
 
 讨论 接受具体的提问，但是需要读过文档首页分栏。
-
-
 
 
 ## 其他
@@ -37,9 +32,8 @@ issue 不接受具体指导的提问，只接受文档的改进建议。
 
 本文的工具包在[这里](https://push.dianas.cyou/LIS/Share/Root/)
 
+
 ## Todo
-
-
 
 - [x] 构架大纲
 - [x] 调研材料
@@ -53,6 +47,15 @@ issue 不接受具体指导的提问，只接受文档的改进建议。
 - [ ] 重写不合理
 - [ ] 修复/润色
 
+
 ### 协议
 
-<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="知识共享许可协议" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/80x15.png" /></a><br />本作品采用<a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a>进行许可。
+```
+Copyright (c)  2022  sudoskys/Root 编写组.
+    Permission is granted to copy, distribute and/or modify this document
+    under the terms of the GNU Free Documentation License, Version 1.3
+    or any later version published by the Free Software Foundation;
+    with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+    A copy of the license is included in the section entitled "GNU
+    Free Documentation License".
+```
