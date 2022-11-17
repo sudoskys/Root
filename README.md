@@ -60,5 +60,5 @@ Copyright (c)  2022  sudoskys/Root 编写组.
     A copy of the license is included in the section entitled "GNU
     Free Documentation License".
     
-含引用的部分遵循 CC BY-NC-SA 4.0
+含引用的部分遵循材料规定的协议
 ```
