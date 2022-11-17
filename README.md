@@ -39,14 +39,15 @@ issue 不接受具体指导的提问，只接受文档的改进建议。
 - [x] 调研材料
 - [x] 初步总结
 - [x] 调整重写
-- [ ] 审稿
-- [ ] 重写不合理
-- [ ] 解构术语
-- [ ] 修复/润色
+- [x] 审稿
+- [x] 重写不合理
+- [x] 解构术语
+- [x] 修复/润色
 - [ ] 审稿 
 - [ ] 重写不合理
 - [ ] 修复/润色
 
+Promote openness.
 
 ### 协议
 
@@ -58,4 +59,6 @@ Copyright (c)  2022  sudoskys/Root 编写组.
     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
     A copy of the license is included in the section entitled "GNU
     Free Documentation License".
+    
+含引用的部分遵循 CC BY-NC-SA 4.0
 ```

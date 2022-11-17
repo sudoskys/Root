@@ -1,15 +1,16 @@
 ## 社区
 
-
 [Fiime](https://fiime.cn/)
 
 [Magisk](https://forum.xda-developers.com/f/magisk.5903/)
 
 [AKR社区](https://www.akr-developers.com/)
 
+
 ## [Magisk](https://github.com/topjohnwu/Magisk)
 
 使用任何模块之前请考虑格机风险。模块推荐请自己查社区（酷安等）
+
 
 ### 资源分享
 
@@ -25,6 +26,7 @@
 ### 社区模块库
 
 [Magisk Modules Repository - Androidacy](https://www.androidacy.com/magisk-modules-repository/?utm_source=old-repo-link&utm_medium=web&utm_campaign=redirects)
+
 
 ## [LSPosed](https://github.com/LSPosed/LSPosed)
 
@@ -46,6 +48,7 @@
 [LSPosed](https://t.me/s/LSPosed)
 
 下载模块后，在面具的设置中开启 Zygisk，同时在模块中从本地安装 LSposed。重启设备，桌面就新增 LSPosed 的APP。
+
 
 ## 安全验证
 
@@ -90,8 +93,6 @@ Recovery也就是我们常用来三清和卡刷用的东西。
 
 ### Fastboot
 
-
-
 在安卓手机中 Fastboot 是一种比Recovery更底层的刷机模式，计算机通过 Usb 线将已有的各分区文件（光盘映象文件）直接覆写到指定分区中。[^35]
 
 !!! info 
@@ -114,7 +115,6 @@ fastboot模式其实是调用spl进行刷机的，所以如果刷spl坏了，fas
 高通的QPST线刷模式，因联机之后端口名字叫Qualcomm HS-USB QDLoader 9008 (COMx)而得名。这种模式下，可以彻底删除手机系统后刷入新系统。
 
 
-
 ### Mtk 深刷
 [^21]
 
@@ -132,10 +132,7 @@ fastboot模式其实是调用spl进行刷机的，所以如果刷spl坏了，fas
 
 [^35]:[Fastboot 原理](https://wowothink.com/5ade33b8/)
 
-
 [^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
-
-
 
 [^37]:[MTK刷机原理](https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/)
 

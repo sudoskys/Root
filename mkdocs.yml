@@ -1,29 +1,60 @@
 site_name: IdontKnowRoot
 site_url: https://root.dianas.cyou/
+site_description: 刷机指南
+site_author: IdontKnowRoot Team
+repo_url: https://github.com/sudoskys/Root
+edit_uri: edit/main/docs/
+copyright: >
+        Copyright &copy; GFDL 协议
+        <a href="#__consent">Change cookie settings</a>
+
 nav:
     - 前言: index.md
-    - 准备: prepare.md
-    - 刷机: root.md
+    - 准备: 
+          - 起始: prepare/index.md
+          - 术语: prepare/term.md
+          - 解锁Bootloader: prepare/bootloader.md
+    - 刷机:
+          - 起始: Root/index.md
+          - 线刷: Root/Wirebrush.md
+          - 卡刷: Root/Brushcard.md
+          - 深刷: Root/Deep.md
+          - Gsi: Root/Gsi.md
+          - 救砖: Root/Savebrick.md
+          - Huawei: Root/Huawei.md
     - 优化: optimize.md
     - 模块: module.md
     - 内核: kernel.md
     - 关于: about.md
+
 theme:
   name: material
-  custom_dir: overrides
   language: zh
-  # logo: https://github.com/sudoskys/Root/raw/main/logo.png
+  icon:
+    logo: material/navigation
+    repo: fontawesome/brands/github
   palette:
-    primary: indigo
+    - scheme: default
+      primary: teal
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
   features:
     - navigation.tabs
-    - toc.integrate
-    #- navigation.indexes
+    - toc.follow
     - navigation.top
-    - navigation.instant
+    - navigation.tracking
+    - navigation.indexes
+    - navigation.expand
+    - navigation.sections
 
 
-    
 markdown_extensions:
   - tables
   - attr_list
@@ -31,6 +62,12 @@ markdown_extensions:
   - admonition
   - pymdownx.details
   - pymdownx.superfences
+  - md_in_html
+  - pymdownx.superfences
+  - meta
+  - pymdownx.tabbed:
+      alternate_style: true
+    
 
 extra:
   social:
@@ -38,7 +75,7 @@ extra:
       link: https://t.me/gjzsr
   analytics:
     provider: custom
-    property: foobar 
+    property: foobar
   consent:
     title: Cookie 请求
     description: >- 
@@ -50,17 +87,16 @@ extra:
       https://root.dianas.cyou/:
         name: Cloudflare Analytics
         checked: true
+
+
 plugins:
-  # - git-authors
+  - glightbox
+  - search
+  - social:
+      cards_font: Noto Sans SC
+      cards_color:
+        fill: '#000026'
+        text: '#FF770F'
   - git-revision-date-localized:
       type: datetime
       enable_creation_date: true
-  - search
-
-
-repo_url: https://github.com/sudoskys/Root
-edit_uri: edit/main/docs/
-
-copyright: >
-        Copyright &copy; CC BY-NC-SA 4.0
-        <a href="#__consent">Change cookie settings</a>
