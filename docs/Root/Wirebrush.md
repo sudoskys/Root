@@ -1,6 +1,5 @@
 # 线刷指南
 
-
 - 电脑
 - 一台解锁 Bootloader 的安卓 ？ 以上的手机
 - 一根良好的数据线
@@ -135,5 +134,6 @@ https://xiaomirom.com/download-xiaomi-flash-tool-miflash/
 按下组合键后，设备不会进入 Recovery 模式，而是会闪屏过后直接进入一个有 Magisk 的系统。每一次重启都要这样做才能挂载 Magisk。进入系统后就没有特别需要注意的问题了。
 
 而想要进入真正的 Recovery ，我们需要在按下组合键后的闪屏界面长按音量 + 键。
+
 
 

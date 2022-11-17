@@ -29,6 +29,7 @@ nav:
 
 theme:
   name: material
+  custom_dir: overrides
   language: zh
   icon:
     logo: material/navigation
