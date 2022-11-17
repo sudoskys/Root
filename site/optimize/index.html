@@ -1,655 +1,594 @@
 
-<!doctype html>
-<html lang="zh" class="no-js">
-  <head>
-    
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width,initial-scale=1">
-      
-      
-      
-        <link rel="canonical" href="https://root.dianas.cyou/optimize/">
-      
-      <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
-    
-    
-      
-        <title>优化 - IdontKnowRoot</title>
-      
-    
-    
-      <link rel="stylesheet" href="../assets/stylesheets/main.472b142f.min.css">
-      
-        
-        <link rel="stylesheet" href="../assets/stylesheets/palette.08040f6c.min.css">
-        
-          
-          
-          <meta name="theme-color" content="#4051b5">
-        
-      
-      
+<!DOCTYPE html>
 
-    
-    
-    
-      
-        
-        
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
-        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
-      
-    
-    
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
-    
-      
-  
-
-
-  <!-- Cloudflare Web Analytics --><script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "111cadfda46740a887bf5145c1f998db"}'></script><!-- End Cloudflare Web Analytics -->
-  
-    <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
-  
-
-    
-    
-    
-  </head>
-  
-  
-    
-    
-    
-    
-    
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="">
-  
-    
-    
-    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
-    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
-    <label class="md-overlay" for="__drawer"></label>
-    <div data-md-component="skip">
-      
-        
-        <a href="#magisk" class="md-skip">
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="刷机指南" name="description"/>
+<meta content="IdontKnowRoot Team" name="author"/>
+<link href="https://root.dianas.cyou/optimize/" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>优化 - IdontKnowRoot</title>
+<link href="../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<!-- Cloudflare Web Analytics --><script data-cf-beacon='{"token": "111cadfda46740a887bf5145c1f998db"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script><!-- End Cloudflare Web Analytics -->
+<script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+<meta content="website" property="og:type"/>
+<meta content="优化 - IdontKnowRoot" property="og:title"/>
+<meta content="刷机指南" property="og:description"/>
+<meta content="https://root.dianas.cyou/assets/images/social/optimize.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://root.dianas.cyou/optimize/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="优化 - IdontKnowRoot" name="twitter:title"/>
+<meta content="刷机指南" name="twitter:description"/>
+<meta content="https://root.dianas.cyou/assets/images/social/optimize.png" name="twitter:image"/>
+<link href="../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#_1">
           跳转至
         </a>
-      
-    </div>
-    <div data-md-component="announce">
-      
-    </div>
-    
-    
-      
-
+</div>
+<div data-md-component="announce">
+</div>
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="页眉">
-    <a href=".." title="IdontKnowRoot" class="md-header__button md-logo" aria-label="IdontKnowRoot" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
-    <label class="md-header__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
-    </label>
-    <div class="md-header__title" data-md-component="header-title">
-      <div class="md-header__ellipsis">
-        <div class="md-header__topic">
-          <span class="md-ellipsis">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="IdontKnowRoot" class="md-header__button md-logo" data-md-component="logo" href=".." title="IdontKnowRoot">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
             IdontKnowRoot
           </span>
-        </div>
-        <div class="md-header__topic" data-md-component="header-topic">
-          <span class="md-ellipsis">
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
             
               优化
             
           </span>
-        </div>
-      </div>
-    </div>
-    
-    
-    
-      <label class="md-header__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-      </label>
-      <div class="md-search" data-md-component="search" role="dialog">
-  <label class="md-search__overlay" for="__search"></label>
-  <div class="md-search__inner" role="search">
-    <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="搜索" placeholder="搜索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
-      <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-      </label>
-      <nav class="md-search__options" aria-label="查找">
-        
-        <button type="reset" class="md-search__icon md-icon" title="清空当前内容" aria-label="清空当前内容" tabindex="-1">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
-        </button>
-      </nav>
-      
-    </form>
-    <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
-        <div class="md-search-result" data-md-component="search-result">
-          <div class="md-search-result__meta">
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
             正在初始化搜索引擎
           </div>
-          <ol class="md-search-result__list"></ol>
-        </div>
-      </div>
-    </div>
-  </div>
+<ol class="md-search-result__list"></ol>
 </div>
-    
-    
-      <div class="md-header__source">
-        <a href="https://github.com/sudoskys/Root" title="前往仓库" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sudoskys/Root" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
     GitHub
   </div>
 </a>
-      </div>
-    
-  </nav>
-  
+</div>
+</nav>
 </header>
-    
-    <div class="md-container" data-md-component="container">
-      
-      
-        
-          
-            
-<nav class="md-tabs" aria-label="标签" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href=".." class="md-tabs__link">
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
       前言
     </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../prepare/" class="md-tabs__link">
-      准备
-    </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../root/" class="md-tabs__link">
-      刷机
-    </a>
-  </li>
-
-      
-        
-  
-  
-    
-  
-
-
-  <li class="md-tabs__item">
-    <a href="./" class="md-tabs__link md-tabs__link--active">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../prepare/">
+        准备
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../Root/">
+        刷机
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="./">
       优化
     </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../module/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../module/">
       模块
     </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../kernel/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../kernel/">
       内核
     </a>
-  </li>
-
-      
-        
-  
-  
-
-
-  <li class="md-tabs__item">
-    <a href="../about/" class="md-tabs__link">
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../about/">
       关于
     </a>
-  </li>
-
-      
-    </ul>
-  </div>
+</li>
+</ul>
+</div>
 </nav>
-          
-        
-      
-      <main class="md-main" data-md-component="main">
-        <div class="md-main__inner md-grid">
-          
-            
-              
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-
-  
-
-
-  
-
-<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="导航栏" data-md-level="0">
-  <label class="md-nav__title" for="__drawer">
-    <a href=".." title="IdontKnowRoot" class="md-nav__button md-logo" aria-label="IdontKnowRoot" data-md-component="logo">
-      
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
-
-    </a>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="IdontKnowRoot" class="md-nav__button md-logo" data-md-component="logo" href=".." title="IdontKnowRoot">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2Z"></path></svg>
+</a>
     IdontKnowRoot
   </label>
-  
-    <div class="md-nav__source">
-      <a href="https://github.com/sudoskys/Root" title="前往仓库" class="md-source" data-md-component="source">
-  <div class="md-source__icon md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
-  </div>
-  <div class="md-source__repository">
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sudoskys/Root" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
     GitHub
   </div>
 </a>
-    </div>
-  
-  <ul class="md-nav__list" data-md-scrollfix>
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
         前言
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../prepare/" class="md-nav__link">
-        准备
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../prepare/">准备</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="准备" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          准备
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../prepare/term/">
+        术语
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../root/" class="md-nav__link">
-        刷机
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../prepare/bootloader/">
+        解锁Bootloader
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../Root/">刷机</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="刷机" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          刷机
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Root/Wirebrush/">
+        线刷
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Root/Brushcard/">
+        卡刷
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Root/Deep/">
+        深刷
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Root/Gsi/">
+        Gsi
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Root/Savebrick/">
+        救砖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Root/Huawei/">
+        Huawei
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
           优化
           <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
         优化
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="目录">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
       目录
     </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#magisk" class="md-nav__link">
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#magisk">
     升级系统时 Magisk 的保留
   </a>
-  
-    <nav class="md-nav" aria-label="升级系统时 Magisk 的保留">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+<nav aria-label="升级系统时 Magisk 的保留" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
     确定你的系统分区
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#a-only" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-only">
     如果，设备是A-Only分区机制：
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#ab-ab" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ab-ab">
     如果设备是 A/B 分区或虚拟 A/B 分区：
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rec" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rec">
     如果，你有第三方rec：
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
     具体步骤
   </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
     系统分区解锁
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
     没有图标
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
     小米刷原生
   </a>
-  
-    <nav class="md-nav" aria-label="小米刷原生">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+<nav aria-label="小米刷原生" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
     刷底包
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_7" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
     通用教程
   </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#root" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#root">
     隐藏 Root
   </a>
-  
-    <nav class="md-nav" aria-label="隐藏 Root">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zygisk" class="md-nav__link">
+<nav aria-label="隐藏 Root" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zygisk">
     开启 Zygisk 的面具
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_8" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
     面具随机包名
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#shamiko" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shamiko">
     安装 SHamiko
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#momo-app" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#momo-app">
     安装 Momo APP检查情况
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#zfb-root" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zfb-root">
     用排除列表对 ZFB 隐藏root
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rootmiui" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rootmiui">
     排除列表对手机管家隐藏root(MIUI系统专属)
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_9" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
     疑难解答
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#shamiko_1" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shamiko_1">
     “Shamiko”白名单模式
   </a>
-  
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#_10" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
     隐藏应用列表
   </a>
-  
 </li>
-        
-      </ul>
-    </nav>
-  
+</ul>
+</nav>
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#lsposed" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lsposed">
     安装 LSPosed
   </a>
-  
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#_11" class="md-nav__link">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
     华为降级
   </a>
-  
 </li>
-      
-    </ul>
-  
+</ul>
 </nav>
-      
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../module/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../module/">
         模块
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../kernel/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../kernel/">
         内核
       </a>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../about/" class="md-nav__link">
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../about/">
         关于
       </a>
-    </li>
-  
-
-    
-  </ul>
+</li>
+</ul>
 </nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-          
-          
-            <div class="md-content" data-md-component="content">
-              <article class="md-content__inner md-typeset">
-                
-                  
-
-  <a href="https://github.com/sudoskys/Root/edit/main/docs/optimize.md" title="编辑此页" class="md-content__button md-icon">
-    
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#magisk">
+    升级系统时 Magisk 的保留
   </a>
-
-
-  <h1>优化</h1>
-
+<nav aria-label="升级系统时 Magisk 的保留" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    确定你的系统分区
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#a-only">
+    如果，设备是A-Only分区机制：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#ab-ab">
+    如果设备是 A/B 分区或虚拟 A/B 分区：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rec">
+    如果，你有第三方rec：
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    具体步骤
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    系统分区解锁
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    没有图标
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    小米刷原生
+  </a>
+<nav aria-label="小米刷原生" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    刷底包
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    通用教程
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#root">
+    隐藏 Root
+  </a>
+<nav aria-label="隐藏 Root" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zygisk">
+    开启 Zygisk 的面具
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_9">
+    面具随机包名
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shamiko">
+    安装 SHamiko
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#momo-app">
+    安装 Momo APP检查情况
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#zfb-root">
+    用排除列表对 ZFB 隐藏root
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#rootmiui">
+    排除列表对手机管家隐藏root(MIUI系统专属)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_10">
+    疑难解答
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#shamiko_1">
+    “Shamiko”白名单模式
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_11">
+    隐藏应用列表
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#lsposed">
+    安装 LSPosed
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_12">
+    华为降级
+  </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/sudoskys/Root/edit/main/docs/optimize.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="_1">优化</h1>
 <p>因为在Google加强安全性之前，SuperSU 一直有效，直到 Android Marshmallow 出现。修改系统分区会向尝试检测根目录的应用发送红色标记。</p>
 <p>Google SafetyNet是一个用于监视系统的API，如果检测到篡改，它将阻止某些应用程序运行。您不能将Google Pay或Netflix与SuperSU一起使用。修改系统后，用户不会获得任何 OTA（Over The Air Updates， 无线下载 ）更新 。</p>
 <p>所以现在，只讲 Magisk</p>
 <h2 id="magisk"><strong>升级系统时 Magisk 的保留</strong></h2>
-<h3 id="_1">确定你的系统分区</h3>
+<h3 id="_2">确定你的系统分区</h3>
 <p>首先确定你的系统分区机制，对于安卓11的机型，大多数都是Virtual-A/B的分区机制。安卓7.0以后有部分机型搭载A/B分区或者A-Only分区机制。</p>
 <p>安装<a href="https://www.coolapk.com/apk/net.imknown.android.forefrontinfo">这个应用</a>查看设备的分区机制。</p>
 <div class="admonition info">
@@ -695,7 +634,7 @@
 </li>
 </ol>
 <p>目前各大品牌的旗舰手机均采用A/B架构（即同时有两套系统共存、其中一个作为备份、共用一份用户数据）。这就为我们升级系统提供了极大的便利。当我们安装更新后，在重启手机以前，新的系统将作为备份系统存在，这时我们可以利用现有系统仍保留的root权限修改备份系统的分区，刷入 Magisk 。</p>
-<p><img alt="AB分区示意" src="https://cdn.sspai.com/2019/02/26/1efd3d6a9eb66f6f441e8695aa0c2a0f.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1" /></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://cdn.sspai.com/2019/02/26/1efd3d6a9eb66f6f441e8695aa0c2a0f.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1"><img alt="AB分区示意" src="https://cdn.sspai.com/2019/02/26/1efd3d6a9eb66f6f441e8695aa0c2a0f.jpg?imageView2/2/w/1120/q/90/interlace/1/ignore-error/1"/></a></p>
 <p>扩展材料：<a href="https://sspai.com/post/53075">保留 Magisk 进行「无痛 OTA」</a>的方法 OTA 之后重新刷一次 Magisk。</p>
 <p>扩展文章：<a href="https://mi.fiime.cn/Dtech/65.html">AB分区保留面具升级系统</a></p>
 <details class="help">
@@ -709,7 +648,7 @@
 6. 开机 完成。
 仅供参考</p>
 </details>
-<h3 id="_2"><strong>具体步骤</strong></h3>
+<h3 id="_3"><strong>具体步骤</strong></h3>
 <p>关闭系统自动更新。设置-系统-开发者选项。</p>
 <p>下载更新并安装更新。此时会提示检测到root需要下载全量包，为正常现象。</p>
 <div class="admonition warning">
@@ -719,14 +658,14 @@
 <p>这时候打开Magisk Manager。卸载-还原原厂镜像。安装-安装-安装到未使用的槽位（OTA后）。</p>
 <p>接着按提示重启即可。重启完成后系统应该是新系统，Magisk应该还在。</p>
 <p><a href="https://zhuanlan.zhihu.com/p/507103088">Redmi K50 ROOT刷Magisk（面具）教程</a></p>
-<h2 id="_3">系统分区解锁</h2>
+<h2 id="_4">系统分区解锁</h2>
 <p>现在几乎所有手机都不能动 system，也不建议解锁。</p>
 <p>现在除了部分手机可以用模块，剩下的方法只有第三方 Rec 了。</p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>自安卓7开始，很多手机的system分区默认为只读模式，不可进行删除读写，导致我们即使获取root后，也一样不能去系统文件进行深一层的修改改造。只有当我们解锁system后，再次修改system分区文件才可以正常修改，也可以更直接的进入system层，删除我们不想要的繁杂软件。这里最常见的就是解锁system分区后替换修改system/etc/hosts文件案例。未解锁system分区的机型，删除会出现失败或者直接删除后重启不能开机。</p>
 </div>
-<h2 id="_4">没有图标</h2>
+<h2 id="_5">没有图标</h2>
 <div class="admonition info">
 <p class="admonition-title">不能创建 Lsposed 图标？</p>
 <p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
@@ -735,13 +674,13 @@
 <p class="admonition-title">不能创建 Magisk 图标？</p>
 <p>面具设置中有生成图标的选项</p>
 </div>
-<h2 id="_5">小米刷原生</h2>
+<h2 id="_6">小米刷原生</h2>
 <p>刷机有风险 如果不会刷还请不要刷</p>
-<h3 id="_6">刷底包</h3>
+<h3 id="_7">刷底包</h3>
 <p>首先要解锁手机BL锁 。</p>
 <p>解锁完下载MIUI系统底包 必须要和类原生安卓版本一样 安卓9=安卓9 安卓10=安卓10请前往官网或者mi.fiime.cn下载相对应的系统底包，然后参考上面的教程刷第三方REC。</p>
-<p>刷完第三方rec会自动进入 进去之后把下载好的底包移动到手机里面进入清除 把按钮滑到右边 双清完再刷系统点击安装 选择下载好的底包 有个滑动按钮 滑到右边就开始刷了 记住 钩子不要勾</p>
-<h3 id="_7">通用教程</h3>
+<p>刷完第三方rec会自动进入，进去之后把下载好的底包移动到手机里面进入清除，把按钮滑到右边，双清完再刷系统点击安装，选择下载好的底包 有个滑动按钮 滑到右边开始。</p>
+<h3 id="_8">通用教程</h3>
 <p>刷完底包后请不要清除任何东西</p>
 <p>请直接刷完底包接着刷原生ROM包</p>
 <p>刷完，返回主页面 。</p>
@@ -787,7 +726,7 @@
 </div>
 <p>刷了这个<code>隐藏系统root</code>模块，会导致Momo提示找到Magisk，但是影响不大，<strong>更不会影响隐藏root</strong>。</p>
 <p>我个人建议，如果不是强迫症，建议不要在意这个了。如果你是MIUI开发版系统，比较在意Momo的提示，想让Momo不提示找到Magisk，那么你需要重刷一遍当前开发版系统(重刷系统这一步是为了关闭系统自带的root)。重刷完不要打开系统自带的root，不能用面具接管系统root的方式刷面具，你应该用第三方recovery或者修补boot的方式刷入面具。</p>
-<h3 id="_8">面具随机包名</h3>
+<h3 id="_9">面具随机包名</h3>
 <p>面具设置里，找到“隐藏Magisk应用”选项点开，会跳出一个对话框。这个对话框里已经有默认名称“Settings”，你可以把它删掉并输入你喜欢的名字。比如我输入<code>balabala</code>，点确定就不用管它了，它最后会自动跳转到新生成的面具界面里。</p>
 <p>期间无论跳转什么界面，你只需要点确定或者允许就行了。面具随机包名成功后，会看到原来的面具消失，桌面出现新生成的面具“MiaoHan”。如果随机包名失败或者“隐藏Magisk应用”一直转圈圈，那么你需要使用<strong>代理隧道</strong>(不懂请自己搜索，不要来问)。</p>
 <div class="admonition help">
@@ -810,7 +749,7 @@
 <p>建议在面具排除列表勾选应用(即对应用隐藏 root )后，最好检查一下应用是否在后台运行。</p>
 <p>如果是在后台运行，你最好结束一下 (<strong>注意长按打开应用信息界面彻底结束进程</strong>) ，再打开应用。如果不是在后台运行，你就可以直接打开应用。</p>
 <p>当面具排除列表勾选 Momo 后，打开 Momo 可以看到 Momo 已经不再提示找到可执行程序 “su”、Magisk、Zygisk，说明 “Shamiko” 模块配合面具排除列表隐藏 root 是有效的。接下来我们如法炮制，在排除列表勾选那些检测到 root 后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到 root ，也就可以正常运行了。</p>
-<p><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png" /></p>
+<p><a class="glightbox" data-desc-position="bottom" data-description="" data-height="auto" data-title="" data-width="100%" href="https://s1.328888.xyz/2022/08/13/TGDNR.png"><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png"/></a></p>
 <h3 id="zfb-root">用排除列表对 ZFB 隐藏root</h3>
 <p>玩机的朋友可能会知道，当 root 后 ZFB 可能会无法刷脸，归根结底还是因为ZFB检测到了 root。我们需要对 ZFB 隐藏r oot，相关步骤如下：</p>
 <p>进入面具排除列表，然后右上角搜索找到 ZFB，点击 ZFB 图标把它展开如图四，这里面显示的一条条都是 ZFB 的进程。当我们勾选 ZFB 的所有进程， ZFB 就检测不到 root 了，也就是对 ZFB 隐藏 root 了。不用一个个点，展开后点 ZFB 右边的方框即可全部勾选这些进程。把这些进程全部勾选后，如图六，可以看到 ZFB 上面的进度条全满。这个进度条表示里面的进程有没有全部勾选，如果没有全部勾选，进度条就不会全满。就像图七图八进度条不全满，里面的进程就没有全部勾选，这样是不行的。必须全部勾选里面的进程，才能完全隐藏 root 。</p>
@@ -820,7 +759,7 @@
 <p>如果你是MIUI系统的用户，对ZFB或者薇信以及其他金融类应用隐藏root后，用它们ZF时可能会弹出以下提醒。</p>
 <p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。SHamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
 <p>进入面具排除列表，然后右上角搜索手机管家，大概率都会搜索不到，主要是方法不对，以下教大家查找手机管家的正确方法。</p>
-<h3 id="_9">疑难解答</h3>
+<h3 id="_10">疑难解答</h3>
 <details class="help">
 <summary><strong>Momo提示找到Magisk解决方法</strong></summary>
 <p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，打开Momo还是提示找到Magisk。</p>
@@ -898,7 +837,7 @@
 <p>适用场景：
 也安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，模块描述里也显示的是“whitelist mode(白名单模式)”，打开Momo还是提示找到Magisk，或者找到二进制文件“su”，或者找到Zygisk。进而打开银行类金融类游戏类应用提示root无法运行，或者功能不正常。</p>
 <p>原因分析：这种情况不是因为“Shamiko”模块白名单模式失效了，而是你们装了太多系统优化类面具模块。部分系统优化类面具模块，让你们手机不再纯净，破坏了系统的完整性，让设备处于被修改的状态。进而导致“Shamiko”模块隐藏失效，Momo从而找到以下三个提示。而我从来不用系统优化类面具模块，只用寥寥可数的几个模块(还不是系统优化类)，所以可以很容易的过掉Momo以下三个提示。</p>
-<h3 id="_10">隐藏应用列表</h3>
+<h3 id="_11">隐藏应用列表</h3>
 <p>隐藏应用列表完全没有隐藏root的作用，但是如果你有安装 LSPosed 它可以隐藏你的模块应用，隐藏 LSPosed 相关特征。</p>
 <p>银行类金融类游戏类应用，检测设备环境的优先级永远是先检测root，然后再检测应用列表或者不检测应用列表。大部分应用都不检测应用列表。</p>
 <h2 id="lsposed">安装 LSPosed</h2>
@@ -919,228 +858,139 @@
 <p>使用 暗码 <code>*#*#lsposed#*#*</code>可以启动寄生管理器。</p>
 </div>
 <p>刷入教程看下一节。</p>
-<h2 id="_11">华为降级</h2>
+<h2 id="_12">华为降级</h2>
 <p>请读 <a href="https://www.coolapk1s.com/feed/27132475">华为麒麟の系统降级教程</a></p>
 <div class="footnote">
-<hr />
+<hr/>
 <ol>
 <li id="fn:23">
-<p><a href="https://www.coolapk1s.com/feed/37647626">保留root去更新系统</a>&#160;<a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+<p><a href="https://www.coolapk1s.com/feed/37647626">保留root去更新系统</a> <a class="footnote-backref" href="#fnref:23" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
 <li id="fn:8">
-<p><a href="https://www.coolapk1s.com/feed/37950576"><strong>Root隐藏教程</strong>图文分享</a>&#160;<a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+<p><a href="https://www.coolapk1s.com/feed/37950576"><strong>Root隐藏教程</strong>图文分享</a> <a class="footnote-backref" href="#fnref:8" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:14">
-<p><a href="https://zhuanlan.zhihu.com/p/428730333"><strong>小米如何刷入第三方Recovery</strong></a>&#160;<a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+<p><a href="https://zhuanlan.zhihu.com/p/428730333"><strong>小米如何刷入第三方Recovery</strong></a> <a class="footnote-backref" href="#fnref:14" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 <li id="fn:29">
-<p><a href="https://www.coolapk1s.com/feed/34860331">Root升级系统</a>&#160;<a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+<p><a href="https://www.coolapk1s.com/feed/34860331">Root升级系统</a> <a class="footnote-backref" href="#fnref:29" title="Jump back to footnote 4 in the text">↩</a></p>
 </li>
 </ol>
 </div>
-
-  <hr>
+<hr/>
 <div class="md-source-file">
-  <small>
+<small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 16:59:45</span>
-      
-        <br>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2022 11:47:54</span>
+<br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 14, 2022 18:20:58</span>
-      
-    
-  </small>
+</small>
 </div>
-
-
-  
-
-
-
-
-                
-              </article>
-            </div>
-          
-          
-        </div>
-        
-          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
             回到页面顶部
           </a>
-        
-      </main>
-      
-        <footer class="md-footer">
-  
-    
-    <nav class="md-footer__inner md-grid" aria-label="页脚" >
-      
-        
-        <a href="../root/" class="md-footer__link md-footer__link--prev" aria-label="上一页: 刷机" rel="prev">
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
-          </div>
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: Huawei" class="md-footer__link md-footer__link--prev" href="../Root/Huawei/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
                 上一页
               </span>
-              刷机
+              Huawei
             </div>
-          </div>
-        </a>
-      
-      
-        
-        <a href="../module/" class="md-footer__link md-footer__link--next" aria-label="下一页: 模块" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
+</div>
+</a>
+<a aria-label="下一页: 模块" class="md-footer__link md-footer__link--next" href="../module/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
                 下一页
               </span>
               模块
             </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
-          </div>
-        </a>
-      
-    </nav>
-  
-  <div class="md-footer-meta md-typeset">
-    <div class="md-footer-meta__inner md-grid">
-      <div class="md-copyright">
-  
-    <div class="md-copyright__highlight">
-      Copyright &copy; CC BY-NC-SA 4.0 <a href="#__consent">Change cookie settings</a>
-
-    </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © GFDL 协议 <a href="#__consent">Change cookie settings</a>
+</div>
   
   
     Made with
-    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
       Material for MkDocs
     </a>
-  
 </div>
-      
-        <div class="md-social">
-  
-    
-    
-      
-      
-    
-    <a href="https://t.me/gjzsr" target="_blank" rel="noopener" title="t.me" class="md-social__link">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"/></svg>
-    </a>
-  
+<div class="md-social">
+<a class="md-social__link" href="https://t.me/gjzsr" rel="noopener" target="_blank" title="t.me">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
+</a>
 </div>
-      
-    </div>
-  </div>
+</div>
+</div>
 </footer>
-      
-    </div>
-    <div class="md-dialog" data-md-component="dialog">
-      <div class="md-dialog__inner md-typeset"></div>
-    </div>
-    
-      <div class="md-consent" data-md-component="consent" id="__consent" hidden>
-        <div class="md-consent__overlay"></div>
-        <aside class="md-consent__inner">
-          <form class="md-consent__form md-grid md-typeset" name="consent">
-            
-
-  
-
-
-  
-
-
-
-  
-
-
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-consent" data-md-component="consent" hidden="" id="__consent">
+<div class="md-consent__overlay"></div>
+<aside class="md-consent__inner">
+<form class="md-consent__form md-grid md-typeset" name="consent">
 <h4>Cookie 请求</h4>
 <p>我们使用Cloudflare分析服务收集有关我们的网站用户的地理位置以及他们访问的页面的信息。 这样做是为了监测和改进站点配置，以便我们为用户对站点的需求提供最好的支持。同样的信息也用于组织内部以支持战略决策。  当您第一次访问我们的网站时，系统会询问您是否接受cookies以获得完整的网站体验。如果您接受，这将成为我们在您下次访问时存储在cookie中的信息之一。  Cookies以匿名形式收集信息。若要管理第三方cookie，您可以更改cookie设置。 </p>
-<input class="md-toggle" type="checkbox" id="__settings" >
+<input class="md-toggle" id="__settings" type="checkbox"/>
 <div class="md-consent__settings">
-  <ul class="task-list">
-    
-      
-      
-        
-        
-          
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="https://root.dianas.cyou/" checked>
-          <span class="task-list-indicator"></span>
+<ul class="task-list">
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="https://root.dianas.cyou/" type="checkbox"/>
+<span class="task-list-indicator"></span>
           Cloudflare Analytics
         <label>
-      </li>
-    
-      
-      
-        
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="analytics" checked>
-          <span class="task-list-indicator"></span>
+</label></label></li>
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="analytics" type="checkbox"/>
+<span class="task-list-indicator"></span>
           Google Analytics
         <label>
-      </li>
-    
-      
-      
-        
-        
-      
-      <li class="task-list-item">
-        <label class="task-list-control">
-          <input type="checkbox" name="github" checked>
-          <span class="task-list-indicator"></span>
+</label></label></li>
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="github" type="checkbox"/>
+<span class="task-list-indicator"></span>
           GitHub
         <label>
-      </li>
-    
-  </ul>
+</label></label></li>
+</ul>
 </div>
 <div class="md-consent__controls">
-  
-    
-      <button class="md-button md-button--primary">同意</button>
-    
-    
-    
-  
-    
-    
-    
-      <label class="md-button" for="__settings">管理设定</label>
-    
-  
+<button class="md-button md-button--primary">同意</button>
+<label class="md-button" for="__settings">管理设定</label>
 </div>
-          </form>
-        </aside>
-      </div>
-      <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
-    
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.integrate", "navigation.top", "navigation.instant"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-    
-    
-      <script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
-      
-    
-  </body>
+</form>
+</aside>
+</div>
+<script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.follow", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
 </html>

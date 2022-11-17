@@ -1,0 +1,845 @@
+
+<!DOCTYPE html>
+
+<html class="no-js" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
+<meta content="刷机指南" name="description"/>
+<meta content="IdontKnowRoot Team" name="author"/>
+<link href="https://root.dianas.cyou/Root/Gsi/" rel="canonical"/>
+<link href="../../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<title>Gsi - IdontKnowRoot</title>
+<link href="../../assets/stylesheets/main.472b142f.min.css" rel="stylesheet"/>
+<link href="../../assets/stylesheets/palette.08040f6c.min.css" rel="stylesheet"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+<script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+<!-- Cloudflare Web Analytics --><script data-cf-beacon='{"token": "111cadfda46740a887bf5145c1f998db"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script><!-- End Cloudflare Web Analytics -->
+<script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
+<meta content="website" property="og:type"/>
+<meta content="Gsi - IdontKnowRoot" property="og:title"/>
+<meta content="刷机指南" property="og:description"/>
+<meta content="https://root.dianas.cyou/assets/images/social/Root/Gsi.png" property="og:image"/>
+<meta content="image/png" property="og:image:type"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
+<meta content="https://root.dianas.cyou/Root/Gsi/" property="og:url"/>
+<meta content="summary_large_image" name="twitter:card"/>
+<meta content="Gsi - IdontKnowRoot" name="twitter:title"/>
+<meta content="刷机指南" name="twitter:description"/>
+<meta content="https://root.dianas.cyou/assets/images/social/Root/Gsi.png" name="twitter:image"/>
+<link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gdesc-inner { font-size: 0.75rem; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            
+                .gscrollbar-fixer { padding-right: 15px; }
+                </style><script src="../../assets/javascripts/glightbox.min.js"></script></head>
+<body data-md-color-accent="indigo" data-md-color-primary="teal" data-md-color-scheme="default" dir="ltr">
+<script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#gsi">
+          跳转至
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="页眉" class="md-header__inner md-grid">
+<a aria-label="IdontKnowRoot" class="md-header__button md-logo" data-md-component="logo" href="../.." title="IdontKnowRoot">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2Z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            IdontKnowRoot
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Gsi
+            
+          </span>
+</div>
+</div>
+</div>
+<form class="md-header__option" data-md-component="palette">
+<input aria-label="Switch to dark mode" class="md-option" data-md-color-accent="indigo" data-md-color-media="" data-md-color-primary="teal" data-md-color-scheme="default" id="__palette_1" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_2" hidden="" title="Switch to dark mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+<input aria-label="Switch to light mode" class="md-option" data-md-color-accent="" data-md-color-media="" data-md-color-primary="black" data-md-color-scheme="slate" id="__palette_2" name="__palette" type="radio"/>
+<label class="md-header__button md-icon" for="__palette_1" hidden="" title="Switch to light mode">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12c0-2.42-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12 20 8.69Z"></path></svg>
+</label>
+</form>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="搜索" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="搜索" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</label>
+<nav aria-label="查找" class="md-search__options">
+<button aria-label="清空当前内容" class="md-search__icon md-icon" tabindex="-1" title="清空当前内容" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"></path></svg>
+</button>
+</nav>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            正在初始化搜索引擎
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sudoskys/Root" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="标签" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../..">
+      前言
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../prepare/">
+        准备
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../">
+        刷机
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../optimize/">
+      优化
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../module/">
+      模块
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../kernel/">
+      内核
+    </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="../../about/">
+      关于
+    </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="导航栏" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="IdontKnowRoot" class="md-nav__button md-logo" data-md-component="logo" href="../.." title="IdontKnowRoot">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 2 4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2Z"></path></svg>
+</a>
+    IdontKnowRoot
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/sudoskys/Root" title="前往仓库">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../..">
+        前言
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../../prepare/">准备</a>
+<label for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="准备" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          准备
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prepare/term/">
+        术语
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../prepare/bootloader/">
+        解锁Bootloader
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<div class="md-nav__link md-nav__link--index">
+<a href="../">刷机</a>
+<label for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+</label>
+</div>
+<nav aria-label="刷机" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_3">
+<span class="md-nav__icon md-icon"></span>
+          刷机
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Wirebrush/">
+        线刷
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Brushcard/">
+        卡刷
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Deep/">
+        深刷
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Gsi
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Gsi
+      </a>
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#persist">
+    备份 Persist
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    支持查询
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu">
+    Cpu 架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    寻找镜像
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    刷入镜像
+  </a>
+<nav aria-label="刷入镜像" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avb">
+    停用AVB验证
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recovery">
+    还原原厂Recovery
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    刷写
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    动态分区
+  </a>
+<nav aria-label="动态分区" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dsu">
+    使用动态系统更新（DSU)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    安装前的准备
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    安装操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    系统升级
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safetynet49">
+    SafetyNet[^49]
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drm49">
+    DRM[^49]
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Savebrick/">
+        救砖
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../Huawei/">
+        Huawei
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../optimize/">
+        优化
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../module/">
+        模块
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../kernel/">
+        内核
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../../about/">
+        关于
+      </a>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="目录" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      目录
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#persist">
+    备份 Persist
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_1">
+    支持查询
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#cpu">
+    Cpu 架构
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_2">
+    寻找镜像
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_3">
+    刷入镜像
+  </a>
+<nav aria-label="刷入镜像" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#avb">
+    停用AVB验证
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#recovery">
+    还原原厂Recovery
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    刷写
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_5">
+    动态分区
+  </a>
+<nav aria-label="动态分区" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#dsu">
+    使用动态系统更新（DSU)
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_6">
+    安装前的准备
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
+    安装操作
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_8">
+    系统升级
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#safetynet49">
+    SafetyNet[^49]
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#drm49">
+    DRM[^49]
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/sudoskys/Root/edit/main/docs/Root/Gsi.md" title="编辑此页">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
+</a>
+<h1 id="gsi">Gsi 通用系统镜像</h1>
+<ul>
+<li>一台 Root 的安卓 ？ 以上的手机</li>
+<li>一双手</li>
+<li>电脑</li>
+</ul>
+<p>本节适合有刷机经验的同学。[^48]</p>
+<p>如果在酷安，XDA等论坛翻了半天，却发现只有原厂救砖包，说明你的机型可能过于冷门，以至于没有开发者愿意专门为这个机型做刷机包，可以试一下 通用系统镜像。(见术语解释)</p>
+<p>[^46]</p>
+<p>[^47]</p>
+<p>[^49]</p>
+<h2 id="persist">备份 Persist</h2>
+<p>Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经 Root 的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。</p>
+<p>具体操作如下。
+<div class="highlight"><pre><span></span><code>adb shell
+su # 获取 root 权限，请在手机上确认
+dd if=/dev/block/bootdevice/by-name/persist of=/sdcard/persist.img
+# 此时按两次 Ctrl + D，退出 adb shell
+adb pull /sdcard/persist.img
+</code></pre></div></p>
+<p><strong>长期保存，避免丢失</strong></p>
+<h2 id="_1">支持查询</h2>
+<p>首先，你需要确认设备是否支持project treble，下载并打开<a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble">treble check</a></p>
+<p><strong>只有 Project Treble 通过检测，此手机才可以刷 gsi 镜像包。</strong></p>
+<p>如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。</p>
+<h2 id="cpu">Cpu 架构</h2>
+<p>将手机链接电脑，在 shell 进入 adb 环境，接着上网查找你所使用手机的 Cpu 架构或者输入指令：</p>
+<div class="highlight"><pre><span></span><code>adb shell getprop ro.product.cpu.abi
+</code></pre></div>
+<p>如过架构是<code>arm64-v8a</code>，那么你应该去找 ARM64 的包，如果是<code>armeabi-v7a</code>，那么你应该去寻找 ARM32 的包。</p>
+<p>a-only和a/b的gsi不通用。</p>
+<h2 id="_2">寻找镜像</h2>
+<p>查阅 <a href="https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list">通用镜像列表</a>，也可以去 XDA 论坛或者问一下刷机群里的人。</p>
+<details class="help">
+<summary>啊不想动怎么办</summary>
+<p>呃.... 如果不会找的话，推荐换个流行的手机（？）或者（￥-5）请人找吧～</p>
+</details>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>在XDA查找gsi包，需要查看最前面的标签是<code>gsi</code>，<code>Treble</code>或<code>Project Treble</code>，而不是 <code>rom</code></p>
+<p>一般<code>gsi</code>的格式是：<code>系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否</code>
+其中后面带有<code>gapps</code>字样的刷机包，表明其内置了谷歌服务。</p>
+</div>
+<h2 id="_3">刷入镜像</h2>
+<p>主要任务是刷写 system 分区，所以 fastboot 和 twrp 都可以做到。刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]</p>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>刷写Gsi 双清擦除用户数据（data和cache）</p>
+<p>Data 分区的强制加密要关掉</p>
+<p>刷 GSI 之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版</p>
+<p>需要刷入同等级的gsi</p>
+<p>应该进入 fastboot 使用 fastboot 指令刷，如果有 第三方rec 就下专包卡刷</p>
+</div>
+<h3 id="avb">停用AVB验证</h3>
+<p><strong>刷入vbmeta.img停用AVB验证</strong></p>
+<p>Android 10引入了 启动时验证 (AVB)，在刷写 GSI之前，需要先下载并刷入 vbmeta.img 以停用 AVB，vbmeta.img一般包含会随gsi镜像一起发布。</p>
+<p>如果你是安卓 10 以上，请刷入从底包中提取的vbmeta文件，防止无法进入系统。</p>
+<div class="highlight"><pre><span></span><code>fastboot --disable-verification flash vbmeta vbmeta.img
+</code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>此步骤用于停用 Verified Boot 分区验证，只需执行一次
+如果已经安装了 Magisk，可以跳过本步骤，但未来要一直安装着 Magisk，否则 system 分区通不过校验可能会被禁用，需要重刷</p>
+</div>
+<h3 id="recovery">还原原厂Recovery</h3>
+<p>请确保你的设备正在使用的是<strong>原厂的rec</strong>，目的是可以启动 <code>fastbootd</code> (一些twrp会阻止它...见<a href="https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227">这里</a>)。</p>
+<p>或者使用 twrp 里的 用户空间<code>fastboot</code> 也可以，如果twrp有这个功能可以不用刷回 recovery。</p>
+<details class="tip">
+<summary>刷写system分区，关于Twrp问题</summary>
+<p><a href="https://source.android.com/docs/core/bootloader/fastbootd?hl=zh-cn">官方文档</a></p>
+<p>为支持 fastbootd，引导加载程序必须实现一个新的启动控制块 (BCB) 命令：boot-fastboot。如需进入 fastbootd 模式，引导加载程序应将 boot-fastboot 写入 BCB 消息的命令字段，并保持 BCB 的 recovery 字段不变（以重启中断的恢复任务）。status、stage 和 reserved 字段也保持不变。引导加载程序在 BCB 命令字段中发现 boot-fastboot 时，会加载并启动到恢复映像。然后，recovery 会解析 BCB 消息并切换到 fastbootd 模式。</p>
+<p>在使用fastbootd的设备上，如果twrp支持 用户空间<code>fastboot</code> 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
+<div class="highlight"><pre><span></span><code>fastboot flash system system-arm64-ab-vanilla.img 
+Sending sparse 'system' 1/3 (676429 KB)            OKAY [ 22.9843s]
+Writing sparse 'system' 1/3                        FAILED (remote: 'Partition not found')
+Finished. Total time: 23.050s
+</code></pre></div>
+<strong>但是现在一般都会支持 Fastbootd，所以一般没什么要担心的</strong></p>
+</details>
+<p>然后，将手机重启至<code>fastbootd</code>模式（<code>fastboot reboot fastboot</code>）</p>
+<h3 id="_4">刷写</h3>
+<p>对于A-only,输入<code>fastboot flash system system.img</code></p>
+<p>对于A/B，输入
+<div class="highlight"><pre><span></span><code>fastboot flash system_a GSI.img
+fastboot flash system_b GSI.img
+</code></pre></div></p>
+<p><strong>具体操作注意看你下载的包的说明。</strong></p>
+<p>刷写完成后，使用<code>fastboot -w</code>清除数据，这一步会格式化data注意提前备份）。</p>
+<p>在具有较小系统分区的 Android 10 或更高版本设备上，刷写 GSI 时可能会出现以下错误消息</p>
+<div class="highlight"><pre><span></span><code>    Resizing 'system_a'    FAILED (remote: 'Not enough space to resize partition')
+    fastboot: error: Command failed
+</code></pre></div>
+<p>如果出现这种情况，你可以使用以下命令删除产品分区并为系统分区释放空间。这可以为刷写 GSI 提供额外的空间：</p>
+<div class="highlight"><pre><span></span><code>fastboot delete-logical-partition product_a
+</code></pre></div>
+<p>后缀 _a 应与 system 分区的槽位 ID 匹配，例如本示例中的 system_a。</p>
+<p><strong>重启</strong>
+<div class="highlight"><pre><span></span><code>fastboot reboot recovery
+</code></pre></div>
+进入 Recovery 后，按提示操作清除数据并重启系统。</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+</div>
+<p>刷入不同类型 ROM 或版本降级时必须清除数据，否则无法进入系统。</p>
+<p>开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>刷了gsi收不到短信 但是电话和流量都能用，是votle问题</p>
+</div>
+<h2 id="_5">动态分区</h2>
+<p>Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。</p>
+<p>如果你想简单点或者不想向下看，可以使用 https://github.com/VegaBobo/DSU-Sideloader</p>
+<h3 id="dsu">使用动态系统更新（DSU)</h3>
+<p><a href="https://source.android.google.cn/docs/core/ota/dynamic-system-updates?hl=zh-cn">官方文档</a></p>
+<p>安卓10正式版及以上，可以在开发者选项中Feature flags &gt; settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.</p>
+<div class="highlight"><pre><span></span><code>adb shell setprop persist.sys.fflag.override.settings_dynamic_system true
+</code></pre></div>
+<h3 id="_6">安装前的准备</h3>
+<p>通过DSU安装的GSI需要是可直接刷写的raw格式镜像，在开始前先检查你的镜像是不是raw格式
+linux或者mac系统可以用<code>file system.img</code>命令查看</p>
+<div class="highlight"><pre><span></span><code>file system.img
+system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f81f7ca3301 (extents) (large files) (huge files)
+</code></pre></div>
+<p>若返回值是这样的就是raw格式
+若为稀疏格式（simg），可以使用以下命令把system镜像转为raw格式镜像</p>
+<div class="highlight"><pre><span></span><code>simg2img system.img system_raw.img
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>一般gsi镜像都是simg格式，先检查转换</p>
+</div>
+<h3 id="_7">安装操作</h3>
+<p><strong>将镜像打包为gz格式</strong></p>
+<div class="highlight"><pre><span></span><code>gzip -c system_raw.img &gt; system_raw.gz
+</code></pre></div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>也可以直接用压缩工具压缩为gzip压缩包</p>
+</div>
+<p><strong>用adb推到手机内置储存</strong></p>
+<p><code>adb push system_raw.gz /storage/emulated/0/Download/</code></p>
+<h3 id="_8">系统升级</h3>
+<p>建议非必要不升级。升级前务必备份好所有数据，升级后有可能无法开机，需要清数据重刷。</p>
+<p><strong>安装动态系统更新</strong></p>
+<p>复制后一起执行。
+<div class="highlight"><pre><span></span><code>adb shell am start-activity \
+    -n com.android.dynsystem/com.android.dynsystem.VerificationActivity  \
+    -a android.os.image.action.START_INSTALL    \
+    -d file:///storage/emulated/0/Download/system_raw.gz  \
+    --el KEY_SYSTEM_SIZE $(du -b system_raw.img|cut -f1)  \
+    --el KEY_USERDATA_SIZE 8589934592   
+</code></pre></div></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>这里第五行的$(du -b system_raw.img|cut -f1)可直接用 system_raw.img 的大小代替，不然用windows刷会报错</p>
+<p>大小使用 <code>ls -la</code>看</p>
+<p>比如<code>system_raw.img</code>的大小为<code>2370265088</code>
+<div class="highlight"><pre><span></span><code>adb shell am start-activity \
+-n com.android.dynsystem/com.android.dynsystem.VerificationActivity  \
+-a android.os.image.action.START_INSTALL    \
+-d file:///storage/emulated/0/Download/system_raw.gz  \
+--el KEY_SYSTEM_SIZE 2370265088  \
+--el KEY_USERDATA_SIZE 2370265088
+</code></pre></div></p>
+</div>
+<p>然后你就会看到状态栏有正在安装的动态更新的提示，安装完重启进入第二个系统</p>
+<p>小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp gsi。</p>
+<details class="help">
+<summary>修复 GSI 可能存在的基础问题</summary>
+<p><strong>修复自动亮度失效</strong>
+1.  下载 <a href="https://drive.google.com/open?id=1DF-v-gwG1rQT-SbAZQYlTwFZFcOPKI9U">framework-res__auto_generated_rro.apk</a>
+2.  用re管理器将其复制到 vendor/overlay 文件夹
+3.  修改 overlay 文件夹权限为 <code>rwxr-xr-x</code>
+4.  手机打开 Termux 输入以下命令
+<div class="highlight"><pre><span></span><code>mount -o remount -w /vendor chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay;chcon u:object_r:vendor_overlay_file:s0 /vendor/overlay/framework-res__auto_generated_rro.apk
+</code></pre></div></p>
+<p><strong>修复扬声器失真</strong>
+1.  手机下载 Root Explorer
+2.  删除两个文件夹
+    &gt; /system/vendor/lib/soundfx<br/>
+    &gt; /system/vendor/lib64/soundfx</p>
+<ol>
+<li>改变 vendor 文件夹的权限为 <code>rw-r--r--</code></li>
+<li>重启手机
+上面的内容来自  [^48]
+下面的内容来自 https://dev.moe/2716 [^49]
+<strong>修复屏幕状态栏圆角</strong></li>
+</ol>
+<p>adb 输入以下命令(最后的数字根据自己喜好任意修改):
+<div class="highlight"><pre><span></span><code>adb shell settings put secure sysui_rounded_content_padding 20
+</code></pre></div></p>
+<p><strong>开启 120 Hz</strong>
+<div class="highlight"><pre><span></span><code>adb shell settings put system min_refresh_rate 120
+adb shell settings put system peak_refresh_rate 120
+</code></pre></div></p>
+<p>如果设置里有 Phh Treble Settings 的话，也可以在里面直接改（Misc features -&gt; Force FPS）。</p>
+<p><strong>移除屏幕锐化</strong>
+https://dev.moe/wp-content/uploads/2022/06/Remove-screen-sharpening-Mi-Pad-5-Pro.zip</p>
+<p><strong>修复音频</strong>
+https://dev.moe/wp-content/uploads/2022/06/GSI-Audio-Stutter-Fix-Mi-Pad-5-Pro-elish.zip</p>
+<p>https://forum.xda-developers.com/t/run-an-gsi-on-your-mi-pad-5.4352591/page-9#post-86447857</p>
+<p><strong>修复任务栏</strong>
+https://github.com/Coxxs/hide-tablet-taskbar</p>
+</details>
+<h3 id="safetynet49">SafetyNet[^49]</h3>
+<p>SafetyNet 的修复根据不同 ROM 分成几种情况.</p>
+<p><strong>PixelExperience ROM</strong> 已经模拟了设备信息，只需在 Magisk DenyList 对 Play Services 隐藏即可。</p>
+<p><strong>Lineage OS</strong> 可能由于自带了 <code>su</code>，我没能成功通过 Basic integrity 测试（可能要自己修改 ROM 了）。</p>
+<p><strong>Android 13 GSI</strong> 需要 <a href="https://github.com/Magisk-Modules-Repo/MagiskHidePropsConf">MagiskHidePropsConf</a> + <a href="https://github.com/kdrag0n/safetynet-fix">Universal SafetyNet Fix</a> + Magisk DenyList，其中 MagiskHidePropsConf 设置成 MIUI 系统的 fingerprint，外加将 <code>ro.build.version.security_patch</code> 设置成 MIUI 系统对应版本的值（可以用 7z 打开线刷包的 <code>system.img</code>，在 <code>system/build.props</code> 里找到）。</p>
+<p><strong>Magisk DenyList 配置方法</strong></p>
+<ol>
+<li>打开 Magisk，设置里选择 Hide the Magisk app</li>
+<li>打开 Magisk，设置里启用 Zygisk 及 Enforce DenyList</li>
+<li>进入 Configure DenyList，找到 Google Play services，只需勾选 <code>com.google.android.gms</code> 及 <code>com.google.android.gms.unstable</code> 两项。</li>
+<li>进入设置，清除 Google Play services 及 Google Play Store 的数据。</li>
+</ol>
+<h3 id="drm49">DRM[^49]</h3>
+<p>DRM 方面，Widevine 无需任何操作，保持在 L1，修复 Safetynet 后即可直接观看 Disney+。</p>
+<p>Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复到 L1：</p>
+<ol>
+<li>确保 SafetyNet 已通过</li>
+<li>将 Netflix 添加到 DenyList 列表</li>
+<li>用 Magisk 模块在 <code>build.prop</code> 添加一行 <code>ro.netflix.bsp_rev=Q8250-19134-1</code><ul>
+<li>该值仅适用于小米平板 5 Pro</li>
+<li>Magisk 模块写法非常简单，可以参考上面的「移除屏幕锐化」模块</li>
+<li>修改 <code>build.prop</code> 后需要清除 Netflix 应用数据重新登录</li>
+<li>该修改<a href="https://github.com/phhusson/device_phh_treble/pull/313/files">已合并至上游</a>，一段时间后的新版 ROM 可能已经自带了</li>
+<li>Dev.moe:感谢几位朋友的帮助！</li>
+</ul>
+</li>
+</ol>
+<hr/>
+<div class="md-source-file">
+<small>
+    
+      最后更新:
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 19:19:43</span>
+<br/>
+        创建日期:
+        <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 19:19:43</span>
+</small>
+</div>
+</article>
+</div>
+</div>
+<a class="md-top md-icon" data-md-component="top" hidden="" href="#">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"></path></svg>
+            回到页面顶部
+          </a>
+</main>
+<footer class="md-footer">
+<nav aria-label="页脚" class="md-footer__inner md-grid">
+<a aria-label="上一页: 深刷" class="md-footer__link md-footer__link--prev" href="../Deep/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                上一页
+              </span>
+              深刷
+            </div>
+</div>
+</a>
+<a aria-label="下一页: 救砖" class="md-footer__link md-footer__link--next" href="../Savebrick/" rel="next">
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                下一页
+              </span>
+              救砖
+            </div>
+</div>
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-copyright">
+<div class="md-copyright__highlight">
+      Copyright © GFDL 协议 <a href="#__consent">Change cookie settings</a>
+</div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+      Material for MkDocs
+    </a>
+</div>
+<div class="md-social">
+<a class="md-social__link" href="https://t.me/gjzsr" rel="noopener" target="_blank" title="t.me">
+<svg viewbox="0 0 496 512" xmlns="http://www.w3.org/2000/svg"><!--! Font Awesome Free 6.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M248 8C111.033 8 0 119.033 0 256s111.033 248 248 248 248-111.033 248-248S384.967 8 248 8Zm114.952 168.66c-3.732 39.215-19.881 134.378-28.1 178.3-3.476 18.584-10.322 24.816-16.948 25.425-14.4 1.326-25.338-9.517-39.287-18.661-21.827-14.308-34.158-23.215-55.346-37.177-24.485-16.135-8.612-25 5.342-39.5 3.652-3.793 67.107-61.51 68.335-66.746.153-.655.3-3.1-1.154-4.384s-3.59-.849-5.135-.5q-3.283.746-104.608 69.142-14.845 10.194-26.894 9.934c-8.855-.191-25.888-5.006-38.551-9.123-15.531-5.048-27.875-7.717-26.8-16.291q.84-6.7 18.45-13.7 108.446-47.248 144.628-62.3c68.872-28.647 83.183-33.623 92.511-33.789 2.052-.034 6.639.474 9.61 2.885a10.452 10.452 0 0 1 3.53 6.716 43.765 43.765 0 0 1 .417 9.769Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<div class="md-consent" data-md-component="consent" hidden="" id="__consent">
+<div class="md-consent__overlay"></div>
+<aside class="md-consent__inner">
+<form class="md-consent__form md-grid md-typeset" name="consent">
+<h4>Cookie 请求</h4>
+<p>我们使用Cloudflare分析服务收集有关我们的网站用户的地理位置以及他们访问的页面的信息。 这样做是为了监测和改进站点配置，以便我们为用户对站点的需求提供最好的支持。同样的信息也用于组织内部以支持战略决策。  当您第一次访问我们的网站时，系统会询问您是否接受cookies以获得完整的网站体验。如果您接受，这将成为我们在您下次访问时存储在cookie中的信息之一。  Cookies以匿名形式收集信息。若要管理第三方cookie，您可以更改cookie设置。 </p>
+<input class="md-toggle" id="__settings" type="checkbox"/>
+<div class="md-consent__settings">
+<ul class="task-list">
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="https://root.dianas.cyou/" type="checkbox"/>
+<span class="task-list-indicator"></span>
+          Cloudflare Analytics
+        <label>
+</label></label></li>
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="analytics" type="checkbox"/>
+<span class="task-list-indicator"></span>
+          Google Analytics
+        <label>
+</label></label></li>
+<li class="task-list-item">
+<label class="task-list-control">
+<input checked="" name="github" type="checkbox"/>
+<span class="task-list-indicator"></span>
+          GitHub
+        <label>
+</label></label></li>
+</ul>
+</div>
+<div class="md-consent__controls">
+<button class="md-button md-button--primary">同意</button>
+<label class="md-button" for="__settings">管理设定</label>
+</div>
+</form>
+</aside>
+</div>
+<script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);console.log(new FormData(form)),__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
+<script id="__config" type="application/json">{"base": "../..", "features": ["navigation.tabs", "toc.follow", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.sections"], "search": "../../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../../assets/javascripts/bundle.d6c3db9e.min.js"></script>
+<script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom"});})</script></body>
+</html>
