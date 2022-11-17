@@ -59,4 +59,6 @@ Copyright (c)  2022  sudoskys/Root 编写组.
     with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
     A copy of the license is included in the section entitled "GNU
     Free Documentation License".
+    
+含引用的部分遵循 CC BY-NC-SA 4.0
 ```

@@ -10,7 +10,10 @@ copyright: >
 
 nav:
     - 前言: index.md
-    - 准备: prepare.md
+    - 准备: 
+          - 起始: prepare/index.md
+          - 术语: prepare/term.md
+          - 解锁Bootloader: prepare/bootloader.md
     - 刷机:
           - 起始: Root/index.md
           - 线刷: Root/Wirebrush.md
