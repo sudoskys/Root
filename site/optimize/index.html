@@ -752,7 +752,6 @@
 <p>建议在面具排除列表勾选应用(即对应用隐藏 root )后，最好检查一下应用是否在后台运行。</p>
 <p>如果是在后台运行，你最好结束一下 (<strong>注意长按打开应用信息界面彻底结束进程</strong>) ，再打开应用。如果不是在后台运行，你就可以直接打开应用。</p>
 <p>当面具排除列表勾选 Momo 后，打开 Momo 可以看到 Momo 已经不再提示找到可执行程序 “su”、Magisk、Zygisk，说明 “Shamiko” 模块配合面具排除列表隐藏 root 是有效的。接下来我们如法炮制，在排除列表勾选那些检测到 root 后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到 root ，也就可以正常运行了。</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://s1.328888.xyz/2022/08/13/TGDNR.png"><img alt="Untitled" src="https://s1.328888.xyz/2022/08/13/TGDNR.png"/></a></p>
 <h3 id="zfb-root">用排除列表对 ZFB 隐藏root</h3>
 <p>玩机的朋友可能会知道，当 root 后 ZFB 可能会无法刷脸，归根结底还是因为ZFB检测到了 root。我们需要对 ZFB 隐藏r oot，相关步骤如下：</p>
 <p>进入面具排除列表，然后右上角搜索找到 ZFB，点击 ZFB 图标把它展开如图四，这里面显示的一条条都是 ZFB 的进程。当我们勾选 ZFB 的所有进程， ZFB 就检测不到 root 了，也就是对 ZFB 隐藏 root 了。不用一个个点，展开后点 ZFB 右边的方框即可全部勾选这些进程。把这些进程全部勾选后，如图六，可以看到 ZFB 上面的进度条全满。这个进度条表示里面的进程有没有全部勾选，如果没有全部勾选，进度条就不会全满。就像图七图八进度条不全满，里面的进程就没有全部勾选，这样是不行的。必须全部勾选里面的进程，才能完全隐藏 root 。</p>
@@ -885,7 +884,7 @@
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2022 11:47:54</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 12, 2022 10:42:06</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 14, 2022 18:20:58</span>
