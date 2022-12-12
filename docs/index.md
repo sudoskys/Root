@@ -27,7 +27,8 @@ Welcome to IdontKnowRoot
 
 **刷机的一般流程是**
 
-![引用自少数派](https://s1.328888.xyz/2022/08/13/TGFaP.png)
+![引用自少数派](https://user-images.githubusercontent.com/75739606/207025077-5d0231c7-08b1-4856-98c9-15c3efc1410a.png)
+>引用自少数派[^3]
 
 因为 Android 阵营厂商众多，的确很难保证他们步伐齐一，也就不存在某种一定通行的「通法」能够搞定任一 Android 设备的 `Magisk` 刷入。
 
