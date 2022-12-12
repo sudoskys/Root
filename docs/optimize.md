@@ -264,7 +264,6 @@ Google SafetyNet是一个用于监视系统的API，如果检测到篡改，它�
 当面具排除列表勾选 Momo 后，打开 Momo 可以看到 Momo 已经不再提示找到可执行程序 “su”、Magisk、Zygisk，说明 “Shamiko” 模块配合面具排除列表隐藏 root 是有效的。接下来我们如法炮制，在排除列表勾选那些检测到 root 后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到 root ，也就可以正常运行了。
 
 
-![Untitled](https://s1.328888.xyz/2022/08/13/TGDNR.png)
 
 ### 用排除列表对 ZFB 隐藏root
 
