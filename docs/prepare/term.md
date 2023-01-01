@@ -406,7 +406,7 @@ fastboot 主要是用来与bootloader的USB通讯的PC命令行工具，也用�
 
 所以fastbootd 就是动态分区手机的 fastboot(指非动态分区手机的).
 
-![a5nZlt.png](https://s1.328888.xyz/2022/08/13/TGOJ6.png)
+<img width="505" alt="fastboot" src="https://user-images.githubusercontent.com/75739606/210176260-9ce22fb7-e8b3-4a36-b3ba-23c181b27f0e.png">
 
 [What is FastbootD? How to Boot to FastbootD Mode - DroidWin](https://www.droidwin.com/fastbootd-mode/)
 
