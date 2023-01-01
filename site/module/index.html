@@ -584,13 +584,13 @@
 │
 </code></pre></div>
 <p><strong>module.prop</strong></p>
-<div class="highlight"><pre><span></span><code><span class="na">id</span><span class="o">=</span><span class="s">Automatic_brick_rescue</span><span class="w"></span>
-<span class="na">name</span><span class="o">=</span><span class="s">自动神仙救砖-支持OTA稳定版-等待重启中</span><span class="w"></span>
-<span class="na">version</span><span class="o">=</span><span class="s">v210701</span><span class="w"></span>
-<span class="na">versionCode</span><span class="o">=</span><span class="s">35</span><span class="w"></span>
-<span class="na">author</span><span class="o">=</span><span class="s">奋斗的小青年（原作者 Han|情非得已c）</span><span class="w"></span>
-<span class="na">description</span><span class="o">=</span><span class="s">正在等待重启后，测试Magisk开机脚本是否正常执行，来判断自动神仙救砖是否支持您的机型。如果不支持你的机型名称将一直是：自动神仙救砖-等待重启中</span><span class="w"></span>
-<span class="na">updateJson</span><span class="o">=</span><span class="s">&lt;url&gt; (optional)</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="na">id</span><span class="o">=</span><span class="s">Automatic_brick_rescue</span>
+<span class="na">name</span><span class="o">=</span><span class="s">自动神仙救砖-支持OTA稳定版-等待重启中</span>
+<span class="na">version</span><span class="o">=</span><span class="s">v210701</span>
+<span class="na">versionCode</span><span class="o">=</span><span class="s">35</span>
+<span class="na">author</span><span class="o">=</span><span class="s">奋斗的小青年（原作者 Han|情非得已c）</span>
+<span class="na">description</span><span class="o">=</span><span class="s">正在等待重启后，测试Magisk开机脚本是否正常执行，来判断自动神仙救砖是否支持您的机型。如果不支持你的机型名称将一直是：自动神仙救砖-等待重启中</span>
+<span class="na">updateJson</span><span class="o">=</span><span class="s">&lt;url&gt; (optional)</span>
 </code></pre></div>
 <p><strong>id</strong>：Magisk就是通过这个ID来识别模块，所以ID不能冲突。如果是相同的ID，最后刷入的模块则会替换你之前刷入的模块。发布后不应更改。</p>
 <div class="admonition tip">
@@ -607,12 +607,12 @@ ID必须匹配这个正则表达式：^[a-zA-Z][a-zA-Z0-9._-]+$。
 <p>确保使用 UNIX (LF) 换行类型，而不是 Windows (CR+LF) 或者 Macintosh (CR) .</p>
 </div>
 <p><strong>Json格式</strong></p>
-<div class="highlight"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"versionCode"</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"zipUrl"</span><span class="p">:</span><span class="w"> </span><span class="err">url</span><span class="p">,</span><span class="w"></span>
-<span class="w">    </span><span class="nt">"changelog"</span><span class="p">:</span><span class="w"> </span><span class="err">url</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">"version"</span><span class="p">:</span><span class="w"> </span><span class="err">s</span><span class="kc">tr</span><span class="err">i</span><span class="kc">n</span><span class="err">g</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"versionCode"</span><span class="p">:</span><span class="w"> </span><span class="err">i</span><span class="kc">nt</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"zipUrl"</span><span class="p">:</span><span class="w"> </span><span class="err">url</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"changelog"</span><span class="p">:</span><span class="w"> </span><span class="err">url</span>
+<span class="p">}</span>
 </code></pre></div>
 <h3 id="shellsh">Shell脚本(*.sh)</h3>
 <p>请阅读启动脚本部分，了解<code>post-fs-data.sh</code>与<code>service.sh</code>之间的差异。对于大多数模块开发者，<code>service.sh</code>如果只需运行启动脚本那便足够了。</p>
@@ -670,10 +670,10 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
 </code></pre></div>
 <p>为了方便起见，还可以在变量名 <code>REPLACE</code> 中声明要替换的文件夹列表。</p>
 <p>模块安装程序脚本将提取此变量并创建<code>.replace</code>文件进行替换。声明示例:</p>
-<div class="highlight"><pre><span></span><code><span class="na">REPLACE</span><span class="o">=</span><span class="s">"</span><span class="w"></span>
-<span class="na">/system/app/YouTube</span><span class="w"></span>
-<span class="na">/system/app/Bloatware</span><span class="w"></span>
-<span class="na">"</span><span class="w"></span>
+<div class="highlight"><pre><span></span><code><span class="na">REPLACE</span><span class="o">=</span><span class="s">"</span>
+<span class="na">/system/app/YouTube</span>
+<span class="na">/system/app/Bloatware</span>
+<span class="na">"</span>
 </code></pre></div>
 <p>上面的列表将导致创建以下文件: <code>$MODPATH/system/app/YouTube/.replace和$MODPATH/system/app/Bloatware/.replace</code></p>
 <div class="admonition tip">
@@ -739,32 +739,32 @@ set_perm_recursive &lt;目录&gt; &lt;所有者&gt; &lt;用户组&gt; &lt;目录
 <p>下面是一个如何使用自定义<code>*.rc</code>脚本设置<code>overlay.d</code>的示例:</p>
 <div class="highlight"><pre><span></span><code>ramdisk
 │
-├── overlay.d
-│   ├── sbin
-│   │   ├── libfoo.ko      &lt;--- 这两个文件将被复制
-│   │   └── myscript.sh    &lt;--- 到Magisk的tmpfs目录
-│   ├── custom.rc          &lt;--- 该文件将被注入到init.rc中
-│   ├── res
-│   │   └── random.png     &lt;--- 该文件将替换/res/random.png
-│   └── new_file           &lt;--- 该文件将被忽略，因为
-│                               /new_file不存在
-├── res
-│   └── random.png         &lt;--- 该文件将被替换为
-│                               /overlay.d/res/random.png
-├── ...
-├── ...  /* 其余的initramfs文件 */
+├──<span class="w"> </span>overlay.d
+│<span class="w">   </span>├──<span class="w"> </span>sbin
+│<span class="w">   </span>│<span class="w">   </span>├──<span class="w"> </span>libfoo.ko<span class="w">      </span>&lt;---<span class="w"> </span>这两个文件将被复制
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>myscript.sh<span class="w">    </span>&lt;---<span class="w"> </span>到Magisk的tmpfs目录
+│<span class="w">   </span>├──<span class="w"> </span>custom.rc<span class="w">          </span>&lt;---<span class="w"> </span>该文件将被注入到init.rc中
+│<span class="w">   </span>├──<span class="w"> </span>res
+│<span class="w">   </span>│<span class="w">   </span>└──<span class="w"> </span>random.png<span class="w">     </span>&lt;---<span class="w"> </span>该文件将替换/res/random.png
+│<span class="w">   </span>└──<span class="w"> </span>new_file<span class="w">           </span>&lt;---<span class="w"> </span>该文件将被忽略，因为
+│<span class="w">                               </span>/new_file不存在
+├──<span class="w"> </span>res
+│<span class="w">   </span>└──<span class="w"> </span>random.png<span class="w">         </span>&lt;---<span class="w"> </span>该文件将被替换为
+│<span class="w">                               </span>/overlay.d/res/random.png
+├──<span class="w"> </span>...
+├──<span class="w"> </span>...<span class="w">  </span>/*<span class="w"> </span>其余的initramfs文件<span class="w"> </span>*/
 │
 </code></pre></div>
 <p>这是一个示例<code>custom.rc</code> 配置</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># 使用${MAGISKTMP}引用Magisk的tmpfs目录</span>
 
-on early-init
-    setprop sys.example.foo bar
-    insmod <span class="si">${</span><span class="nv">MAGISKTMP</span><span class="si">}</span>/libfoo.ko
-    start myservice
+on<span class="w"> </span>early-init
+<span class="w">    </span>setprop<span class="w"> </span>sys.example.foo<span class="w"> </span>bar
+<span class="w">    </span>insmod<span class="w"> </span><span class="si">${</span><span class="nv">MAGISKTMP</span><span class="si">}</span>/libfoo.ko
+<span class="w">    </span>start<span class="w"> </span>myservice
 
-service myservice <span class="si">${</span><span class="nv">MAGISKTMP</span><span class="si">}</span>/myscript.sh
-    oneshot
+service<span class="w"> </span>myservice<span class="w"> </span><span class="si">${</span><span class="nv">MAGISKTMP</span><span class="si">}</span>/myscript.sh
+<span class="w">    </span>oneshot
 </code></pre></div>
 <h2 id="clashformagisk">特典:ClashForMagisk</h2>
 <p>刷入此包即可:<a href="https://t.me/nanie1/48">Clash养老版,自带说明</a></p>

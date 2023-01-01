@@ -775,7 +775,7 @@
 <p>为了让设备厂商更方便的引入 Verified boot 功能，Google 在 Android O上推出了一个统一的验证启动框架 Android verified boot 2.0.</p>
 <p>AVB/DM启动验证分区，主要是为了防止启动镜像（boot.img）被篡改。vbmeta启动效验通常导致MTK机型刷入magisk或者三方Recovery后陷入无限重启的情况。</p>
 <p>在部分机型中，可能由于vbmeta.img的验证导致设备无法启动，我们可以去掉这项验证，</p>
-<p><div class="highlight"><pre><span></span><code>fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img 
+<p><div class="highlight"><pre><span></span><code>fastboot<span class="w"> </span>--disable-verity<span class="w"> </span>--disable-verification<span class="w"> </span>flash<span class="w"> </span>vbmeta<span class="w"> </span>vbmeta.img<span class="w"> </span>
 </code></pre></div>
 面具 <code>安装</code> 功能中也有相关选项。</p>
 <ul>
@@ -864,7 +864,7 @@
 <p>据我所知, fastbootd 是用户空间中的 fastboot。</p>
 <p>在动态分区手机. <code>data</code>, <code>system</code>等原来的物理分区, 现在都被放到一个共同的<code>super</code>分区下. 这种"虚拟分区"只在用户空间(Android系统里)可见, 也就是说原版fastboot只能识别到整个<code>super</code>, 而<code>super</code>里的<code>data</code>这些却不行.</p>
 <p>所以fastbootd 就是动态分区手机的 fastboot(指非动态分区手机的).</p>
-<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://s1.328888.xyz/2022/08/13/TGOJ6.png"><img alt="a5nZlt.png" src="https://s1.328888.xyz/2022/08/13/TGOJ6.png"/></a></p>
+<p><a class="glightbox" data-desc-position="bottom" data-height="auto" data-width="100%" href="https://user-images.githubusercontent.com/75739606/210176260-9ce22fb7-e8b3-4a36-b3ba-23c181b27f0e.png"><img alt="fastboot" src="https://user-images.githubusercontent.com/75739606/210176260-9ce22fb7-e8b3-4a36-b3ba-23c181b27f0e.png" width="505"/></a></p>
 <p><a href="https://www.droidwin.com/fastbootd-mode/">What is FastbootD? How to Boot to FastbootD Mode - DroidWin</a></p>
 <p><strong>ADB Android 调试桥 (ADB)</strong></p>
 <p>Android 调试桥 (ADB) 可让您将开发工作站直接连接到 Android 设备进行通信，以便安装软件包并评估更改。</p>
@@ -875,7 +875,7 @@
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2022 11:47:54</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 1, 2023 15:32:19</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2022 11:47:54</span>

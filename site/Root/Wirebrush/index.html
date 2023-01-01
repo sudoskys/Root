@@ -461,11 +461,11 @@
 <p>下面是拉取源码进行解包的指南，如果失败请尝试找到打包完毕的exe工具(首页附有)。</p>
 <p>解压 payload.bin 需要用到特殊的工具，我们可以在 Github 上找到开源的 <a href="https://github.com/vm03/payload_dumper">payload dumper</a>，这是一个基于 python 3 的命令行工具。</p>
 <p>以 zip 格式下载源代码，本地解压得到 payload_dumper-master 文件夹，下属两个 py 后缀的 python 文件。将 ROM 的 .zip 包解压缩后，把其中的 payload.bin 文件移送到 payload_dumper-master 中。</p>
-<div class="highlight"><pre><span></span><code>pip3 install protobuf <span class="c1">#安装 protobuf</span>
+<div class="highlight"><pre><span></span><code>pip3<span class="w"> </span>install<span class="w"> </span>protobuf<span class="w"> </span><span class="c1">#安装 protobuf</span>
 <span class="c1">## 定位到 payload_dumper-master 文件夹</span>
-python3 -m pip install protobuf
-python3 -m pip install -r requirements.txt
-python3 payload_dumper.py payload.bin
+python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>protobuf
+python3<span class="w"> </span>-m<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
+python3<span class="w"> </span>payload_dumper.py<span class="w"> </span>payload.bin
 </code></pre></div>
 </div>
 <p>准备好 boot.img 后，打开最新的 <code>Magisk</code> ，点击 <code>Magisk</code> 后边的<code>安装</code>，选择安装方式为 <code>选择并修改一个文件</code> ，从电脑端复制 <code>boot.img</code> 文件到手机并选中该文件，点击<code>开始</code> ，仔细阅读修改结果并从结果中复制patch后的文件（一般在 <code>Download</code> 文件夹下，文件名类似<code>magisk_patched-24100_gk0te.img</code>）到电脑。</p>

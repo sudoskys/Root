@@ -581,8 +581,8 @@ Finished. Total time: 23.050s
 <h3 id="_4">刷写</h3>
 <p>对于A-only,输入<code>fastboot flash system system.img</code></p>
 <p>对于A/B，输入
-<div class="highlight"><pre><span></span><code>fastboot flash system_a GSI.img
-fastboot flash system_b GSI.img
+<div class="highlight"><pre><span></span><code>fastboot<span class="w"> </span>flash<span class="w"> </span>system_a<span class="w"> </span>GSI.img
+fastboot<span class="w"> </span>flash<span class="w"> </span>system_b<span class="w"> </span>GSI.img
 </code></pre></div></p>
 <p><strong>具体操作注意看你下载的包的说明。</strong></p>
 <p>刷写完成后，使用<code>fastboot -w</code>清除数据，这一步会格式化data注意提前备份）。</p>
@@ -591,7 +591,7 @@ fastboot flash system_b GSI.img
     fastboot: error: Command failed
 </code></pre></div>
 <p>如果出现这种情况，你可以使用以下命令删除产品分区并为系统分区释放空间。这可以为刷写 GSI 提供额外的空间：</p>
-<div class="highlight"><pre><span></span><code>fastboot delete-logical-partition product_a
+<div class="highlight"><pre><span></span><code>fastboot<span class="w"> </span>delete-logical-partition<span class="w"> </span>product_a
 </code></pre></div>
 <p>后缀 _a 应与 system 分区的槽位 ID 匹配，例如本示例中的 system_a。</p>
 <p><strong>重启</strong>

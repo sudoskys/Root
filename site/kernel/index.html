@@ -444,26 +444,26 @@
 <p>对于如何安装以上的系统不在本文主题内，如果你不懂，可以搜索一下。</p>
 <p>本教程以 Ubuntu18.04 为例.</p>
 <p>首先，我们要把软件源更换为国内镜像源，在终端输入以下命令:</p>
-<div class="highlight"><pre><span></span><code>sudo sed -i <span class="s2">"s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g"</span> /etc/apt/sources.list
-sudo sed -i <span class="s2">"s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g"</span> /etc/apt/sources.list
-sudo apt update
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">"s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g"</span><span class="w"> </span>/etc/apt/sources.list
+sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">"s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g"</span><span class="w"> </span>/etc/apt/sources.list
+sudo<span class="w"> </span>apt<span class="w"> </span>update
 </code></pre></div>
 <p>以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令:</p>
-<p><div class="highlight"><pre><span></span><code>sudo apt install -y bc bison build-essential ccache cpio curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-
-dev unzip openjdk-8-jdk language-pack-zh-hans python vim
+<p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>bc<span class="w"> </span>bison<span class="w"> </span>build-essential<span class="w"> </span>ccache<span class="w"> </span>cpio<span class="w"> </span>curl<span class="w"> </span>flex<span class="w"> </span>g++-multilib<span class="w"> </span>gcc-multilib<span class="w"> </span>git<span class="w"> </span>gnupg<span class="w"> </span>gperf<span class="w"> </span>imagemagick<span class="w"> </span>lib32ncurses5-dev<span class="w"> </span>lib32readline-dev<span class="w"> </span>lib32z1-dev<span class="w"> </span>liblz4-tool<span class="w"> </span>libncurses5-dev<span class="w"> </span>libsdl1.2-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libwxgtk3.0-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-utils<span class="w"> </span>lzop<span class="w"> </span>pngcrush<span class="w"> </span>rsync<span class="w"> </span>schedtool<span class="w"> </span>squashfs-tools<span class="w"> </span>xsltproc<span class="w"> </span>zip<span class="w"> </span>zlib1g-
+dev<span class="w"> </span>unzip<span class="w"> </span>openjdk-8-jdk<span class="w"> </span>language-pack-zh-hans<span class="w"> </span>python<span class="w"> </span>vim
 </code></pre></div>
 在上述命令执行完后，我们需要下载编译器，这里使用clang。</p>
-<div class="highlight"><pre><span></span><code><span class="nb">cd</span> ~ <span class="o">&amp;&amp;</span> git clone --depth<span class="o">=</span><span class="m">1</span> https://github.com/kdrag0n/proton-clang.git
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/kdrag0n/proton-clang.git
 </code></pre></div>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>如果克隆很慢，尝试把源地址中的<code>github.com</code>改成<code>hub.fastgit.xyz</code>。</p>
 </div>
 <p>下载完后，我们在终端输入<code>vi ~/.bashrc</code>打开编辑器，按下键盘上的 "Insert" 键，使用方向键滑到文件底部，加上以下代码：</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span> <span class="nv">PATH</span><span class="o">=</span><span class="s2">"~/proton-clang/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
-<span class="nb">export</span> <span class="nv">CROSS_COMPILE</span><span class="o">=</span>aarch64-linux-gnu-
-<span class="nb">export</span> <span class="nv">CROSS_COMPILE_ARM32</span><span class="o">=</span>arm-linux-gnueabi-
-<span class="nb">export</span> <span class="nv">ARCH</span><span class="o">=</span>arm64
+<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"~/proton-clang/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">CROSS_COMPILE</span><span class="o">=</span>aarch64-linux-gnu-
+<span class="nb">export</span><span class="w"> </span><span class="nv">CROSS_COMPILE_ARM32</span><span class="o">=</span>arm-linux-gnueabi-
+<span class="nb">export</span><span class="w"> </span><span class="nv">ARCH</span><span class="o">=</span>arm64
 </code></pre></div>
 <p>然后按下 “Esc” 键，输入<code>:wq!</code>保存退出。</p>
 <p>接着输入以下命令 <code>source ~/.bashrc &amp;&amp; clang --version</code>，它应该有大概长这样的输出(因人而异)：
@@ -477,7 +477,7 @@ InstalledDir: /home/proton-clang/bin
 <p>现在环境已经准备好了，我们需要下载我们之前找到的内核源码。</p>
 <p><a href="https://github.com/flypatriot/crdroid_12_kernel" title="本教程作为示例所使用的内核源码在这里">本教程作为示例所使用的内核源码在这里</a></p>
 <p>一般内核都使用 Git 源，我们应该通过这种方法下载：
-<div class="highlight"><pre><span></span><code>git clone --depth<span class="o">=</span><span class="m">1</span> &lt;源地址&gt;
+<div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>&lt;源地址&gt;
 </code></pre></div>
 其中 <code>--depth=1</code> 表示浅克隆，即不克隆提交记录，因为 Linux 历史悠久，提交记录非常多(比如本教程的示例内核有86万多个提交)如果将他们克隆下来，将会非常慢，最后源码目录也会非常大。</p>
 <div class="admonition help">
@@ -540,17 +540,17 @@ CONFIG_NF_NAT_NEEDED=y
 CONFIG_OVERLAY_FS=y
 </code></pre></div>
 <p>然后保存退出，回到源码目录，执行：</p>
-<div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out op8-perf_defconfig
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang<span class="w"> </span><span class="nv">AR</span><span class="o">=</span>llvm-ar<span class="w"> </span><span class="nv">NM</span><span class="o">=</span>llvm-nm<span class="w"> </span><span class="nv">STRIP</span><span class="o">=</span>llvm-strip<span class="w"> </span><span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy<span class="w"> </span><span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump<span class="w"> </span><span class="nv">O</span><span class="o">=</span>out<span class="w"> </span>op8-perf_defconfig
 </code></pre></div>
 <p>加载默认配置。</p>
 <p>此时我们已经可以开始编译。不过你可能还想修改一下别的，所以我们执行：
-<div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out  menuconfig
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang<span class="w"> </span><span class="nv">AR</span><span class="o">=</span>llvm-ar<span class="w"> </span><span class="nv">NM</span><span class="o">=</span>llvm-nm<span class="w"> </span><span class="nv">STRIP</span><span class="o">=</span>llvm-strip<span class="w"> </span><span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy<span class="w"> </span><span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump<span class="w"> </span><span class="nv">O</span><span class="o">=</span>out<span class="w">  </span>menuconfig
 </code></pre></div></p>
 <p>比如我们还想修改内核名，那我们需要修改这一项：
 <code>General setup -&gt; Local version - append to kernel release</code>
 修改完后，直接 ”Esc“ 保存退出</p>
 <p>然后我们开始编译，输入以下命令
-<div class="highlight"><pre><span></span><code>make <span class="nv">CC</span><span class="o">=</span>clang <span class="nv">AR</span><span class="o">=</span>llvm-ar <span class="nv">NM</span><span class="o">=</span>llvm-nm <span class="nv">STRIP</span><span class="o">=</span>llvm-strip <span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy <span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump <span class="nv">O</span><span class="o">=</span>out -j<span class="k">$(</span>nproc<span class="k">)</span>
+<div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang<span class="w"> </span><span class="nv">AR</span><span class="o">=</span>llvm-ar<span class="w"> </span><span class="nv">NM</span><span class="o">=</span>llvm-nm<span class="w"> </span><span class="nv">STRIP</span><span class="o">=</span>llvm-strip<span class="w"> </span><span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy<span class="w"> </span><span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump<span class="w"> </span><span class="nv">O</span><span class="o">=</span>out<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
 </code></pre></div>
 <code>nproc</code>会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把<code>$(nproc)</code>换成一个比你 CPU 的线程数小的数字。</p>
 <p>然后便是等待。等他出现<code>Ready</code>字样时就说明你成功了。</p>
