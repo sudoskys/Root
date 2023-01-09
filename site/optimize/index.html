@@ -8,10 +8,12 @@
 <meta content="刷机指南" name="description"/>
 <meta content="IdontKnowRoot Team" name="author"/>
 <link href="https://root.dianas.cyou/optimize/" rel="canonical"/>
+<link href="../Root/Huawei/" rel="prev"/>
+<link href="../module/" rel="next"/>
 <link href="../assets/images/favicon.png" rel="icon"/>
-<meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
+<meta content="mkdocs-1.4.2, mkdocs-material-9.0.3" name="generator"/>
 <title>优化 - IdontKnowRoot</title>
-<link href="../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/main.6b71719e.min.css" rel="stylesheet"/>
 <link href="../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
 <link href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback" rel="stylesheet"/>
@@ -202,7 +204,7 @@
       </a>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../prepare/">准备</a>
 <label for="__nav_2">
@@ -229,7 +231,7 @@
 </nav>
 </li>
 <li class="md-nav__item md-nav__item--nested">
-<input checked="" class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
+<input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" id="__nav_3" type="checkbox"/>
 <div class="md-nav__link md-nav__link--index">
 <a href="../Root/">刷机</a>
 <label for="__nav_3">
@@ -258,7 +260,7 @@
       </a>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="../Root/GSI/">
+<a class="md-nav__link" href="../Root/GSI.md">
         GSI
       </a>
 </li>
@@ -371,7 +373,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#shamiko">
-    安装 SHamiko
+    安装 Shamiko
   </a>
 </li>
 <li class="md-nav__item">
@@ -530,7 +532,7 @@
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#shamiko">
-    安装 SHamiko
+    安装 Shamiko
   </a>
 </li>
 <li class="md-nav__item">
@@ -583,9 +585,6 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/sudoskys/Root/edit/main/docs/optimize.md" title="编辑此页">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
-</a>
 <h1 id="_1">优化</h1>
 <p>因为在Google加强安全性之前，SuperSU 一直有效，直到 Android Marshmallow 出现。修改系统分区会向尝试检测根目录的应用发送红色标记。</p>
 <p>Google SafetyNet是一个用于监视系统的API，如果检测到篡改，它将阻止某些应用程序运行。您不能将Google Pay或Netflix与SuperSU一起使用。修改系统后，用户不会获得任何 OTA（Over The Air Updates， 无线下载 ）更新 。</p>
@@ -740,7 +739,7 @@
 <p class="admonition-title">Magisk 图标好丑！</p>
 <p>面具的设置中有生成一个图标的选项</p>
 </div>
-<h3 id="shamiko">安装 SHamiko</h3>
+<h3 id="shamiko">安装 Shamiko</h3>
 <p>一个面具模块，可以在面具开启Zygisk的情况下，实现类似于MagiskHide的隐藏root效果，可以对应用隐藏Magisk、Zygisk本身和二进制文件“su”。你可以把它简单理解为，就是隐藏root的模块。</p>
 <p>文件在文档首页的<strong>资源仓库支持中均有，请自行下载</strong>。</p>
 <div class="admonition help">
@@ -753,13 +752,13 @@
 <p>如果是在后台运行，你最好结束一下 (<strong>注意长按打开应用信息界面彻底结束进程</strong>) ，再打开应用。如果不是在后台运行，你就可以直接打开应用。</p>
 <p>当面具排除列表勾选 Momo 后，打开 Momo 可以看到 Momo 已经不再提示找到可执行程序 “su”、Magisk、Zygisk，说明 “Shamiko” 模块配合面具排除列表隐藏 root 是有效的。接下来我们如法炮制，在排除列表勾选那些检测到 root 后无法运行或者闪退的应用，比如银行类、金融类、游戏类应用。这样它们就检测不到 root ，也就可以正常运行了。</p>
 <h3 id="zfb-root">用排除列表对 ZFB 隐藏root</h3>
-<p>玩机的朋友可能会知道，当 root 后 ZFB 可能会无法刷脸，归根结底还是因为ZFB检测到了 root。我们需要对 ZFB 隐藏r oot，相关步骤如下：</p>
+<p>玩机的朋友可能会知道，当 root 后 ZFB 可能会无法刷脸，归根结底还是因为ZFB检测到了 root。我们需要对 ZFB 隐藏root，相关步骤如下：</p>
 <p>进入面具排除列表，然后右上角搜索找到 ZFB，点击 ZFB 图标把它展开如图四，这里面显示的一条条都是 ZFB 的进程。当我们勾选 ZFB 的所有进程， ZFB 就检测不到 root 了，也就是对 ZFB 隐藏 root 了。不用一个个点，展开后点 ZFB 右边的方框即可全部勾选这些进程。把这些进程全部勾选后，如图六，可以看到 ZFB 上面的进度条全满。这个进度条表示里面的进程有没有全部勾选，如果没有全部勾选，进度条就不会全满。就像图七图八进度条不全满，里面的进程就没有全部勾选，这样是不行的。必须全部勾选里面的进程，才能完全隐藏 root 。</p>
 <p>非必需操作：排除列表勾选完 ZFB 后，退出面具。然后长按桌面的 ZFB 图标， ZFB 图标上会出现“应用信息”四个字，点“应用信息”进入“应用信息”界面。如果你是显示图一那样，你就直接去打开 ZFB，也不用点“结束运行”。如果你是显示图二那样，就点一下“结束运行”，然后再去打开 ZFB。</p>
 <p>好了，不出意外的话，当排除列表勾选 ZFB 后，打开 ZFB 就会发现刷脸功能又可以使用了。</p>
 <h3 id="rootmiui">排除列表对手机管家隐藏root(MIUI系统专属)</h3>
 <p>如果你是MIUI系统的用户，对ZFB或者薇信以及其他金融类应用隐藏root后，用它们ZF时可能会弹出以下提醒。</p>
-<p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。SHamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
+<p>当看到以上提醒，一些朋友可能会觉得，你这方案不行啊。Shamiko模块生效了，也在排除列表勾选了ZFB所有进程，居然还会提示手机已被root。其实这真不是ZFB检测到了root，而是MIUI系统的系统应用“手机管家”检测到了root，发出的弹窗提醒。至于为什么会弹窗这个，因为你排除列表没勾选手机管家啊！</p>
 <p>进入面具排除列表，然后右上角搜索手机管家，大概率都会搜索不到，主要是方法不对，以下教大家查找手机管家的正确方法。</p>
 <h3 id="_10">疑难解答</h3>
 <details class="help">
@@ -770,14 +769,14 @@
 <p>关于“隐藏系统root”这个模块的作用，我发现许多人对这个模块的作用存在很大误解。</p>
 <p>如果你每次打开面具时，它都会提示“检测到不属于Magisk的su文件”，那么你需要安装这个“隐藏系统root”模块，如果你打开面具没提示这个，就不能安装也不要安装。</p>
 <p>(2)去面具模块界面，检查有没有安装“隐藏系统root”模块。如果没安装这个模块，那说明是其他模块导致Momo提示找到Magisk。</p>
-<p>怎么排查是哪个面具模块引起Momo找到Magisk呢？我建议停用除“SHamiko”以外的所有模块，即“SHamiko”模块你不要停用，其余模块全部停用。PS:停用的面具模块，主要包括字体模块、桌面模块、调节音质、优化触控、停用温控、开启高刷、调整扬声器马达、开启快充等等这一类优化模块。</p>
+<p>怎么排查是哪个面具模块引起Momo找到Magisk呢？我建议停用除“Shamiko”以外的所有模块，即“Shamiko”模块你不要停用，其余模块全部停用。PS:停用的面具模块，主要包括字体模块、桌面模块、调节音质、优化触控、停用温控、开启高刷、调整扬声器马达、开启快充等等这一类优化模块。</p>
 <p>停用后重启手机打开Momo再看看，如果停用面具模块解决了Momo找到Magisk的问题，那么我建议大家重新启用面具模块时，一个一个或者两个两个来启用。每启用一个或者两个，就重启下手机打开Momo再看看。直到Momo再次提示找到Magisk，就可以知道是哪个模块引起的了。知道是哪个模块引起的，就把哪个模块移除不用就行了。</p>
 </details>
 <details class="help">
 <summary><strong>Momo提示找到二进制文件“su”解决方法</strong></summary>
 <p>安装了“Shamiko”模块，并且“Shamiko”模块也生效了(显示笑脸)，排除列表也勾选了Momo的所有进程，特定用户也安装了“隐藏系统root”模块，打开Momo还是提示找到二进制文件“su”。</p>
 <p><strong>解决方法</strong>
-我建议停用除“SHamiko”以外的所有模块，即“SHamiko”模块你不要停用，剩余模块全部停用。如果你是安装了“隐藏系统root”模块的特定用户，那么你就停用除“隐藏系统root、SHamiko”以外的所有模块。即这两个SHamiko模块和隐藏系统root模块你不要停用，剩余模块全部停用。</p>
+我建议停用除“Shamiko”以外的所有模块，即“Shamiko”模块你不要停用，剩余模块全部停用。如果你是安装了“隐藏系统root”模块的特定用户，那么你就停用除“隐藏系统root、Shamiko”以外的所有模块。即这两个Shamiko模块和隐藏系统root模块你不要停用，剩余模块全部停用。</p>
 <p>停用后重启手机打开Momo再看看，如果停用面具模块解决了Momo找到二进制文件“su”的问题，那么我建议大家重新启用面具模块时，一个一个或者两个两个来启用。每启用一个或者两个，就重启下手机打开Momo再看看。直到Momo再次提示找到二进制文件“su”，就可以知道是哪个模块引起的了。知道是哪个模块引起的，就把哪个模块移除不用就行了。</p>
 </details>
 <details class="help">
@@ -799,7 +798,7 @@
 </details>
 <h3 id="shamiko_1"><strong>“Shamiko”白名单模式</strong></h3>
 <p><strong>需要注意的事项</strong></p>
-<p>既然SHamiko白名单模式比黑名单模式有优势，那是不是可以不加分辨的启用白名单模式呢？还真不是这样的，在决定使用白名单模式前，我建议你知道一些注意事项：</p>
+<p>既然Shamiko白名单模式比黑名单模式有优势，那是不是可以不加分辨的启用白名单模式呢？还真不是这样的，在决定使用白名单模式前，我建议你知道一些注意事项：</p>
 <ul>
 <li>白名单模式存在一些较为严重的Bug</li>
 </ul>
@@ -812,13 +811,13 @@
 <p>比如你启用“Shamiko”白名单模式后，安装搞机助手(搞机助手需要root才能正常运行)，那么搞机助手就会获取不了root，进而无法运行。</p>
 <p><strong>“Shamiko”白名单模式的隐藏root方案</strong></p>
 <blockquote>
-<p>面具启用随机包名+开启Zygisk+遵守排除列表(不能开)+安装“SHamiko”模块+启用“Shamiko”白名单模式+安装“隐藏系统root”模块(特定用户安装)→若无效→停用或移除部分面具模块
+<p>面具启用随机包名+开启Zygisk+遵守排除列表(不能开)+安装“Shamiko”模块+启用“Shamiko”白名单模式+安装“隐藏系统root”模块(特定用户安装)→若无效→停用或移除部分面具模块
 </p>
 </blockquote>
 <p>“ Shamiko”白名单模式跟黑名单模式一样，也需要关闭遵守排除列表，“Shamiko”模块才能生效。</p>
 <p>关于特定用户的安装“隐藏系统root”模块还是得再讲一下。如果你每次打开面具，它都会提示“检测到不属于Magisk的su文件”，那么你一定要安装一个名叫“隐藏系统root”的面具模块。如果没提示这个，你不能安装，也没必要安装。</p>
 <p>PS：这个“隐藏系统root”模块文件包里就有，下载后在面具里刷入即可。刷完记得重启手机</p>
-<p><strong>启用“SHamiko”白名单模式的方法</strong></p>
+<p><strong>启用“Shamiko”白名单模式的方法</strong></p>
 <p>既然要启用“Shamiko”白名单模式，首先要学会判断当前“Shamiko”模块是处于哪种模式？如何判断呢？我们要看“Shamiko”的模块描述。首先我们打开面具进入模块界面，可以看到“Shamiko”笑脸正在工作。</p>
 <p>如果“Shamiko”的模块描述里显示的是“blacklist mode”，说明“Shamiko”处于黑名单模式，正在以黑名单模式运行；如果“Shamiko”的模块描述里显示的是“whitelist mode”，说明“Shamiko”处于白名单模式，正在以白名单模式运行。</p>
 <p>正常情况下，你的“Shamiko”模块描述里都应该显示“blacklist mode”，因为这是“Shamiko”模块的默认工作方式。</p>
@@ -884,7 +883,7 @@
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">December 12, 2022 10:42:06</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 05:38:32</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 14, 2022 18:20:58</span>
@@ -899,34 +898,6 @@
           </a>
 </main>
 <footer class="md-footer">
-<nav aria-label="页脚" class="md-footer__inner md-grid">
-<a aria-label="上一页: Huawei" class="md-footer__link md-footer__link--prev" href="../Root/Huawei/" rel="prev">
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"></path></svg>
-</div>
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                上一页
-              </span>
-              Huawei
-            </div>
-</div>
-</a>
-<a aria-label="下一页: 模块" class="md-footer__link md-footer__link--next" href="../module/" rel="next">
-<div class="md-footer__title">
-<div class="md-ellipsis">
-<span class="md-footer__direction">
-                下一页
-              </span>
-              模块
-            </div>
-</div>
-<div class="md-footer__button md-icon">
-<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"></path></svg>
-</div>
-</a>
-</nav>
 <div class="md-footer-meta md-typeset">
 <div class="md-footer-meta__inner md-grid">
 <div class="md-copyright">
@@ -992,7 +963,7 @@
 </aside>
 </div>
 <script>var consent=__md_get("__consent");if(consent)for(var input of document.forms.consent.elements)input.name&&(input.checked=consent[input.name]||!1);else"file:"!==location.protocol&&setTimeout(function(){document.querySelector("[data-md-component=consent]").hidden=!1},250);var action,form=document.forms.consent;for(action of["submit","reset"])form.addEventListener(action,function(e){if(e.preventDefault(),"reset"===e.type)for(var n of document.forms.consent.elements)n.name&&(n.checked=!1);__md_set("__consent",Object.fromEntries(Array.from(new FormData(form).keys()).map(function(e){return[e,!0]}))),location.hash="",location.reload()})</script>
-<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.follow", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\uff0c\u3002]+", "search.placeholder": "\u641c\u7d22", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version.title": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
-<script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "toc.follow", "navigation.top", "navigation.tracking", "navigation.indexes", "navigation.expand", "navigation.sections"], "search": "../assets/javascripts/workers/search.e5c33ebb.min.js", "translations": {"clipboard.copied": "\u5df2\u590d\u5236", "clipboard.copy": "\u590d\u5236", "search.result.more.one": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.more.other": "\u5728\u8be5\u9875\u4e0a\u8fd8\u6709 # \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.none": "\u6ca1\u6709\u627e\u5230\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.one": "\u627e\u5230 1 \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.other": "# \u4e2a\u7b26\u5408\u6761\u4ef6\u7684\u7ed3\u679c", "search.result.placeholder": "\u952e\u5165\u4ee5\u5f00\u59cb\u641c\u7d22", "search.result.term.missing": "\u7f3a\u5c11", "select.version": "\u9009\u62e9\u5f53\u524d\u7248\u672c"}}</script>
+<script src="../assets/javascripts/bundle.ba449ae6.min.js"></script>
 <script>document$.subscribe(() => {const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});})</script></body>
 </html>
