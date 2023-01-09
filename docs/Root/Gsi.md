@@ -1,4 +1,4 @@
-# Gsi 通用系统镜像
+# GSI 通用系统镜像
 
 - 一台 Root 的安卓 ？ 以上的手机
 - 一双手
@@ -35,14 +35,14 @@ adb pull /sdcard/persist.img
 
 首先，你需要确认设备是否支持project treble，下载并打开[treble check](https://play.google.com/store/apps/details?id=com.kevintresuelo.treble)
 
-**只有 Project Treble 通过检测，此手机才可以刷 gsi 镜像包。**
+**只有 Project Treble 通过检测，此手机才可以刷 GSI 镜像包。**
 
 如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。
 
 
-## Cpu 架构
+## CPU 架构
 
-将手机链接电脑，在 shell 进入 adb 环境，接着上网查找你所使用手机的 Cpu 架构或者输入指令：
+将手机链接电脑，在 shell 进入 adb 环境，接着上网查找你所使用手机的 CPU 架构或者输入指令：
 
 ```
 adb shell getprop ro.product.cpu.abi
@@ -50,7 +50,7 @@ adb shell getprop ro.product.cpu.abi
 
 如过架构是`arm64-v8a`，那么你应该去找 ARM64 的包，如果是`armeabi-v7a`，那么你应该去寻找 ARM32 的包。
 
-a-only和a/b的gsi不通用。
+a-only和a/b的GSI不通用。
 
 
 ## 寻找镜像
@@ -61,25 +61,25 @@ a-only和a/b的gsi不通用。
     呃.... 如果不会找的话，推荐换个流行的手机（？）或者（￥-5）请人找吧～
 
 !!! tip
-    在XDA查找gsi包，需要查看最前面的标签是`gsi`，`Treble`或`Project Treble`，而不是 `rom`
+    在XDA查找GSI包，需要查看最前面的标签是`GSI`，`Treble`或`Project Treble`，而不是 `rom`
 
-    一般`gsi`的格式是：`系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否`
+    一般`GSI`的格式是：`系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否`
     其中后面带有`gapps`字样的刷机包，表明其内置了谷歌服务。
 
 
 ## 刷入镜像
 
-主要任务是刷写 system 分区，所以 fastboot 和 twrp 都可以做到。刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]
+主要任务是刷写 system 分区，所以 fastboot 和第三方 rec 都可以做到。刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]
 
 !!! danger
 
-    刷写Gsi 双清擦除用户数据（data和cache）
+    刷写 GSI 双清擦除用户数据（data和cache）
 
     Data 分区的强制加密要关掉
 
     刷 GSI 之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版
     
-    需要刷入同等级的gsi
+    需要刷入同等级的GSI
 
     应该进入 fastboot 使用 fastboot 指令刷，如果有 第三方rec 就下专包卡刷
 
@@ -87,7 +87,7 @@ a-only和a/b的gsi不通用。
 
 **刷入vbmeta.img停用AVB验证**
 
-Android 10引入了 启动时验证 (AVB)，在刷写 GSI之前，需要先下载并刷入 vbmeta.img 以停用 AVB，vbmeta.img一般包含会随gsi镜像一起发布。
+Android 10引入了启动时验证 (AVB)，在刷写 GSI之前，需要先下载并刷入 vbmeta.img 以停用 AVB，vbmeta.img一般包含会随GSI镜像一起发布。
 
 如果你是安卓 10 以上，请刷入从底包中提取的vbmeta文件，防止无法进入系统。
 
@@ -101,17 +101,17 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 
 ### 还原原厂Recovery
 
-请确保你的设备正在使用的是**原厂的rec**，目的是可以启动 `fastbootd` (一些twrp会阻止它...见[这里](https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227))。
+请确保你的设备正在使用的是**原厂的rec**，目的是可以启动 `fastbootd` (一些TWRP会阻止它...见[这里](https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227))。
 
-或者使用 twrp 里的 用户空间`fastboot` 也可以，如果twrp有这个功能可以不用刷回 recovery。
+或者使用 TWRP 里的 用户空间`fastboot` 也可以，如果TWRP有这个功能可以不用刷回 recovery。
 
-??? tip "刷写system分区，关于Twrp问题"
+??? tip "刷写system分区，关于TWRP问题"
 
     [官方文档](https://source.android.com/docs/core/bootloader/fastbootd?hl=zh-cn)
 
     为支持 fastbootd，引导加载程序必须实现一个新的启动控制块 (BCB) 命令：boot-fastboot。如需进入 fastbootd 模式，引导加载程序应将 boot-fastboot 写入 BCB 消息的命令字段，并保持 BCB 的 recovery 字段不变（以重启中断的恢复任务）。status、stage 和 reserved 字段也保持不变。引导加载程序在 BCB 命令字段中发现 boot-fastboot 时，会加载并启动到恢复映像。然后，recovery 会解析 BCB 消息并切换到 fastbootd 模式。
    
-    在使用fastbootd的设备上，如果twrp支持 用户空间`fastboot` 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
+    在使用fastbootd的设备上，如果TWRP支持 用户空间`fastboot` 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
     ```
     fastboot flash system system-arm64-ab-vanilla.img 
     Sending sparse 'system' 1/3 (676429 KB)            OKAY [ 22.9843s]
@@ -161,10 +161,10 @@ fastboot reboot recovery
 !!! tip
    刷入不同类型 ROM 或版本降级时必须清除数据，否则无法进入系统。
    
-开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 gsi 包了，或者是底包的问题，恢复至官方系统，升级一下试试？
+开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 GSI 包了，或者是底包的问题，恢复至官方系统，升级一下试试？
 
 !!! info
-    刷了gsi收不到短信 但是电话和流量都能用，是votle问题
+    刷了GSI收不到短信 但是电话和流量都能用，是votle问题
 
 
 ## 动态分区
@@ -202,7 +202,7 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 simg2img system.img system_raw.img
 ```
 !!! tip
-    一般gsi镜像都是simg格式，先检查转换
+    一般GSI镜像都是simg格式，先检查转换
 
 
 ### 安装操作
@@ -258,7 +258,7 @@ adb shell am start-activity \
 
 然后你就会看到状态栏有正在安装的动态更新的提示，安装完重启进入第二个系统
 
-小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp gsi。
+小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp GSI。
 
 
 ??? help "修复 GSI 可能存在的基础问题"
@@ -302,7 +302,7 @@ adb shell am start-activity \
     **修复音频**
     https://dev.moe/wp-content/uploads/2022/06/GSI-Audio-Stutter-Fix-Mi-Pad-5-Pro-elish.zip
 
-    https://forum.xda-developers.com/t/run-an-gsi-on-your-mi-pad-5.4352591/page-9#post-86447857
+    https://forum.xda-developers.com/t/run-an-GSI-on-your-mi-pad-5.4352591/page-9#post-86447857
 
     **修复任务栏**
     https://github.com/Coxxs/hide-tablet-taskbar

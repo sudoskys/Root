@@ -115,7 +115,7 @@ fastboot模式其实是调用spl进行刷机的，所以如果刷spl坏了，fas
 高通的QPST线刷模式，因联机之后端口名字叫Qualcomm HS-USB QDLoader 9008 (COMx)而得名。这种模式下，可以彻底删除手机系统后刷入新系统。
 
 
-### Mtk 深刷
+### MTK 深刷
 [^21]
 
 !!! tip

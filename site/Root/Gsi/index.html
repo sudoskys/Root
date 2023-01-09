@@ -7,10 +7,10 @@
 <meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="刷机指南" name="description"/>
 <meta content="IdontKnowRoot Team" name="author"/>
-<link href="https://root.dianas.cyou/Root/Gsi/" rel="canonical"/>
+<link href="https://root.dianas.cyou/Root/GSI/" rel="canonical"/>
 <link href="../../assets/images/favicon.png" rel="icon"/>
 <meta content="mkdocs-1.4.2, mkdocs-material-8.5.10" name="generator"/>
-<title>Gsi - IdontKnowRoot</title>
+<title>GSI - IdontKnowRoot</title>
 <link href="../../assets/stylesheets/main.975780f9.min.css" rel="stylesheet"/>
 <link href="../../assets/stylesheets/palette.2505c338.min.css" rel="stylesheet"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
@@ -20,17 +20,17 @@
 <!-- Cloudflare Web Analytics --><script data-cf-beacon='{"token": "111cadfda46740a887bf5145c1f998db"}' defer="" src="https://static.cloudflareinsights.com/beacon.min.js"></script><!-- End Cloudflare Web Analytics -->
 <script>var consent;"undefined"==typeof __md_analytics||(consent=__md_get("__consent"))&&consent.analytics&&__md_analytics()</script>
 <meta content="website" property="og:type"/>
-<meta content="Gsi - IdontKnowRoot" property="og:title"/>
+<meta content="GSI - IdontKnowRoot" property="og:title"/>
 <meta content="刷机指南" property="og:description"/>
-<meta content="https://root.dianas.cyou/assets/images/social/Root/Gsi.png" property="og:image"/>
+<meta content="https://root.dianas.cyou/assets/images/social/Root/GSI.png" property="og:image"/>
 <meta content="image/png" property="og:image:type"/>
 <meta content="1200" property="og:image:width"/>
 <meta content="630" property="og:image:height"/>
-<meta content="https://root.dianas.cyou/Root/Gsi/" property="og:url"/>
+<meta content="https://root.dianas.cyou/Root/GSI/" property="og:url"/>
 <meta content="summary_large_image" name="twitter:card"/>
-<meta content="Gsi - IdontKnowRoot" name="twitter:title"/>
+<meta content="GSI - IdontKnowRoot" name="twitter:title"/>
 <meta content="刷机指南" name="twitter:description"/>
-<meta content="https://root.dianas.cyou/assets/images/social/Root/Gsi.png" name="twitter:image"/>
+<meta content="https://root.dianas.cyou/assets/images/social/Root/GSI.png" name="twitter:image"/>
 <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"/><style>
             html.glightbox-open { overflow: initial; height: 100%; }
             .gslide-title { margin-top: 0px; user-select: text; }
@@ -73,7 +73,7 @@
 <div class="md-header__topic" data-md-component="header-topic">
 <span class="md-ellipsis">
             
-              Gsi
+              GSI
             
           </span>
 </div>
@@ -260,11 +260,11 @@
 <li class="md-nav__item md-nav__item--active">
 <input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
 <label class="md-nav__link md-nav__link--active" for="__toc">
-          Gsi
+          GSI
           <span class="md-nav__icon md-icon"></span>
 </label>
 <a class="md-nav__link md-nav__link--active" href="./">
-        Gsi
+        GSI
       </a>
 <nav aria-label="目录" class="md-nav md-nav--secondary">
 <label class="md-nav__title" for="__toc">
@@ -495,10 +495,10 @@
 </div>
 <div class="md-content" data-md-component="content">
 <article class="md-content__inner md-typeset">
-<a class="md-content__button md-icon" href="https://github.com/sudoskys/Root/edit/main/docs/Root/Gsi.md" title="编辑此页">
+<a class="md-content__button md-icon" href="https://github.com/sudoskys/Root/edit/main/docs/Root/GSI.md" title="编辑此页">
 <svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"></path></svg>
 </a>
-<h1 id="gsi">Gsi 通用系统镜像</h1>
+<h1 id="gsi">GSI 通用系统镜像</h1>
 <ul>
 <li>一台 Root 的安卓 ？ 以上的手机</li>
 <li>一双手</li>
@@ -545,7 +545,7 @@ adb pull /sdcard/persist.img
 <p>主要任务是刷写 system 分区，所以 fastboot 和 twrp 都可以做到。刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>刷写Gsi 双清擦除用户数据（data和cache）</p>
+<p>刷写GSI 双清擦除用户数据（data和cache）</p>
 <p>Data 分区的强制加密要关掉</p>
 <p>刷 GSI 之前先刷底包，使用官方稳定ROM作为底包，不要使用开发版和任何官改版</p>
 <p>需要刷入同等级的gsi</p>
@@ -566,7 +566,7 @@ adb pull /sdcard/persist.img
 <p>请确保你的设备正在使用的是<strong>原厂的rec</strong>，目的是可以启动 <code>fastbootd</code> (一些twrp会阻止它...见<a href="https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227">这里</a>)。</p>
 <p>或者使用 twrp 里的 用户空间<code>fastboot</code> 也可以，如果twrp有这个功能可以不用刷回 recovery。</p>
 <details class="tip">
-<summary>刷写system分区，关于Twrp问题</summary>
+<summary>刷写system分区，关于TWRP问题</summary>
 <p><a href="https://source.android.com/docs/core/bootloader/fastbootd?hl=zh-cn">官方文档</a></p>
 <p>为支持 fastbootd，引导加载程序必须实现一个新的启动控制块 (BCB) 命令：boot-fastboot。如需进入 fastbootd 模式，引导加载程序应将 boot-fastboot 写入 BCB 消息的命令字段，并保持 BCB 的 recovery 字段不变（以重启中断的恢复任务）。status、stage 和 reserved 字段也保持不变。引导加载程序在 BCB 命令字段中发现 boot-fastboot 时，会加载并启动到恢复映像。然后，recovery 会解析 BCB 消息并切换到 fastbootd 模式。</p>
 <p>在使用fastbootd的设备上，如果twrp支持 用户空间<code>fastboot</code> 可以不用刷回 recovery，但是如果不支持就会发生以下类似报错：
