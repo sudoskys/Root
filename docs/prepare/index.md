@@ -1,11 +1,12 @@
 # 快问快答
 
-
 ## 我的手机能 Root 吗？
 
-第一看手机能不能解锁 Bootloader ,第二看你使用的机型是否有 全量系统包 或者 对应的第三方Recovery包.
+第一看手机厂商能不能解锁 Bootloader ,第二看你使用的机型是否有 全量系统包 或者 对应的第三方Recovery包.
 
 如果不是特别小众或厂商故意封锁,大部分手机都可以 Root.
+
+- 除了小米、一加、Google 等品牌之外，大多数的品牌可能会在解锁 Bootloader 后失去保修（如 OPPO、真我、三星、索尼、摩托罗拉），还有的可能会导致某些功能的永久失效（如三星解锁后会物理熔断 Knox，导致无法使用三星支付
 
 ## 等一下，你想 Root 模拟器？
 
@@ -19,7 +20,7 @@
 
 请使用 [MagiskOnWSALocal](https://github.com/LSPosed/MagiskOnWSALocal) 项目。
 
-## 不能Root,但是想用。
+## 不能Root,但是想用
 
 假如你经过后面的尝试，发现厂商锁住了 Bootloader,魔改了分区，锁定了端口，甚至把系统组件放进了 Data里... 就是不能Root...
 
@@ -36,7 +37,6 @@
 - [项目与下载地址](https://github.com/LSPosed/LSPatch)
 
 - [一个教程](https://www.jipa.work/lspatch)
-
 
 ## 本节参考
 
