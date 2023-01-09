@@ -111,7 +111,7 @@ finished.
     
     有的 TWRP 的高级设置中并没有签名boot功能，但是一般情况下都会有防止覆盖TWRP功能，虽然功能实现原理不一样，但是都可以防止恢复官方recovery.
     
-    Twrp下只选择 data 不会清除内置存储，会保留 `/data/media/`
+    TWRP下只选择 data 不会清除内置存储，会保留 `/data/media/`
 
 !!! help
     **橙狐设置简体中文界面**

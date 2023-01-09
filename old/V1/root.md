@@ -370,7 +370,7 @@ MTK 提供不同平台的版本，但是因为依赖 Python，所以你需要从
 `python mtk wl out`
 
 
-## Gsi 通用系统镜像
+## GSI 通用系统镜像
 
 本节适合有刷机经验的同学。[^48]
 
@@ -441,7 +441,7 @@ adb shell getprop ro.product.cpu.abi
 刷入 GSI 前，可以先刷入 Magisk，便于之后的操作。[^49]
 
 !!! danger
-    刷写Gsi需要擦除用户数据，嗯就是双清。（data和cache）
+    刷写GSI需要擦除用户数据，嗯就是双清。（data和cache）
 
     Data 分区的强制加密要关掉
 
@@ -473,7 +473,7 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 
 首先，你需要确保你的设备正在使用的是**原厂的rec**，目的是可以启动 `fastbootd` (一些twrp会阻止...见[这里](https://forum.xda-developers.com/t/fastboot-flash-system-partition-not-found.3992977/#post-84653227))，或者使用twrp里的用户空间`fastboot`也可以，注意如果twrp有这个功能可以不用刷回 recovery。
 
-??? tip "刷写system分区，关于Twrp问题"
+??? tip "刷写system分区，关于TWRP问题"
     [官方文档](https://source.android.com/docs/core/bootloader/fastbootd?hl=zh-cn)
     为支持 fastbootd，引导加载程序必须实现一个新的启动控制块 (BCB) 命令：boot-fastboot。如需进入 fastbootd 模式，引导加载程序应将 boot-fastboot 写入 BCB 消息的命令字段，并保持 BCB 的 recovery 字段不变（以重启中断的恢复任务）。status、stage 和 reserved 字段也保持不变。引导加载程序在 BCB 命令字段中发现 boot-fastboot 时，会加载并启动到恢复映像。然后，recovery 会解析 BCB 消息并切换到 fastbootd 模式。
    
@@ -767,7 +767,7 @@ Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复
 
 那么这个70个当中有某个分区数据损坏了，9008是无法救砖的，必须返厂，用工厂售后（非卖手机的那种售后）的工厂包，方可救砖。当然，如果这个工厂包，没有刷写完100个分区的话，基本上也是无法救砖的。
 
-如果你是频繁刷机的玩家，比如你刷Gsi(通用系统镜像)把基带刷丢了怎么办？或者装了格机模块被格式化全分区数据了怎么办？
+如果你是频繁刷机的玩家，比如你刷GSI(通用系统镜像)把基带刷丢了怎么办？或者装了格机模块被格式化全分区数据了怎么办？
 
 所以，Root后第一件事，就是备份完整字库，以防不测。
 

@@ -64,7 +64,7 @@ Welcome to IdontKnowRoot
 - 橘色小狐狸官网 https://orangefox.download/zh-CN
 - 搞机助手 https://gjzsr.com/
 - 还可以的论坛 https://mi.fiime.cn
-- Twrp官方 https://twrp.me/Devices
+- TWRP官方 https://twrp.me/Devices
 - 小米Rom下载站？ http://xiaomirom.com
 - XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
 - viQOO工具箱 https://gitee.com/mouzei/viqoo
