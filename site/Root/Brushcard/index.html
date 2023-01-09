@@ -426,7 +426,7 @@
 <li>一台解锁 Bootloader 的安卓 ？ 以上的手机</li>
 <li>一根良好的数据线</li>
 <li>卡刷包</li>
-<li>Magisk.zip(Root需选) </li>
+<li>Magisk.zip(Root需选)</li>
 </ul>
 <h3 id="adb">ADB</h3>
 <div class="admonition warning">
@@ -448,7 +448,7 @@
 </blockquote>
 <h3 id="_4">提前说明</h3>
 <ul>
-<li>重启到 Recovery 显示 The system has been destoryed </li>
+<li>重启到 Recovery 显示 The system has been destoryed</li>
 </ul>
 <p>新款联发科机型必须关闭AVB2.0校验。</p>
 <p>否则任何对系统的修改都会导致卡在 Fastboot。涉及的机型包括但不限于红米6，6A，9，9A，红米Note8Pro，红米10X4G，5G，红米K30U，小米Play，以及之后的联发科机型。这个与 <a href="https://source.android.com/security/verifiedboot/avb">AVB 2.0 有关</a></p>
@@ -462,10 +462,10 @@
 <p>重置保护 / 谷歌锁 Factory Reset Protection</p>
 </li>
 </ul>
-<p>https://bbs.letitfly.me/d/856</p>
+<p><a href="https://bbs.letitfly.me/d/856">https://bbs.letitfly.me/d/856</a></p>
 <h2 id="_5">刷机</h2>
 <p>用数据线链接手机和电脑，手机进行关机，<strong>长按 音量减键 + 电源键</strong> 进入 <code>fastboot</code> 模式。</p>
-<p>然后打开终端，输入 <code>fastboot flash recovery 解压的 recovery.img 的文件地址</code> （或者 <code>.\fastboot</code>？） </p>
+<p>然后打开终端，输入 <code>fastboot flash recovery 解压的 recovery.img 的文件地址</code> （或者 <code>.\fastboot</code>？）</p>
 <blockquote>
 <p>这一步需要按照上面的指南配置好 ADB 环境。</p>
 </blockquote>
@@ -484,9 +484,9 @@ finished.
 </div>
 <p>在界面输入你的锁屏密码，输入完后点击右下角确认。经过十秒左右秒钟的解密后，不出意外会显示欢迎界面，点击屏幕下方勾即可。然后就是挂载 <code>System</code> 的界面，滑动下方滑块进入主界面。</p>
 <ul>
-<li>格式化 Data </li>
+<li>格式化 Data</li>
 </ul>
-<p>在 <code>Menu –&gt; Manage Parttions –&gt; Data –&gt; 确认 –&gt; 点击</code> 中选择 <code>Format Data</code> 格式化 Data </p>
+<p>在 <code>Menu –&gt; Manage Parttions –&gt; Data –&gt; 确认 –&gt; 点击</code> 中选择 <code>Format Data</code> 格式化 Data</p>
 <ul>
 <li>重启 Recovery</li>
 </ul>
@@ -519,9 +519,9 @@ finished.
 <p>将 Magisk-xxx.apk 替换为你所下载的文件名</p>
 </blockquote>
 <p>完成后，在 Recovery 中重启手机至系统.</p>
-<p>最后，安装 Magisk Manager.
+<p>最后，安装 Magisk Manager.</p>
 <div class="highlight"><pre><span></span><code>adb install Magisk-xxx.apk
-</code></pre></div></p>
+</code></pre></div>
 <p>打开手机上新增的 Magisk 应用，若下方的 超级用户 和 模块 菜单能够点击，就代表已经成功获取了 Root 权限.</p>
 <p>卡刷可以用手机直接下载卡刷包，更名 Update.zip 后进入 recovery 刷机，刷后资料还会在，但是通常不做资料清除的话很容易发生问题，严重的就是一直出现系统错误，轻的则是偶尔出现闪退。</p>
 <p>所以基本上刷完机最好进 Recovery 三清，刷前做三清也行，不然问题很多。接着要还原备份的时候如果系统本差异太大最好不要还原系统设定和App之类的资料，还原一些使用者data就好。卡刷需要存储空间，一般能进 recovery 就能刷。</p>
@@ -537,7 +537,7 @@ finished.
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 05:38:32</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 14:16:22</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 19:19:43</span>

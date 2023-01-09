@@ -422,7 +422,7 @@
 <li>电脑</li>
 <li>一台解锁 Bootloader 的安卓 ？ 以上的手机</li>
 <li>一根良好的数据线</li>
-<li>Magisk.zip(Root需选) </li>
+<li>Magisk.zip(Root需选)</li>
 <li>全量包/OTA包/boot.img 三选一</li>
 </ul>
 <h2 id="_2">准备</h2>
@@ -483,19 +483,19 @@ python3<span class="w"> </span>payload_dumper.py<span class="w"> </span>payload.
 <p><strong>手机重启到 Bootloader</strong></p>
 <div class="highlight"><pre><span></span><code>adb reboot bootloader
 </code></pre></div>
-<p><strong>如果面具中 Ramdisk 为 yes</strong>
+<p><strong>如果面具中 Ramdisk 为 yes</strong></p>
 <div class="highlight"><pre><span></span><code>fastboot flash boot &lt;修改后的 boot.img 路径&gt;
-</code></pre></div></p>
-<p><strong>刷入完成后重启</strong>
+</code></pre></div>
+<p><strong>刷入完成后重启</strong></p>
 <div class="highlight"><pre><span></span><code>fastboot reboot
-</code></pre></div></p>
+</code></pre></div>
 <p>如果想要谨慎一点，比如说修改的镜像文件是从网上下载的，想先试试看能否正常启动，则可以用命令：<code>fastboot boot</code>。这样顺利启动系统后即可暂时拥有 Magisk ，不过重启后就会失效。</p>
 <p>文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）</p>
 <h3 id="miflash">小米线刷工具 MIflash</h3>
 <p>MiFlash 是由小米发布的刷机工具。可以选择刷机不上 BL 锁（对刷 MIUI 海外版来说是必须），自定义刷机脚本，EDL 刷机模式等。</p>
 <p>你可以在以下地址获取它的相关信息，因为是特定机型工具，所以不展开叙述。</p>
-<p>https://miuiver.com/miflash/</p>
-<p>https://xiaomirom.com/download-xiaomi-flash-tool-miflash/</p>
+<p><a href="https://miuiver.com/miflash/">https://miuiver.com/miflash/</a></p>
+<p><a href="https://xiaomirom.com/download-xiaomi-flash-tool-miflash/">https://xiaomirom.com/download-xiaomi-flash-tool-miflash/</a></p>
 <h2 id="ramdisk">面具 Ramdisk 为「否」的机型</h2>
 <p>我们使用面具修补的 「Recovery Mode」 选项来解决这个问题。</p>
 <p>具体操作步骤如下：</p>
@@ -518,7 +518,7 @@ python3<span class="w"> </span>payload_dumper.py<span class="w"> </span>payload.
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2022 11:55:16</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 14:16:22</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 19:19:43</span>

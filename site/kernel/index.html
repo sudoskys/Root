@@ -448,10 +448,10 @@ sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span
 sudo<span class="w"> </span>apt<span class="w"> </span>update
 </code></pre></div>
 <p>以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令:</p>
-<p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>bc<span class="w"> </span>bison<span class="w"> </span>build-essential<span class="w"> </span>ccache<span class="w"> </span>cpio<span class="w"> </span>curl<span class="w"> </span>flex<span class="w"> </span>g++-multilib<span class="w"> </span>gcc-multilib<span class="w"> </span>git<span class="w"> </span>gnupg<span class="w"> </span>gperf<span class="w"> </span>imagemagick<span class="w"> </span>lib32ncurses5-dev<span class="w"> </span>lib32readline-dev<span class="w"> </span>lib32z1-dev<span class="w"> </span>liblz4-tool<span class="w"> </span>libncurses5-dev<span class="w"> </span>libsdl1.2-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libwxgtk3.0-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-utils<span class="w"> </span>lzop<span class="w"> </span>pngcrush<span class="w"> </span>rsync<span class="w"> </span>schedtool<span class="w"> </span>squashfs-tools<span class="w"> </span>xsltproc<span class="w"> </span>zip<span class="w"> </span>zlib1g-
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>bc<span class="w"> </span>bison<span class="w"> </span>build-essential<span class="w"> </span>ccache<span class="w"> </span>cpio<span class="w"> </span>curl<span class="w"> </span>flex<span class="w"> </span>g++-multilib<span class="w"> </span>gcc-multilib<span class="w"> </span>git<span class="w"> </span>gnupg<span class="w"> </span>gperf<span class="w"> </span>imagemagick<span class="w"> </span>lib32ncurses5-dev<span class="w"> </span>lib32readline-dev<span class="w"> </span>lib32z1-dev<span class="w"> </span>liblz4-tool<span class="w"> </span>libncurses5-dev<span class="w"> </span>libsdl1.2-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libwxgtk3.0-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-utils<span class="w"> </span>lzop<span class="w"> </span>pngcrush<span class="w"> </span>rsync<span class="w"> </span>schedtool<span class="w"> </span>squashfs-tools<span class="w"> </span>xsltproc<span class="w"> </span>zip<span class="w"> </span>zlib1g-
 dev<span class="w"> </span>unzip<span class="w"> </span>openjdk-8-jdk<span class="w"> </span>language-pack-zh-hans<span class="w"> </span>python<span class="w"> </span>vim
 </code></pre></div>
-在上述命令执行完后，我们需要下载编译器，这里使用clang。</p>
+<p>在上述命令执行完后，我们需要下载编译器，这里使用clang。</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/kdrag0n/proton-clang.git
 </code></pre></div>
 <div class="admonition help">
@@ -465,20 +465,20 @@ dev<span class="w"> </span>unzip<span class="w"> </span>openjdk-8-jdk<span class
 <span class="nb">export</span><span class="w"> </span><span class="nv">ARCH</span><span class="o">=</span>arm64
 </code></pre></div>
 <p>然后按下 “Esc” 键，输入<code>:wq!</code>保存退出。</p>
-<p>接着输入以下命令 <code>source ~/.bashrc &amp;&amp; clang --version</code>，它应该有大概长这样的输出(因人而异)：
+<p>接着输入以下命令 <code>source ~/.bashrc &amp;&amp; clang --version</code>，它应该有大概长这样的输出(因人而异)：</p>
 <div class="highlight"><pre><span></span><code>Proton clang version 13.0.0 (https://github.com/llvm/llvm-project b4fd512c36ca344a3ff69350219e8b0a67e9472a)
 Target: x86_64-unknown-linux-gnu
 Thread model: posix
 InstalledDir: /home/proton-clang/bin
 </code></pre></div>
-如果没有，说明某一步操作有问题，你必须回头纠正。</p>
+<p>如果没有，说明某一步操作有问题，你必须回头纠正。</p>
 <h3 id="_5">准备配置并开始编译</h3>
 <p>现在环境已经准备好了，我们需要下载我们之前找到的内核源码。</p>
 <p><a href="https://github.com/flypatriot/crdroid_12_kernel" title="本教程作为示例所使用的内核源码在这里">本教程作为示例所使用的内核源码在这里</a></p>
-<p>一般内核都使用 Git 源，我们应该通过这种方法下载：
+<p>一般内核都使用 Git 源，我们应该通过这种方法下载：</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>&lt;源地址&gt;
 </code></pre></div>
-其中 <code>--depth=1</code> 表示浅克隆，即不克隆提交记录，因为 Linux 历史悠久，提交记录非常多(比如本教程的示例内核有86万多个提交)如果将他们克隆下来，将会非常慢，最后源码目录也会非常大。</p>
+<p>其中 <code>--depth=1</code> 表示浅克隆，即不克隆提交记录，因为 Linux 历史悠久，提交记录非常多(比如本教程的示例内核有86万多个提交)如果将他们克隆下来，将会非常慢，最后源码目录也会非常大。</p>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
 <p>如果克隆很慢，尝试把源地址中的<code>github.com</code>改成<code>hub.fastgit.xyz</code>。</p>
@@ -542,31 +542,31 @@ CONFIG_OVERLAY_FS=y
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang<span class="w"> </span><span class="nv">AR</span><span class="o">=</span>llvm-ar<span class="w"> </span><span class="nv">NM</span><span class="o">=</span>llvm-nm<span class="w"> </span><span class="nv">STRIP</span><span class="o">=</span>llvm-strip<span class="w"> </span><span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy<span class="w"> </span><span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump<span class="w"> </span><span class="nv">O</span><span class="o">=</span>out<span class="w"> </span>op8-perf_defconfig
 </code></pre></div>
 <p>加载默认配置。</p>
-<p>此时我们已经可以开始编译。不过你可能还想修改一下别的，所以我们执行：
+<p>此时我们已经可以开始编译。不过你可能还想修改一下别的，所以我们执行：</p>
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang<span class="w"> </span><span class="nv">AR</span><span class="o">=</span>llvm-ar<span class="w"> </span><span class="nv">NM</span><span class="o">=</span>llvm-nm<span class="w"> </span><span class="nv">STRIP</span><span class="o">=</span>llvm-strip<span class="w"> </span><span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy<span class="w"> </span><span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump<span class="w"> </span><span class="nv">O</span><span class="o">=</span>out<span class="w">  </span>menuconfig
-</code></pre></div></p>
+</code></pre></div>
 <p>比如我们还想修改内核名，那我们需要修改这一项：
 <code>General setup -&gt; Local version - append to kernel release</code>
 修改完后，直接 ”Esc“ 保存退出</p>
-<p>然后我们开始编译，输入以下命令
+<p>然后我们开始编译，输入以下命令</p>
 <div class="highlight"><pre><span></span><code>make<span class="w"> </span><span class="nv">CC</span><span class="o">=</span>clang<span class="w"> </span><span class="nv">AR</span><span class="o">=</span>llvm-ar<span class="w"> </span><span class="nv">NM</span><span class="o">=</span>llvm-nm<span class="w"> </span><span class="nv">STRIP</span><span class="o">=</span>llvm-strip<span class="w"> </span><span class="nv">OBJCOPY</span><span class="o">=</span>llvm-objcopy<span class="w"> </span><span class="nv">OBJDUMP</span><span class="o">=</span>llvm-objdump<span class="w"> </span><span class="nv">O</span><span class="o">=</span>out<span class="w"> </span>-j<span class="k">$(</span>nproc<span class="k">)</span>
 </code></pre></div>
-<code>nproc</code>会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把<code>$(nproc)</code>换成一个比你 CPU 的线程数小的数字。</p>
+<p><code>nproc</code>会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把<code>$(nproc)</code>换成一个比你 CPU 的线程数小的数字。</p>
 <p>然后便是等待。等他出现<code>Ready</code>字样时就说明你成功了。</p>
 <h3 id="_6">打包并刷入内核</h3>
 <p>考虑到有些手机并没有可用的第三方 Recovery ，所以我们不使用 Anykernel3 ，而是通过修改boot镜像手动刷入。</p>
-<p>终端输入以下命令下载工具：
+<p>终端输入以下命令下载工具：</p>
 <div class="highlight"><pre><span></span><code>curl https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300923/ | tar xzvf -
-</code></pre></div></p>
+</code></pre></div>
 <p>然后我们需要从手机中提取 Boot 镜像，并将其传到电脑上的工具目录内。如何提取镜像在前面 Root 的环节已经提到。</p>
-<p>接着:
+<p>接着:</p>
 <div class="highlight"><pre><span></span><code>./unpackimg.sh &lt;Boot 镜像文件名&gt;
 </code></pre></div>
-工具目录下会出现一个<code>split_img</code>文件夹，其中的<code>&lt;Boot 镜像文件名&gt;-kernel</code>就是我们要替换的文件。</p>
+<p>工具目录下会出现一个<code>split_img</code>文件夹，其中的<code>&lt;Boot 镜像文件名&gt;-kernel</code>就是我们要替换的文件。</p>
 <p>编译好的内核在源码目录<code>out/arch/arm64/boot</code>目录下。一般来说文件名带有<code>Image</code>字样，把它复制到这里，替换掉原来的文件。</p>
-<p>然后：
+<p>然后：</p>
 <div class="highlight"><pre><span></span><code>./repackimg.sh
-</code></pre></div></p>
+</code></pre></div>
 <p>重新打包内核文件，然后刷入重启。你应该会看到内核变化了。大功告成。</p>
 <p>此时你可以试着在 Termux 里安装 Docker ，不出意料就能够正常运行了。</p>
 <hr/>
@@ -574,7 +574,7 @@ CONFIG_OVERLAY_FS=y
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 16:59:45</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 14:16:22</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:27:51</span>

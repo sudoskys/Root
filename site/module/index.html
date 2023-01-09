@@ -338,8 +338,8 @@
 <nav aria-label="自定义模块" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#busybox3">
-    BusyBox3
+<a class="md-nav__link" href="#busybox2">
+    BusyBox2
   </a>
 </li>
 <li class="md-nav__item">
@@ -448,8 +448,8 @@
 <nav aria-label="自定义模块" class="md-nav">
 <ul class="md-nav__list">
 <li class="md-nav__item">
-<a class="md-nav__link" href="#busybox3">
-    BusyBox3
+<a class="md-nav__link" href="#busybox2">
+    BusyBox2
   </a>
 </li>
 <li class="md-nav__item">
@@ -504,8 +504,8 @@
 <p>打开 模块 页面，点击 从本地ZIP安装 ，选择模块压缩包文件，然后等待刷入完毕。</p>
 <p>一些模块仓库如下，推荐先装一个救砖模块，这个模块自己下面的仓库。</p>
 <ul>
-<li>https://magisk.suchenqaq.club/</li>
-<li>https://kamiui.ml/E52shuaji/</li>
+<li><a href="https://magisk.suchenqaq.club/">https://magisk.suchenqaq.club/</a></li>
+<li><a href="https://kamiui.ml/E52shuaji/">https://kamiui.ml/E52shuaji/</a></li>
 </ul>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -514,7 +514,7 @@
 如果没有安装救砖模块，可以在 <code>cache</code> 目录下面建立一个 <code>disable_magisk</code> 文件，禁用掉进系统，进了系统再把插件删了。</p>
 </div>
 <h2 id="_3">装模块装砖了</h2>
-<p>装了不兼容的模块，导致手机无法进入系统了！怎么办？下面是一些解决方案。<sup id="fnref:40"><a class="footnote-ref" href="#fn:40">4</a></sup></p>
+<p>装了不兼容的模块，导致手机无法进入系统了！怎么办？下面是一些解决方案。<sup id="fnref:40"><a class="footnote-ref" href="#fn:40">3</a></sup></p>
 <h3 id="_4">救砖模块</h3>
 <p>社区中有一种自动救砖模块可以使用。你可以在仓库中下载。</p>
 <h3 id="adb">ADB 保险</h3>
@@ -552,7 +552,7 @@
 <p><code>update-binary</code>  下载最新的<a href="https://github.com/topjohnwu/Magisk/blob/master/scripts/module_installer.sh">module_installer.sh</a>并重命名/复制为<code>update-binary</code></p>
 <p><code>updater-script</code>  此文件应仅包含字符串<code>#MAGISK</code></p>
 <p>默认情况下，<code>update-binary</code> 将检查/设置环境，加载使用的脚本，将模块安装程序的zip解压缩到将要安装模块的位置，最后执行一些琐碎的任务和清理工作，这些工作和清理应满足大多数简单模块的需求。</p>
-<h3 id="busybox3">BusyBox<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">3</a></sup></h3>
+<h3 id="busybox2">BusyBox<sup id="fnref:27"><a class="footnote-ref" href="#fn:27">2</a></sup></h3>
 <p>Magisk附带了功能完整的BusyBox二进制文件(包括完全的SELinux支持)。可执行文件位于<code>/data/adb/magisk/busybox</code>。</p>
 <p>Magisk的 BusyBox 支持运行时切换“ASH独立Shell模式”。这种独立模式意味着，当在BusyBox的灰壳中运行时，每个单独的命令将直接使用 BusyBox 中的 applet，而不管什么被设置为PATH。例如，像ls, rm, chmod这样的命令不会使用 PATH 中的内容(在Android的情况下，默认是<code>/system/bin/ls</code>， <code>/system/bin/rm</code>，和<code>/system/bin/chmod</code>)，而是直接调用内部的BusyBox小程序。这可以确保脚本始终运行在可预测的环境中，并且无论运行在哪个 Android 版本上都始终拥有完整的命令套件。要强制命令不使用BusyBox，您必须调用具有完整路径的可执行文件。</p>
 <p>在 Magisk 上下文中运行的每个 shell 脚本都将在 BusyBox 的 <code>ash shell</code> 中执行，并启用独立模式。对于与第三方开发人员相关的内容，这包括所有引导脚本和模块安装脚本。</p>
@@ -773,14 +773,11 @@ service<span class="w"> </span>myservice<span class="w"> </span><span class="si"
 <li id="fn:24">
 <p><a href="https://www.coolapk1s.com/feed/16164846">自制简易Magisk模块教程-辉少菌</a> <a class="footnote-backref" href="#fnref:24" title="Jump back to footnote 1 in the text">↩</a></p>
 </li>
-<li id="fn:25">
-<p><a href="https://www.coolapk1s.com/feed/37576170">自制简易Magisk模块教程</a> <a class="footnote-backref" href="#fnref:25" title="Jump back to footnote 2 in the text">↩</a></p>
-</li>
 <li id="fn:27">
-<p><a href="https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html">MagiskDeveloperGuides</a> <a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 3 in the text">↩</a></p>
+<p><a href="https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html">MagiskDeveloperGuides</a> <a class="footnote-backref" href="#fnref:27" title="Jump back to footnote 2 in the text">↩</a></p>
 </li>
 <li id="fn:40">
-<p><a href="https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/">Guide-Remove-magisk-modules-without-TWRP</a> <a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 4 in the text">↩</a></p>
+<p><a href="https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/">Guide-Remove-magisk-modules-without-TWRP</a> <a class="footnote-backref" href="#fnref:40" title="Jump back to footnote 3 in the text">↩</a></p>
 </li>
 </ol>
 </div>
@@ -789,7 +786,7 @@ service<span class="w"> </span>myservice<span class="w"> </span><span class="si"
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 05:38:32</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 14:16:22</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:27:51</span>

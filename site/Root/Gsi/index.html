@@ -412,13 +412,13 @@
 <p>[^49]</p>
 <h2 id="persist">备份 Persist</h2>
 <p>Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经 Root 的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。</p>
-<p>具体操作如下。
+<p>具体操作如下。</p>
 <div class="highlight"><pre><span></span><code>adb shell
 su # 获取 root 权限，请在手机上确认
 dd if=/dev/block/bootdevice/by-name/persist of=/sdcard/persist.img
 # 此时按两次 Ctrl + D，退出 adb shell
 adb pull /sdcard/persist.img
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>长期保存，避免丢失</strong></p>
 <h2 id="_1">支持查询</h2>
 <p>首先，你需要确认设备是否支持project treble，下载并打开<a href="https://play.google.com/store/apps/details?id=com.kevintresuelo.treble">treble check</a></p>
@@ -481,10 +481,10 @@ Finished. Total time: 23.050s
 <p>然后，将手机重启至<code>fastbootd</code>模式（<code>fastboot reboot fastboot</code>）</p>
 <h3 id="_4">刷写</h3>
 <p>对于A-only,输入<code>fastboot flash system system.img</code></p>
-<p>对于A/B，输入
+<p>对于A/B，输入</p>
 <div class="highlight"><pre><span></span><code>fastboot<span class="w"> </span>flash<span class="w"> </span>system_a<span class="w"> </span>GSI.img
 fastboot<span class="w"> </span>flash<span class="w"> </span>system_b<span class="w"> </span>GSI.img
-</code></pre></div></p>
+</code></pre></div>
 <p><strong>具体操作注意看你下载的包的说明。</strong></p>
 <p>刷写完成后，使用<code>fastboot -w</code>清除数据，这一步会格式化data注意提前备份）。</p>
 <p>在具有较小系统分区的 Android 10 或更高版本设备上，刷写 GSI 时可能会出现以下错误消息</p>
@@ -495,10 +495,10 @@ fastboot<span class="w"> </span>flash<span class="w"> </span>system_b<span class
 <div class="highlight"><pre><span></span><code>fastboot<span class="w"> </span>delete-logical-partition<span class="w"> </span>product_a
 </code></pre></div>
 <p>后缀 _a 应与 system 分区的槽位 ID 匹配，例如本示例中的 system_a。</p>
-<p><strong>重启</strong>
+<p><strong>重启</strong></p>
 <div class="highlight"><pre><span></span><code>fastboot reboot recovery
 </code></pre></div>
-进入 Recovery 后，按提示操作清除数据并重启系统。</p>
+<p>进入 Recovery 后，按提示操作清除数据并重启系统。</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 </div>
@@ -510,7 +510,7 @@ fastboot<span class="w"> </span>flash<span class="w"> </span>system_b<span class
 </div>
 <h2 id="_5">动态分区</h2>
 <p>Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。</p>
-<p>如果你想简单点或者不想向下看，可以使用 https://github.com/VegaBobo/DSU-Sideloader</p>
+<p>如果你想简单点或者不想向下看，可以使用 <a href="https://github.com/VegaBobo/DSU-Sideloader">https://github.com/VegaBobo/DSU-Sideloader</a></p>
 <h3 id="dsu">使用动态系统更新（DSU)</h3>
 <p><a href="https://source.android.google.cn/docs/core/ota/dynamic-system-updates?hl=zh-cn">官方文档</a></p>
 <p>安卓10正式版及以上，可以在开发者选项中Feature flags &gt; settings_dynamic_system 中启用该功能。国内系统UI大多隐藏了，可以尝试用下面的adb 命令开启.</p>
@@ -543,14 +543,14 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 <h3 id="_8">系统升级</h3>
 <p>建议非必要不升级。升级前务必备份好所有数据，升级后有可能无法开机，需要清数据重刷。</p>
 <p><strong>安装动态系统更新</strong></p>
-<p>复制后一起执行。
+<p>复制后一起执行。</p>
 <div class="highlight"><pre><span></span><code>adb shell am start-activity \
     -n com.android.dynsystem/com.android.dynsystem.VerificationActivity  \
     -a android.os.image.action.START_INSTALL    \
     -d file:///storage/emulated/0/Download/system_raw.gz  \
     --el KEY_SYSTEM_SIZE $(du -b system_raw.img|cut -f1)  \
-    --el KEY_USERDATA_SIZE 8589934592   
-</code></pre></div></p>
+    --el KEY_USERDATA_SIZE 8589934592 
+</code></pre></div>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>这里第五行的$(du -b system_raw.img|cut -f1)可直接用 system_raw.img 的大小代替，不然用windows刷会报错</p>
@@ -635,7 +635,7 @@ https://github.com/Coxxs/hide-tablet-taskbar</p>
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 05:38:32</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 14:16:22</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 16, 2022 19:19:43</span>
