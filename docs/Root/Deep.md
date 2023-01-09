@@ -23,14 +23,12 @@
 
 !!! note
     高通的 QPST线刷模式，因联机之后端口名字叫Qualcomm HS-USB QDLoader 9008 (COMx)而得名。
-    
+
     该模式下，用户可通过QPST及其衍生工具（本质为QPST命令行调用）直接对手机的Flash芯片进行读写操作，而不需要解锁Bootloader。
     
     常见刷机工具有QPST，MiFlash（Pro）等工具，刷机包中一般会有一个分区表xml文件。以及一个eif文件。XML文件命名一般为Rawprogram（数字）.XML和Patch（数字）.XML,EIF文件一般命名为prog_存储芯片类型（比如UFS和EMMC）*firehose*(SOC型号，比如MSM8998或者SDM855)_（内存类型，一般是DDR）.eif，只要带有这两个文件的，一般都是高通支持9008的刷机包。
     
     进入9008模式，高通略为麻烦。MSM8994及以前的SoC，可以通过Fastboot命令直接进入9008模式：`adb reboot edl`
-    
-    
 
 此方案无需改线，无需触点短接等操作，但需要电脑进行操作。
 
@@ -48,12 +46,10 @@
 
 2. 无反应！------换包刷写，或试另一种刷写方式
 
-
 ## MTK联发科
 
 !!! note
     联发科的底层刷机模式没有高通那么麻烦。该模式在 MTK 内部被称为 MTK in-house developed loader。MTK 的该模式与高通略有不同，该模式具有帮助系统寻找Uboot的功能。该模式除了具有启动功能之外，还具有下载功能。首先还是需要明确的是mtk芯片都有一个boot rom，如果没有这个rom，那么程序是无法被下载到 Nand Flash中的，然后此时的Flash上是为空的，没有任何数据的。系统在上电之后它会检测是启动模式还是下载模式，如果是下载模式，它会初始化一个usb的串口，将Preloader加载到内部的SRAM中，跳转到Preloader中去执行，初始化好Flash和外部RAM之后，依次将preloader、lk、kernel、android下载到nand flash中去。刷机工具是SP Flash Tools ，需要验证的对应的DA文件，或者 MTKclinet
-
 
 ### 准备 MTK 工具/工具箱
 
@@ -65,7 +61,6 @@ MTk 工具依赖安卓的一种漏洞来实现 Root ，提取 boot.img
 先在 [GitHub - bkerler/mtkclient: Inofficial MTK reverse engineering and flash tool](https://github.com/bkerler/mtkclient) 下载源代码，解压到 mtkclient-main 文件夹。
 
 MTK 提供不同平台的版本，但是依赖 Python，所以你需要从文件包或从 [Download Python |Python.org](https://www.python.org/downloads/) 安装Python（**确保安装时勾选 ADD PYTHON to PATH**），并使用 `pip config set global.index-url https://pypi.tuna.tsinghua.edu.cn/simple` 配置国内镜像源。
-
 
 ### 初始化
 
@@ -112,7 +107,7 @@ MTK 提供不同平台的版本，但是依赖 Python，所以你需要从文件
 
 !!! help "AVB验证"
     **安卓10及以上需勾选 vbmeta 选项**
-    
+
     有些机型刷入修改的 boot 后可能会由于 vbmeta.img 的验证导致设备无法启动 ，可尝试保持 boot镜像 中的 vbmeta ,此选项在最新版面具中已支持。
 
 有的手机没有 vbmeta 分区会有提示，忽视它。
@@ -123,10 +118,9 @@ MTK 提供不同平台的版本，但是依赖 Python，所以你需要从文件
 
 `python mtk w boot,vbmeta boot.patched,vbmeta.img.empty`
 
-
 ### 备份 Root 后的手机字库（分区）
 
-!!! tip 
+!!! tip
     你可以使用mtk工具备份各个分区。
 
 - 备份命令
@@ -142,11 +136,7 @@ MTK 提供不同平台的版本，但是依赖 Python，所以你需要从文件
 
     注意 userdata 可能会很大，包含你的用户数据(音乐图片之类全部)。
 
-
 !!! help
     🛠 如果在解锁中遇到问题请先去 [https://github.com/bkerler/mtkclient/issues](https://github.com/bkerler/mtkclient/issues) ，搜索遇到的问题，如果是新的bug欢迎向作者反馈。需注明机型和提供相应的preloader。
-    
+
     如果不自信，可以花钱购买**靠谱的**刷机服务。
-
-
-

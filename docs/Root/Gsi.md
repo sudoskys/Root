@@ -14,12 +14,12 @@
 
 [^49]
 
-
 ## 备份 Persist
 
 Persist 分区中储存了诸如指纹模块等的校准信息，这些信息每部设备都是不同的，如果你是已经 Root 的设备，建议备份一份，以备不时之需。如果你还没有Root,可以按照线刷教程先修补boot再刷入取得权限。
 
 具体操作如下。
+
 ```
 adb shell
 su # 获取 root 权限，请在手机上确认
@@ -30,7 +30,6 @@ adb pull /sdcard/persist.img
 
 **长期保存，避免丢失**
 
-
 ## 支持查询
 
 首先，你需要确认设备是否支持project treble，下载并打开[treble check](https://play.google.com/store/apps/details?id=com.kevintresuelo.treble)
@@ -38,7 +37,6 @@ adb pull /sdcard/persist.img
 **只有 Project Treble 通过检测，此手机才可以刷 GSI 镜像包。**
 
 如果 Seamless System Updates 结果显示 A/B 即表明你应该选择的通刷包后缀名为 A/B 或者 AB ，若显示 A only，即表明你应该选择的通刷包后缀名为 A 或者 A only。但是如果最下面的 system-as-root 显示 支持，那么不管你的设备是否支持ab分区，都必须刷入标注为ab的包。
-
 
 ## CPU 架构
 
@@ -52,7 +50,6 @@ adb shell getprop ro.product.cpu.abi
 
 a-only和a/b的GSI不通用。
 
-
 ## 寻找镜像
 
 查阅 [通用镜像列表](https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list)，也可以去 XDA 论坛或者问一下刷机群里的人。
@@ -65,7 +62,6 @@ a-only和a/b的GSI不通用。
 
     一般`GSI`的格式是：`系统名 系统版本 编译日期 作者 CPU架构 分区类型 官方与否`
     其中后面带有`gapps`字样的刷机包，表明其内置了谷歌服务。
-
 
 ## 刷入镜像
 
@@ -120,7 +116,6 @@ fastboot --disable-verification flash vbmeta vbmeta.img
     ```
     **但是现在一般都会支持 Fastbootd，所以一般没什么要担心的**
 
-
 然后，将手机重启至`fastbootd`模式（`fastboot reboot fastboot`）
 
 ### 刷写
@@ -128,6 +123,7 @@ fastboot --disable-verification flash vbmeta vbmeta.img
 对于A-only,输入`fastboot flash system system.img`
 
 对于A/B，输入
+
 ```shell
 fastboot flash system_a GSI.img
 fastboot flash system_b GSI.img
@@ -153,26 +149,26 @@ fastboot delete-logical-partition product_a
 后缀 _a 应与 system 分区的槽位 ID 匹配，例如本示例中的 system_a。
 
 **重启**
+
 ```
 
 fastboot reboot recovery
 ```
+
 进入 Recovery 后，按提示操作清除数据并重启系统。
 !!! tip
    刷入不同类型 ROM 或版本降级时必须清除数据，否则无法进入系统。
-   
+
 开机，但是如果开机时发现双清了还是不断重启！这个时候就可以考虑更换一个 GSI 包了，或者是底包的问题，恢复至官方系统，升级一下试试？
 
 !!! info
     刷了GSI收不到短信 但是电话和流量都能用，是votle问题
 
-
 ## 动态分区
 
 Android10开始引入了动态分区（Dynamic Partitions），把原来的system , vendor , product还有odm分区整合到了一起。
 
-如果你想简单点或者不想向下看，可以使用 https://github.com/VegaBobo/DSU-Sideloader
-
+如果你想简单点或者不想向下看，可以使用 <https://github.com/VegaBobo/DSU-Sideloader>
 
 ### 使用动态系统更新（DSU)
 
@@ -183,7 +179,6 @@ Android10开始引入了动态分区（Dynamic Partitions），把原来的syste
 ```
 adb shell setprop persist.sys.fflag.override.settings_dynamic_system true
 ```
-
 
 ### 安装前的准备
 
@@ -201,9 +196,9 @@ system.img: Linux rev 1.0 ext2 filesystem data, UUID=91180515-3f1c-501d-888d-6f8
 ```
 simg2img system.img system_raw.img
 ```
+
 !!! tip
     一般GSI镜像都是simg格式，先检查转换
-
 
 ### 安装操作
 
@@ -212,33 +207,31 @@ simg2img system.img system_raw.img
 ```
 gzip -c system_raw.img > system_raw.gz
 ```
+
 !!! tip
     也可以直接用压缩工具压缩为gzip压缩包
 
-
 **用adb推到手机内置储存**
- 
+
  ```
 adb push system_raw.gz /storage/emulated/0/Download/
  ```
-
 
 ### 系统升级
 
 建议非必要不升级。升级前务必备份好所有数据，升级后有可能无法开机，需要清数据重刷。
 
-
-
 **安装动态系统更新**
 
 复制后一起执行。
+
 ```
 adb shell am start-activity \
     -n com.android.dynsystem/com.android.dynsystem.VerificationActivity  \
     -a android.os.image.action.START_INSTALL    \
     -d file:///storage/emulated/0/Download/system_raw.gz  \
     --el KEY_SYSTEM_SIZE $(du -b system_raw.img|cut -f1)  \
-    --el KEY_USERDATA_SIZE 8589934592	
+    --el KEY_USERDATA_SIZE 8589934592 
 ```
 
 !!! tip
@@ -259,7 +252,6 @@ adb shell am start-activity \
 然后你就会看到状态栏有正在安装的动态更新的提示，安装完重启进入第二个系统
 
 小米10出厂安卓10，必然是支持DSU的，你可以用此方法尝试安装phh的aosp GSI。
-
 
 ??? help "修复 GSI 可能存在的基础问题"
     **修复自动亮度失效**
@@ -307,7 +299,6 @@ adb shell am start-activity \
     **修复任务栏**
     https://github.com/Coxxs/hide-tablet-taskbar
 
-
 ### SafetyNet[^49]
 
 SafetyNet 的修复根据不同 ROM 分成几种情况.
@@ -320,11 +311,10 @@ SafetyNet 的修复根据不同 ROM 分成几种情况.
 
 **Magisk DenyList 配置方法**
 
-1.  打开 Magisk，设置里选择 Hide the Magisk app
-2.  打开 Magisk，设置里启用 Zygisk 及 Enforce DenyList
-3.  进入 Configure DenyList，找到 Google Play services，只需勾选 `com.google.android.gms` 及 `com.google.android.gms.unstable` 两项。
-4.  进入设置，清除 Google Play services 及 Google Play Store 的数据。
-
+1. 打开 Magisk，设置里选择 Hide the Magisk app
+2. 打开 Magisk，设置里启用 Zygisk 及 Enforce DenyList
+3. 进入 Configure DenyList，找到 Google Play services，只需勾选 `com.google.android.gms` 及 `com.google.android.gms.unstable` 两项。
+4. 进入设置，清除 Google Play services 及 Google Play Store 的数据。
 
 ### DRM[^49]
 
@@ -332,13 +322,11 @@ DRM 方面，Widevine 无需任何操作，保持在 L1，修复 Safetynet 后�
 
 Netflix 可能多了一套验证，默认会是 L3，以下操作后可以恢复到 L1：
 
-1.  确保 SafetyNet 已通过
-2.  将 Netflix 添加到 DenyList 列表
-3.  用 Magisk 模块在 `build.prop` 添加一行 `ro.netflix.bsp_rev=Q8250-19134-1`
-    -   该值仅适用于小米平板 5 Pro
-    -   Magisk 模块写法非常简单，可以参考上面的「移除屏幕锐化」模块
-    -   修改 `build.prop` 后需要清除 Netflix 应用数据重新登录
-    -   该修改[已合并至上游](https://github.com/phhusson/device_phh_treble/pull/313/files)，一段时间后的新版 ROM 可能已经自带了
-    -   Dev.moe:感谢几位朋友的帮助！
-
-
+1. 确保 SafetyNet 已通过
+2. 将 Netflix 添加到 DenyList 列表
+3. 用 Magisk 模块在 `build.prop` 添加一行 `ro.netflix.bsp_rev=Q8250-19134-1`
+    - 该值仅适用于小米平板 5 Pro
+    - Magisk 模块写法非常简单，可以参考上面的「移除屏幕锐化」模块
+    - 修改 `build.prop` 后需要清除 Netflix 应用数据重新登录
+    - 该修改[已合并至上游](https://github.com/phhusson/device_phh_treble/pull/313/files)，一段时间后的新版 ROM 可能已经自带了
+    - Dev.moe:感谢几位朋友的帮助！

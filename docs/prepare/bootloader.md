@@ -7,11 +7,9 @@
 
 然后在 [Magisk仓库](https://github.com/topjohnwu/Magisk/releases/latest/) 安装最新版本的 Magisk，如果不能下载请复制Github的 apk 链接请填入[镜像站](https://ghproxy.com/) 下载
 
-
 ## 准备设备
 
 本教程用到的工具我**已经打入附带的文件包** [^1]
-
 
 ### 提前注意
 
@@ -19,7 +17,6 @@
 
 !!! warning "注意"
     **解锁BL或救砖都会让你的文件被清空，需要备份**
-
 
 !!! warning "注意"
     - 解锁设备将允许修改系统重要组件，并有可能在一定程度上导致设备受损
@@ -33,7 +30,6 @@
 
 不建议你在主力机上解锁 Bootloader，而且，如果厂商明确表示不能解锁 Bootloader ，**请放弃**。如果一定要刷机并且报着变砖的觉悟，可以尝试**深刷**强解。
 
-
 ### 准备驱动文件
 
 准备你的手机对应的机型的驱动文件，文件包提供 Vivo 和 Oppo 的两种驱动文件[1^]。
@@ -44,7 +40,6 @@
 
 !!! tip "**对于非深刷玩家如何检查是否链接？**"  
     💡 重启后在设备开机状态下连接电脑，打开终端，输入`adb devices`，如果返回了设备名称，说明 adb 配置完成；用 `adb reboot bootloader`进入 fastboot 界面（这步不适用fastbootd设备,即安卓十），键入 `fastboot reboot`后，若设备重启，说明 fastboot 正常。
-
 
 ### 准备设备和平台工具
 
@@ -59,12 +54,10 @@ Linux 需要使用其自带包管理器安装 `android-platform-tools`
 !!! tip "提示[^3]"
     如果你已经安装了 [choco](https://chocolatey.org/) 或 [homebrew](https://brew.sh/) 等包管理工具的话，Windows 输入`choco install adb universal adb-drivers -y`，Mac 输入 `brew install android-platform-tools`能最方便的完成 adb 和 fastboot 的配置。Windows 用户可以参照  [Windows 操作系统下的 ADB 环境配置](https://sspai.com/post/40471) 这篇文章；macOS 用户可以尝试  [此脚本](https://github.com/corbindavenport/nexus-tools) 或是参考 [使用 Mac 为 Android 手机刷原生系统](https://sspai.com/post/38535) 进行手动配置。最后最最不济，可以尝试在 Google  [开发者页面](https://developer.android.com/studio/releases/platform-tools?hl=zh-cn) 下载对应 adb 包，解压后在对应的目录下执行指令亦可，或者是尝试 [WebADB](https://app.webadb.com/#/) 或  [adb 在线执行器](https://adb.http.gs/) 这样的在线 adb 工具，比较考验浏览器的兼容性。
 
-
 然后打开手机的USB调试开关允许计算机调试，确认你的**驱动线和驱动**都**没有问题**！
 
 !!! info
     通过 `adb devices` 命令确认已经连上手机。
-
 
 ### 准备申请解锁BL 或 深度测试
 
@@ -82,7 +75,7 @@ BL 是 bootloader 的简称 就是 手机开机时，最先运行的小程序：
 
 对于小米手机，可以通过这个地址 [申请解锁](https://www.miui.com/unlock/download.html) 下载工具，然后打开手机设置，进入关于手机–>系统版本点10下，在`设备解锁状态`中绑定账号和设备，进入`Fastboot`模式(关机后，同时按住开机键和音量下键)，打开刚才下载的工具，点击 `解锁` 后系统会恢复出厂系统并解锁。
 
-!!! danger 
+!!! danger
     **解bl锁会清除手机（恢复出厂设置）所有数据，记得提前备份好。**
 
 !!! danger "不可逆"
@@ -98,8 +91,6 @@ BL 是 bootloader 的简称 就是 手机开机时，最先运行的小程序：
 
 附上 [小米解锁教程](https://web.vip.miui.com/page/info/mio/mio/detail?postId=28646781&boardId=5415551&isComment=&isRecommend=0&app_version=dev.211029&ref=share)
 
-
 ### 什么，你用华为？
 
 华为用户请跳转到后面的专门章节查看介绍。
-
