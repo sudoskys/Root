@@ -16,9 +16,6 @@ jobs:
         with:
           fetch-depth: 0
       
-      - name: AutoCorrect
-        uses: huacnlee/autocorrect-action@main
-      
       # Picture Support
       - uses: actions/cache@v2
         with:
