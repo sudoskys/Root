@@ -8,19 +8,17 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check source code
-        uses: actions/checkout@main
 
-      - name: AutoCorrect
-        uses: huacnlee/autocorrect-action@main
-      
       # Picture Support
       - run: sudo apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
 
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
+      
+      - name: AutoCorrect
+        uses: huacnlee/autocorrect-action@main
+      
       # Picture Support
       - uses: actions/cache@v2
         with:
