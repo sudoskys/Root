@@ -3,11 +3,10 @@
 - 电脑
 - 一台解锁 Bootloader 的安卓 ？ 以上的手机
 - 一根良好的数据线
-- Magisk.zip(Root需选) 
+- Magisk.zip(Root需选)
 - 全量包/OTA包/boot.img 三选一
 
 ## 准备
-
 
 ### 链接手机
 
@@ -19,7 +18,6 @@
 !!! tip "找不到adb？？"
     如果你不想配置ADB全局环境的话，以后执行 Adb 命令需要在工具目录下，按住 Shift 右键鼠标打开终端，命令替换为`.\adb`或者`.\fastboot`，如果需要配置全局环境，请按照[这篇文档](https://www.sunzn.com/2018/08/02/Windows-10-%E4%B8%8B%E9%85%8D%E7%BD%AE-ADB-%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/)配置。
 
-
 ### 准备 **Magisk**
 
 你可以从 [Github](https://github.com/topjohnwu/Magisk/releases) 或者 文件包 [1^] 下载它，推荐去 Github 下载，越新越好。如果不能下载 Github 文件请复制 apk 链接填入[这里](https://ghproxy.com/)
@@ -30,7 +28,6 @@
     Ramdisk 是系统中的一个小分区，Ramdisk 告诉系统接下来要加载哪些东西。Magisk 的目的是修改 Ramdsik，把自己加进开机需要加载的系统组件中。App 中 Ramdisk 的值为「否」时，表示需要修改的 Ramdisk 被放在了 recovery.img 中，我们需要提取并修改 recovery.img。具体操作方法见节尾。
 
 Tips：极少数小米设备存在检测设备信息错误的问题，Ramdisk 虽然显示为「否」，但实际上是需要修改 boot.img,具体请询问相同机型的刷机爱好者。
-
 
 ## 准备修补的img
 
@@ -65,23 +62,19 @@ Tips：极少数小米设备存在检测设备信息错误的问题，Ramdisk �
     python3 payload_dumper.py payload.bin
     ```
 
-
 准备好 boot.img 后，打开最新的 `Magisk` ，点击 `Magisk` 后边的`安装`，选择安装方式为 `选择并修改一个文件` ，从电脑端复制 `boot.img` 文件到手机并选中该文件，点击`开始` ，仔细阅读修改结果并从结果中复制patch后的文件（一般在 `Download` 文件夹下，文件名类似`magisk_patched-24100_gk0te.img`）到电脑。
 
 !!! help "AVB验证"
     **安卓10及以上需勾选 vbmeta 选项**
-    
-    有些机型刷入修改的 boot 后可能会由于 vbmeta.img 的验证导致设备无法启动 ，可尝试保持 boot镜像 中的 vbmeta ,此选项在最新版面具中已支持。
 
+    有些机型刷入修改的 boot 后可能会由于 vbmeta.img 的验证导致设备无法启动 ，可尝试保持 boot镜像 中的 vbmeta ,此选项在最新版面具中已支持。
 
 由于 ROM code 和 BootLoader 通常都是由设备厂商 OEM 提供，而各家实际做法和研发能力不尽相同，为了让设备厂商更方便的引入 Verified boot 功能，Google 在 Android O上推出了一个统一的验证启动框架 Android verified boot 2.0，好处是既保证了基于该框架开发的verified boot 功能能够满足 CDD 要求，也保留了各家 OEM 定制启动校验流程的弹性。
 
 !!! danger "警告"
     ⚠️ **请对操作使用到的镜像(提取或修改)在电脑上留存副本，防止不测！！**
 
-
 ## 线刷 Fastboot刷入镜像
-
 
 复制修改镜像后的完整路径（**在 Windows 中，选中文件 > Shift + 右键，会多出「复制为路径」命令**）。
 
@@ -92,11 +85,13 @@ adb reboot bootloader
 ```
 
 **如果面具中 Ramdisk 为 yes**
+
 ```
 fastboot flash boot <修改后的 boot.img 路径>
 ```
 
 **刷入完成后重启**
+
 ```
 fastboot reboot
 ```
@@ -105,17 +100,15 @@ fastboot reboot
 
 文件包中有Han.GJZS-v2.12.1附带了很多工具，可以使用ADB和FastBoot（不懂不要用）
 
-
 ### 小米线刷工具 MIflash
 
 MiFlash 是由小米发布的刷机工具。可以选择刷机不上 BL 锁（对刷 MIUI 海外版来说是必须），自定义刷机脚本，EDL 刷机模式等。
 
 你可以在以下地址获取它的相关信息，因为是特定机型工具，所以不展开叙述。
 
-https://miuiver.com/miflash/
+<https://miuiver.com/miflash/>
 
-https://xiaomirom.com/download-xiaomi-flash-tool-miflash/
-
+<https://xiaomirom.com/download-xiaomi-flash-tool-miflash/>
 
 ## 面具 Ramdisk 为「否」的机型
 
@@ -134,6 +127,3 @@ https://xiaomirom.com/download-xiaomi-flash-tool-miflash/
 按下组合键后，设备不会进入 Recovery 模式，而是会闪屏过后直接进入一个有 Magisk 的系统。每一次重启都要这样做才能挂载 Magisk。进入系统后就没有特别需要注意的问题了。
 
 而想要进入真正的 Recovery ，我们需要在按下组合键后的闪屏界面长按音量 + 键。
-
-
-

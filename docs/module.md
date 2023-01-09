@@ -4,31 +4,27 @@
 
 Magisk 模块仓库在很早就被官方移除，面具只能通过 zip 文件刷入模块，而 LSPosed 可以通过安装 APP 来启动模块（而不需要重启）。
 
-
 ## 模块安装
 
 打开 模块 页面，点击 从本地ZIP安装 ，选择模块压缩包文件，然后等待刷入完毕。
 
 一些模块仓库如下，推荐先装一个救砖模块，这个模块自己下面的仓库。
 
-- https://magisk.suchenqaq.club/
-- https://kamiui.ml/E52shuaji/
+- <https://magisk.suchenqaq.club/>
+- <https://kamiui.ml/E52shuaji/>
 
 !!! danger
     安装模块必须审计模块脚本！如果你不会 sh ，那么请从可靠信源下载模块文件或者论坛提问求助/搜索。
     模块的文件地址`/sbin/.magisk/img`，如果你没有这个软链接，可以去 `/data/adb/modules` 查看。
     如果没有安装救砖模块，可以在 `cache` 目录下面建立一个 `disable_magisk` 文件，禁用掉进系统，进了系统再把插件删了。
-    
 
 ## 装模块装砖了
 
 装了不兼容的模块，导致手机无法进入系统了！怎么办？下面是一些解决方案。[^40]
 
-
 ### 救砖模块
 
 社区中有一种自动救砖模块可以使用。你可以在仓库中下载。
-
 
 ### ADB 保险
 
@@ -55,24 +51,21 @@ Magisk 从2019年其实施了一项故障保险，如果你的 Xposed 使用 Mag
     如果你可以刷入 非 root 的 `boot.img` 并启用 USB 调试，就可以在 root 时修复软重启。
     如果在 adb 调试模式之前在引导期间卡住了.....通常这种问题比砖你的 Magisk 模块更严重。
 
-
 ### ADB 命令
 
 打开 CMD 并输入 `adb shell`
-    
+
 切换到目录 `cd /data/adb/modules`
-    
+
 查找模块 `ls -Ral /data/adb/modules`
-    
+
 删除 magisk 模块 `rm -r /data/adb/modules/module_name`
 
 >Adb安全验证被禁用时，所有设备都可以获得授权。
 
-
 ### TWRP
 
 进`TWRP`，删除`data/adb/modules`，里面是你的magisk模块。
-
 
 ## 自定义模块
 
@@ -86,7 +79,6 @@ Magisk 从2019年其实施了一项故障保险，如果你的 Xposed 使用 Mag
 ```updater-script```  此文件应仅包含字符串```#MAGISK```
 
 默认情况下，`update-binary` 将检查/设置环境，加载使用的脚本，将模块安装程序的zip解压缩到将要安装模块的位置，最后执行一些琐碎的任务和清理工作，这些工作和清理应满足大多数简单模块的需求。
-
 
 ### BusyBox[^27]
 
@@ -108,7 +100,6 @@ Magisk的 BusyBox 支持运行时切换“ASH独立Shell模式”。这种独立
 
 为了确保所有随后执行的 sh shell 也在独立模式下运行，选项1是首选方法(Magisk 和 Magisk 应用程序内部使用的方法) ，因为环境变量被继承到子进程。
 
-
 ### 文件结构[^24]
 
 ```
@@ -127,7 +118,6 @@ module.zip
 ├── ...  /* 模块的其余文件 */
 │
 ```
-
 
 **module.prop**
 
@@ -168,11 +158,12 @@ updateJson=<url> (optional)
 ```
 
 ### Shell脚本(*.sh)
+
 请阅读启动脚本部分，了解`post-fs-data.sh`与`service.sh`之间的差异。对于大多数模块开发者，`service.sh`如果只需运行启动脚本那便足够了。
 
 所有的模块脚本中，使用`MODDIR=${0%/*}`来获取模块的基本目录信息
 
-!!! danger 
+!!! danger
     千万不要在脚本中编码模块目录。
 
 **system.prop**
@@ -187,13 +178,11 @@ updateJson=<url> (optional)
 **system文件夹**
 您希望Magisk为您替换/插入的所有文件都应放在此文件夹中。请查看Magic挂载 部分，以了解Magisk如何挂载文件。
 
-
 ### 自定义
 
 如果您需要自定义模块安装过程，则可以选择在安装程序中创建一个名为`customize.sh`的脚本。这个脚本会在所有文件以默认`permissions`和`secontext`应用后，由`update-binary`调用(不是执行！)。如果您的模块包含基于`ABI`的其他文件，或者您需要为某些文件(例如`/system/bin`中的文件)，设置特殊的`permissions/secontext`，这将非常有用。
 
 如果您需要更多的自定义，并且希望自己做所有事情请在`customize.sh`中标注`SKIPUNZIP=1`以跳过提取操作并应用默认`permissions/secontext`。请注意，这样做后，你的`customize.sh`将负责自行安装所有内容。
-
 
 **`customize.sh`的运行环境**
 
@@ -210,7 +199,6 @@ updateJson=<url> (optional)
 - `ARCH` (string): 设备的C​​PU构架。值可以是arm, arm64, x86, or x64
 - `IS64BIT` (bool): 如果$ARCH(上方的ARCH变量)为 arm64或x64，则为true
 - `API` (int): 设备的API级别(Android版本)(例如 21为Android 5.0)
-
 
 可用函数
 
@@ -238,7 +226,6 @@ set_perm_recursive <目录> <所有者> <用户组> <目录权限> <文件权限
        set_perm 目录 所有者 用户组 目录权限 上下文
 ```
 
-
 为了方便起见，还可以在变量名 `REPLACE` 中声明要替换的文件夹列表。
 
 模块安装程序脚本将提取此变量并创建`.replace`文件进行替换。声明示例:
@@ -264,7 +251,7 @@ REPLACE="
 
 !!! note "删除文件夹"
     与上述相同，实际上使文件夹删除是不值得的。用一个空文件夹替换它应该已经足够了！对于模块开发人员来说，一个方便的技巧是将要删除的文件夹添加到customize.sh中的REPLACE列表中。
-    
+
     如果您的模块没有提供相应的文件夹，它将创建一个空文件夹，并自动将.replace添加到该空文件夹中，以便虚拟文件夹可以正确替换/system中的一个文件夹。
 
 ### 启动脚本
@@ -277,8 +264,7 @@ REPLACE="
 允许模块开发者在安装模块之前动态调整其模块。
 *该模式在Zygote启动前执行（意味着所有进程已经加载完毕）*
 
-
-!!! tip 
+!!! tip
     仅在必要时在此模式下运行脚本！
 
 - late_start service 模式
@@ -288,8 +274,6 @@ REPLACE="
 **推荐在该模式下运行大多数的脚本.**
 
 在Magisk中，还有两种脚本: `通用脚本`和`模块脚本`.
-
-
 
 **通用脚本特性**
 
@@ -364,7 +348,6 @@ service myservice ${MAGISKTMP}/myscript.sh
 
 [^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk1s.com/feed/16164846)
 
-[^25]:[自制简易Magisk模块教程](https://www.coolapk1s.com/feed/37576170)
 
 [^27]:[MagiskDeveloperGuides](https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html)
 

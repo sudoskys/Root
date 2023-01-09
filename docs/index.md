@@ -1,7 +1,6 @@
 # 前言
 
-
-Welcome to IdontKnowRoot 
+Welcome to IdontKnowRoot
 
 本站基于广泛调研的基础，打破圈层壁垒，致力于给予小白全详细的刷机起步指导或给经常刷机的人一个速查手册，不必因为教程混乱，分散，老旧或描述不清而耗费心力。
 
@@ -14,14 +13,11 @@ Welcome to IdontKnowRoot
 !!! tip "开始之前，你需要知道的..."
     本教程仅供参考，阅读者**需要自己承担因尝试解锁，Root导致的后果**。
 
-
-##  **文档结构简介**
-
+## **文档结构简介**
 
 如果你对自己的动手能力感到怀疑，可以选择花钱请专业人士操作。
 
-**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。Win用户最好使用 Win10 ，避免驱动问题** 
-
+**这个教程需要一台 WIN7及以上/Linux 的电脑。请先提前阅读一遍教程，而不是一步一步来。Win用户最好使用 Win10 ，避免驱动问题**
 
 **刷机大概有几种方法**： Rec，Fastboot，Fastbootd，9008，mtk端口
 
@@ -32,8 +28,7 @@ Welcome to IdontKnowRoot
 
 因为 Android 阵营厂商众多，的确很难保证他们步伐齐一，也就不存在某种一定通行的「通法」能够搞定任一 Android 设备的 `Magisk` 刷入。
 
-
-所以，本文档会从 
+所以，本文档会从
 
 - 准备
 - 刷机
@@ -41,12 +36,9 @@ Welcome to IdontKnowRoot
 
 三个主要章节展开相关叙述，其中在第二节会描述不同的常用对策方法。
 
-
 >在此提示:本站大多数资料都是综合收集来的，不许商用，需要商用请和引用页内的源取得授权
 
-
 ## **相关资料连结**
-
 
 原始导出的长文PDF版本在 [这里](https://github.com/sudoskys/Root/)
 
@@ -60,21 +52,19 @@ Welcome to IdontKnowRoot
 
 在操作过程中，你可以在**以下平台获取相关支持**
 
-- 分享站/模块 https://kamiui.ml/E52shuaji/
-- 橘色小狐狸官网 https://orangefox.download/zh-CN
-- 搞机助手 https://gjzsr.com/
-- 还可以的论坛 https://mi.fiime.cn
-- TWRP官方 https://twrp.me/Devices
-- 小米Rom下载站？ http://xiaomirom.com
-- XDAMagiskForum https://forum.xda-developers.com/f/magisk.5903/
-- viQOO工具箱 https://gitee.com/mouzei/viqoo
-- 通用系统镜像列表 https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list
-- 小米各机型 MIUI 历史版本分类索引 https://miuiver.com/
-- 面具模块 https://magisk.suchenqaq.club/
+- 分享站/模块 <https://kamiui.ml/E52shuaji/>
+- 橘色小狐狸官网 <https://orangefox.download/zh-CN>
+- 搞机助手 <https://gjzsr.com/>
+- 还可以的论坛 <https://mi.fiime.cn>
+- TWRP官方 <https://twrp.me/Devices>
+- 小米Rom下载站？ <http://xiaomirom.com>
+- XDAMagiskForum <https://forum.xda-developers.com/f/magisk.5903/>
+- viQOO工具箱 <https://gitee.com/mouzei/viqoo>
+- 通用系统镜像列表 <https://github.com/phhusson/treble_experimentations/wiki/Generic-System-Image-%28GSI%29-list>
+- 小米各机型 MIUI 历史版本分类索引 <https://miuiver.com/>
+- 面具模块 <https://magisk.suchenqaq.club/>
 
-
->本文档与上述平台无利益关系，凭内容判定列举,欢迎补充 
-
+>本文档与上述平台无利益关系，凭内容判定列举,欢迎补充
 
 ## **社区交流原则**
 
@@ -82,30 +72,25 @@ Welcome to IdontKnowRoot
 
 [如何获取别人的帮助？](https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way/blob/main/README-zh_CN.md)
 
-
 你可能曾经试过向大牛提问，但是这些提问往往石沉大海，于是你就纳闷了，这些大牛们平时在网上看都性格好好和蔼可亲的样子，怎么一向他们提问变得那么冷漠了？反差实在是太大了。[^32]
 
 其实，出现这样的情况，往往不是对方耍大牌，而是你提问的方式错了。
 
-
-### 原则一、先初步判定问题。
+### 原则一、先初步判定问题
 
 无 Log ，不帮忙，没有情况说明，谁也不知道你在做什么。
 
-
-### 原则二、提问前先搜一搜。
+### 原则二、提问前先搜一搜
 
 将你的问题放进搜索引擎过滤一遍，这其实不是什么难事，事实证明，90%的问题都可以用搜索引擎解决了，百度不行，用Google，Google不行用知乎。
 
 打开 bing.com
 
+### 原则三、提问前先试试自己解决
 
-### 原则三、提问前先试试自己解决。
-    
 如果你的问题在网络上找不到答案，需要先自行思考试图解决。
 
-
-### 原则四、准确地描述问题。
+### 原则四、准确地描述问题
 
 问题的描述应该包含以下内容：
 
@@ -115,22 +100,19 @@ Welcome to IdontKnowRoot
     提问前为确定问题而采取的诊断步骤；
     注意：千万不要用什么「跪求」，「在线等」，「紧急」等之类哗众取宠的词语来吸引大牛的注意，在大牛们看来，这些问题根本不值得去回答。
 
-
-### 原则五、感谢。
+### 原则五、感谢
 
 别人帮你解决了问题，说声谢谢。
-
 
 ### 原则六、如果期望别人积极地帮助你
 
 ??? help "答案"
-    
-    **打钱啊**
 
+    **打钱啊**
 
 ## 贡献者
 
-本教程由 Sudoskys 引录编辑 
+本教程由 Sudoskys 引录编辑
 [Jasmine](https://blog.dianas.cyou/)
 
 **由以下人士参与校对/编写**
@@ -138,7 +120,7 @@ Welcome to IdontKnowRoot
 - github@Scirese
 - tg@狼 |ZH/EN/(JA)|o0kam1
 - tg@Chi_Tang
-- github@liuran001 
+- github@liuran001
 - github@Dedicatus5457
 - github@lz233
 - tg@Aidenpers Ultra
@@ -152,110 +134,57 @@ Welcome to IdontKnowRoot
 
 **Theme:Mkdocs.org**
 
-
 下面，让我们开始刷机！
-
 
 ## 引录
 
-[^1]:**所需资料打包**<https://push.dianas.cyou/LIS/Share/Root/>
 
-[^2]: [**root、刷rec、rom通用教程<**](http://sudo0m.github.io/2022/05/29/root%E3%80%81%E5%88%B7rec%E3%80%81rom%E9%80%9A%E7%94%A8%E6%95%99%E7%A8%8B/)
 
 [^3]:[Android玩家必备神器入门：从零开始安装Magisk](https://sspai.com/post/67932)
 
-[^4]:[Magisk官方教程](https://topjohnwu.github.io/Magisk/)
 
-[^5]:[MagiskXDA官方论坛](https://forum.xda-developers.com/f/magisk.5903/)
 
-[^6]:[每个Android玩家都不可错过的神器（一）：Magisk初识与安装](https://sspai.com/post/53043)
 
-[^7]:[Android玩机「神器的矛盾与新生：MagiskCanary更新详解](https://sspai.com/post/69945)
 
-[^8]:[**Root隐藏教程**图文分享](https://www.coolapk1s.com/feed/37950576)
 
-[^9]:[**酷安MiaoHan的专栏**](https://www.coolapk1s.com/feed/32286938)
 
-[^10]:[APKMirror-FreeAPK-Downloads-FreeandsafeAndroidAPKdownloads](https://www.apkmirror.com/)
 
-[^11]:[Clash-For-Magisk简介-CFM](https://docs.adlyq.ml/)
 
-[^12]:[**小米手機各種刷機方式的疑問?**](https://www.mobile01.com/topicdetail.php?f=634&t=3725269)
 
-[^13]:[**通过ADB给手机刷入第三方Recovery**](https://blog.linioi.com/posts/8/)**** 
 
-[^14]:[**小米如何刷入第三方Recovery**](https://zhuanlan.zhihu.com/p/428730333)
 
-[^15]:[告诉大家如何防止掉基带问题](https://www.coolapk1s.com/feed/21305538)
 
-[^16]:[酷安Rannki原创](https://www.coolapk1s.com/feed/21305538)
 
-[^17]:[一些常识基础](https://mi.fiime.cn/tutorial)
 
-[^18]:[**刷入原生ROM的通用教程等教程**](https://fiime.cn/thread/359)
 
-[^19]:[**Violet-机型PE/Plus刷入教程**](https://blog.linioi.com/posts/10/)
 
-[^20]:[**如何在RedmiNote7Pro上刷机？**](https://blog.linioi.com/posts/11/)
 
-[^21]:[底层刷机教程/全解析](https://wiki.pchelper666.com/%E5%BA%95%E5%B1%82%E5%88%B7%E6%9C%BA%E6%95%99%E7%A8%8B)
 
-[^22]:[**高通9008线刷救黑砖教程**](https://www.bilibili.com/read/cv15031395/)
 
-[^23]:[保留root去更新系统](https://www.coolapk1s.com/feed/37647626)
 
-[^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk1s.com/feed/16164846)
 
-[^25]:[自制简易Magisk模块教程](https://www.coolapk1s.com/feed/37576170)
 
-[^26]:[MagiskInstallation](https://topjohnwu.github.io/Magisk/install.html)
 
-[^27]:[MagiskDeveloperGuides](https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html)
 
-[^28]:[联发科不建议玩机](https://www.coolapk1s.com/feed/37080982)
 
-[^29]:[Root升级系统](https://www.coolapk1s.com/feed/34860331)
 
-[^30]:[简单认识手机各个分区](https://www.coolapk1s.com/feed/38367093)
 
-[^31]:[手动给予安卓应用root权限的方法](https://www.coolapk1s.com/feed/37543497)
 
 [^32]:[如何提问，并获得高回复率](https://zhuanlan.zhihu.com/p/19779979)
 
-[^33]:[Android-Root原理分析及防Root新思路](https://blog.csdn.net/hsluoyc/article/details/50560782)
-
-[^34]:[Root卡刷原理](https://www.zhihu.com/question/20098750/answer/173038749)
-
-[^35]:[Fastboot原理](https://wowothink.com/5ade33b8/)
-
-[^36]:[Bootloader原理](https://www.zhihu.com/question/47496619/answer/195494376)
-
-[^37]:[MTK刷机原理](https://websetnet.net/zh-CN/%E7%8E%B0%E5%9C%A8%E5%8F%AF%E4%BB%A5%E8%BD%BB%E6%9D%BE%E7%BB%95%E8%BF%87Mediateks-sp%E9%97%AA%E5%AD%98%E5%B7%A5%E5%85%B7%E8%BA%AB%E4%BB%BD%E9%AA%8C%E8%AF%81/)
-
-[^38]:[高通9008刷机原理](https://www.xda-developers.com/how-to-unbrick-oneplus-nord-msmdownloadtool/)
-
-[^39]:[为什么内存不叫运存？](https://www.zhihu.com/question/327171923/answer/716602933)
-
-[^40]:[Guide-Remove-magisk-modules-without-TWRP](https://forum.xda-developers.com/t/guide-remove-magisk-modules-without-twrp.3995677/)
-
-[^41]:[[新手必看]华为刷机你一定要知道的](https://zhuanlan.zhihu.com/p/416456337)
-
-[^42]:[部分华为麒麟手动获取BL解锁码](https://zhuanlan.zhihu.com/p/397173427)
 
 
-[^43]:[华为麒麟深刷救砖［变砖绝杀技］](https://www.coolapk1s.com/feed/26830366)
 
 
-[^44]:[小米11搞机指南](https://blog.chitang.dev/posts/mi11/)
-
-[^45]:[关于ProjectTreble和AndroidGSI](https://bbs.liuxingw.com/t/9315/2.html)
-
-[^46]:[安卓手机刷入GSI镜像教程](https://www.irom.net/post/9.html)
-
-[^47]:[刷写GSI的要求](https://source.android.com/docs/setup/build/gsi#flashing-gsis)
-
-[^48]:[动态分区刷GSI-通用镜像-的正确姿势](https://www.chaptsand.top/posts/da8abb0.html)
 
 
-[^49]:[小米平板5Pro刷入GSIAndroid教程](https://dev.moe/2716)
+
+
+
+
+
+
+
+
+
 

@@ -1,8 +1,7 @@
- 
+
 本节为非必须部分，上手需要**一定的知识储备**，如果你**没事**或者**不清楚为什么搞内核**，可以看下一节。
 
 结合此文档阅读本节内容：[构建内核](https://source.android.com/docs/setup/build/building-kernels)
-
 
 !!! danger
     如果你的手机内核版本为`5.x`，那它多半使用了 GKI(Generic Kernel Image)，为这些手机制作内核需要额外步骤，不能按照以下教程进行。否则可能会导致手机部分设备(如触摸屏，尾插等)无法工作。
@@ -16,8 +15,6 @@
 
 如果不开源，那就不用继续看了。
 
-
-
 ### 为什么自定义系统内核
 
 我们都知道,安卓使用 Linux 内核，但是系统内核的功能被严重阉割，导致有些东西(例如 Docker)跑不起来。
@@ -27,7 +24,6 @@
 修改内核能做到的当然不止如此，在安卓上，Linux 内核扮演的角色大致相当与电脑的 BIOS+系统内核，也就是说，你还可以通过修改内核来优化性能，甚至超频。不过这就是后话了。
 
 本教程将以一加8t为例，从头开始构建一个支持 Docker 的内核。其他手机的步骤和这个基本相同。
-
 
 ### 准备
 
@@ -41,7 +37,6 @@
 
 对于其他品牌，你可以试着谷歌 “你的手机型号+内核源码”。
 
-
 !!! danger
     **注意内核应该和安卓版本对应**
 
@@ -50,9 +45,7 @@
 
 如果能找到(一般内核源码都是放在Github)，那么就可以继续了。
 
-
 ### 准备环境
-
 
 编译 Linux 内核肯定是需要 Linux 的，目前有如下几种方法
 
@@ -61,7 +54,6 @@
 - 使用 Windows 的 Linux 子系统v2(WSL2)安装一个Linux发行版(推荐 Ubuntu)
 
 - 手机上 Chroot 安装一个 Linux 发行版(推荐 Ubuntu，至于安装，可以使用 [tmoe](https://github.com/2moe/tmoe) 项目)
-
 
 除非迫不得已，否则我不建议你用手机编译来折磨自己。
 
@@ -85,6 +77,7 @@ sudo apt update
 sudo apt install -y bc bison build-essential ccache cpio curl flex g++-multilib gcc-multilib git gnupg gperf imagemagick lib32ncurses5-dev lib32readline-dev lib32z1-dev liblz4-tool libncurses5-dev libsdl1.2-dev libssl-dev libwxgtk3.0-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-
 dev unzip openjdk-8-jdk language-pack-zh-hans python vim
 ```
+
 在上述命令执行完后，我们需要下载编译器，这里使用clang。
 
 ```bash
@@ -93,7 +86,6 @@ cd ~ && git clone --depth=1 https://github.com/kdrag0n/proton-clang.git
 
 !!! help
     如果克隆很慢，尝试把源地址中的`github.com`改成`hub.fastgit.xyz`。
-
 
 下载完后，我们在终端输入`vi ~/.bashrc`打开编辑器，按下键盘上的 "Insert" 键，使用方向键滑到文件底部，加上以下代码：
 
@@ -107,14 +99,15 @@ export ARCH=arm64
 然后按下 “Esc” 键，输入`:wq!`保存退出。
 
 接着输入以下命令 `source ~/.bashrc && clang --version`，它应该有大概长这样的输出(因人而异)：
+
 ```
 Proton clang version 13.0.0 (https://github.com/llvm/llvm-project b4fd512c36ca344a3ff69350219e8b0a67e9472a)
 Target: x86_64-unknown-linux-gnu
 Thread model: posix
 InstalledDir: /home/proton-clang/bin
 ```
-如果没有，说明某一步操作有问题，你必须回头纠正。
 
+如果没有，说明某一步操作有问题，你必须回头纠正。
 
 ### 准备配置并开始编译
 
@@ -123,9 +116,11 @@ InstalledDir: /home/proton-clang/bin
 [本教程作为示例所使用的内核源码在这里](https://github.com/flypatriot/crdroid_12_kernel "本教程作为示例所使用的内核源码在这里")
 
 一般内核都使用 Git 源，我们应该通过这种方法下载：
+
 ```bash
 git clone --depth=1 <源地址>
 ```
+
 其中 `--depth=1` 表示浅克隆，即不克隆提交记录，因为 Linux 历史悠久，提交记录非常多(比如本教程的示例内核有86万多个提交)如果将他们克隆下来，将会非常慢，最后源码目录也会非常大。
 
 !!! help
@@ -200,49 +195,50 @@ make CC=clang AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUM
 
 加载默认配置。
 
-
 此时我们已经可以开始编译。不过你可能还想修改一下别的，所以我们执行：
+
 ```bash
 make CC=clang AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump O=out  menuconfig
 ```
-
 
 比如我们还想修改内核名，那我们需要修改这一项：
 `General setup -> Local version - append to kernel release`
 修改完后，直接 ”Esc“ 保存退出
 
-
 然后我们开始编译，输入以下命令
+
 ```bash
 make CC=clang AR=llvm-ar NM=llvm-nm STRIP=llvm-strip OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump O=out -j$(nproc)
 ```
+
 `nproc`会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把`$(nproc)`换成一个比你 CPU 的线程数小的数字。
 
 然后便是等待。等他出现`Ready`字样时就说明你成功了。
 
-
 ### 打包并刷入内核
-
 
 考虑到有些手机并没有可用的第三方 Recovery ，所以我们不使用 Anykernel3 ，而是通过修改boot镜像手动刷入。
 
 终端输入以下命令下载工具：
+
 ```
 curl https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300923/ | tar xzvf -
 ```
 
-
 然后我们需要从手机中提取 Boot 镜像，并将其传到电脑上的工具目录内。如何提取镜像在前面 Root 的环节已经提到。
 
 接着:
+
 ```
 ./unpackimg.sh <Boot 镜像文件名>
 ```
-工具目录下会出现一个`split_img`文件夹，其中的` <Boot 镜像文件名>-kernel`就是我们要替换的文件。
+
+工具目录下会出现一个`split_img`文件夹，其中的`<Boot 镜像文件名>-kernel`就是我们要替换的文件。
 
 编译好的内核在源码目录`out/arch/arm64/boot`目录下。一般来说文件名带有`Image`字样，把它复制到这里，替换掉原来的文件。
 
 然后：
+
 ```
 ./repackimg.sh
 ```
