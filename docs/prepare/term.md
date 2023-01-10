@@ -120,23 +120,33 @@ ROM是只读存储器（Read Only Memory）。但是很多可以读可以写的�
 
 ### 各清
 
+!!! info
+    一般来说，清除分区的方法有两种。一种是进入 Recovery 然后使用 Recovery 的 wipe 功能，还有一种是在 fastboot 模式中使用 fastboot 指令。
+    另外，对于使用了动态分区的设备（出厂版本为安卓10及以上的手机基本上都是）来说，Recovery 不允许清除 /system 分区
+
 - 双清
 
 Dalvik/ART Cache ,Cache
 
-清除分区以及数据，简称重置手机。
+清除缓存，一般来说没有太大风险。
+
+!!! note
+    部分 Magisk 模块会将内容写入 /cache
 
 - 三清
 
 Dalvik/ART Cache ,Cache ,Data
 
-刷机前基本上必选三清，使新系统的兼容性达到最佳。
+刷机前基本上必选三清，使新系统的兼容性达到最佳。对于刷入使用了不同 /data 分区加密方法的包，请一定三清。
 
 - 四清
 
 Dalvik/ART Cache ,Cache ,Data ,System
 
 四清针对版本差异过大的系统,四清后不刷入系统无法进系统(因为系统分区寄掉了)
+
+!!! info
+    另外，对于使用了动态分区的设备（出厂版本为安卓10及以上的手机基本上都是）来说，Recovery 不允许清除 /system 分区
 
 !!! warning  end
 
