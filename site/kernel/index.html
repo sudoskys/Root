@@ -306,29 +306,47 @@
 <a class="md-nav__link" href="#_1">
     看前须知
   </a>
-</li>
+<nav aria-label="看前须知" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
     为什么自定义系统内核
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    准备
-  </a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_3">
     准备环境
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    旧版内核
+  </a>
+<nav aria-label="旧版内核" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-    准备配置并开始编译
+    准备编译器, 源码
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_6">
+    准备配置并开始编译
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#54-wip">
+    新版内核（5.4 以上) [WIP]
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
     打包并刷入内核
   </a>
 </li>
@@ -358,29 +376,47 @@
 <a class="md-nav__link" href="#_1">
     看前须知
   </a>
-</li>
+<nav aria-label="看前须知" class="md-nav">
+<ul class="md-nav__list">
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_2">
     为什么自定义系统内核
   </a>
 </li>
-<li class="md-nav__item">
-<a class="md-nav__link" href="#_3">
-    准备
-  </a>
+</ul>
+</nav>
 </li>
 <li class="md-nav__item">
-<a class="md-nav__link" href="#_4">
+<a class="md-nav__link" href="#_3">
     准备环境
   </a>
 </li>
 <li class="md-nav__item">
+<a class="md-nav__link" href="#_4">
+    旧版内核
+  </a>
+<nav aria-label="旧版内核" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
 <a class="md-nav__link" href="#_5">
-    准备配置并开始编译
+    准备编译器, 源码
   </a>
 </li>
 <li class="md-nav__item">
 <a class="md-nav__link" href="#_6">
+    准备配置并开始编译
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#54-wip">
+    新版内核（5.4 以上) [WIP]
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#_7">
     打包并刷入内核
   </a>
 </li>
@@ -393,39 +429,22 @@
 <article class="md-content__inner md-typeset">
 <h1>内核</h1>
 <p>本节为非必须部分，上手需要<strong>一定的知识储备</strong>，如果你<strong>没事</strong>或者<strong>不清楚为什么搞内核</strong>，可以看下一节。</p>
-<p>结合此文档阅读本节内容：<a href="https://source.android.com/docs/setup/build/building-kernels">构建内核</a></p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>如果你的手机内核版本为<code>5.x</code>，那它多半使用了 GKI(Generic Kernel Image)，为这些手机制作内核需要额外步骤，不能按照以下教程进行。否则可能会导致手机部分设备(如触摸屏，尾插等)无法工作。</p>
+<p>如果你的手机内核版本为<code>5.4</code>，那它使用了 GKI(Generic Kernel Image) 1.0，给这种设备单独编译出可用的内核几乎是<strong>不可能</strong>的, 就算能编译出来, 手机外围设备(如触摸屏，尾插等)也无法工作.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>当你在执行时，因为每个人所使用的系统操作环境不同，很可能会出现不可控的奇怪报错，出现问题提问前请确保严格按照本教程操作。<strong>提问要给出详细信息和测试结果，并参考首页的提问指南</strong></p>
 </div>
-<h4 id="_1">看前须知</h4>
+<h3 id="_1">看前须知</h3>
 <p>首先，你需要确认你的手机内核是<strong>开源</strong>的（这个需要自己了解搜索信息）。</p>
 <p>如果不开源，那就不用继续看了。</p>
-<h3 id="_2">为什么自定义系统内核</h3>
+<h4 id="_2">为什么自定义系统内核</h4>
 <p>我们都知道,安卓使用 Linux 内核，但是系统内核的功能被严重阉割，导致有些东西(例如 Docker)跑不起来。</p>
 <p>这时候，我们就需要构建自己的 Linux 内核，来补全这些功能，让我们需要的软件能正常运行。</p>
 <p>修改内核能做到的当然不止如此，在安卓上，Linux 内核扮演的角色大致相当与电脑的 BIOS+系统内核，也就是说，你还可以通过修改内核来优化性能，甚至超频。不过这就是后话了。</p>
-<p>本教程将以一加8t为例，从头开始构建一个支持 Docker 的内核。其他手机的步骤和这个基本相同。</p>
-<h3 id="_3">准备</h3>
-<p>你可以去 <a href="https://forum.xda-developers.com">XDA开发者论坛(英文)</a> 寻找你手机的内核源码，直接在论坛内搜索你的手机型号即可。这里的内核一般是经过大佬修改的第三方版，带有性能优化或额外功能。本人推荐去这里查找。</p>
-<p>如果没有也别沮丧。可能只是还没人做而已。 一般来讲，小米几乎所有手机和一加所有手机的内核都是开源的。</p>
-<p>小米开源内核目录<a href="https://github.com/micode/xiaomi_kernel_opensource">在这里</a>，直接查找你手机的型号即可。</p>
-<p>一加开源内核<a href="https://github.com/orgs/oneplusoss/repositories">在这里</a>，对于初学者，在这个目录找到你手机对应的源码比较难，所以推荐直接谷歌 “一加xx内核源码”。</p>
-<p>对于其他品牌，你可以试着谷歌 “你的手机型号+内核源码”。</p>
-<div class="admonition danger">
-<p class="admonition-title">Danger</p>
-<p><strong>注意内核应该和安卓版本对应</strong></p>
-</div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>有些设备有多个版本的内核可用(例如红米Note7可用的版本有 <code>4.4</code>,<code>4.9</code>,<code>4.14</code>,<code>4.19</code>)，这些内核版本和 ROM 是对应的，刷入其他版本会导致<strong>无法开机</strong>，所以你应该记住你当前的内核     版本。</p>
-</div>
-<p>如果能找到(一般内核源码都是放在Github)，那么就可以继续了。</p>
-<h3 id="_4">准备环境</h3>
+<h3 id="_3">准备环境</h3>
 <p>编译 Linux 内核肯定是需要 Linux 的，目前有如下几种方法</p>
 <ul>
 <li>
@@ -434,29 +453,29 @@
 <li>
 <p>使用 Windows 的 Linux 子系统v2(WSL2)安装一个Linux发行版(推荐 Ubuntu)</p>
 </li>
-<li>
-<p>手机上 Chroot 安装一个 Linux 发行版(推荐 Ubuntu，至于安装，可以使用 <a href="https://github.com/2moe/tmoe">tmoe</a> 项目)</p>
-</li>
 </ul>
-<p>除非迫不得已，否则我不建议你用手机编译来折磨自己。</p>
-<p>如果电脑配置不大行，建议实机安装。</p>
+<p>如果电脑配置不大行，建议实机安装。<strong>RAM 为 8G 或更低的设备一定要实机安装!</strong></p>
 <p>对于如何安装以上的系统不在本文主题内，如果你不懂，可以搜索一下。</p>
-<p>本教程以 Ubuntu18.04 为例.</p>
+<p>本教程以 Ubuntu22.04 为例.</p>
 <p>首先，我们要把软件源更换为国内镜像源，在终端输入以下命令:</p>
 <div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">"s@http://.*archive.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g"</span><span class="w"> </span>/etc/apt/sources.list
-sudo<span class="w"> </span>sed<span class="w"> </span>-i<span class="w"> </span><span class="s2">"s@http://.*security.ubuntu.com@https://mirrors.tuna.tsinghua.edu.cn@g"</span><span class="w"> </span>/etc/apt/sources.list
 sudo<span class="w"> </span>apt<span class="w"> </span>update
 </code></pre></div>
-<p>以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令:</p>
-<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>bc<span class="w"> </span>bison<span class="w"> </span>build-essential<span class="w"> </span>ccache<span class="w"> </span>cpio<span class="w"> </span>curl<span class="w"> </span>flex<span class="w"> </span>g++-multilib<span class="w"> </span>gcc-multilib<span class="w"> </span>git<span class="w"> </span>gnupg<span class="w"> </span>gperf<span class="w"> </span>imagemagick<span class="w"> </span>lib32ncurses5-dev<span class="w"> </span>lib32readline-dev<span class="w"> </span>lib32z1-dev<span class="w"> </span>liblz4-tool<span class="w"> </span>libncurses5-dev<span class="w"> </span>libsdl1.2-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libwxgtk3.0-dev<span class="w"> </span>libxml2<span class="w"> </span>libxml2-utils<span class="w"> </span>lzop<span class="w"> </span>pngcrush<span class="w"> </span>rsync<span class="w"> </span>schedtool<span class="w"> </span>squashfs-tools<span class="w"> </span>xsltproc<span class="w"> </span>zip<span class="w"> </span>zlib1g-
-dev<span class="w"> </span>unzip<span class="w"> </span>openjdk-8-jdk<span class="w"> </span>language-pack-zh-hans<span class="w"> </span>python<span class="w"> </span>vim
+<p>以上命令会将软件源更换为清华大学源。然后我们开始安装依赖，在终端输入以下命令安装依赖:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>acl<span class="w"> </span>aptly<span class="w"> </span>bc<span class="w"> </span>bison<span class="w"> </span>build-essential<span class="w"> </span>busybox<span class="w"> </span>ca-certificates<span class="w"> </span>clang<span class="w"> </span>coreutils<span class="w"> </span>cpio<span class="w"> </span>crossbuild-essential-arm64<span class="w"> </span>curl<span class="w"> </span>debian-archive-keyring<span class="w"> </span>debian-keyring<span class="w"> </span>dialog<span class="w"> </span>flex<span class="w"> </span>gawk<span class="w"> </span>gcc<span class="w"> </span>git<span class="w"> </span>gpg<span class="w"> </span>gzip<span class="w"> </span>initramfs-tools<span class="w"> </span>jq<span class="w"> </span>kmod<span class="w"> </span>libbison-dev<span class="w"> </span>libcrypto++-dev<span class="w"> </span>libelf-dev<span class="w"> </span>libfdt-dev<span class="w"> </span>libfile-fcntllock-perl<span class="w"> </span>libfl-dev<span class="w"> </span>liblz4-tool<span class="w"> </span>libncurses-dev<span class="w"> </span>libncurses5<span class="w"> </span>libncurses5-dev<span class="w"> </span>libncursesw5-dev<span class="w"> </span>libpython2.7-dev<span class="w"> </span>libssl-dev<span class="w"> </span>libusb-1.0-0-dev<span class="w"> </span>lld<span class="w"> </span>llvm<span class="w"> </span>locales<span class="w"> </span>lz4<span class="w"> </span>lzma<span class="w"> </span>lzop<span class="w"> </span>mtools<span class="w"> </span>ncurses-base<span class="w"> </span>ncurses-term<span class="w"> </span>ntpdate<span class="w"> </span>p7zip<span class="w"> </span>p7zip-full<span class="w"> </span>parallel<span class="w"> </span>patchutils<span class="w"> </span>pigz<span class="w"> </span>pixz<span class="w"> </span>pkg-config<span class="w"> </span>pv<span class="w"> </span>python2<span class="w"> </span>python3<span class="w"> </span>python3-dev<span class="w"> </span>python3-distutils<span class="w"> </span>rsync<span class="w"> </span>subversion<span class="w"> </span>swig<span class="w"> </span>tar<span class="w"> </span>udev<span class="w"> </span>unzip<span class="w"> </span>uuid<span class="w"> </span>uuid-dev<span class="w"> </span>uuid-runtime<span class="w"> </span>vim<span class="w"> </span>wget<span class="w"> </span>xz-utils<span class="w"> </span>zip<span class="w"> </span>zlib1g-dev<span class="w"> </span>zstd
 </code></pre></div>
-<p>在上述命令执行完后，我们需要下载编译器，这里使用clang。</p>
+<h3 id="_4">旧版内核</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><strong>本部分适用于旧版内核, 即 4.x 或更旧版本, 5.x 或更新版本不适用!!</strong></p>
+</div>
+<h4 id="_5">准备编译器, 源码</h4>
+<p>安装完前面的依赖后，我们需要下载编译器，这里使用clang。</p>
 <div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>~<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>--depth<span class="o">=</span><span class="m">1</span><span class="w"> </span>https://github.com/kdrag0n/proton-clang.git
 </code></pre></div>
 <div class="admonition help">
 <p class="admonition-title">Help</p>
-<p>如果克隆很慢，尝试把源地址中的<code>github.com</code>改成<code>hub.fastgit.xyz</code>。</p>
+<p>如果克隆很慢，尝试把源地址前加上<code>https://ghproxy.com/</code>, 例如<code>https://ghproxy.com/https://github.com/kdrag0n/proton-clang.git</code></p>
 </div>
 <p>下载完后，我们在终端输入<code>vi ~/.bashrc</code>打开编辑器，按下键盘上的 "Insert" 键，使用方向键滑到文件底部，加上以下代码：</p>
 <div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="s2">"~/proton-clang/bin:</span><span class="nv">$PATH</span><span class="s2">"</span>
@@ -471,8 +490,14 @@ Target: x86_64-unknown-linux-gnu
 Thread model: posix
 InstalledDir: /home/proton-clang/bin
 </code></pre></div>
-<p>如果没有，说明某一步操作有问题，你必须回头纠正。</p>
-<h3 id="_5">准备配置并开始编译</h3>
+<p>如果没有，说明某一步操作有问题，你必须回头纠正, 否则下面的操作无法进行。</p>
+<p>对于源码, 你可以去 <a href="https://forum.xda-developers.com">XDA开发者论坛(英文)</a> 寻找你手机的内核源码，直接在论坛内搜索你的手机型号即可。这里的内核一般是经过大佬修改的第三方版，带有性能优化或额外功能。本人推荐去这里查找。</p>
+<p>如果没有也别沮丧。可能只是还没人做而已。 一般来讲，小米几乎所有手机和一加所有手机的内核都是开源的。</p>
+<p>小米开源内核目录<a href="https://github.com/micode/xiaomi_kernel_opensource">在这里</a>，直接查找你手机的型号即可。</p>
+<p>一加开源内核<a href="https://github.com/orgs/oneplusoss/repositories">在这里</a></p>
+<p>对于初学者，在这个目录找到你手机对应的源码比较难，所以推荐直接谷歌 “一加xx内核源码”。</p>
+<p>对于其他品牌，你可以试着谷歌 “你的手机型号+内核源码”。</p>
+<h4 id="_6">准备配置并开始编译</h4>
 <p>现在环境已经准备好了，我们需要下载我们之前找到的内核源码。</p>
 <p><a href="https://github.com/flypatriot/crdroid_12_kernel" title="本教程作为示例所使用的内核源码在这里">本教程作为示例所使用的内核源码在这里</a></p>
 <p>一般内核都使用 Git 源，我们应该通过这种方法下载：</p>
@@ -553,7 +578,63 @@ CONFIG_OVERLAY_FS=y
 </code></pre></div>
 <p><code>nproc</code>会输出你 CPU 的线程数，也就是这条命令会让你的系统火力全开。如果你不想让它火力全开，酌情把<code>$(nproc)</code>换成一个比你 CPU 的线程数小的数字。</p>
 <p>然后便是等待。等他出现<code>Ready</code>字样时就说明你成功了。</p>
-<h3 id="_6">打包并刷入内核</h3>
+<h3 id="54-wip">新版内核（5.4 以上) [WIP]</h3>
+<p>结合此文档阅读本小节内容：<a href="https://source.android.com/docs/setup/build/building-kernels">构建内核</a></p>
+<p>为什么没有 5.4 内核? 5.4 是 GKI 1.0 版本, 这东西非常阴间, 笔者研究了两三天也毫无进展, 去 xda 一看, 根本没有人单独发布内核。所以决定放弃捏</p>
+<p><em>注: 谷歌 Pixel 手机除外, 因为谷歌给 Pixel 的内核提供了很阳间的一键编译脚本</em></p>
+<p>新版内核与上面的旧版内核最大的差别就是: 内核本身是统一由谷歌提供的, 存储在<code>boot</code>分区, 设备厂商提供的驱动等全部被拆分进入<code>vendor_boot</code>和<code>vendor_dlkm</code>分区中, 这意味着内核碎片化从此不复存在了。</p>
+<p>而我们, 再也不用东奔西走去找内核源码, 也不需要盼望厂商开源了. 开个香槟先🍾</p>
+<p>如果你的设备出厂就是安卓12或更高版本, 那它就使用了这里的“新版内核”。</p>
+<p>首先, 我们需要下载安卓的源码管理工具<code>repo</code>。</p>
+<p>以 Ubuntu 为例:</p>
+<p><div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>repo
+</code></pre></div>
+其他发行版可以在软件仓库中搜索, 或是用这些命令安装:</p>
+<div class="highlight"><pre><span></span><code>sudo<span class="w"> </span>curl<span class="w"> </span>https://storage.googleapis.com/git-repo-downloads/repo<span class="w"> </span>&gt;<span class="w"> </span>/usr/bin/repo<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="se">\</span>
+chmod<span class="w"> </span>a+x<span class="w"> </span>/usr/bin/repo
+</code></pre></div>
+<p>首先你需要安装 Magisk, 然后读取你手机<code>boot</code>镜像内的信息。</p>
+<p>执行下面的命令:
+<div class="highlight"><pre><span></span><code>uname<span class="w"> </span>-a
+su<span class="w"> </span>-c<span class="w"> </span>dd<span class="w"> </span><span class="k">if</span><span class="o">=</span>/dev/block/by-name/boot<span class="k">$(</span>getprop<span class="w"> </span>ro.boot.slot_suffix<span class="k">)</span><span class="w"> </span><span class="nv">of</span><span class="o">=</span>/sdcard/boot.img
+su<span class="w"> </span>-c<span class="w"> </span>/data/adb/magisk/magiskboot<span class="w"> </span>unpack<span class="w"> </span>/sdcard/boot.img
+</code></pre></div></p>
+<p>第一条命令会输出你的内核版本, 看起来像这样:
+<div class="highlight"><pre><span></span><code>Linux localhost 4.19.268-march7th-ksu #4 SMP PREEMPT Sun Aug 10 11:45:14 JST 1919 aarch64 Android
+</code></pre></div></p>
+<p>*不要问这个为什么是 4.19.268, 因为笔者没有新版内核的设备</p>
+<p>*你的应该是 5.10.x 或 5.15.x, 否则你应该看上面的旧版内核部分!</p>
+<p>第三条命令会输出很多boot镜像的信息, 而我们需要关注以下几条:
+<div class="highlight"><pre><span></span><code>OS_VERSION      [13.0.0]
+OS_PATCH_LEVEL  [2022-12]
+KERNEL_FMT      [raw]
+</code></pre></div></p>
+<p>新建文件夹, 叫什么随意。</p>
+<p>进入你新建的文件夹;</p>
+<p>根据上面的设备信息, 这里要拉取不同的分支;</p>
+<p>这里没法给出非常具体的应该拉哪个分支, 只能给出几个例子:</p>
+<p>比如你是安卓12(OS_VERSION 为 12.x.y), 内核版本为5.10.x, 安全补丁日期是2022年10月(OS_PATCH_LEVEL 为 2022-10), 执行下面的命令:
+<div class="highlight"><pre><span></span><code>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://android.googlesource.com/kernel/manifest<span class="w"> </span>-b<span class="w"> </span>common-android12-5.10-2022-10
+</code></pre></div></p>
+<p>再比如你是安卓13(OS_VERSION 为 13.x.y), 内核版本为5.15.x, 安全补丁日期是2022年12月(OS_PATCH_LEVEL 为 2022-12), 执行下面的命令:
+<div class="highlight"><pre><span></span><code>repo<span class="w"> </span>init<span class="w"> </span>-u<span class="w"> </span>https://android.googlesource.com/kernel/manifest<span class="w"> </span>-b<span class="w"> </span>common-android13-5.15-2022-12
+</code></pre></div></p>
+<p>上条命令执行完后, 继续执行 <code>repo sync -j$(nproc)</code></p>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>这些命令可能会花费一点时间, 耐心的等一会.</p>
+</div>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>如果花费时间实在太长, 你可能必须通过镜像站拉取源代码, 把上面命令中所有的<code>android.googlesource.com</code>替换成<code>mirrors.tuna.tsinghua.edu.cn/git/AOSP/</code>即可. 例如<code>repo init -u https://mirrors.tuna.tsinghua.edu.cn/git/AOSP/kernel/manifest -b common-android13-5.15-2022-12</code></p>
+</div>
+<div class="admonition help">
+<p class="admonition-title">Help</p>
+<p>如果提示无法连接到<code>gerrit.googlesource.com</code>, 请参照<a href="https://mirrors.tuna.tsinghua.edu.cn/help/git-repo">git-repo的帮助页面的</a>更新一节。</p>
+</div>
+<p>剩下的会写的，别急
+可以先参考<a href="https://xtuly.cn/article/arm64-kernel-research-3#d9d370819ef944179363eeb7069115d0">Ylarod 的教程</a></p>
+<h3 id="_7">打包并刷入内核</h3>
 <p>考虑到有些手机并没有可用的第三方 Recovery ，所以我们不使用 Anykernel3 ，而是通过修改boot镜像手动刷入。</p>
 <p>终端输入以下命令下载工具：</p>
 <div class="highlight"><pre><span></span><code>curl https://forum.xda-developers.com/attachments/aik-linux-v3-8-all-tar-gz.5300923/ | tar xzvf -
@@ -568,13 +649,12 @@ CONFIG_OVERLAY_FS=y
 <div class="highlight"><pre><span></span><code>./repackimg.sh
 </code></pre></div>
 <p>重新打包内核文件，然后刷入重启。你应该会看到内核变化了。大功告成。</p>
-<p>此时你可以试着在 Termux 里安装 Docker ，不出意料就能够正常运行了。</p>
 <hr/>
 <div class="md-source-file">
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 14:16:22</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 10, 2023 01:57:43</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">August 19, 2022 11:27:51</span>
