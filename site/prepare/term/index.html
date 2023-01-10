@@ -670,21 +670,34 @@
 <p>外存，闪存或存储空间都行。</p>
 <p>叫ROM属于错误，叫内存让人无语。</p>
 <h3 id="_8">各清</h3>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>一般来说，清除分区的方法有两种。一种是进入 Recovery 然后使用 Recovery 的 wipe 功能，还有一种是在 fastboot 模式中使用 fastboot 指令。
+另外，对于使用了动态分区的设备（出厂版本为安卓10及以上的手机基本上都是）来说，Recovery 不允许清除 /system 分区</p>
+</div>
 <ul>
 <li>双清</li>
 </ul>
 <p>Dalvik/ART Cache ,Cache</p>
-<p>清除分区以及数据，简称重置手机。</p>
+<p>清除缓存，一般来说没有太大风险。</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>部分 Magisk 模块会将内容写入 /cache</p>
+</div>
 <ul>
 <li>三清</li>
 </ul>
 <p>Dalvik/ART Cache ,Cache ,Data</p>
-<p>刷机前基本上必选三清，使新系统的兼容性达到最佳。</p>
+<p>刷机前基本上必选三清，使新系统的兼容性达到最佳。对于刷入使用了不同 /data 分区加密方法的包，请一定三清。</p>
 <ul>
 <li>四清</li>
 </ul>
 <p>Dalvik/ART Cache ,Cache ,Data ,System</p>
 <p>四清针对版本差异过大的系统,四清后不刷入系统无法进系统(因为系统分区寄掉了)</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>另外，对于使用了动态分区的设备（出厂版本为安卓10及以上的手机基本上都是）来说，Recovery 不允许清除 /system 分区</p>
+</div>
 <div class="admonition warning end">
 <p class="admonition-title">Warning</p>
 <p>重要！
@@ -860,7 +873,7 @@
 <small>
     
       最后更新:
-      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 9, 2023 15:24:23</span>
+      <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">January 10, 2023 05:10:12</span>
 <br/>
         创建日期:
         <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-datetime">November 17, 2022 11:47:54</span>
