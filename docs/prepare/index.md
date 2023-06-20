@@ -6,7 +6,11 @@
 
 如果不是特别小众或厂商故意封锁,大部分手机都可以 Root.
 
-- 除了小米、一加、Google 等品牌之外，大多数的品牌可能会在解锁 Bootloader 后失去保修（如 OPPO、真我、三星、索尼、摩托罗拉），还有的可能会导致某些功能的永久失效（如三星解锁后会物理熔断 Knox，导致无法使用三星支付
+- 除了小米、一加、Google 等品牌之外，大多数的品牌可能会在解锁 Bootloader 后失去保修（如 OPPO、真我、三星、索尼、摩托罗拉），还有的可能会导致某些功能的永久失效（如三星解锁后会物理熔断 Knox，导致无法使用三星支付。
+
+## 尝试 KernelSU
+
+[基于内核支持的Root方案](https://github.com/eltociear/KernelSU)，KernelSU 有官方文档，在 [这里](https://kernelsu.org/zh_CN/guide/installation.html)
 
 ## 等一下，你想 Root 模拟器？
 
