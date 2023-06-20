@@ -10,7 +10,7 @@
 
 ## 尝试 KernelSU
 
-[基于内核支持的Root方案](https://github.com/eltociear/KernelSU)，KernelSU 有官方文档，在 [这里](https://kernelsu.org/zh_CN/guide/installation.html)
+[基于内核支持的Root方案](https://github.com/tiann/KernelSU)，KernelSU 有官方文档，在 [这里](https://kernelsu.org/zh_CN/guide/installation.html)
 
 ## 等一下，你想 Root 模拟器？
 
