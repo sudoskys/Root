@@ -10,7 +10,9 @@
 
 <h2 align="center">IdontKnowRoot</h2>
 
-[基于内核支持的Root方案](https://github.com/tiann/KernelSU)
+**[KernelSU-基于内核支持的Root方案](https://github.com/tiann/KernelSU)**
+
+**[手机品牌型号汇总](https://github.com/KHwang9883/MobileModels)**
 
 
 欢迎，浏览内容请访问 **[在线文档](https://root.dianas.cyou/)** 获取最新文档支持。
