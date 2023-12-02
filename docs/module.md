@@ -342,12 +342,11 @@ service myservice ${MAGISKTMP}/myscript.sh
     oneshot
 ```
 
-## 特典:ClashForMagisk
+## ClashForMagisk
 
-刷入此包即可:[Clash养老版,自带说明](https://t.me/nanie1/48)
+谷歌搜索关键词即可！
 
 [^24]:[自制简易Magisk模块教程-辉少菌](https://www.coolapk1s.com/feed/16164846)
-
 
 [^27]:[MagiskDeveloperGuides](https://topjohnwu.github.io/Magisk/guides.html|https://e7kmbb.github.io/Magisk/guides.html)
 
