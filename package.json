@@ -1,0 +1,19 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Docs",
+  "type": "module",
+  "main": "index.js",
+  "repository": "git@github.com:LLMKira/Openaibot.git",
+  "author": "LLMKira",
+  "license": "MIT",
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.40",
+    "vuepress": "^1.9.10"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  }
+}
