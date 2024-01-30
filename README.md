@@ -29,6 +29,4 @@
 
 - [ ] 自动问答 Gpt
 
-**由以下服务商支持运行**
-
 ![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white)
