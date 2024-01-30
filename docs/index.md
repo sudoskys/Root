@@ -7,7 +7,7 @@ editLink: true
 hero:
   name: RootDocs
   text: 刷写机器指南和教程
-  tagline: 为老玩家和新玩家编写的速查手册
+  tagline: 为快速刷写安卓机器编写的速查手册
   actions:
     - theme: brand
       text: 阅读指南
@@ -18,6 +18,9 @@ hero:
 
 features:
   - icon: 🛠️
-    title: 快速部署
-    details: 便捷打包 Docker 镜像，一键部署。自动校验配置启动相关服务。
+    title: 重新上手
+    details: 太久没刷机，忘记了怎么刷？打开本文档，重新快速上手。
+  - icon: 📚
+    title: 科普知识
+    details: 本文档包含了刷机所需的基础知识，让你更好的理解这些操作。
 ---
