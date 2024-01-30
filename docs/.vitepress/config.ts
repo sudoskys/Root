@@ -1,6 +1,8 @@
 // @ts-ignore
 import {createRequire} from 'module'
 import {defineConfig} from 'vitepress'
+import {pagefindPlugin} from 'vitepress-plugin-pagefind'
+// https://vitepress.dev/reference/site-config
 
 // @ts-ignore
 export default defineConfig({
@@ -20,6 +22,9 @@ export default defineConfig({
         head: [
             ['meta', {name: 'theme-color', content: '#4b56c1'}]
         ],
+        vite: {
+            plugins: [pagefindPlugin()],
+        },
         themeConfig: {
             nav: navBar(),
             siteTitle: 'Root My Phone',
@@ -41,8 +46,7 @@ export default defineConfig({
             lastUpdated: {
                 text: 'Updated at',
                 formatOptions: {
-                    dateStyle: 'full',
-                    timeStyle: 'medium'
+                    forceLocale: true,
                 },
             },
             outline: [1, 3],

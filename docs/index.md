@@ -7,7 +7,7 @@ editLink: true
 hero:
   name: RootDocs
   text: 刷写机器指南和教程
-  tagline: 掌握刷机技巧，享受刷机乐趣
+  tagline: 为老玩家和新玩家编写的速查手册
   actions:
     - theme: brand
       text: 阅读指南
