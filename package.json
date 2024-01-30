@@ -4,8 +4,8 @@
   "description": "Docs",
   "type": "module",
   "main": "index.js",
-  "repository": "git@github.com:LLMKira/Openaibot.git",
-  "author": "LLMKira",
+  "repository": "git@github.com:sudoskys/root.git",
+  "author": "sudoskys",
   "license": "MIT",
   "devDependencies": {
     "vitepress": "^1.0.0-rc.40",
