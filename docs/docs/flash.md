@@ -192,7 +192,7 @@ fastboot reboot
 
 ::: danger
 解锁 Bootloader 会清除你的手机数据。
-解锁 Bootloader 后，你可能会面临失去保修，损坏 `TTE` ，无法使用某些应用，无法升级系统等问题。
+解锁 Bootloader 后，你可能会面临失去保修，损坏 `TEE` ，无法使用某些应用，无法升级系统等问题。
 :::
 
 **请阅读 [Bootloader 解锁支持列表](https://github.com/KHwang9883/MobileModels/blob/master/misc/bootloader-kernel-source.md)。**
