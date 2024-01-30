@@ -76,7 +76,7 @@ function sidebarGuide() {
             text: '基础指南',
             collapsed: false,
             items: [
-                {text: '快速刷机', link: '/docs/index'},
+                {text: '快速刷机', link: '/docs/flash'},
                 {text: '救砖', link: '/docs/unbrick'},
                 {text: '调整环境', link: '/docs/optimize'},
                 {text: '卡刷教程', link: '/docs/brush'},
