@@ -72,18 +72,20 @@ function sidebarGuide() {
             text: '基础指南',
             collapsed: false,
             items: [
-                {text: '救砖和善后工作', link: '/docs/index'},
-                {text: '关于卡刷', link: '/docs/index'},
-                {text: '线刷详细教程', link: '/docs/index'},
-                {text: 'MTK漏洞', link: '/docs/index'},
+                {text: '救砖', link: '/docs/unbrick'},
+                {text: '调整环境', link: '/docs/optimize'},
+                {text: '卡刷教程', link: '/docs/brush'},
+                {text: '9008 刷写', link: '/docs/9008flash'},
+                {text: 'MTK芯片漏洞', link: '/docs/mtk_vul'},
             ]
         },
         {
             text: '知识读本',
             collapsed: false,
             items: [
-                {text: '关于 AB 分区的事情', link: '/docs/vab'},
-                {text: '关于 AB 分区的事情', link: '/docs/vab'},
+                {text: '关于分区', link: '/docs/partition'},
+                {text: '刷写 GSI 通用镜像', link: '/docs/gsi'},
+                {text: 'KernelSu 方案', link: '/docs/kernelsu'},
             ]
         }
     ]
