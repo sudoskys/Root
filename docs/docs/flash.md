@@ -224,7 +224,7 @@ Bootloader 由 OEM厂商（华为、小米和三星等）锁定，或由运营�
 
 ::: tip 进入 Bootloader 模式的其他方法
 你可以使用 `adb` 工具指示手机进入 `Bootloader` 模式。
-对于某些手机，你还也可以使用按键组合进入 `Bootloader` 模式，比如按 `电源键` 重启，马上按住 `音量键-`。
+对于某些手机，你还也可以使用按键组合进入 `Bootloader` 模式，比如按 `电源键` 重启，马上按住 `音量键-`，但是这种方法不适用于所有手机，`一加` 部分机型已经无法通过按键组合进入 `Bootloader` 模式。
 :::
 
 输入 `fastboot flashing unlock` 解锁。详见 [安卓开发者文档-锁定/解锁引导加载程序](https://source.android.com/docs/core/architecture/bootloader/locking_unlocking)。
