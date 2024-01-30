@@ -6,7 +6,7 @@ editLink: true
 
 hero:
   name: RootDocs
-  text: 安卓刷机一站式指南
+  text: 刷写机器指南和教程
   tagline: 为快速刷写安卓机器编写的速查手册
   actions:
     - theme: brand
