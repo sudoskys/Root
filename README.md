@@ -29,4 +29,4 @@
 
 - [ ] 自动问答 Gpt
 
-![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white)
+托管在 ![Vercel](https://img.shields.io/badge/Vercel-black?style=flat&logo=Vercel&logoColor=white)
