@@ -12,7 +12,7 @@
 
 # 快速开始
 
-此页面为快速开始，介绍整个流程。
+此页面为快速开始，介绍整个流程。下文所说的安卓版本均为 **内核版本**。
 
 我为 `VAB分区` `SELinux` 撰写的其他科普专题，请点击左侧导航栏。
 
@@ -22,8 +22,7 @@ Root，即超级用户，是 Android 系统中的最高权限，拥有 Root 权�
 
 但是厂商并不希望用户获取 Root 权限，因为这会破坏系统安全，并且可能会被不法分子利用。
 
-目前，最流行的 Root 框架是 `Magisk`，我们使用 `adb` 和 `fastboot` 工具链接手机和烧录 `Magisk` 修补后的分区文件，来获取 Root
-权限。
+目前，最流行的 Root 框架是 `Magisk`，我们使用 `adb` 和 `fastboot` 工具链接手机和烧录 `Magisk` 修补后的分区文件，来获取 Root 权限。
 
 下文将会主要介绍这种方法。
 
@@ -257,9 +256,9 @@ Bootloader 由 OEM厂商（华为、小米和三星等）锁定，或由运营�
 
 解包的过程需要大约 `镜像大小*3` 硬盘空间。
 
-::: warning
-Android 12 及更高版本的设备的架构中，包含通用 ramdisk 的为新 init_boot 映像，而不是传统的 boot 映像。
-所以如果你的设备是 Android 12 及更高版本，你需要使用 `init_boot.img` 镜像文件。参考 [安卓开发文档-通用Boot镜像](https://source.android.com/docs/core/architecture/partitions/generic-boot?hl=zh-cn)。
+::: warning Android 13 注意
+Android 13 及更高版本的设备的架构中，包含通用 ramdisk 的为新 `init_boot` 映像，而不是传统的 `boot` 映像。
+所以如果你的设备是 Android 13 及更高版本，你需要使用 `init_boot.img` 镜像文件。参考 [安卓开发文档-通用Boot镜像](https://source.android.com/docs/core/architecture/partitions/generic-boot?hl=zh-cn)。
 :::
 
 ### 准备修补
@@ -303,10 +302,13 @@ Sending 'boot' (29079 KB)                          OKAY [  0.936s]
 Writing 'boot'                                     OKAY [  0.878s]
 Finished. Total time: 2.085s
 ```
+::: warning Android 13 注意
+Android 13 及更高版本的设备的架构中，包含通用 ramdisk 的为新 `init_boot` 映像，而不是传统的 `boot` 映像。
+如果你的机器有 `init_boot.img` 分区，那么你需要用命令 `fastboot flash init_boot` 刷写修补后的 `init_boot` 分区。
+:::
 
-::: warning 注意事项
-如果你的机型是 `A/B` 分区，那么你需要刷写 `boot_a` 或 `boot_b` 分区，否则可能不生效。
-如果你的机器有 `init_boot.img` 分区，那么你需要用命令 `fastboot flash init_boot` 刷写 `init_boot` 分区。
+::: warning Android 12 注意
+如果你的机型是 `A/B` 分区，那么你需要刷写 `boot_a` **和** `boot_b` 分区，否则可能不生效。
 :::
 
 使用 `fastboot` 命令 `fastboot reboot` 重启手机。

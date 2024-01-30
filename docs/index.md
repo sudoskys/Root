@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 阅读指南
-      link: /docs/
+      link: /docs/flash
     - theme: alt
       text: View on GitHub
       link: https://github.com/sudoskys/Root/
