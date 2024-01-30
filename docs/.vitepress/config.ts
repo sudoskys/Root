@@ -6,6 +6,21 @@ import {pagefindPlugin} from 'vitepress-plugin-pagefind'
 
 // @ts-ignore
 export default defineConfig({
+        ignoreDeadLinks: [
+            // ignore exact url "/playground"
+            '/playground',
+            // ignore all localhost links
+            /^https?:\/\/localhost/,
+            // ignore all gov.cn links
+            /.*\.gov\.cn/,
+            // ignore all links include "/repl/""
+            /\/repl\//,
+            // custom function, ignore all links include "ignore"
+            (url) => {
+                // @ts-ignore
+                return url.toLowerCase().includes('ignore')
+            }
+        ],
         lang: 'zh-CN',
         title: 'Root Docs',
         base: "/",
