@@ -3,3 +3,4 @@
 # site/**/*
 .cache
 .idea
+/run.log

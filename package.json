@@ -1,0 +1,36 @@
+{
+  "name": "docs",
+  "version": "1.0.0",
+  "description": "Root Docs",
+  "type": "module",
+  "private": true,
+  "license": "MPL-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudoskys/root.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sudoskys/root/issues"
+  },
+  "engines": {
+    "node": ">=20",
+    "pnpm": ">=8"
+  },
+  "devDependencies": {
+    "markdown-it": "^14.0.0",
+    "markdown-it-mathjax3": "^4.3.2",
+    "open-cli": "^8.0.0",
+    "vitepress": "1.0.0-rc.35",
+    "vitepress-plugin-search": "^1.0.4-alpha.22"
+  },
+  "scripts": {
+    "docs:dev": "vitepress dev docs",
+    "docs:build": "vitepress build docs",
+    "docs:serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "pagefind": "^1.0.4",
+    "vitepress-plugin-comment-with-giscus": "^1.1.12",
+    "vitepress-plugin-pagefind": "^0.2.10"
+  }
+}
