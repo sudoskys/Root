@@ -233,7 +233,7 @@ Bootloader 由 OEM厂商（华为、小米和三星等）锁定，或由运营�
 
 ## 准备文件
 
-在手机的 `关于手机` 中，寻找系统版本号，记录下来。然后去下载对应的全量包或 `boot` 分区文件。
+在手机的 `关于手机` 中，寻找系统版本号，记录下来。然后去下载对应的全量包或 `boot` 分区文件。（**系统版本必须对应，否则会失败！**）
 
 ::: info 关于全量包
 官方 ROM 的压缩包，例如 [Google](https://developers.google.com/android/images)、[小米](https://www.miui.com/shuaji-393.html)、[Moto](https://mirrors.lolinet.com/firmware/moto/)，它们由厂商发布，可从固定的发布页面、机型论坛等下载**符合**你的**机型和型号**的 Rom.
