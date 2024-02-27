@@ -12,6 +12,9 @@ hero:
     - theme: brand
       text: 阅读指南
       link: /docs
+    - theme: brand
+      text: KernelSu
+      link: https://kernelsu.org/zh_CN
     - theme: alt
       text: View on GitHub
       link: https://github.com/sudoskys/Root/
