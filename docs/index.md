@@ -7,13 +7,13 @@ editLink: true
 hero:
   name: RootDocs
   text: 刷写机器指南和教程
-  tagline: 为快速刷写安卓机器编写的速查手册
+  tagline: 为U速刷写安卓机器编写的速查手册
   actions:
     - theme: brand
       text: 阅读指南
       link: /docs
     - theme: brand
-      text: KernelSu
+      text: KernelSU
       link: https://kernelsu.org/zh_CN
     - theme: alt
       text: View on GitHub
