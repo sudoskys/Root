@@ -12,20 +12,23 @@
 
 <h2 align="center">IdontKnowRoot</h2>
 
-访问 **[在线文档](https://root.dianas.cyou/)** 阅读。
-
-**[KernelSU-基于内核支持的Root方案](https://github.com/tiann/KernelSU)**
-
-**[手机品牌型号汇总](https://github.com/KHwang9883/MobileModels)**
-
 每当换手机时，你不必再去各个论坛寻找刷机教程，只需要打开本文档，即可重新快速上手。为速查设计。
+
+请访问 **[在线文档](https://root.dianas.cyou/)** 阅读内容。
+
+**其他相关文档**
+
+- [KernelSU-基于内核支持的Root方案](https://github.com/tiann/KernelSU)
+
+- [手机品牌型号汇总](https://github.com/KHwang9883/MobileModels)
+
+- [lineageos Wiki](https://wiki.lineageos.org/pages)
 
 ## 改进文档
 
-如果你发现了错误或不足，欢迎提交 `Pull Request` 或 `Issue`。
-
 请不要在 `Issue` 发布求助，这里只接受文档改进相关的问题。
 
+如果你刷写过程发现文档缺漏，欢迎向知识库提交补充或修改。只需要在仓库页面按下键盘的 `.` 即可编辑。
 
 ## 待办
 
